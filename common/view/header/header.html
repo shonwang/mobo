@@ -1,0 +1,56 @@
+<script id="tpl-header" type="text/tpl">
+    <div class="device-info hbox logo">
+
+        <div class="connect">
+           <div class="circle"></div>
+        </div>
+        
+        <div class="icon battery" style="display:none">
+            <span class="electricity">
+                <!-- 电量低于20% 加上类 reg 或者 直接替换blue -->
+                <i class="blue" style="height:80%"></i>
+            </span>
+            <i class="usb"></i>
+            <i class="wifi"></i>
+        </div>
+
+        <h1>
+            <p class="te brand"></p>
+            <p class="te model"></p>
+        </h1>
+        <div class="arl" style="display:none"><i></i></div>
+    </div>
+    <div class="right">
+        <div class="g-header-oper hbox">
+            <button class="g-ico-return" disabled="true" i18n-key="common.returnTipText"></button>
+            <button class="g-ico-retreat" disabled="true" i18n-key="common.retreatTipText"></button>
+            <button class="g-ico-refresh" i18n-key="common.Refresh"></button>
+        </div>
+        <div class="g-search-box">
+          <!--  <input class="com-text" placeholder="Apps/Games/Local Files" pattern="[^%_#\\\+\-\=]{1,100}" minlength="1" maxlength="40"></input>-->
+          <input class="com-text head-box" minlength="1" maxlength="100"></input>
+          <span class="icon-control g-search-icon"></span>
+        </div>
+        
+        <div class="g-header-toolbar">
+            <i class="sign-in"><a><%=I18N.fillDomText('common.headSignIn')%></a></i>
+            <i class="online user" style="display:none;"><a class="cbox"><img src="../src/common/images/header/user-avatar30.png"></a></i>
+            <i class="spt"></i>
+            <i class="fbk" i18n-key="setting.feedback"></i>
+            <i class="setting" i18n-key="setting.settingTip"></i>
+            <i class="spt"></i>
+            <i class="min" i18n-key="common.minTipText"></i>
+            <i class="max-icon max" i18n-key="common.maxTipText"></i>
+            <i class="close" i18n-key="common.exitTipText"></i>
+        </div>
+    </div>
+</script>
+
+<script id="tpl-setting-sns" type="text/tpl">
+     <div class="g-setting-sns hbox">
+         <div class="facebook" data-i="1"></div>
+         <div class="twitter" data-i="2"></div>
+         <div class="gplus" data-i="3"></div>
+     </div>
+</script>
+

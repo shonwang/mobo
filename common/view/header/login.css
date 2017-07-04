@@ -1,0 +1,231 @@
+/*用户登录*/
+.signin {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.signin .error {
+    color: #ff5454
+}
+
+.signin-form {
+    overflow: hidden;
+    padding-top: 8px;
+}
+
+.signin-form li {
+    position: relative;
+    min-height: 56px;
+}
+
+.signin .forgot-pwd {
+    padding: 5px;
+}
+
+.signin .g-btn1 {
+    width: 100%;
+    height: 36px;
+}
+
+.signin .third-party {
+    position: absolute;
+    left: 1px;
+    bottom: 1px;
+    right: 1px;
+    height: 58px;
+    line-height: 58px;
+    background-color: #f7f7f7;
+}
+
+.signin .or {
+    padding: 0 30px 0 50px;
+}
+
+/*第三方登录*/
+
+.signin .ico-facebook,
+.signin .ico-google {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+    display: block;
+}
+
+.signin .ico-facebook:hover {
+    background-color: rgba(59, 89, 152, 0.8);
+}
+
+.signin .ico-google:hover {
+    background-color: rgba(212, 62, 40, 0.8);
+}
+
+.signin .ico-facebook {
+    background: #3b5998 url(../../images/ico/facebook.png) no-repeat center;
+}
+
+.signin .ico-google {
+    background: #d43e28 url(../../images/ico/google.png) no-repeat center;
+}
+
+.ico-signin-success {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    background: url(../../images/header/ico-signin-success.png) no-repeat center;
+}
+
+/*注册*/
+.register {
+}
+
+.register .signin-form {
+    height: 252px;
+}
+
+.register .input-code {
+    width: 170px;
+}
+
+.register .randcode {
+    display: block;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.register .checkbox {
+    vertical-align: -3px;
+}
+
+.register .agree {
+    padding: 0 5px;
+}
+
+/*登录成功*/
+.success {
+}
+
+.user-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 18px auto 10px;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, .15);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.user-avatar .pic {
+    position: relative;
+    width: 108px;
+    height: 108px;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, .15);
+    display: block;
+    overflow: hidden;
+}
+
+.user-avatar .pic .img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 260px;
+    height: 108px;
+    margin-left: -130px;
+}
+
+.user-avatar img {
+    height: 100%;
+    border-radius: 100%;
+}
+
+.user-avatar .change {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    margin: -55px 0 0 -55px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    width: 108px;
+    height: 108px;
+    line-height: 108px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, .55);
+    display: none;
+}
+
+.user-avatar:hover .change {
+    display: block;
+}
+
+.success .account {
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.success .send-email {
+    padding-top: 30px;
+    height: 66px;
+}
+
+.signin .image-info {
+    height: 20px;
+    width: 100%;
+    color: #ff5454;
+    overflow: hidden;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.signin .image-info.suc {
+    color: #13abe1;
+}
+
+/*修改密码成功*/
+.success-confirm {
+}
+
+.success-confirm .success-label {
+    height: 80px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/*下拉菜单重置*/
+.signin-down {
+    top: 89px !important;
+}
+
+.signin-down .g-menu .g-menu-item {
+    width: 274px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.signin-down .g-menu .cur {
+    color: #fff;
+    background-color: #3ac0ee;
+}
+
+/*第三方合作登录方式*/
+.third-box {
+    width: 678px;
+    height: 410px;
+    margin: -12px;
+}
+
+.third-facebook,
+.third-google {
+    width: 100%;
+    height: 100%;
+}

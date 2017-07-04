@@ -1,0 +1,50 @@
+<script id="tpl-backup-view" type="text/tpl">
+	<div class="backup-panel">
+	    <button class="switch-link"><%=I18N.fillDomText('backupRestore.advanceLabel')%></button>
+		<div class="compelete-label"><%=I18N.fillDomText('backupRestore.backupCompleted')%></div>
+		<ul class="g-popup-tools backup-list"></ul>
+		<div class="process-label f14 c-9"><%=I18N.fillDomText('backupRestore.backupProcess')%></div>
+		<div class="change-path hbox">
+			<div class="backto-label"><%=I18N.fillDomText('backupRestore.backtoLabel')%></div>
+			<input class="com-text path-input" maxLength="0"></input>
+			<button class="btn-change g-btn g-btn3"><%=I18N.fillDomText('backupRestore.changeLabel')%></button>
+		</div>
+		<div class="backup-footer">
+			<button class="g-btn g-btn1 btn-backup"><%=I18N.fillDomText('tools.backup')%></button>
+			<button class="g-btn g-btn4 btn-cancel"><%=I18N.fillDomText('common.cancelLabel')%></button>
+			<button class="g-btn g-btn1 btn-finish"><%=I18N.fillDomText('backupRestore.closeLabel')%></button>
+			<div class="view-backup"><%=I18N.fillDomText('backupRestore.viewBackup')%></div>
+			<div class="last-backup-time c-9">
+				<span class="last-label"><%=I18N.fillDomText('backupRestore.lastBackupLabel')%></span>
+				<span class="time"></span>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script id="tpl-backup-item-view" type="text/tpl">
+    <li class="backup-item">
+        <div class="g-tools-con">
+            <p class="fl tools-l">
+                <span class="icon-tools"></span>
+                <span class="ico-warng-small">&nbsp;</span>
+                <span class="ico-pass-small">&nbsp;</span>
+            </p>
+
+            <p class="fl tools-r cbox">
+                <span class="con">
+                    <span class="name te"></span>
+                    <span class="ico-loading20"></span>
+                    <span class="num animation fadeIn te fl"><em class="c-red">0</em>0</span>
+                    <span class="size f12"></span>
+                </span>
+            </p>
+            <input type="checkbox" checked="" class="checkbox">
+            <div class="tools-load hide">
+                <div class="progress-bar">
+                    <span style="width: 0%"></span>
+                </div>
+            </div>
+        </div>
+    </li>
+</script>

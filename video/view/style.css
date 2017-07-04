@@ -1,0 +1,288 @@
+.g-video .list {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 5px;
+    width: 100%;
+    margin-top: 20px;
+    height: 97%;
+    box-sizing: border-box;
+}
+
+/*.g-video .g-media-thread-box:before {
+    position: absolute;
+    left: 27px;
+    content: "";
+    height: 97%;
+    border-left: 1px solid #ddd;
+}*/
+
+.g-video .g-media-thread {
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+.g-media-thread .header {
+    position: relative;
+    padding: 0 5px;
+}
+
+.g-media-thread .header {
+    margin-right: 6px;
+}
+
+.g-media-thread .header:hover input {
+    border-color: #39a6d4;
+}
+
+.g-media-thread strong {
+    font-weight: normal;
+}
+
+.g-media-thread .count {
+    background-color: #e3e3e3;
+    border-radius: 6px;
+    color: #555;
+    display: inline-block;
+    font-size: 10px;
+    line-height: 14px;
+    margin-left: 3px;
+    padding: 0 6px;
+    text-align: center;
+    vertical-align: 3px;
+}
+
+.g-media-thread .media-ctn {
+    padding: 5px 0 5px 10px;
+    margin-left: 10px;
+}
+
+.g-media-thread .g-media-item {
+    width: 176px;
+    height: 133px;
+    display: inline-block;
+    border: 1px solid #dbdbdb;
+    margin: 0 8px 8px 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    background-color: #ececec;
+}
+
+.g-media-thread .g-media-item.selected {
+    outline: 1px solid #39a6d4;
+    border: 1px solid #39a6d4;
+}
+
+.g-media-thread .video-image {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    overflow: hidden;
+}
+
+.g-media-thread .g-media-item img {
+    width: 100%;
+}
+
+.g-media-thread .select-item {
+    position: absolute;
+    bottom: -15px;
+    left: 5px;
+    z-index: 2;
+}
+
+.g-media-thread .video-duration {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    color: #fff;
+    padding: 0 4px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 2px;
+}
+
+.g-media-thread .info-detail {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: left;
+    bottom: 25px;
+    box-sizing: border-box;
+    height: 80px;
+    left: 0;
+    overflow: hidden;
+    padding: 5px;
+    position: absolute;
+    width: 100%;
+}
+
+.g-media-thread .control {
+    text-align: right;
+    bottom: 0;
+    box-sizing: border-box;
+    height: 25px;
+    left: 0;
+    overflow: hidden;
+    padding: 0 5px;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: none;
+}
+
+.g-media-thread input {
+    vertical-align: top;
+    margin-right: 3px;
+}
+
+.g-media-thread .date {
+    font-size: 18px;
+    line-height: 14px;
+    vertical-align: top;
+    cursor: default;
+}
+
+/*.g-media-thread .g-media-item:hover .control{
+	display: block;
+	-webkit-animation:fadeInUp 0.5s .1s ease both;
+}
+
+@-webkit-keyframes fadeInUp{
+	0%{opacity:0;
+	-webkit-transform:translateY(20px)}
+	100%{opacity:1;
+	-webkit-transform:translateY(0)}
+}*/
+
+.g-media-thread .info-detail .nameLabel,
+.g-media-thread .info-detail .dateLabel,
+.g-media-thread .info-detail .sizeLabel,
+.g-media-thread .info-detail .ext {
+    color: #939393;
+}
+
+.g-media-thread .info-detail .name,
+.g-media-thread .info-detail .date-info,
+.g-media-thread .info-detail .size {
+    color: #fff;
+}
+
+.g-media-thread .info-detail .name {
+    width: 54px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.g-media-thread .btn-play {
+    width: 20px;
+    height: 100%;
+    cursor: pointer;
+    background: url("../images/play.png") no-repeat center;
+}
+
+.g-media-thread .btn-play:hover {
+    background: url("../images/play-hover.png") no-repeat center;
+}
+
+.g-media-thread .btn-play:active {
+    background: url("../images/play-active.png") no-repeat center;
+}
+
+.g-media-thread .btn-info {
+    width: 20px;
+    height: 100%;
+    cursor: pointer;
+    background: url("../images/info.png") no-repeat center;
+}
+
+.g-media-thread .btn-info:hover {
+    background: url("../images/info-hover.png") no-repeat center;
+}
+
+.g-media-thread .btn-info:active {
+    background: url("../images/info-active.png") no-repeat center;
+}
+
+.g-video-process-ctn .process-label {
+    margin-bottom: 20px;
+}
+
+.g-media-empty-info {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+.g-media-empty-info .empty-label {
+    height: 127px;
+    width: 100%;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    overflow: hidden;
+    background: url("../images/empty-bg.png") no-repeat center top;
+}
+
+.g-media-empty-info .empty-label span {
+    position: relative;
+    top: 160px;
+    left: 10px;
+}
+
+.g-media-empty-info .goto-youtube {
+    margin-top: 20px;
+}
+
+/*tips提示*/
+
+.g-video-tips-box .g-content {
+    top: 60px;
+}
+
+.g-video .g-video-tips {
+    display: none;
+}
+
+.g-video-tips-box .g-video-tips {
+    display: -webkit-box;
+}
+
+.g-video-tips {
+    display: none;
+    padding: 0 10px 0 20px;
+    height: 28px;
+    line-height: 28px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(214, 245, 255, 0.8);
+}
+
+.g-video-tips .ico-remind-small {
+    -webkit-box-flex: 1;
+    max-width: 90%;
+    display: block;
+}
+
+.ico-close-blue {
+    width: 20px;
+    height: 20px;
+    display: block;
+    cursor: pointer;
+    background: url("../../common/images/ico/ico-close-blue.png") no-repeat center;
+}
+
+.ico-close-blue:hover {
+    background: url("../../common/images/ico/ico-close-blue-hover.png") no-repeat center;
+}
+
+.ico-close-blue:active {
+    background: url("../../common/images/ico/ico-close-blue-active.png") no-repeat center;
+}

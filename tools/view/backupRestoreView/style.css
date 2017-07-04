@@ -1,0 +1,614 @@
+.backup-restore-window .g-window-ctn .backup-panel {
+    box-sizing: border-box;
+    position: absolute;
+    width: 716px;
+    height: 330px;
+    /*	border: 1px #ccc solid;*/
+}
+
+.backup-restore-window .g-window-ctn {
+    background-color: #f9f9f9;
+}
+
+.backup-restore-window.g-window .ico-min {
+    right: 30px;
+}
+
+.backup-restore-window .backup-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.backup-restore-window .btn-backup,
+.backup-restore-window .btn-cancel,
+.backup-restore-window .btn-finish,
+.backup-restore-window .btn-next,
+.backup-restore-window .btn-close {
+    display: block;
+    margin: auto;
+    height: 34px;
+    min-width: 140px;
+}
+
+.backup-restore-window .compelete-label {
+    display: none;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.backup-restore-window .process-label {
+    position: absolute;
+    bottom: 65px;
+    width: 690px;
+    text-align: center;
+    display: none;
+}
+
+.backup-restore-window .btn-cancel {
+    display: none;
+}
+
+.backup-restore-window .btn-finish {
+    display: none;
+}
+
+.backup-restore-window .change-path {
+    display: none;
+    position: absolute;
+    width: 100%;
+    bottom: 75px;
+    text-align: center;
+}
+
+.backup-restore-window .backto-label,
+.backup-restore-window .btn-change {
+    display: inline-block;
+}
+
+.backup-restore-window .btn-change {
+    min-width: 88px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.backup-restore-window .path-input {
+    width: 470px;
+    height: 30px;
+    margin: 0 7px 0 0;
+}
+
+.backup-restore-window .view-backup {
+    display: none;
+}
+
+.backup-restore-window .switch-link {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    padding: 0 10px;
+    height: 22px;
+    line-height: 20px;
+    border: 1px solid #d5d5d5;
+    color: #666;
+    cursor: pointer;
+    background-color: #f8f8f8;
+}
+
+.backup-restore-window .switch-link:before {
+    position: absolute;
+    right: -9px;
+    top: 2px;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+    -webkit-transform: rotate(45deg);
+}
+
+.backup-restore-window .basic {
+    left: 37px;
+    right: auto;
+}
+
+.backup-restore-window .basic:before {
+    left: -9px;
+    right: auto;
+    -webkit-transform: rotate(-135deg);
+}
+
+.backup-restore-window .view-backup {
+    position: relative;
+    left: 120px;
+}
+
+.backup-restore-window .last-backup-time {
+    padding-top: 5px;
+
+}
+
+/*-- 弹出层样式
+--------------------------------------------------*/
+.backup-restore-window .g-popup-tools {
+    margin: 55px 18px;
+}
+
+.backup-restore-window .g-tools-con {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+.backup-restore-window .g-popup-tools li {
+    float: left;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+.backup-restore-window .g-tools-con .checkbox {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+
+.backup-restore-window .g-tools-con .tools-load {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    z-index: 2;
+    width: 100%;
+    padding: 0 13px;
+    box-sizing: border-box;
+    /*    background-color: rgba(0, 180, 255, 0.4);
+        cursor: default;*/
+}
+
+.backup-restore-window .g-tools-con .tools-l {
+    width: 100%;
+    height: 120px;
+}
+
+.backup-restore-window .g-tools-con .tools-r {
+    width: 100%;
+    text-align: center;
+}
+
+.backup-restore-window .g-tools-con .tools-r .con {
+    display: block;
+    width: 100%;
+}
+
+.backup-restore-window .g-tools-con .tools-r .name {
+    position: absolute;
+    width: 100%;
+    margin-top: -15px;
+    color: #666;
+    font-size: 14px;
+    display: block;
+}
+
+.backup-restore-window .g-tools-con .tools-r .num {
+    display: none;
+    min-width: 20px;
+    padding: 0 5px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #0aa8dd;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    margin: -50px 0 0 10px;
+    position: absolute;
+    left: 50%;
+
+}
+
+.animation {
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-delay: .2s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+}
+
+.backup-restore-window .g-tools-con .tools-r .f12 {
+    display: none;
+}
+
+.backup-restore-window .ico-tools-contact,
+.backup-restore-window .ico-tools-message,
+.backup-restore-window .ico-tools-records,
+.backup-restore-window .ico-tools-video,
+.backup-restore-window .ico-tools-picture,
+.backup-restore-window .ico-tools-music,
+.backup-restore-window .ico-tools-app {
+    height: 118px;
+    display: block;
+    background: url("../../images/ico-contacts.png") no-repeat center;
+}
+
+.backup-restore-window .ico-tools-message {
+    background: url("../../images/ico-message.png") no-repeat center;
+}
+
+.backup-restore-window .ico-tools-records {
+    background: url("../../images/ico-records.png") no-repeat center;
+}
+
+.backup-restore-window .ico-tools-app {
+    background: url("../../images/ico-app.png") no-repeat center;
+}
+
+.backup-restore-window .ico-tools-picture {
+    background: url("../../images/ico-picture.png") no-repeat center;
+}
+
+/*.backup-restore-window .g-tools-con:hover .tools-l {
+    padding-bottom: 1px;
+}
+
+.backup-restore-window .g-tools-con:hover .tools-l,
+.backup-restore-window .g-tools-con:hover .tools-r {
+    border-bottom: none;
+}
+
+.backup-restore-window .g-tools-con:active .tools-l,
+.backup-restore-window .g-tools-con:active .tools-r {
+
+}*/
+
+/*横向排列重置*/
+.backup-restore-window .g-tools-list {
+    width: 716px;
+    height: 330px;
+    margin: 0px;
+}
+
+.backup-restore-window .g-tools-list {
+    margin: 55px 18px;
+}
+
+.backup-restore-window .g-tools-list li {
+    float: left;
+    margin: 0 0 10px 10px;
+    cursor: pointer;
+}
+
+.backup-restore-window .g-tools-box li {
+    cursor: default;
+}
+
+.backup-restore-window .g-tools-list .g-tools-con {
+    width: 158px;
+    height: 70px;
+}
+
+.backup-restore-window .g-tools-list .g-tools-con .tools-l {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.backup-restore-window .g-tools-list .icon-tools {
+    height: 100%;
+    width: 60px;
+}
+
+.backup-restore-window .g-tools-list .ico-warng-small,
+.backup-restore-window .g-tools-list .ico-pass-small {
+    position: absolute;
+    left: 35px;
+    top: 29px;
+    z-index: 1;
+    display: none;
+}
+
+.backup-restore-window .g-tools-list .ico-loading20 {
+    margin: 0 0 0 -3px;
+}
+
+.backup-restore-window .g-tools-list .ico-tools-contact {
+    background: url("../../images/ico-contacts-small.png") no-repeat center;
+}
+
+.backup-restore-window .g-tools-list .ico-tools-message {
+    background: url("../../images/ico-message-small.png") no-repeat center;
+}
+
+.backup-restore-window .g-tools-list .ico-tools-records {
+    background: url("../../images/ico-records-small.png") no-repeat center;
+}
+
+.backup-restore-window .g-tools-list .ico-tools-app {
+    background: url("../../images/ico-app-small.png") no-repeat center;
+}
+
+.backup-restore-window .g-tools-list .ico-tools-picture {
+    background: url("../../images/ico-picture-small.png") no-repeat center;
+}
+
+.backup-restore-window .g-tools-list .ico-tools-music {
+    background: url("../../images/ico-music-small.png") no-repeat center;
+}
+
+.backup-restore-window .g-tools-list .ico-tools-video {
+    background: url("../../images/ico-video-small.png") no-repeat center;
+}
+
+.backup-restore-window .g-tools-list .g-tools-con .tools-r {
+    width: 98px;
+    padding: 0 5px 0 0;
+    height: 70px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.backup-restore-window .g-tools-list .g-tools-con .tools-r .name {
+    position: static;
+    margin: 0;
+    text-align: left;
+}
+
+.backup-restore-window .g-tools-list .g-tools-con .tools-r .num {
+    position: static;
+    min-width: 10px;
+    max-width: 50px;
+    padding: 0;
+    color: #00aae3;
+    margin: 0 5px 0 0;
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: bottom;
+    background: none;
+}
+
+.backup-restore-window .g-tools-list .g-tools-con .tools-r .f12 {
+    display: block;
+}
+
+/*
+
+.backup-restore-window .g-tools-list .g-tools-con:hover .tools-l {
+    background-color: #fff;
+}
+
+.backup-restore-window .g-tools-list .g-tools-con:hover .tools-r {
+    background-color: #d8d8d8;
+}
+
+.backup-restore-window .g-tools-list .g-tools-con:active .tools-l {
+    background-color: #e6e4e5;
+}
+
+.backup-restore-window .g-tools-list .g-tools-con:active .tools-r {
+    background-color: #c0c0c0;
+}
+*/
+
+/*End*/
+
+/*还原样式*/
+.backup-restore-window .restore-panel {
+    box-sizing: border-box;
+    position: absolute;
+    width: 714px;
+    height: 330px;
+}
+
+.backup-restore-window .select-label {
+    display: inline-block;
+    top: 13px;
+    position: absolute;
+}
+
+.backup-restore-window .btn-restore-folder {
+    display: inline-block;
+    right: 0;
+    top: 10px;
+    position: absolute;
+}
+
+.backup-restore-window .restore-file-list {
+    margin-top: 55px;
+    height: 210px;
+    border: 1px solid #ddd;
+    overflow: auto;
+}
+
+.backup-restore-window .restore-file-list li:last-child {
+    border-bottom: none;
+}
+
+.backup-restore-window .restore-file-item {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.backup-restore-window .cur {
+    background-color: #eee;
+}
+
+.backup-restore-window .restore-file-item .time {
+    position: absolute;
+    right: 26px;
+}
+
+.backup-restore-window .restore-file-item .file-name {
+    cursor: pointer;
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+.backup-restore-window .restore-file-item .file-name:hover {
+    color: #1fb3e5;
+}
+
+.backup-restore-window .restore-list {
+    padding: 10px 0 0 20px;
+}
+
+.backup-restore-window .restore-item {
+    margin-right: 5px;
+    width: 85px;
+    border-radius: 5px;
+    /*border: 1px solid #cecece;*/
+    overflow: hidden;
+}
+
+.backup-restore-window .restore-item .icon {
+    display: block;
+    /*border-right: 1px solid #cecece;*/
+    width: 34px;
+    height: 32px;
+    padding: 0;
+}
+
+.backup-restore-window .restore-item .ico-contact {
+    background: url("../../images/ico-contacts-small.png") no-repeat center;
+}
+
+.backup-restore-window .restore-item .ico-message {
+    background: url("../../images/ico-message-small.png") no-repeat center;
+}
+
+.backup-restore-window .restore-item .ico-records {
+    background: url("../../images/ico-records-small.png") no-repeat center;
+}
+
+.backup-restore-window .restore-item .ico-app {
+    background: url("../../images/ico-app-small.png") no-repeat center;
+}
+
+.backup-restore-window .restore-item .ico-picture {
+    background: url("../../images/ico-picture-small.png") no-repeat center;
+}
+
+.backup-restore-window .restore-item .ico-music {
+    background: url("../../images/ico-music-small.png") no-repeat center;
+}
+
+.backup-restore-window .restore-item .ico-video {
+    background: url("../../images/ico-video-small.png") no-repeat center;
+}
+
+.backup-restore-window .restore-item .number {
+    /*background-color: #e6e5e5;*/
+    width: 50px;
+    height: 32px;
+    line-height: 32px;
+    /*text-align: center;*/
+    display: block;
+}
+
+.backup-restore-window .btn-restore {
+    height: 34px;
+    min-width: 140px;
+}
+
+.backup-restore-window .restore-process,
+.backup-restore-window .restore-no-file {
+    position: absolute;
+    left: 0;
+    top: 55px;
+    width: 100%;
+    height: 210px;
+    color: #999;
+    display: none;
+}
+
+.backup-restore-window .restore-process {
+    top: auto;
+    bottom: 36px;
+    height: 86px;
+}
+
+/*.backup-restore-window .restore-no-file {
+    top: 130px;
+    left: 250px;
+    position: absolute;
+}*/
+
+.backup-restore-window .btn-restore {
+    display: none;
+    margin-left: 20px
+}
+
+.backup-restore-window .btn-close {
+    display: none;
+}
+
+.backup-restore-window .pre-link {
+    cursor: pointer;
+    display: none;
+}
+
+.backup-restore-window .restore-panel .backup-footer {
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+/*loading  20*20*/
+.ico-loading20 {
+    position: absolute;
+    margin: -50px 0 0 15px;
+    z-index: 2;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    border: 3px solid #0baee0;
+    overflow: hidden;
+    background: #0baee0;
+    -webkit-animation: 1s linear infinite ico-loading20;
+}
+
+.ico-loading20:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border-radius: 100%;
+    border: 1px solid #fff;
+}
+
+.ico-loading20:after {
+    position: absolute;
+    left: 2px;
+    top: -1px;
+    width: 5px;
+    height: 5px;
+    content: "";
+    border-radius: 100%;
+    background-color: #0baee0;
+    z-index: 1;
+}
+
+@-webkit-keyframes ico-loading20 {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}

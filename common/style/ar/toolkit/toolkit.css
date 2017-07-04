@@ -1,0 +1,26 @@
+﻿body[language="arabic"] .g-tools-moudle{direction: rtl;}
+body[language="arabic"] .g-tools-info ul li{float: right;}
+body[language="arabic"] .g-tools-info ul li i.icon{float: right;}
+/*backup*/
+body[language="arabic"] .backup-restore-window .switch-link{left: 27px;right: auto;}
+body[language="arabic"] .backup-restore-window .basic{right: 40px;left:auto;}
+body[language="arabic"] .backup-restore-window .g-popup-tools li{float: right;}
+body[language="arabic"] .backup-restore-window .g-tools-con .checkbox{right: 5px;left:auto;}
+body[language="arabic"] .backup-restore-window .g-tools-con .tools-l{float: right;}
+body[language="arabic"] .backup-restore-window .g-tools-list .g-tools-con .tools-r .name{text-align: right;}
+body[language="arabic"] .backup-restore-window .g-tools-list .g-tools-con .tools-r .num{float: right;margin: 0 0 0 5px}
+body[language="arabic"] .backup-restore-window .g-tools-list .g-tools-con .tools-r{padding:0 0 0 5px;}
+body[language="arabic"] .backup-restore-window .g-tools-list .ico-loading20{ left: 83px;}
+
+/*restore*/
+body[language="arabic"] .backup-restore-window .restore-panel{direction: rtl;}
+body[language="arabic"] .backup-restore-window .btn-restore-folder{left: 0;right: auto;}
+body[language="arabic"] .backup-restore-window .restore-file-item .time{left: 26px;right: auto;}
+body[language="arabic"] .backup-restore-window .g-tools-list li{float: right;}
+body[language="arabic"] .backup-restore-window .restore-file-item .file-name{margin-right: 5px;margin-left: 0}
+body[language="arabic"] .backup-restore-window .btn-restore{margin-left: 0; margin-right:20px; }
+body[language="arabic"] .ico-remind{background-position: right center; padding-left:0;padding-right: 23px;}
+/*deviceinfo*/
+body[language="arabic"] .g-deviceInfo-center{direction: rtl;}
+body[language="arabic"] .g-deviceInfo-center ul li i{margin-right: 10px;margin-left: 0}
+

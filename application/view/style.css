@@ -1,0 +1,315 @@
+.g-application {
+    width: 100%;
+    height: 100%;
+}
+
+.g-application .g-panels {
+    position: absolute;
+    right: 220px;
+    left: 0;
+    height: 100%;
+}
+
+.g-application .g-grid-checkbox {
+
+}
+
+.g-app-action-col .move {
+    min-width: 50px;
+    margin-left: 5px;
+}
+
+.g-app-action-col .progress-bar,
+.g-app-action-col .progress-bar-stripes {
+    width: 82px;
+}
+
+.g-app-name-col img {
+    width: 38px;
+    height: 38px;
+    display: block;
+}
+
+.g-app-name-col {
+    width: 100%;
+    -webkit-box-align: center;
+}
+
+.g-app-name-col .name {
+    height: 50px;
+    line-height: 50px;
+    margin-left: 12px;
+    font-size: 14px;
+    width: 180px;
+}
+
+.g-app-name-col .name .title {
+    width: 100%;
+}
+
+.g-app-name-col .name. title {
+    width: 100%;
+}
+
+.g-app-name-col .version {
+    line-height: 28px;
+    color: #999;
+}
+
+.app-detail .like-apps {
+    position: absolute;
+    padding: 6px;
+    height: 100%;
+}
+
+.g-app-pos-phone,
+.g-app-pos-sd {
+    width: 11px;
+    height: 15px;
+}
+
+.g-app-pos-phone {
+    background: url(../images/phone.png) no-repeat;
+}
+
+.g-app-pos-sd {
+    background: url(../images/sd.png) no-repeat;
+}
+
+.app-version-col {
+    width: 160px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.app-version-col .cur-version {
+    max-width: 100px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: -13px;
+}
+
+.app-version-col .new-version {
+    width: 40px;
+    overflow: hidden;
+}
+
+.app-version-col .ar {
+    width: 20px;
+    height: 16px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    background: url(../images/ar.png) no-repeat center 6px;
+}
+
+/*应用详情*/
+.g-application-detail {
+    width: 210px;
+    padding: 20px 10px 0 9px;
+    /*background-color: #f7f8f9;*/
+    /*border-bottom: 1px #ddd solid;*/
+}
+
+.g-application-detail .pic {
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+    display: block;
+}
+
+.g-application-detail .pic img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.g-application-detail .title {
+    height: 24px;
+    font-size: 14px;
+    padding: 3px 0 2px;
+}
+
+.g-application-detail .title a {
+    color: #333;
+}
+
+.g-application-detail .title a:hover {
+    color: #1fb3e5;
+}
+
+.g-application-detail .g-btn2 {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.g-application-detail .info {
+    padding: 10px 10px 0 3px;
+    clear: both;
+}
+
+.g-application-detail .info li {
+    padding-bottom: 6px;
+    width: 182px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.g-application-detail .button {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.g-system-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, .8);
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+.g-system-mask .ctn {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: -32px;
+}
+
+.g-system-mask .ctn p {
+    text-align: left;
+}
+
+.g-system-mask .ctn button {
+    margin-top: 12px;
+}
+
+.g-application .g-empty-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/*详情与猜你喜欢*/
+.g-application .top,
+.g-application .detail {
+    position: absolute;
+    width: 220px;
+    right: 0;
+    height: 100%;
+    border-left: 1px #c6c6c6 solid;
+    overflow: hidden;
+}
+
+.g-app-recommend-list .title {
+    padding: 12px 5px 0 10px;
+    font-size: 16px;
+    font-family: Roboto-Light;
+}
+
+.g-app-recommend-list .list {
+    padding: 10px 4px 0;
+}
+
+.g-app-recommend-list .list li {
+    padding: 6px;
+}
+
+.g-app-recommend-list .list li:hover {
+    background-color: #f0f0f0;
+}
+
+.g-app-recommend-list .column1 img {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+}
+
+.g-app-recommend-list .column2 {
+    width: 100px;
+    -webkit-box-flex: 1;
+    font-family: Roboto-Light;
+}
+
+.g-app-recommend-list .column2 h3 {
+    padding-bottom: 3px;
+}
+
+.g-app-recommend-list .column3 {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    display: none;
+}
+
+.g-app-recommend-list .list li:hover .column3 {
+    display: block;
+}
+
+.g-list-app-search-header {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+}
+
+.g-list-app-search-header .static {
+    width: 70%;
+    display: inline-block;
+    text-align: center;
+}
+
+/*-- tips --*/
+.g-app-tips {
+    width: 210px;
+    /*left: 50px;*/
+    /*bottom: 100px;*/
+    /*border: 1px solid #bfbfbf;*/
+    padding: 8px 10px;
+    background-color: #fff;
+}
+
+.g-app-tips .version {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.g-app-tips .version .c-9 {
+    max-width: 100px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: -3px;
+}
+
+.g-app-tips .info {
+    word-wrap: break-word;
+    padding-top: 5px;
+}
+
+.g-app-tips .ar {
+    width: 20px;
+    height: 16px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    background: url(../images/ar.png) no-repeat center 6px;
+}
+
+.g-app-tips.arr-lb .arr {
+    top: auto;
+    bottom: 20px;
+}
+
+/*-- End --*/
+
+
+
+
+

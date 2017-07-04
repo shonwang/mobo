@@ -1,0 +1,15 @@
+
+.g-ui-dialog .g-window-ctn {
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+.g-dialog-footer {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    height: 44px;
+}
+
+.g-dialog-footer button {
+    margin: 0 9px;
+}

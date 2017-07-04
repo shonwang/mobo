@@ -1,0 +1,133 @@
+<script id="tpl-setting-view" type="text/tpl">
+
+	<div class="g-setting-moudle hbox">
+		<div class="left-nav hbox">
+			<nav class="f14 c-6">
+				<li class="light"><%=I18N.fillDomText('setting.generalLabel')%></li>
+				<li><%=I18N.fillDomText('setting.LocationsLabel')%></li>
+				<li><%=I18N.fillDomText('setting.AppllicationsLabel')%></li>
+				<li><%=I18N.fillDomText('setting.remindersLabel')%></li>
+			</nav>
+		</div>
+		<div class="right-module c-9 f14 hbox">
+			<div class="general-module" style="display:block">
+				<ul>
+					<li class="list-site">
+						<h4 class="c-3"><%=I18N.fillDomText('setting.swicthSiteLabel')%></h4>
+						<p></p>
+						<div class="g-select">
+							<a href="javascript:;" class="g-select-mod">
+							
+							<span class="site"><img class="logo-img" src="" /><span class="siteName"></span></span><span class="fr"><i class="g-arrow"></i></span></a>
+						</div>
+					</li>
+					<li class="list-language">
+						<h4 class="c-3"><%=I18N.fillDomText('setting.Language')%></h4>
+						<p></p>
+						<div class="g-select">
+							<a href="javascript:;" class="g-select-mod"><span class="language"></span><span class="fr"><i class="g-arrow"></i></span></a>
+						</div>
+					</li>
+					<li>
+						<h4 class="c-3"><%=I18N.fillDomText('setting.generalConnetTitle')%></h4>
+						<label><input class="alwaysOpenMG" name="" type="checkbox" value="">
+						 <span class="check"><%=I18N.fillDomText('setting.generalConnetText')%></span></label>
+						<label><input class="installUnFinishDApps" name="" type="checkbox" value="">
+						 <span class="check"><%=I18N.fillDomText('setting.generalConnetTextTwo')%></span></label>
+					</li>
+					<li>
+						<h4 class="c-3"><%=I18N.fillDomText('setting.generalStartupTitle')%></h4>
+						<label><input class="atuoUnFinish" name="" type="checkbox" value="">
+						<span class="check"><%=I18N.fillDomText('setting.generalStartupText')%><span></label>
+					</li>
+					
+					<li class="onClose">
+						<h4 class="c-3"><%=I18N.fillDomText('setting.generalCloseTitle')%></h4>
+						<label><input name="onClose" type="radio" value="">
+						<span class="check"><%=I18N.fillDomText('setting.generalCloseText')%></span></label>
+						<label><input name="onClose" type="radio" value="">
+						<span class="check"><%=I18N.fillDomText('setting.generalCloseTextTwo')%></span></label>
+						<!--<label><input name="onClose" type="radio" value="">
+						<span class="check"><%=I18N.fillDomText('setting.generalCloseTextThree')%></span></label>-->
+					</li>
+					<li class="atuoUpdate hide">
+						<h4 class="c-3"><%=I18N.fillDomText('setting.generalUpdateTitle')%></h4>
+						<label><input class="atuoUpdate" name="" type="checkbox" value="">
+						<span class="check"><%=I18N.fillDomText('setting.generalUpdateText')%></span></label>
+					</li>
+					 
+				</ul>
+			</div>
+			<div class="locations-module">
+				<ul>
+					<li>
+						<h4 class="c-3"><%=I18N.fillDomText('setting.locationsResource')%></h4>
+						<p>
+						<input type="text" readonly class="resourcePath com-text"/>
+						<button class="g-btn g-btn3 te resourcePathBtn"><%=I18N.fillDomText('setting.locationsBtn')%></button>
+						</p>
+					</li>
+					<li>
+						<h4 class="c-3"><%=I18N.fillDomText('setting.locationsBackup')%></h4>
+						<p>
+						<input type="text"  readonly class="backupPath com-text"/>
+						<button class="g-btn g-btn3 te backupPathBtn"><%=I18N.fillDomText('setting.locationsBtn')%></button>
+						</p>
+					</li>
+					<li>
+						<h4 class="c-3"><%=I18N.fillDomText('setting.locationsScreen')%></h4>
+						<p>
+						<input type="text"  readonly class="screenshootsPath com-text" />
+						<button class="g-btn g-btn3 te screenPathBtn"><%=I18N.fillDomText('setting.locationsBtn')%></button>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="appllications-module">
+				<ul>
+					<li>
+						<h4 class="c-3"><%=I18N.fillDomText('setting.appllicationsFileTitle')%></h4>
+						<label><input class="apkAssociate" name="" type="checkbox" value="">
+						<span class="check"><%=I18N.fillDomText('setting.appllicationsFileText')%></span></label>
+					</li>
+					<li class="defaultInstalled">
+						<h4 class="c-3"><%=I18N.fillDomText('setting.appllicationsDefaultTitle')%></h4>
+						<label><input name="default" type="radio" value="">
+						<span class="check"><%=I18N.fillDomText('setting.appllicationsDefaultText')%></span></label>
+						<label><input name="default" type="radio" value="">
+						<span class="check"><%=I18N.fillDomText('setting.appllicationsDefaultTextTwo')%></span></label>
+						<label><input name="default" type="radio" value="">
+						<span class="check"><%=I18N.fillDomText('setting.appllicationsDefaultTextThree')%></span></label>
+					</li>
+				</ul>
+			</div>
+			<div class="reminders-module">
+				<ul>
+					<li class="clientUpdateRemind">
+						<h4 class="c-3"><%=I18N.fillDomText('setting.remindersUpdateTitle')%></h4>
+						<label><input name="update" type="radio" value="">
+						<span class="check"><%=I18N.fillDomText('setting.remindersUpdateText','7')%></span></label>
+						<label><input name="update" type="radio" value="">
+						<span class="check"><%=I18N.fillDomText('setting.remindersUpdateText','3')%></span></label>
+						<label><input name="update" type="radio" value="">
+						<span class="check"><%=I18N.fillDomText('setting.remindersUpdateTextTwo')%></span></label>
+					</li>
+					<li class="backupReminders">
+						<h4 class="c-3"><%=I18N.fillDomText('setting.remindersBackupTitle')%></h4>
+						<label><input name="backup" type="radio" value="">
+						<span class="check"><%=I18N.fillDomText('setting.remindersBackupText','7')%></span></label>
+						<label><input name="backup" type="radio" value="">
+						<span class="check"><%=I18N.fillDomText('setting.remindersBackupText','3')%></span></label>
+						<label><input name="backup" type="radio" value="">
+						<span class="check"><%=I18N.fillDomText('setting.remindersUpdateTextTwo')%></span></label>
+					</li>
+					<li>
+						<h4 class="c-3"><%=I18N.fillDomText('setting.remindersPopularTitle')%></h4>
+						<label><input class="popularActivities" name="" type="checkbox" value="">
+						<span class="check"><%=I18N.fillDomText('setting.remindersPopularText')%></span></label>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</script>

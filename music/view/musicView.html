@@ -1,0 +1,74 @@
+<script id="tpl-music-main-view" type="text/tpl">
+    <div class="g-music">
+        <div id="i-music-header" class="g-toolbar hbox">
+            <input type="checkbox" class="chkbox-all"></input>
+            <button class="btn-import ico-btn ico-music"><%=I18N.fillDomText('music.ImportMusic')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="btn-export ico-btn ico-export"><%=I18N.fillDomText('common.Export')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="btn-delete ico-btn ico-delete"><%=I18N.fillDomText('common.Delete')%></button>
+            <i class="g-toolbar-line"></i>
+        </div>
+        <div class="g-content hbox">
+            <div class="pic_content" style="display: none;"></div>
+            <div  class="list"></div>
+        </div>
+    </div>
+        
+</script>
+<!--列表栏目  start-->
+<script  id="tpl-music-list-item" type="text/tpl">
+  <div class="music-list-item c-9 hbox" data-url="<%=data.sMusicRemotePath%>" data-id="<%=data.id%>">
+        <div class="musicName c-3 te" >
+            <%=data.sMusicName%>
+        </div>
+        <div class="play-icon cbox">
+            <span class="ico-loading16" style="display:none;"></span>
+            <button class="play-control <%=data.playing=="1"?'btn-pause':'btn-play'%>" i18n-Key="<%=['mp3','m4a','ogg','wav'].indexOf(data.format)>-1?'video.playLabel':'music.formaterror'%>" data-url="<%=data.sMusicRemotePath%>" data-id="<%=data.id%>"></button>
+        </div>
+        <div class="artist te">
+            <%=data.sMusicArtist%>
+        </div>
+         <div class="duration">
+            <%=data.duration%>
+        </div>
+        <div class="format">
+            <%=data.format%>
+        </div>
+        <div class="size">
+            <%=data.size%>
+        </div>
+       <div class="<%=data.isRing||data.isSms||data.isAlarm?'settings hasSetted':'settings'%>">
+             <button class="<%=data.isRing?'phone cur':'phone'%>"  name="setasring"  data-url="<%=data.sMusicRemotePath%>" title="" data-id="<%=data.id%>"><i></i></button>
+             <button class="<%=data.isSms?'sms cur':'sms'%>" name="setasmsg" data-url="<%=data.sMusicRemotePath%>" title="" data-id="<%=data.id%>"><i></i></button>
+             <button class="<%=data.isAlarm?'ring cur':'ring'%>" name="setasalarm" data-url="<%=data.sMusicRemotePath%>"  title="" data-id="<%=data.id%>"><i></i></button>
+       </div>
+    </div>
+
+</script>
+<script id="tpl-music-grid-header" type="text/tpl">
+            <div class="music-list-header hbox">
+                <p class="name"><%=I18N.fillDomText('common.nameLabel')%><!--<i class="g-arrow"></i>--></p>
+                <p class="action">&nbsp;</p>
+                <p class="artist"><%=I18N.fillDomText('music.Artist')%></p>
+                <p class="time"><%=I18N.fillDomText('music.Time')%></p>
+                <p class="format"><%=I18N.fillDomText('music.Format')%></p>
+                <p class="size"><%=I18N.fillDomText('common.sizeLabel')%></p>
+         </div>
+</script>
+<script id="tpl-music-empty-info" type="text/tpl">
+    <div class="g-media-empty-info vbox">
+        <div class="empty-music"><%=I18N.fillDomText('music.emptyMusicLabel')%></div>
+        <button class="g-btn g-btn1 goto-downloadRingtones"><%=I18N.fillDomText('music.gotoRingtonesLabel')%></button>
+    </div>
+</script>
+<script id="tpl-music-nosd-info" type="text/tpl">
+    <div class="g-empty-state g-media-empty-info cbox">
+        <div class="con">
+            <img src="../src/music/images/no-sd.png">
+            <p class="info">
+                <%=I18N.fillDomText('common.noSdState')%>
+            </p>
+        </div>
+    </div>
+</script>

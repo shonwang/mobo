@@ -1,0 +1,35 @@
+.g-scr-prx{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.g-scr-prx-body{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: visible;
+}
+
+.g-scr-prx-content{
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.g-scr-prx-scroller{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 14px;
+    overflow: auto;
+}
+.g-scr-prx-scroller .g-line{
+    width: 1px;
+}

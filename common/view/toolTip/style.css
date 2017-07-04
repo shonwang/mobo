@@ -1,0 +1,15 @@
+/* @module tooltip-style */
+
+.g-tooltip {
+    position: absolute;
+    display: none;
+}
+
+.g-tooltip .n em {
+    display: block;
+    width: 100%;
+}
+
+.g-tooltip .d em {
+    padding-right: 20px;
+}

@@ -1,0 +1,103 @@
+<script id="tpl-home-main-view" type="text/tpl">
+    <div class="g-home">
+        <div class="g-home-bg">
+           <img src="home/images/home-bg.png"></img>
+        </div>
+        <div class="top">
+           <div class="g-mobile-screen">
+               <div class="picture">
+                   <div class="pic">
+                       <img></img>
+                       <div id="screen-black" style="position:absolute;width:100%;height:100%;background:#000;top:0;display:none;">
+                           <span style="display: block;width: 100%;"><%=i18n.fillDomText('common.screenBlackTipText')%></span>
+                       </div>
+                       <div class="screen-empty-info cbox"><%=i18n.fillDomText('driver.connectNoticeTitle')%></div>
+                       <div class="g-screen-action">
+                           <div class="con">
+                               <div class="refresh"><%=i18n.fillDomText('common.Refresh')%></div>
+                               <div class="capture"><%=i18n.fillDomText('common.captureLabel')%></div>
+                           </div>
+                       </div>
+                       <div id="wifi-screen-black" style="position:absolute;width:100%;height:100%;background:#000;top:0;display:none;">
+                           <span style="display: block; padding:10px;"><%=i18n.fillDomText('driver.wifiScreen')%></span>
+                       </div>
+                       <span class="g-screen-action-bg"></span>
+                   </div>
+                   
+                   <img  id="screenshot-loading" src="common/images/loading/loading.gif" style="display:none"></img>
+               </div>
+           </div>
+           
+           <div class="g-home-recommend">
+               <div class="inner-ctn">
+                   <header><%=i18n.fillDomText('common.featureText')%></header>
+                   <div class="middle">
+                       
+                   </div>
+                   <div class="split-line"></div>
+                   <div class="footer">
+                       <label>
+                           <input class="checkall" type="checkbox" checked></input><%=i18n.fillDomText('common.selectAllLabel')%>
+                       </label>
+                       
+                       <button class="g-btn g-btn1 install"><%=i18n.fillDomText('common.installText')%></button>
+                   </div>
+               </div>
+           </div>
+           
+           <div class="g-home-tools unconnected cbox">
+               <div class="tool all-memory">
+                   <div class="phone-memory">
+                       <div class="con">
+                           <div class="progress"></div>
+                       </div>
+                   </div>
+                   <div class="sd-memory sd-one">
+                       <div class="con">
+                           <div class="progress"></div>
+                       </div>
+                   </div>
+                   <div class="sd-memory sd-two" >
+                       <div class="con">
+                           <div class="progress"></div>
+                       </div>
+                   </div>
+               </div>
+               
+               <div class="tool backup" i18n-key="tools.backup">
+                   <button></button><span class="home-backup-label te"><%=i18n.fillDomText('tools.backup')%></span>
+               </div>
+               <div class="tool recovery" i18n-key="tools.restore">
+                   <button></button><span class="home-restore-label te"><%=i18n.fillDomText('tools.restore')%></span>
+               </div>
+               <div class="tool file"  i18n-key="tools.fileManager">
+                   <button></button><span class="home-fileManager-label te"><%=i18n.fillDomText('tools.fileManager')%></span>
+               </div>
+           </div>
+        </div>
+        <div class="bottom">
+        </div>
+        <div style="height:12px"></div>
+    </div>
+</script>
+
+<!--截屏成功消息提醒-->
+<script id="tpl-home-message-tip" type="text/tpl">
+    <span><%=message%></span>
+    <a href="javascript:void(0)" class="open special" style="margin-left: 12px"><%=openlabel%></a>
+</script>
+
+<script id="tpl-home-memory-tip" type="text/tpl">
+    <div class="memory-container cbox">
+      <div class="memory-info">
+        <p class="title c-9"><%=data.title%></p>
+        <p class="c-f">
+          <span class="total"><%=I18N.fillDomText('common.total')%></span>
+          <span class="total-value"><%=data.total%></span>
+          <span class="available"><%=I18N.fillDomText('common.available')%></span>
+          <span class="available-value"><%=data.avaliable%></span>
+        </p>
+      </div>
+      <button class="btn-manage g-btn g-btn2"><%=I18N.fillDomText('common.manage')%></button>
+    </div>
+</script>

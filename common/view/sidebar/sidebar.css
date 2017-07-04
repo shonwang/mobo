@@ -1,0 +1,455 @@
+.g-sidebar nav {
+    cursor: pointer;
+}
+
+.g-sidebar nav:last-child {
+    border-bottom: none;
+}
+
+.g-sidebar nav li:hover {
+    color: #00c8ff;
+    background-color: rgba(3, 16, 38, 0.25);
+
+}
+
+.g-sidebar nav li span {
+    font-size: 14px;
+    line-height: 40px;
+    color: #b1b6c0;
+    vertical-align: middle;
+    font-family: Roboto-Light;
+}
+
+.g-sidebar nav li span .c {
+    display: inline-block;
+    max-width: 120px;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.g-sidebar nav li.selected {
+    background-color: rgba(3, 16, 38, 0.35);
+}
+
+.g-sidebar nav li.selected span {
+    color: #00c8ff;
+}
+
+.g-sidebar .line {
+    margin: 10px 0;
+    height: 1px;
+    background: rgba(0, 0, 0, .2);
+}
+
+/*Icons*/
+.g-sidebar nav .icon {
+    display: inline-block;
+    width: 50px;
+    /*height: 40px;*/
+    vertical-align: middle;
+}
+
+/*
+.g-sidebar .home.selected {
+    background-color: #1483a8;
+}
+
+.g-sidebar .appres.selected {
+    background-color: #7261c5;
+}
+
+.g-sidebar .game.selected {
+    background-color: #5a921f;
+}
+
+.g-sidebar .rengtone.selected {
+    background-color: #a5207e;
+}
+
+.g-sidebar .wallpaper.selected {
+    background-color: #1a8680;
+}
+
+.g-sidebar .youtube.selected {
+    background-color: #902222;
+}
+
+.g-sidebar .more.selected {
+    background-color: #b0561f;
+}
+*/
+
+/*
+.g-sidebar .appres.selected span {
+    color: #9c871e;
+}
+
+.g-sidebar .game.selected span {
+    color: #4c9682;
+}
+
+.g-sidebar .rengtone.selected span {
+    color: #8e3374;
+}
+
+.g-sidebar .wallpaper.selected span {
+    color: #37782e;
+}
+
+.g-sidebar .youtube.selected span {
+    color: #9a2625;
+}
+
+.g-sidebar .more.selected span {
+    color: #a95932;
+}
+*/
+.g-sidebar .icon {
+    width: 30px;
+    height: 30px;
+    background: url(../../images/sidebar/ico-sidebar.png) no-repeat center;
+}
+
+.g-sidebar .home .icon {
+    background-position: center 0;
+}
+
+.g-sidebar .home.selected .icon {
+    background-position: center -30px;
+}
+
+.g-sidebar .appres .icon {
+    background-position: center -60px;
+}
+
+.g-sidebar .appres.selected .icon {
+    background-position: center -90px;
+}
+
+.g-sidebar .game .icon {
+    background-position: center -120px;
+}
+
+.g-sidebar .game.selected .icon {
+    background-position: center -150px;
+}
+
+.g-sidebar .rengtone .icon {
+    background-position: center -180px;
+}
+
+.g-sidebar .rengtone.selected .icon {
+    background-position: center -210px;
+}
+
+.g-sidebar .wallpaper .icon {
+    background-position: center -240px;
+}
+
+.g-sidebar .wallpaper.selected .icon {
+    background-position: center -270px;
+}
+
+.g-sidebar .youtube .icon {
+    background-position: center -300px;
+}
+
+.g-sidebar .youtube.selected .icon {
+    background-position: center -330px;
+}
+
+.g-sidebar .ebook .icon {
+    background-position: center -960px;
+}
+
+.g-sidebar .ebook.selected .icon {
+    background-position: center -990px;
+}
+
+.g-sidebar .more .icon {
+    background-position: center -360px;
+}
+
+.g-sidebar .more.selected .icon {
+    background-position: center -390px;
+}
+
+.g-sidebar .tools .tools {
+    background-position: center -420px;
+}
+
+.g-sidebar .tools .selected .tools {
+    background-position: center -450px;
+}
+
+.g-sidebar .tools .safety {
+    background-position: center -480px;
+}
+
+.g-sidebar .tools .selected .safety {
+    background-position: center 510px;
+}
+
+.g-sidebar .tools .genie {
+    position: relative;
+    background-position: center -1080px;
+}
+
+.g-sidebar .tools .selected .genie {
+    background-position: center -1110px;
+}
+
+.g-sidebar .local .icon {
+    height: 28px;
+}
+
+.g-sidebar .local .icon.contact {
+    background-position: center -540px;
+}
+
+.g-sidebar .selected .icon.contact {
+    background-position: center -570px;
+}
+
+.g-sidebar .local .icon.sms {
+    position: relative;
+    background-position: center -600px;
+}
+
+.g-sidebar .selected .icon.sms {
+    background-position: center -630px;
+}
+
+.g-sidebar .local .icon.app {
+    position: relative;
+    background-position: center -660px;
+}
+
+.g-sidebar .selected .icon.app {
+    background-position: center -690px;
+}
+
+.g-sidebar .local .icon.music {
+    background-position: center -720px;
+}
+
+.g-sidebar .selected .icon.music {
+    background-position: center -750px;
+}
+
+.g-sidebar .local .icon.picture {
+    background-position: center -780px;
+}
+
+.g-sidebar .selected .icon.picture {
+    background-position: center -810px;
+}
+
+.g-sidebar .local .icon.video {
+    background-position: center -840px;
+}
+
+.g-sidebar .selected .icon.video {
+    background-position: center -870px;
+}
+
+.g-sidebar .local .icon.ebook {
+    background-position: center -1020px;
+}
+
+.g-sidebar .selected .icon.ebook {
+    background-position: center -1050px;
+}
+.g-sidebar .tools .tools.first{
+	position:relative;
+}
+.g-sidebar .tools .tools.first:after {
+    position: absolute;
+    left: 35px;
+	top: 8px;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #de2d1a;
+	display:block;
+}
+.g-sidebar .tools .tools:after{
+	display:none;
+}
+/*.g-sidebar nav .icon.download {
+    margin: 0 7px 0 15px;
+    width: 22px;
+    height: 22px;
+    font-size: 10px;
+    line-height: 24px;
+    text-align: center;
+    color: #0aa8dd;
+    border: 1px solid #64686f;
+    border-radius: 100%;
+    vertical-align: middle;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    background-position: center -903px;
+}*/
+
+.g-sidebar nav .icon.download {
+    margin: 0 7px 0 15px;
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+    line-height: 26px;
+    text-align: center;
+    color: #0aa8dd;
+    vertical-align: middle;
+    background: url(../../images/sidebar/ico-sidebar.png) no-repeat center -902px, url(../../images/sidebar/ico-sidebar.png) no-repeat center -933px;
+}
+
+.g-sidebar nav .icon.num {
+    background: url(../../images/sidebar/ico-sidebar.png) no-repeat center -933px;
+}
+
+.g-sidebar nav.tools {
+    margin: 10px 0;
+}
+
+.g-sidebar .local li {
+}
+
+.g-sidebar .local li span {
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.g-sidebar .icon.tips:after {
+    position: absolute;
+    left: 30px;
+    top: 8px;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #de2d1a;
+}
+
+.task-nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(3, 16, 38, 0.25);
+}
+
+.task-nav .title {
+    font-size: 16px;
+    line-height: 38px;
+    color: #d7d7d7;
+    font-family: Roboto-Light;
+}
+
+.task-nav .title:hover {
+    background: none;
+}
+
+.g-sidebar nav.task-nav li:before {
+    height: 0;
+    width: 0;
+}
+
+.g-sidebar nav.task-nav .speed .c,
+.g-sidebar nav.task-nav .speed .c span {
+    color: #6d6d6d;
+    font-size: 14px;
+}
+
+.g-sidebar nav.task-nav .speed .s {
+    margin-left: 6px;
+    font-size: 12px;
+    color: #575656;
+}
+
+.g-sidebar nav.task-nav .count {
+    color: #d7d7d7;
+}
+
+.g-sidebar nav.task-nav .c-pr {
+    color: #00b5f2;
+}
+
+/*下载动画*/
+.animation {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: .2s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+}
+
+.animation-ctn {
+    position: absolute;
+    top: -85px;
+    left: 54px;
+    display: block;
+}
+
+.fadeOutDown {
+    width: 72px;
+    height: 72px;
+    display: block;
+    border-radius: 100%;
+    background: rgba(10, 168, 221, 0.6) url("../../images/sidebar/down.png") no-repeat center center;
+    /*-webkit-animation-name: fadeOutDown;*/
+}
+
+@-webkit-keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(60px)
+    }
+}
+
+.task-nav.down-box .animation-ctn {
+    position: absolute;
+    top: -160px;
+    left: 0;
+    display: block;
+}
+
+.task-nav.down-box {
+    color: #fff;
+    -webkit-animation: down-box linear infinite 2.3s alternate;
+}
+
+@-webkit-keyframes down-box {
+    0% {
+        opacity: 0;
+    }
+    50%, 65% {
+        opacity: 1;
+        background-color: #0aa8dd;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*断开手机 状态灰质*/
+/*
+.g-unconnected .local li,
+.g-unconnected .tools li {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.g-unconnected .tools li:hover,
+.g-unconnected .tools li:active,
+.g-unconnected .local li:hover,
+.g-unconnected .local li:active {
+    background-color: transparent;
+}
+*/
+
+

@@ -1,0 +1,55 @@
+define('russian:signin', function(require, exports, module){
+    var dictionary = {
+        signUpHeader: "Зарегестрироваться",
+        myAccountLabel: "Мой аккаунт",
+        logoutLabel: "Выйти",
+        errorEmailLabel: "Несуществующий email. Попробуйте другой",
+        emptyEmailLabel: "Это поле нужно заполнить",
+        shortPwdLabel: "Пароль должен иметь не менее 8 символов",
+        longPwdLabel: "Пароль должен иметь не быть 20 символов",
+        notMatchPwdLbel: "пароль не совпадает. Попробуйте ввести его еще раз",
+        usedEmailLabel: "Такой email уже используется. Попробуйте другой",
+        errorLoginLbel: "Пароль не совпадает. Введите пароль еще раз",
+        agreeLabel: "Я согласен",
+        userAgreenebtLabel: "Соглашение об использовании",
+        orLabel: "или",
+        forgotPwdLabel: "Забыли пароль?",
+        changeLabel: "Изменить",
+        sendLabel: "Отправить письмо с подтверждением",
+        changePwdLabel: "Изменить пароль",
+        pwdSuccessLabel: "Пароль изменен успешно!",
+        confirmLabel: "Подтвердить",
+        networkLabel: "Не удалось подключиться к сети. Пожалуйста, повторите попытку позже",
+        nullAccount: "Аккаунт",
+        errorPwdLabel: "Только буквы и цифры",
+        sendSuccessLabel: "Успешно отправлено",
+        errorCodeLabel: "Введеный код потверждения неверен",
+        imgUploadSuccess: "Загружено успешно",
+        imgUploadFailed: "Ошибка загрузки",
+        incorrectPwd: "Введеный пароль неверен. Попробуйте еще раз",
+        registerFailedLabel: "Регистрация нового аккаунта не удалась",
+        waitImageUploadLabel: "Пожалуйста подождите",
+        loginInputText:"Пароль",
+        conWordInputText:"Подтвердить пароль",
+        enterCodeInputText:"Введите код",
+        //20140811
+        samePwdLabel: "Выберите пароль, не похожий на предыдущий",
+        //20140812
+        errorPicLabel: "Неверный формат изображения. Вы можете загрузить jpg, gif или png файл.",
+		oldword:"Старый пароль",
+		newword:"Новый пароль",
+		conword:"Повтвердите пароль",
+        //20140917
+        selectPicFromPCLabel: "Выберите фотографию на вашем компьютере",
+        selectPicFromPhoneLabel: "Выберите фотографию на вашем телефоне",
+        promptConnect: "Пожалуйста, подключите ваше устройство через USB провод.",
+        setAsProfilePhoto: "Установить в качестве аватара",
+        promptPullPic: "Картинки из телефона закачиваются, пожалуйста, ожидайте",
+        promptPullPicFailed: "Не удалось закачать картинку с телефона, попробуйте снова.",
+        promptLargePic: "Извините, но эта картинка слишком большая.",
+        promptFailAuth: "Не удалось войти через сторонние сервисы, пожалуйста проверьте ваше соединение, настройки брандмауэра и пользовательский аккаунт.",
+        imgUploading:"Загрузка..."
+
+    };
+    return dictionary;
+});

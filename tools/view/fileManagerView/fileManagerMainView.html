@@ -1,0 +1,153 @@
+<script id="tpl-fileManager-main-view" type="text/tpl">
+    <div class="wraper" style="width:100%;height:100%;margin:0px;padding:0px; ">
+    <div class="g-sdCard-manage">
+        <div class="left-nav  sidebar">
+            <!--2014-09-09 导航条，新增后退、前进和刷新 start-->
+            <div class="nav-tool-bar hbox">
+                <button class="btn-back g-ico-return" i18n-key="common.returnTipText"></button>
+                <button class="btn-forward g-ico-retreat" i18n-key="common.retreatTipText"></button>
+                <button class="btn-refresh g-ico-refresh" i18n-key="common.Refresh"></button>
+            </div>
+            <!--2014-09-09 导航条，新增后退、前进和刷新 end-->
+            
+            <div class="root">
+
+            </div>
+        </div>
+        <div class="right-moudle">
+            <div class="g-toolbar hbox">
+                <input type="checkbox" class="chkbox-all">
+                <button class="btn-import ico-btn ico-import"><%=I18N.fillDomText('common.Import')%><span class="g-arrow"></span></button>
+                <i class="g-toolbar-line"></i>
+                <button class="btn-export ico-btn ico-export" disabled="true"><%=I18N.fillDomText('common.Export')%></button>
+                <i class="g-toolbar-line"></i>
+                <button class="btn-delete ico-btn ico-delete" disabled="true"><%=I18N.fillDomText('common.Delete')%></button>
+                <i class="g-toolbar-line"></i>
+                <button class="btn-copy ico-btn ico-copy" disabled="true"><%=I18N.fillDomText('tools.copy')%></button>
+                <i class="g-toolbar-line"></i>
+                <button class="btn-paste ico-btn ico-paste" disabled="true"><%=I18N.fillDomText('fileManager.pasteLabel')%></button>
+                <i class="g-toolbar-line"></i>
+                <button class="btn-new-folder ico-btn ico-down-open"><%=I18N.fillDomText('fileManager.newFolder')%></button>
+         <!--        <i class="g-toolbar-line"></i>
+                <button class="btn-refresh ico-btn ico-refresh"><%=I18N.fillDomText('common.Refresh')%></button>-->
+                <div class="g-toolbar-right hbox" style="display: none">
+                    <button class="list-shape light"></button>
+                    <button class="graph-shape"></button>
+                </div>
+            </div>
+            <div class="right-moudle-view">
+                <div class="sd-not emptyBox cbox box-none-height-hidden">
+                    <div class="g-image-master">
+                        <img src="../common/images/mynot/not-sd.png">
+                        <p class="info c-6 f14"><%=I18N.fillDomText('fileManager.nosdcontent')%></p>
+                    </div>
+                </div>
+                <!--          此部分为列表展示Start          -->
+                <div class="list-view">
+                
+                </div>
+                <!--          此部分为列表展示End            -->
+                
+                <!--          此部分为图形展示Start          -->
+                <div class="graph-view" style="display: none;">
+                    
+                </div>
+                <!--          此部分为图形展示End            -->
+            </div>
+        </div>
+    </div>
+     <div class="sd-detail-box">
+         <div class="sd-box vcbox">
+            <i class="ico-file-sd"></i>
+            <span class="name"></span>
+            <div class="sd-memory cbox">
+                <div class="con">
+                    <div class="progress" style="width: 0%;"></div>
+                </div>
+            </div>
+            <p class="usage"></p>
+         </div>
+
+        <div class="sd-box-img multiSelect" style="display:none;">
+            <i class="ico-down-open"></i>
+            <span class="info-sp"></span>
+        </div>
+
+        <div class="sd-box-img singleSelect" style="display:none;">
+            <span class="info-sp"></span>
+        </div>
+
+     </div>
+     </div>
+
+</script>
+<script id="tpl-fileManager-menu-tree" type="text/tpl">
+    <%
+    if(!data){
+        return;
+    }
+    for(var i=0;i<data.length;i++){
+        if(data[i].isDirectory ){%>
+            <div class="node" id="<%=data[i].id%>" parentId="<%=data[i].parentId%>">
+                <div class="nav-left-li vcbox te">
+                    <%if(data[i].hasChildDir){%>
+                        <i class="ico-open-close ico-expand"></i>
+                    <%}else{%>
+                        <i class="ico-open-close"></i>
+                        <%}%>
+                    <a href="javascript:void(0)" draggable="false" class="name_sp te"><img src="<%=data[i].iconPath%>"/><span class="i-name"><%=data[i].name%></span></a>
+                </div>
+                <div  class="childNode"></div>
+            </div>
+        <%}%>
+    <%}%>
+
+</script>
+<script id="tpl-fileManager-menu-root" type="text/tpl">
+    <%for(var i=0;i<data.length;i++){
+            if(data[i].type==0){%>
+                <div class="node sdcardRoot" parentid="-1" id="<%=data[i].id%>">
+                   <div class="nav-left-li vcbox te">
+                        <i class="ico-open-close ico-fold"></i>
+                        <i class="ico-file-sd"></i>
+                         <a href="javascript:void(0)" draggable="false"  class="name_sp te"><%=I18N.fillDomText('fileManager.sdCard')%></a>
+                    </div>
+                <div  class="childNode">
+                    
+                </div>
+                </div> 
+                 
+             <%}else if(data[i].type==1){%>
+                <div class="node extSdcardRoot" parentid="-1" id="<%=data[i].id%>">
+                   <div class="nav-left-li vcbox te">
+                        <i class="ico-open-close ico-expand"></i>
+                        <i class="ico-file-sd"></i>
+                        <a href="javascript:void(0)" draggable="false" class="name_sp te"><%=I18N.fillDomText('fileManager.extSdCard')%></a>
+                    </div>
+                   <div class="childNode">
+                        
+                    </div>  
+                </div> 
+               
+             <%}%>
+    <%}%>
+
+</script>
+<script id="tpl-file-single-selected" type="text/tpl">
+        <div class="file-selected-item vcbox" id="<%=data.id%>" parentId="<%=data.parentId%>">
+            <img class="icon-file-type" src="<%=data.iconPath||'../tools/images/file.png'%>" />
+            <span class="name te"><%=data.name%></span>
+            <span class="size te"><%=I18N.fillDomText('fileManager.sizeLabel',data.realSize)%></span>
+            <span class="modifyDate"><%=I18N.fillDomText('fileManager.modifiedTime',data.realModifiedTime)%></span>
+        </div>
+</script>
+<script id="tpl-file-single-failed" type="text/tpl">
+                   <!--失败信息-->
+                   <div class="result-failed" style="height: 25px;line-height: 25px;">
+                              <%=failedTitle%>
+                   </div>
+                   <!--详情列表-->
+                   <div class="result-detail" style="text-align: left; padding-left: 2em; height: 40px; overflow-y: auto;">
+                       <%=failedText%>
+                   </div>
+</script>

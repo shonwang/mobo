@@ -1,0 +1,22 @@
+.g-popup {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    /*border: 1px solid #aaa;*/
+    min-width: 100px;
+    min-height: 50px;
+    opacity: 0;
+    display: none;
+}
+
+/*弹出层淡入淡出*/
+.g-popup-fade {
+    padding: 20px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    word-wrap: break-word;
+    overflow: hidden;
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Mobogenie</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+  <link href="custom/css/popup.css" rel="stylesheet" type="text/css">
+  <link href="custom/css/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="g-window">
+    <div class="g-window-header hbox">
+        <div class="g-window-header-title">
+            
+        </div>
+    </div>
+    <i class="g-window-header-x ico-close">
+        
+    </i>
+    <!-- Start 内容 -->
+    <div class="g-window-ctn">
+        <iframe class="resource-activity" >
+            
+        </iframe>
+    </div>
+    <!-- End 内容 -->
+</div>
+<script type="text/javascript">
+    document.oncontextmenu = function(){return false};
+
+    //*********************************************************
+    //20140724 新版日志
+    var isGetPulickFeild = false;
+    var log_channelid = "-";
+    var log_version = "-";
+    var log_sessionid = "-";
+    var log_site = "-";
+    var log_pclg = "-";
+    var log_phonestatus = "-";
+    var log_service_id = "1000120";
+    var newLog = {
+        class: "push",
+        page: "p20002",
+        module: "m20003"
+    }
+
+    var sendNewLog = function (logServiceExt){
+        var log_time = new Date().valueOf();
+        var log_nettype = "-";
+
+        logServiceExt = JSON.stringify(logServiceExt)
+        var feildStr = [log_channelid, log_version, log_sessionid, log_time, log_nettype, log_site, log_phonestatus, log_pclg, log_service_id, logServiceExt].join("###");
+        console.log("%c 新版日志 >> " + feildStr, "color:#13abe1");
+        try{
+            parent.sendMessage("get_ReportLog2", feildStr);
+        } catch (error){}   
+    };
+
+    parent.sendMessage("get_GetClientInfo", {}, function(res){
+        console.log("新版日志公共字段：", res);
+        if (res&&res.info){
+            log_channelid = res.info.channelid;
+            log_version = res.info.clientVer;
+            log_sessionid = res.info.sessionid;
+            log_site = res.info.site;
+            log_pclg = res.info.language;
+        }
+    });
+    //*********************************************************
+    
+    var serializeObj = function(obj){
+        var u = '';
+        for(var key in obj){
+            var kv = key + '=' + obj[key];
+            u = u + kv + '&';
+        }
+        return u.slice(0, u.lastIndexOf('&'));
+    };
+
+    var sendStatistics = function(paras){
+        try {
+            var actionName = paras.action;
+            var agrsStr = paras.args || {};
+            
+            var paramObj = {
+                S1 : actionName||"",
+                S2 : JSON.stringify(agrsStr),
+                sid :"1000130"
+            };
+            console.log("%c utility >> event log info: " + serializeObj(paramObj), "color:green");
+
+            parent.sendMessage("get_ReportLog", {
+                paramer: serializeObj(paramObj)
+            });
+        } catch (error){
+            console.error("utility >> event log info: ", error); 
+        }
+    };
+
+    var closeEl = document.querySelector(".ico-close");
+
+    closeEl.onclick = function(){
+        closeWin();
+    };
+
+    closeEl.onmousedown = function(){
+        app.sendMessage("get_DragMainDisabled");
+    };
+
+    var getParameter = function(name, targetUrl){
+        var url = targetUrl || location.href;  
+        
+        //去掉hash
+        if(url.indexOf('#') > -1){
+            url = url.slice(0, url.indexOf('#'));
+        }
+        
+        var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");  
+        var paraObj = {}  
+        for (i = 0; j = paraString[i]; i++) {  
+            paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);  
+        }  
+        var returnValue = paraObj[name.toLowerCase()];  
+        if (typeof (returnValue) == "undefined") {  
+            return "";  
+        } else {  
+            return window.decodeURIComponent(returnValue);  
+        }  
+    };
+    
+    var paras = {
+        id: '123',
+        title: 'Mobogenie3',
+        url: 'push-backup.html'
+    };
+    var language = getParameter("language");
+    var paramer = getParameter("paramer");
+    var activity_id = getParameter("activity_id");
+    var iframeEl = document.querySelector('.resource-activity');
+    var pushID = "";
+    if(language == "arabic"){
+        document.querySelector("body").setAttribute("language","arabic");
+    }else{
+        document.querySelector("body").removeAttribute("language");
+    }
+    console.log("paramer:", paramer);
+
+    if (activity_id === "-2"){
+        paras.title = "Mobogenie";
+        paras.url = 'push-update.html'
+        pushID = "updateApp";
+    } else if (activity_id === "-1"){
+        paras.title = "Mobogenie";
+        paras.url = 'push-backup.html';
+        pushID = "backup";
+    } else if (activity_id === "-3"){
+        paras = JSON.parse(paramer);
+        console.log(paras);
+        //paras.typeContent = "com.aesopower.android.ubitalkie.techdemo";
+        paras.url = paras.imgPath;
+        //paras.url = "http://public.mobogenie.com/pc_activity/push-app.html";
+        //paras.url = "abc";
+        pushID = paras.id;
+    } else if (activity_id === "-4"){
+        paras.title = "Mobogenie";
+        paras.url = 'push-openclient.html'
+        iframeEl.className = "resource-open";
+        var titleHeader = document.querySelector('.g-window-header');
+        titleHeader.style.display = "none";
+        pushID = "launchClient"
+    } else {
+        paras = null;
+    }
+
+    if(paras){
+        var titleEl = document.querySelector('.g-window-header-title');
+        //var iframeEl = document.querySelector('.resource-activity');
+
+        iframeEl.onload = function(){
+            var iframeDoc = iframeEl.contentWindow.document
+            var h2Node = iframeDoc.querySelector('body h2');
+            var bodyNode = iframeEl.contentWindow.document.body;
+
+            if (h2Node){
+                var errorText = h2Node.innerHTML;
+                console.log(errorText.indexOf("Failed to load"));
+                if (errorText.indexOf("Failed to load") > -1){
+                    console.log("Failed to load...");
+                    var logS2 = {
+                        module: "notification",
+                        targetvalue: paras.id,
+                        status: 0,
+                        httpcode: 404
+                    }
+                    var log = {
+                        action: "a20022",
+                        args: logS2
+                    }
+                    sendStatistics(log);
+                    //*********************************************************
+                    //20140724 新版日志
+                    newLog.action = "a20022";
+                    newLog.targetvalue = paras.id;
+                    newLog.status = 0;
+                    newLog.httpcode = 404;
+                    sendNewLog(newLog)
+                    //*********************************************************
+
+                    closeWin()
+                }
+            } else if (!bodyNode){
+                var logS2 = {
+                    module: "notification",
+                    targetvalue: paras.id,
+                    status: 0,
+                    httpcode: 404
+                }
+                var log = {
+                    action: "a20022",
+                    args: logS2
+                }
+                sendStatistics(log);
+
+                //*********************************************************
+                //20140724 新版日志
+                newLog.action = "a20022";
+                newLog.targetvalue = paras.id;
+                newLog.status = 0;
+                newLog.httpcode = 404;
+                sendNewLog(newLog)
+                //*********************************************************
+
+                closeWin()
+            }
+
+        }
+        titleEl.innerText = paras.title;
+        if (activity_id === "-3"){
+            iframeEl.src = paras.url + '?' + Date.now() + '&language=' + language + '&paramer=' + window.encodeURIComponent(JSON.stringify(paras));
+        } else {
+            iframeEl.src = paras.url + '?' + Date.now() + '&language=' + language;
+        }
+    };
+
+    function closeWin(){
+        var time = new Date().valueOf();
+        if (parent.showTime){
+
+            //*********************************************************
+            //20140724 新版日志
+            delete newLog.module;
+            newLog.duration = time - parent.showTime;
+            newLog.pagevalue = pushID;
+            log_service_id = "1000102";
+            sendNewLog(newLog)
+            log_service_id = "1000120";
+            //*********************************************************
+        }
+        app.sendMessage("get_Close", []);
+    };
+    
+    function sendMessage(action, paras, callback){
+        app.setMessageCallback(action, function(bn, args) {
+              var res;
+              try{
+                  res = JSON.parse(args[0]);
+              }catch(e){
+                  res = args[0];
+              }
+              callback && callback(res);
+              app.removeMessageCallback(action);
+        });
+        //var requestId = new Date().valueOf();
+        app.sendMessage(action, [JSON.stringify(paras)]);
+    }
+
+    function bindCallback(bindingName, callback){
+        app.setMessageCallback(bindingName, function(bn, args) {
+            var res;
+            try{
+              res = JSON.parse(args[0]);
+            }catch(e){
+              res = args[0];
+            }
+            callback&&callback(res)
+        });
+    }
+</script>
+</body>
+</html>

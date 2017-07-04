@@ -1,0 +1,58 @@
+<script id="tpl-progress-dlg" type="text/tpl">  
+    <div class="progress-container">
+            <!--start-->
+                <div class="dlg-group-item-wraper">
+                  <div class="title dlg-group-item"">
+                              <%=data.doingTitle%>
+                  </div>
+                    <!--进度信息-->
+                  <div class="progress-bar" style="width: 85%;display: inline-block;vertical-align: middle;">
+                        <span style="width: 0px" class="inner"></span>
+                  </div>
+                  <div class="progress-bar-stripes" style="width: 100%;display: none;">
+                      <span></span>
+                  </div>
+                  <div class="progress-num" style="width: 12%;display: inline-block;text-align: center;vertical-align: middle;">
+                      <%if(data.numberType=='index'){%>
+                          <span class="current"></span>/<span class="total"></span>
+                      <%}else if(data.numberType=="percent"){%>
+                          <span class="percent"></span>
+                      <%}%>
+                  </div>
+                  <!--成功信息-->
+                   <div class="result-success dlg-group-item" style="display: none;">
+                              <%=data.successTitle%>
+                   </div>
+                   <!--失败信息-->
+                   <div class="result-failed dlg-group-item" style="display: none;">
+                              <%=data.failedTitle%>
+                   </div>
+                   <!--详情列表-->
+                   <div class="result-detail" style="text-align: left; padding-left: 2em; height: 100px; overflow-y: auto;">
+                   </div>
+                </div>
+                <!--操作区-->
+                    <div class="btn-ctn">
+                      <%
+                                   if(data.cancelAble){%>
+                                       <button class="btn-cancel g-btn g-btn2"><%=data.cancelButton%></button>
+                      <%}                          
+                        %>
+                        
+                        <button class="btn-open-dir g-btn g-btn2" style="display: none"><%=data.openButton%></button>
+                        <button class="btn-retry g-btn g-btn2" style="display: none"><%=data.retryButton%></button>
+                        <button class="btn-ok g-btn g-btn2" style="display: none"><%=data.okButton%></button>
+                        <button class="btn-close g-btn g-btn4" style="display: none"><%=data.closeButton%></button>
+                    </div>
+            <!--end-->
+        </div>
+</script>
+<script id="tpl-info-detail-list">
+<ul style="width:100%;" class="info-detail">
+    <%for(var i=0;i<data.length;i++){
+        if(data[i]!=""){%>
+            <li>&nbsp;-&nbsp;<%=data[i]%></li>
+        <%}%>
+    <%}%>
+<ul>
+</script>

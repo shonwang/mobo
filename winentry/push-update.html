@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>推送弹出层</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link href="custom/css/popup.css" rel="stylesheet" type="text/css">
+    <link href="custom/css/common.css" rel="stylesheet" type="text/css">
+    <style>
+        /*推送 app更新*/
+        .g-popup-update {
+            padding: 12px;
+        }
+
+        .g-popup-app-title {
+            height: 24px;
+        }
+
+        .ico-warng-small {
+            padding-left: 19px;
+            color: #e5820d;
+            background: url(custom/images/warng.png) no-repeat left center;
+        }
+
+        .g-popup-app-list {
+            overflow-x: hidden;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            height: 200px;
+        }
+
+        .g-popup-app-list li {
+            height: 50px;
+        }
+
+        .g-popup-app-list .checkbox {
+            width: 36px;
+            text-align: center;
+        }
+
+        .g-popup-app-list .pic {
+            width: 36px;
+            height: 36px;
+            display: block;
+            margin-right: 10px;
+        }
+
+        .g-popup-app-list .pic img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .g-popup-app-list .con {
+            -webkit-box-flex: 1;
+            padding-right: 10px;
+        }
+
+        .g-popup-app-list .cur {
+            background-color: #f0f0f0;
+        }
+
+        .g-popup-push-btn .checkbox {
+            margin-top: 9px;
+        }
+
+        .g-popup-push-btn input {
+            vertical-align: -2px;
+        }
+
+        .g-popup-push-btn {
+            bottom: 12px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Start 内嵌内容部分-->
+<div class="g-popup-update">
+    <p class="g-popup-app-title te">
+        <i class="ico-warng-small"></i>
+        <span class="push-app-count"></span>
+    </p>
+    <ul class="g-popup-app-list"></ul>
+    <div class="g-popup-push-btn">
+        <div class="fl checkbox">
+            <input class="select-all" type="checkbox" checked="checked"></input>
+            <span class="select-all-label"></span>
+        </div>
+        <button class="btn-push-update g-btn g-btn1 fr"></button>
+    </div>
+</div>
+<!--End 内嵌内容部分-->
+</body>
+<script type="text/javascript">
+    var localDic = {
+        english: {
+            promptLabel: "You have {0} apps/games can be updated.",
+            selectAllLabel: "Select all",
+            updateLabel: "Update"
+        },
+        arabic: {
+            promptLabel: "لديك {0} من التطبيقات/الألعاب التي يمكن تحديثها",
+            selectAllLabel: "تحديد الكل",
+            updateLabel: "تحديث"
+        },
+        farsi: {
+            promptLabel: "شما {0} برنامه/بازی برای به‌روزرسانی دارید",
+            selectAllLabel: "انتخاب همه",
+            updateLabel: "به‌روزرسانی"
+        },
+        france: {
+            promptLabel: "Vous pouvez effectuer la mise à jour de {0} de vos applis/jeux",
+            selectAllLabel: "Sélectionner tout",
+            updateLabel: "Mise à j."
+        },
+        hindi: {
+            promptLabel: "आपके पास {0} ऐप्स/गेम्स हैं जिन्हें अपडेट किया जा सकता है",
+            selectAllLabel: "सभी का चयन करें",
+            updateLabel: "अद्यतन करें"
+        },
+        indonesian: {
+            promptLabel: "Anda mempunyai {0} app/games yang dapat diupdate",
+            selectAllLabel: "Pilih Semua",
+            updateLabel: "Perbarui"
+        },
+        italian: {
+            promptLabel: "È possibile aggiornare {0} app/giochi",
+            selectAllLabel: "Seleziona tuttos",
+            updateLabel: "Aggiorna"
+        },
+        korean: {
+            promptLabel: "업데이트할 수 있는 앱/게임이 {0}개 있습니다.",
+            selectAllLabel: "모두 선택",
+            updateLabel: "업데이트"
+        },
+        poland: {
+            promptLabel: "Liczba aktualizacji aplikacji i/lub gier: {0}",
+            selectAllLabel: "Wybierz wszystkie",
+            updateLabel: "Aktualizuj"
+        },
+        portuguese: {
+            promptLabel: "Você tem {0} aplicativos/jogos para serem atualizados",
+            selectAllLabel: "Selecionar tudo",
+            updateLabel: "Atualizar"
+        },
+        russian: {
+            promptLabel: "Доступны обновления игр/приложений: {0}",
+            selectAllLabel: "Выбрать все",
+            updateLabel: "Обновить"
+        },
+        spanish: {
+            promptLabel: "Tiene {0} aplicaciones/juegos que pueden actualizarse",
+            selectAllLabel: "Seleccionar todos",
+            updateLabel: "Actualizar"
+        },
+        thai: {
+            promptLabel: "คุณมี {0} แอพ/เกม ที่สามารถอัพเดตได้",
+            selectAllLabel: "เลือกทั้งหมด",
+            updateLabel: "อัปเดต"
+        },
+        vietna: {
+            promptLabel: "Bạn có {0} ứng dụng/game có thể cập nhật ",
+            selectAllLabel: "Chọn tất cả",
+            updateLabel: "Cập nhật"
+        },
+        traditionalchinese: {
+            promptLabel: "你有 {0} 個應用可以升級",
+            selectAllLabel: "全選",
+            updateLabel: "更新"
+        },
+        turkish: {
+            promptLabel: "Güncellenebilecek {0} uygulama/oyununuz var.", 
+            selectAllLabel: "Hepsini seç",
+            updateLabel: "Güncelle"
+        }
+    };
+
+    document.addEventListener("dragstart", function(e){  
+        e.preventDefault();
+    }, false); 
+
+    document.addEventListener("dragenter", function(e){  
+        e.preventDefault();
+    }, false); 
+
+    document.oncontextmenu = function(){return false};
+
+    //*********************************************************
+    //20140724 新版日志
+    var isGetPulickFeild = false;
+    var log_channelid = "-";
+    var log_version = "-";
+    var log_sessionid = "-";
+    var log_site = "-";
+    var log_pclg = "-";
+    var log_phonestatus = "-";
+    var log_service_id = "1000120";
+    var newLog = {
+        class: "push",
+        page: "p20002",
+        module: "m20003"
+    }
+
+    var sendNewLog = function (logServiceExt){
+        var log_time = new Date().valueOf();
+        var log_nettype = "-";
+
+        logServiceExt = JSON.stringify(logServiceExt)
+        var feildStr = [log_channelid, log_version, log_sessionid, log_time, log_nettype, log_site, log_phonestatus, log_pclg, log_service_id, logServiceExt].join("###");
+        console.log("%c 新版日志 >> " + feildStr, "color:#13abe1");
+        try{
+            parent.sendMessage("get_ReportLog2", feildStr);
+        } catch (error){}   
+    };
+
+    parent.sendMessage("get_GetClientInfo", {}, function(res){
+        console.log("新版日志公共字段：", res);
+        if (res&&res.info){
+            log_channelid = res.info.channelid;
+            log_version = res.info.clientVer;
+            log_sessionid = res.info.sessionid;
+            log_site = res.info.site;
+            log_pclg = res.info.language;
+        }
+    });
+    //********************************************************* 
+
+    var serializeObj = function (obj) {
+        var u = '';
+        for (var key in obj) {
+            var kv = key + '=' + obj[key];
+            u = u + kv + '&';
+        }
+        return u.slice(0, u.lastIndexOf('&'));
+    };
+
+    var sendStatistics = function (paras) {
+        try {
+            var actionName = paras.action;
+            var agrsStr = paras.args || {};
+
+            var paramObj = {
+                S1: actionName || "",
+                S2: JSON.stringify(agrsStr),
+                sid: "1000130"
+            };
+            console.log("%c utility >> event log info: " + serializeObj(paramObj), "color:green");
+
+            parent.sendMessage("get_ReportLog", {
+                paramer: serializeObj(paramObj)
+            });
+        } catch (error) {
+            console.error("utility >> event log info: ", error);
+        }
+    };
+
+    var sortListByLetter = function(list){
+        var flag = 0;
+        var temp;
+        for (var i = 0; i < list.length - 1; i++){
+            flag = 0;
+            for (var j = 0; j < list.length - 1; j++){
+                dateFirStr = list[j].name.charAt(0).charCodeAt();
+                dateSecStr = list[j + 1].name.charAt(0).charCodeAt();
+                if (dateFirStr > dateSecStr){
+                    temp = list[j];
+                    list[j] = list[j + 1];
+                    list[j + 1] = temp;
+                    flag = 1;
+                }
+            }
+            if (flag == 0){
+                break;
+            }
+        }
+        return list;
+    };
+
+    var selectAllNode = document.querySelector('.select-all');
+    var selectAllLabelNode = document.querySelector('.select-all-label');
+    var updateNode = document.querySelector('.btn-push-update');
+
+    var getParameter = function (name, targetUrl) {
+        var url = targetUrl || location.href;
+
+        //去掉hash
+        if (url.indexOf('#') > -1) {
+            url = url.slice(0, url.indexOf('#'));
+        }
+
+        var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+        var paraObj = {}
+        for (i = 0; j = paraString[i]; i++) {
+            paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+        }
+        var returnValue = paraObj[name.toLowerCase()];
+        if (typeof (returnValue) == "undefined") {
+            return "";
+        } else {
+            return window.decodeURIComponent(returnValue);
+        }
+    };
+    var language = getParameter("language");
+    if(language == "arabic"){
+        document.querySelector("body").setAttribute("language","arabic");
+    }else{
+        document.querySelector("body").removeAttribute("language");
+    }
+    var createItem = function (itemID, appData) {
+        var itemTpl = '<div class="checkbox">' +
+                '<input type="checkbox" checked="checked"' +
+                'data-id ="' + appData.id + '"' +
+                'data-name ="' + appData.name + '"' +
+                'data-iconPath ="' + appData.picPath + '"' +
+                'data-size ="' + appData.apkSize + '"' +
+                'data-pk ="' + appData.apkId + '"' +
+                'data-apkPath ="' + appData.apkPath + '"' +
+                'data-vc ="' + appData.versionCode + '"' +
+                'data-mtc ="' + appData.mtypeCode + '"' +
+                'data-isBigG ="' + appData.isBigGame + '"' +
+                'data-isSex ="' + appData.isSex + '"' +
+                'data-isVirus ="' + appData.isVirus + '"' +
+                'data-minSDK ="' + appData.minSDK + '"' +
+                'data-sdkVersion ="' + appData.sdk_version + '"' +
+                'data-starNum ="' + appData.starNum + '"' +
+                'data-starValue ="' + appData.starValue + '"' +
+                'data-updateTime ="' + appData.updateTime + '"' +
+                'data-version ="' + appData.version + '"' +
+                'data-webFrom ="' + appData.webFrom + '"' +
+                '>' +
+                '</div>' +
+                '<span class="pic">' +
+                '<img src="' + appData.picPath + '"></span>' +
+                '<div class="con">' +
+                '<h3 class="f14 te">' + appData.name + '</h3>' +
+                '<p class="c-9 te">' + appData.oldAppVersion + "->" + appData.version + '</p>' +
+                '</div>';
+
+        var itemNode = document.createElement('li');
+        itemNode.className = 'cbox cur';
+        itemNode.setAttribute('item-id', itemID);
+        itemNode.innerHTML = itemTpl;
+        var inputNode = itemNode.querySelector("input");
+
+        inputNode.onclick = function () {
+            var listNode = document.querySelector('.g-popup-app-list');
+            var selectAllNode = document.querySelector('.select-all');
+            if (listNode.hasChildNodes()) {
+                var itemList = listNode.childNodes;
+                var count = 0
+                for (var i = 0; i < itemList.length; i++) {
+                    if (itemList[i].querySelector("input").checked === true) {
+                        count = count + 1;
+                    }
+                }
+                console.log("count:", count);
+                console.log("length:", itemList.length);
+                if (count !== itemList.length) {
+                    selectAllNode.checked = false;
+                } else if (count === itemList.length) {
+                    selectAllNode.checked = true;
+                }
+                if (count === 0) {
+                    updateNode.setAttribute("disabled", "disabled")
+                } else {
+                    console.log("count two:", count);
+                    if (updateNode.hasAttribute("disabled")) {
+                        console.log("count two:", count);
+                        updateNode.removeAttribute("disabled")
+                    }
+                }
+            }
+        };
+        itemNode.onclick = function (event) {
+            if (event.target.tagName !== "INPUT") {
+                itemNode.querySelector("input").click();
+            }
+        }
+        return itemNode;
+    };
+
+    var format = function () {
+        var str = arguments[0];
+        var args = Array.prototype.slice.call(arguments, 1);
+        var sprintfRegex = /\{(\d+)\}/g;
+
+        var sprintf = function (match, number) {
+            return number in args ? args[number] : match;
+        };
+
+        return str.replace(sprintfRegex, sprintf);
+    }
+
+    var appCount = 0;
+    var initAppItems = function (response) {
+        console.log("APP推送弹窗 >> 返回的App数据： ", response);
+        var appList = [];
+        var globalConfig = window.globalConfig;
+        if (response && response.data && response.data.appList) {
+            appList = sortListByLetter(response.data.appList);
+
+            document.querySelector('.push-app-count').innerHTML = format(localDic[language].promptLabel, appList.length);
+            appCount = appList.length;
+
+            for (var i = 0; i < appList.length; i++) {
+                appList[i].picPath = domain + appList[i].iconPath + "icon_m.png";
+                appList[i].apkPath = domain + appList[i].apkPath;
+                var item = createItem(i, appList[i]);
+                var list = document.querySelector('.g-popup-app-list');
+                list.appendChild(item);
+            }
+            parent.sendMessage("get_ShowWindow", {cmdShow: 1}, function () {});
+
+            parent.showTime = new Date().valueOf();
+            var logS2 = {
+                module: "notification",
+                targetvalue: "updateApp",
+                status: 1,
+                httpcode: 200
+            }
+            var log = {
+                action: "a20022",
+                args: logS2
+            }
+            sendStatistics(log);
+
+            //*********************************************************
+            //20140724 新版日志
+            newLog.action = "a20022";
+            newLog.targetvalue = "updateApp";
+            newLog.status = 1;
+            newLog.httpcode = 200;
+            sendNewLog(newLog)
+            //*********************************************************            
+        } else {
+            var logS2 = {
+                module: "notification",
+                targetvalue: "updateApp",
+                status: 0,
+                httpcode: 404
+            }
+            var log = {
+                action: "a20022",
+                args: logS2
+            }
+            sendStatistics(log);
+
+            //*********************************************************
+            //20140724 新版日志
+            newLog.action = "a20022";
+            newLog.targetvalue = "updateApp";
+            newLog.status = 0;
+            newLog.httpcode = 404;
+            sendNewLog(newLog)
+            //********************************************************* 
+
+            parent.closeWin();
+        }
+    };
+
+    var domain;
+    var getDomain = function (res) {
+        console.log("获取域名=======", res);
+        if (res && res.info && res.info.site) {
+            var defsite = res.info.defsite;
+            for (var i = 0; i < res.info.site.length; i++) {
+                if (res.info.site[i].title === defsite) {
+                    domain = res.info.site[i].upload_voga360;
+                    parent.sendMessage("get_APKUpdateInfo", {cache: 1}, initAppItems);
+                    break;
+                }
+            }
+        }
+    };
+    parent.sendMessage("get_UserConfInfo", {}, getDomain);
+
+    selectAllNode.onclick = function (event) {
+        var listNode = document.querySelector('.g-popup-app-list');
+        var itemList = listNode.childNodes;
+        if (event.target.checked === true) {
+            if (listNode.hasChildNodes()) {
+                for (var i = 0; i < itemList.length; i++) {
+                    itemList[i].querySelector("input").checked = true;
+                }
+            }
+            if (updateNode.hasAttribute("disabled")) {
+                updateNode.removeAttribute("disabled")
+            }
+        } else {
+            if (listNode.hasChildNodes()) {
+                for (var i = 0; i < itemList.length; i++) {
+                    itemList[i].querySelector("input").checked = false;
+                }
+            }
+            updateNode.setAttribute("disabled", "disabled")
+        }
+    }
+
+    selectAllLabelNode.onclick = function () {
+        selectAllNode.click();
+    };
+
+    updateNode.onclick = function () {
+        var navigateParas = {
+            module: "task",
+            action: "task",
+        };
+        parent.sendMessage(
+                'get_NotifyMainWindow',
+                {action: "navigate", paras: navigateParas}
+        );
+
+        setTimeout(function () {
+            var parasDownload = [];
+            var listNode = document.querySelector('.g-popup-app-list');
+            var itemList = listNode.childNodes;
+            for (var i = 0; i < itemList.length; i++) {
+                if (itemList[i].querySelector("input").checked === true) {
+                    var ds = itemList[i].querySelector("input").dataset;
+                    parasDownload.push({
+                        id: 'app_' + ds.id,
+                        url: ds.apkpath,
+                        name: ds.name,
+                        iconPath: ds.iconpath,
+                        size: ds.size,
+                        packageName: ds.pk,
+                        versionCode: ds.vc,
+                    });
+                }
+            }
+            console.log(parasDownload);
+            parent.sendMessage(
+                    "get_NotifyMainWindow",
+                    {action: "install", paras: parasDownload}
+            );
+
+            var logS2Click = {
+                module: "notification",
+                targetvalue: "updateApp",
+                targettype: 15
+            }
+            var logClick = {
+                action: "a20023",
+                args: logS2Click
+            }
+            sendStatistics(logClick)
+
+            //*********************************************************
+            //20140724 新版日志
+            if (newLog.status){
+                delete newLog.status;
+                delete newLog.httpcode;
+            }
+            newLog.action = "a20023";
+            newLog.targetvalue = "updateApp";
+            newLog.targettype = 15;
+            sendNewLog(newLog)
+            //********************************************************* 
+
+            parent.closeWin();
+        }, 1000);
+    };
+
+    selectAllLabelNode.innerHTML = localDic[language].selectAllLabel;
+    updateNode.innerHTML = localDic[language].updateLabel;
+
+    parent.bindCallback("set_NotifyCefWindow", function(res){
+        console.log("来自其他窗口的消息", res);
+        if (res&&res.language&&localDic[res.language]){
+            selectAllLabelNode.innerHTML = localDic[res.language].selectAllLabel;
+            updateNode.innerHTML = localDic[res.language].updateLabel;
+            document.querySelector('.push-app-count').innerHTML = format(localDic[res.language].promptLabel, appCount);
+        }
+    })
+</script>
+</html>

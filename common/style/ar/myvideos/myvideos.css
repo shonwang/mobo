@@ -1,0 +1,44 @@
+﻿body[language="arabic"] .g-video .g-media-thread{margin-right: 10px;margin-left: 0;direction:rtl;}
+body[language="arabic"] .g-media-thread input{margin-left: 3px;margin-right: 0;}
+body[language="arabic"] .g-media-thread .select-item{right: 5px;left:auto;}
+body[language="arabic"] .g-media-thread .video-duration{left: 0;right: auto;}
+body[language="arabic"] .g-media-thread .control{text-align: left;}
+/*mybooks*/
+body[language="arabic"] .g-scr-prx-body{direction: rtl;}
+/*back btn*/
+body[language="arabic"] .g-task-manager .g-toolbar button.back{left: 10px;right:auto;-webkit-transform:scale(-1,1);}
+body[language="arabic"] .g-video-tips .ico-remind-small{background-position: right center;padding-left:0;padding-right: 18px;}
+@-webkit-keyframes _k_out_arabic
+{
+    from {
+        -webkit-transform: translate(0%, 0px);
+    }
+    to {
+        -webkit-transform: translate(100%, 0px);
+    }
+}
+/*
+body[language="arabic"] .g-task-manager.t-hide{
+    -webkit-animation:_k_out_arabic 0.3s ease;  
+   -webkit-animation-fill-mode: forwards;
+}
+*/
+@-webkit-keyframes _k_screenin_arabic
+{
+    from {
+        -webkit-transform: translate(100%, 0px);
+    }
+    to {
+        -webkit-transform: translate(0%, 0px);
+    }
+}
+/*
+body[language="arabic"] .g-task-manager.t-show{
+    -webkit-animation:_k_screenin_arabic 0.3s ease;   
+   -webkit-animation-fill-mode:forwards;
+}*/
+body[language="arabic"] .g-task-manager{
+    -webkit-transform:translate(-200%, 0px);
+}
+
+

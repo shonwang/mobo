@@ -1,0 +1,46 @@
+﻿body[language="arabic"] .g-toolbar .ico-btn{direction: ltr;}
+body[language="arabic"] .g-sms .right{left:0;right: auto;direction: rtl;}
+body[language="arabic"] .g-sms .right .g-message-thread{direction: ltr;}
+body[language="arabic"] .g-message-item-ctn li .info{ margin: 0 10px 0 0;}
+body[language="arabic"] .g-image-sms-empty,body[language="arabic"]  .g-sms .list{right:0; left: 380px; border-right: 0; border-left:1px solid #c6c6c6; }
+body[language="arabic"] .sms-list-item .icon{float:right;margin-left:10px;margin-right: 0;}
+body[language="arabic"] .sms-list-item .time{left: 10px;right: auto;}
+body[language="arabic"] .sms-list-item .info{padding-left:80px; padding-right: 0;}
+body[language="arabic"] .g-message-item-ctn li{text-align: right;}
+
+body[language="arabic"] .g-message-threads-ctn .g-chat-header{direction:rtl;}
+body[language="arabic"] .g-sms-box-panel{direction:rtl;}
+body[language="arabic"] .g-sms-box-panel .ico-add{left: 0; right: auto;}
+body[language="arabic"] .g-sms-box-panel .ico-expression{left: 0; right: auto;}
+body[language="arabic"] .g-sms-box-panel .hotkey-label, body[language="arabic"] .g-sms-box-panel .button-send{float: left;margin-right:0; margin-left: 10px;}
+body[language="arabic"] .g-message-batch-conversations .g-message-batch-conversations-list-ctn .sms-list-item .info{padding-left: 0}
+body[language="arabic"] .g-message-batch-conversations .close-item{margin-right: 0;margin-left: 10px;}
+body[language="arabic"] .g-message-batch-conversations .g-message-batch-conversations-list-ctn{margin-left:0;margin-right:20px; }
+body[language="arabic"] .g-sms-box-panel .input-contact{float:right;}
+body[language="arabic"] .g-message-threads-ctn .input-content{direction: rtl;}
+body[language="arabic"] .g-search-contact-panel .g-search-box .com-text{margin-left: 0}
+body[language="arabic"] .g-search-contact-panel .placeholder{direction: rtl;right: 0!important;}
+body[language="arabic"] .g-search-contact-panel .g-search-box{direction: rtl;}
+body[language="arabic"] .g-search-contact-panel .g-search-icon{margin-right: -33px;}
+body[language="arabic"] .g-search-contact-panel .search-list-header{direction: rtl;}
+body[language="arabic"] .g-search-contact-panel .button-group{margin-right: 10px;margin-left: 0}
+body[language="arabic"] .g-search-contact-panel .button-select-all{left: 10px;right: auto;}
+body[language="arabic"] .group-menu{left: 263px!important;}
+body[language="arabic"] .g-search-contact-panel .monitor{direction: rtl;}
+body[language="arabic"] .g-search-contact-panel .remove-all-selected{right: auto;left:0;}
+body[language="arabic"] .g-search-contact-panel .g-sms-box-footer{direction: rtl;}
+body[language="arabic"] .g-search-contact-panel .button-ok{margin-left: 10px;margin-right: 0}
+body[language="arabic"] .g-search-contact-panel .placeholder{direction: rtl;right: 10px;left:auto;}
+body[language="arabic"] .g-message-threads-ctn .g-message-quick-sender{direction: rtl;}
+body[language="arabic"] .g-chat-box-footer .ico-expression{float: left;}
+body[language="arabic"] .g-message-threads-ctn .button-send{float: left;}
+body[language="arabic"] .g-message-threads-ctn .hotkey-label{float: left;margin-right:0; margin-left: 10px;}
+body[language="arabic"] .g-sms-box-panel .contact-label{float: right;}
+body[language="arabic"] .com-pos{height: 164px; width: 350px;}
+
+body[language="arabic"] .static.te .loc-label{width:100%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+body[language="arabic"] .g-sms-all-group{width: 342px;}
+body[language="arabic"] .g-sms-all-group .g-menu .g-menu-item .loc-label,
+body[language="arabic"] .g-sms-all-group .g-menu .g-menu-item .name{direction: rtl;}
+body[language="arabic"] .g-search-contact-panel .button-group .group-name .loc-label{display: initial;}
+body[language="arabic"] .g-search-contact-panel .button-group .g-arrow{background-position: left center;}

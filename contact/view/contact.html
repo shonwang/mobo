@@ -1,0 +1,122 @@
+<script id="tpl-contact-main" type="text/tpl">
+	<div class="g-contact">
+	<div id="i-contact-header" class="g-toolbar hbox">
+    	<input type="checkbox" class="chkbox-all"></input>
+    	<button class="btn-new ico-btn ico-contact"><%=I18N.fillDomText('contact.NewContact')%></button>
+    	<i class="g-toolbar-line"></i>
+    	<button class="btn-import ico-btn ico-import"><%=I18N.fillDomText('common.Import')%></button>
+    	<i class="g-toolbar-line"></i>
+    	<button class="btn-export ico-btn ico-export"><%=I18N.fillDomText('common.Export')%><span class="g-arrow"></span></button>
+    	<i class="g-toolbar-line"></i>
+    	<button class="btn-delete ico-btn ico-delete"><%=I18N.fillDomText('common.Delete')%></button>
+    	<i class="g-toolbar-line"></i>
+    	<!--<button class="btn-refresh ico-btn ico-refresh"><%=I18N.fillDomText('common.Refresh')%></button>-->
+    	<div class="g-toolbar-right hbox">
+            <span class="filter"><%=I18N.fillDomText('contact.Filter')%>:</span>
+            <button class="btn-location g-arrow" value="all"><%=I18N.fillDomText('contact.AllContacts')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="btn-group g-arrow" value="all"><%=I18N.fillDomText('contact.AllGroups')%></button>
+         </div>
+	</div>
+
+	<div class="g-content hbox">
+	    <div class="g-image-contact-empty g-empty-state cbox"  style="display: none;">
+             <div class="g-image-master">
+                    <img src="../src/contact/images/no-contacts.png">
+                    <p class="info c-6 f14"><%=I18N.fillDomText('contact.emptyContact')%></p>
+                    <p class="text c-9"><%=I18N.fillDomText('contact.contactPermissionNotice')%></p>
+             </div>
+         </div>
+    <div class="loading-box"></div>
+	<div  class="list">
+
+	</div>
+	<div class="right">
+	    <!--快速添加panel start-->
+	       <div class="g-contact-panel-quick-add"></div>
+	    <!--快速添加panel end-->
+	    <!--详情 panel start-->
+            <div class="g-contact-detail-panel w-layout-hidden"></div>
+        <!--详情 panel end-->
+	</div>
+	</div>
+	</div>
+
+</script>
+
+<script id="tpl-search-header" type="text/tpl">
+      <!-- 搜索header统计 区域-->
+     <div class="g-grid-search hbox" style="display: none;">
+                        <p class="static te"></p>
+                        <button class="btn-clear-search g-btn g-btn2"><%=I18N.fillDomText('common.searchSeeAllLink')%></button>
+     </div>
+</script>
+
+<!--列表栏目  start-->
+<script  id="tpl-contact-list-item" type="text/tpl">
+<div class="contact-list-item hbox">
+    <img class="icon" src="<%=data.sContactIcon||'common/images/ico/default-avatar.png'%>"/>
+    <div class="info">
+        <h4 class="displayName te"><%=data.sDisplayName%></h4>
+        <p class="sContactNumber te">
+        <%
+        if(data.sContactNumber){
+                for(var i=0;i<data.sContactNumber.length;i++){
+                    if(i===data.sContactNumber.length-1){
+                         %><%=data.sContactNumber[i].value%>&nbsp;&nbsp;<%
+                    }else{
+                        %>
+                        <%=data.sContactNumber[i].value%>&nbsp;&nbsp;,
+                    <%}
+                }
+            }else if(data.sContactEmail){
+                for(var i=0;i<data.sContactEmail.length;i++){
+                    if(i===data.sContactEmail.length-1){
+                         %><%=data.sContactEmail[i].value%>&nbsp;&nbsp;<%
+                    }else{
+                        %>
+                        <%=data.sContactEmail[i].value%>&nbsp;&nbsp;,
+                    <%}
+                }                
+            }
+        %>
+        </p>
+    </div>
+</div>
+</script>
+<!--列表栏目  end-->
+<!--右侧面板快速添加-->
+<script  id="tpl-contact-right-panel-add" type="text/tpl">
+	    <!--帮助提示信息start-->
+			<div class="w-contact-helper">
+			     <div class="info-header">
+			         <%=I18N.fillDomText('contact.sideLabel')%>
+			     </div>
+			     <div class="info-details">
+			          <%=I18N.fillDomText('contact.addContactText')%>
+			     </div>
+			</div>
+		<!--帮助提示信息 end-->
+		<!--快速添加区 start-->
+			<div class="contact-quick-add-content">
+				<h3 class="content-title">
+				    <span class="icon-contact-add"><%=I18N.fillDomText('contact.newContact')%></span>
+				 </h3>
+				<div class="quick-add-item">
+					 	<span class="item-label"><%=I18N.fillDomText('common.nameLabel')%></span>
+					 	<input  name="displayName" required="true"  minLength="1" maxlength="30" type="text" class="input-field com-text">
+				</div>
+				<div class="quick-add-item">
+					 	<span class="item-label"><%=I18N.fillDomText('common.phoneText')%></span>
+					 	<input  name="phone" minLength="0" maxlength="20" pattern="[\+\-\*\#0-9]{2,20}" type="text" class="input-field com-text">
+				</div>
+				<div class="quick-add-item">
+					 	<span class="item-label"><%=I18N.fillDomText('common.email')%></span>
+					 	<input  name="email" type="email" minLength="5" maxlength="40"  pattern="(^[a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})"  class="input-field com-text"/>
+				</div>
+				<div class="btn-ctn">
+					<button type="button" class="button-save g-btn g-btn1"><%=I18N.fillDomText('contact.Save')%></button>
+				</div>
+			</div>
+				<!--快速添加区 end-->
+</script>

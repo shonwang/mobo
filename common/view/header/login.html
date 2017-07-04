@@ -1,0 +1,30 @@
+<script id="tpl-login-view" type="text/tpl">
+	<div class="signin">
+		<ul class="signin-form">
+	    	<li>
+	            <input class="com-text input-email-login" type="email" pattern="(^[a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2}" minLength="4" maxlength="50"></input>
+	            <p class="error-email error"></p>
+	            <span class="correct-email ico-signin-success" style="display:none"></span>
+	        </li>
+	        <li>
+	            <input class="com-text input-pwd-login" type="password" minLength="8" maxlength="20"></input>
+	            <p class="error-pwd error"></p>
+	            <span class="correct-pwd ico-signin-success" style="display:none"></span>
+	        </li>
+	    </ul>
+		<button class="button-login g-btn g-btn1"><%=I18N.fillDomText('common.headSignIn')%></button>
+	    <a href="#" class="forgot-pwd c-9 fr"><%=I18N.fillDomText('signin.forgotPwdLabel')%></a>
+	    <div class="third-party cbox">
+	    	<a href="javascript:;" class="sign-up"><%=I18N.fillDomText('signin.signUpHeader')%></a>
+	        <p class="or c-9"><%=I18N.fillDomText('signin.orLabel')%></p>
+	        <button class="ico-facebook"></button>
+	        <button class="ico-google"></button>
+	    </div>
+	</div>
+</script>
+
+<script id="tpl-login-third" type="text/tpl">
+	<div class="signin">
+		<iframe name="third-frame" id="third-frame"  style="display:none;" src="http://www.mobogenie.com"></iframe>
+	</div>
+</script>

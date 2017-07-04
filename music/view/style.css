@@ -1,0 +1,216 @@
+.g-music .list {
+    height: 100%;
+}
+.g-music .line-through{
+    text-decoration:line-through;
+} 
+
+.music-list-header {
+    height: 100%;
+    width: 100%;
+}
+
+.music-list-header .name {
+    -webkit-box-flex: 1;
+}
+
+.music-list-header .artist {
+    width: 108px;
+}
+
+.music-list-header .time {
+    width: 62px;
+}
+
+.music-list-header .format {
+    width: 59px;
+}
+
+.music-list-header .size {
+    width: 181px;
+}
+
+.music-list-item {
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+}
+
+.music-list-item .musicName {
+    -webkit-box-flex: 1;
+    font-size: 14px;
+}
+
+.g-grid-row.selected .musicName {
+    /*color: #13abe1;*/
+}
+
+.music-list-item .play-icon {
+    height: 100%;
+    width: 61px;
+    text-align: center;
+}
+
+.music-list-item .btn-play {
+    width: 61px;
+    height: 100%;
+    cursor: pointer;
+    background: url(../images/play-ring.png) no-repeat center;
+}
+
+.music-list-item .btn-play:hover {
+    background: url(../images/play-ring-hover.png) no-repeat center;
+}
+
+.music-list-item .btn-play:active {
+    background: url(../images/play-ring-active.png) no-repeat center;
+}
+
+.music-list-item .disabled,
+.music-list-item .disabled:hover,
+.music-list-item .disabled:active {
+    cursor: default;
+    background: url(../images/play-ring-disabled.png) no-repeat center;
+}
+
+.music-list-item .btn-pause {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 12px 0 0 2px;
+    cursor: pointer;
+    /*border: 1px solid #0cb7f0;
+    border-radius: 100%;*/
+}
+
+.music-list-item .btn-pause:after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -4px 0 0 -3px;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #0cb7f0;
+}
+
+.music-list-item .musicAlbumn {
+    width: 120px;
+    height: 100%;
+}
+
+.music-list-item .artist {
+    height: 100%;
+    width: 100px;
+    padding-right: 10px;
+}
+
+.music-list-item .date {
+    height: 100%;
+    width: 80px;
+}
+
+.music-list-item .duration {
+    height: 100%;
+    width: 60px;
+
+}
+
+.music-list-item .format {
+    height: 100%;
+    width: 60px;
+
+}
+
+.music-list-item .size {
+    height: 100%;
+    width: 60px;
+}
+
+.music-list-item .settings {
+    width: 120px;
+    height: 100%;
+}
+
+.music-list-item .phone,
+.music-list-item .sms,
+.music-list-item .ring {
+    position: relative;
+    width: 30px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.music-list-item .cur i {
+    position: absolute;
+    left: 23%;
+    top: 55%;
+    width: 10px;
+    height: 10px;
+    display: block;
+    background: url(../images/cur.png) no-repeat;
+}
+
+.music-list-item .phone {
+    background: url(../images/phone.png) no-repeat center;
+}
+
+.music-list-item .sms {
+    background: url(../images/sms.png) no-repeat center;
+}
+
+.music-list-item .ring {
+    background: url(../images/ring.png) no-repeat center;
+}
+
+.g-grid-row .settings,
+.g-grid-row .hasSetted .phone,
+.g-grid-row .hasSetted .sms,
+.g-grid-row .hasSetted .ring {
+    visibility: hidden;
+}
+
+.g-grid-row:hover .settings,
+.g-grid-row:hover .hasSetted .phone,
+.g-grid-row:hover .hasSetted .sms,
+.g-grid-row:hover .hasSetted .ring,
+.g-grid-row .hasSetted .cur {
+    visibility: visible;
+}
+
+.g-media-empty-info .empty-music {
+    height: 160px;
+    width: 100%;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    overflow: hidden;
+    background: url("../images/no-music.png") no-repeat center top;
+}
+
+.g-media-empty-info .empty-music span {
+    position: relative;
+    top: 160px;
+    left: 10px;
+}
+
+/*loading  18*18*/
+.ico-loading18 {
+    width: 18px;
+    height: 18px;
+    display: block;
+    overflow: hidden;
+    background: url(../../common/images/loading/loading16.png) no-repeat center;
+    -webkit-animation: 1s linear infinite ico-loading18;
+}
+
+@-webkit-keyframes ico-loading18 {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}

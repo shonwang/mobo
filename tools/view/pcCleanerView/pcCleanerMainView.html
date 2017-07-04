@@ -1,0 +1,63 @@
+<script id="tpl-pcCleaner-main-view" type="text/tpl">
+    <div class="cleaner-wraper">
+    	<div class="g-cleanWin-top">
+    		<img class="clean-bg" src="../tools/images/clean-top.png" />
+    		<div class="g-clean-title">
+    			<%=I18N.fillDomText('tools.pcCleanerLabel')%>
+    		</div>
+	    	<div class="cleaner-top">
+	    		<div class="anima fl">
+	    			<span class="anima-d"></span>
+	    			<span class="anima-bg"></span>
+	    			<span class="anima-fly animation"></span>
+	    		</div>
+	    		<div class="less">
+	    			<p class="size"><b>0</b><span>KB</span></p>
+	    			<div class="clean-progress">
+	    				<span class="pg"></span>
+	    			</div>
+	    			
+	    			<P class="text f14"></P>
+	    		</div>
+	    	</div>
+    	</div>
+    	<div class="less-info">
+    		<%for(i = 0; i < category.length; i ++) {%>
+    			<div class="tt" data-id=<%=category[i].id%>>
+	    			<div class="title">
+	    				<input type="checkbox"  checked="true">
+	    				<img class="scanImg" src="../tools/images/ttscan.gif" />
+	    				<img class="cleaImg" src="../tools/images/clean.gif" />
+		    			<p class="name"><%=category[i].title%></p>
+		    			<p class="size hide">
+		    			    <span class="mb hide"></span>
+                            <span class="blue-size  hide">(<span class="c-blue"> <em class="select">2</em> <%=I18N.fillDomText('tools.selectedLess')%> </span>)</span>
+                        </p>
+                        <p class="fin c-blue">
+                        	Finished
+                        </p>
+		    			<span class="elastic hide"></span>
+	    			</div>
+	    			<div class="info fold">
+						<ul>
+						</ul>
+					</div>
+	    		</div>
+    		<%}%>
+    	</div>
+    	<!--less信息结束-->
+    	<p class="clean-hint"><em class="c-red">*</em> <%=I18N.fillDomText('tools.someFile')%></p>
+    	<button class="g-btn g-btn1 button cleanBtn"><%=I18N.fillDomText('tools.cleanBtn')%></button>
+    	
+    </div>
+</script>
+<script id="tpl-infoList-view" type="text/tpl">
+	<li class="info-item" subcategory="<%=data.subcategory%>" >
+		
+		<input type="checkbox" checked="true">
+		<img  class="scanImg" src="../tools/images/scan.gif" />
+		<img  class="cleaImg" src="../tools/images/sb.gif" />
+		<p class="info-name"><%=I18N.fillDomText("pcclean."+data.name+"")%></p>
+		<p class="info-size">0KB</p>
+	</li>	
+</script>

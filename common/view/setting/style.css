@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+.g-setting-moudle{
+	width:613px;
+	height:478px;
+	margin:-12px 0 0 -12px;
+}
+.g-setting-moudle .left-nav{
+	width:115px;
+	height:100%;
+	background:#f0f0f0;
+}
+.g-setting-moudle .left-nav nav {
+	width:100%;
+}
+.g-setting-moudle .left-nav nav li{
+	padding:13px 0 13px 17px;
+	cursor:pointer;
+}
+.g-setting-moudle .left-nav nav li.light{
+	background:#3ac0ee;
+	color:#fff;	
+}
+.g-setting-moudle .left-nav nav li:hover {
+	color:#fff;	
+    background-color: rgba(38, 187, 238, 0.9)
+}
+
+.g-setting-moudle .left-nav nav li:active {
+	color:#fff;
+    background-color: rgba(0, 151, 201, 0.9);
+}
+.g-setting-moudle .right-module{
+	-webkit-box-flex:1;
+}
+.g-setting-moudle .right-module > div{
+	padding:22px 20px 0 25px;
+	display:none;
+}
+.g-setting-moudle .right-module > div > ul > li{
+	padding-bottom:22px;
+}
+.g-setting-moudle .right-module li.list-language{
+	height:80px;
+	padding-bottom:0;
+}
+.g-setting-moudle .right-module > div ul li p,
+.g-setting-moudle .right-module > div ul li label{	
+	padding:12px 0 0 4px;
+}
+.g-setting-moudle .right-module > div ul li label{	
+	display:block;
+	padding-left: 20px;
+	position: relative;
+}
+.g-setting-moudle .right-module > div ul li label input[type="checkbox"],
+.g-setting-moudle .right-module > div ul li label input[type="radio"]{
+	vertical-align:middle;
+	cursor:pointer;
+	position: absolute;
+	left: 0;
+	top: 13px;
+}
+.g-setting-moudle .right-module .g-select-mod{
+	padding-left:10px;
+}
+.general-module .g-select{
+	max-width:150px;
+}
+.g-menu-language,
+.g-menu-site{
+	width:150px;
+}
+.g-menu-language .g-menu {
+	overflow-y: auto;
+	max-height:288px;
+}
+.g-menu-site .g-menu {
+	overflow-y: auto;
+	max-height:360px;
+}
+.g-menu-site .g-menu-item img,
+.general-module .g-select img{
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	padding-right: 8px;
+	margin-top:-2px;
+}
+.g-menu-site .g-menu .g-menu-item{
+	padding:0 10px;
+}
+.g-menu-language .g-menu-item,
+.g-menu-site .g-menu-item{
+	font-size:14px;
+}
+.g-setting-moudle .right-module > div.locations-module ul li p{
+	padding-left:0;
+}
+.g-setting-moudle .right-module > div.locations-module ul li{
+	padding-bottom:40px;
+}
+.g-setting-moudle .locations-module ul li p input[type="text"]{
+	width:356px;
+	margin-top:-2px;
+	margin:-2px 3px 0 0;
+	-webkit-user-select: initial;
+	cursor: text;
+}
+.g-setting-moudle .locations-module ul li p button{
+	height:30px;
+	min-width: 86px;
+	max-width:91px;
+}
+.g-setting-moudle .right-module .check{
+	cursor:pointer;
+}

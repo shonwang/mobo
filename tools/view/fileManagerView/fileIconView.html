@@ -1,0 +1,10 @@
+<script  id="tpl-file-explore-icon-item" type="text/tpl">
+    <%for(var i=0;i<models.length;i++){%>
+        <div class="node-item" id="<%=models[i].id%>" parentId="<%=models[i].parentId%>">
+           <div class="node-icon">
+               <img src="<%=models[i].icon%>"/>
+           </div>
+            <%=models[i].name%>
+        </div>
+    <%}%>
+</script>

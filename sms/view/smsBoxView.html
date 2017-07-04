@@ -1,0 +1,54 @@
+<script id="tpl-sms-box-view" type="text/tpl">
+    <div class="g-sms-box-panel">
+        <div class="send-to-label"><%=I18N.fillDomText('sms.sendTo')%></div>
+        <div class="address-input-box">
+            <div class="address">
+                <input id="address" class="input-contact">
+            </div>
+            <button class="ico-add">Add</button>
+        </div>
+        <textarea class="input-content com-area" placeholder="Write Message here."></textarea>
+        <div class="monitor">
+            <span class="content-count">0</span>
+            <span><%=I18N.fillDomText('sms.characters')%></span>
+            <span class="contacts-count">0</span>
+            <span><%=I18N.fillDomText('sms.contacts')%></span>
+            <span class="ico-expression">^_^</span>
+        </div>
+        <div class="g-sms-box-footer">
+            <button class="button-send g-btn g-btn1"><%=I18N.fillDomText('sms.send')%></button>
+            <div class="hotkey-label"><%=I18N.fillDomText('sms.pressCE')%></div>
+        </div>
+    </div>
+</script>
+
+<script id="tpl-sms-contact-item" type="text/tpl">
+    <div class="contact-label">
+        <span id="contact"></span>
+        <em id="close">&times;</em>
+    </div>
+</script>
+
+<script id="tpl-sms-search-contact" type="text/tpl">
+    <div class="g-search-contact-panel">
+        <div class="g-search-box g-search-con-box">
+            <input class="com-text input-search"></input>
+            <span class="button-search g-search-icon"></span>
+        </div>
+        <div class="search-list-header hbox">
+            <button class="button-group cbox"><span class="group-name te"><%=I18N.fillDomText('sms.allGroup')%></span><i class="g-arrow"></i></button>
+            <div class="button-select-all"><%=I18N.fillDomText('sms.selectAll')%></div>
+        </div>
+        <div class="search-list hbox"></div>
+        <div class="selected-container"></div>
+        <div class="monitor">
+            <span class="contacts-count">0</span>
+            <span class="count-label"><%=I18N.fillDomText('sms.contacts')%></span>
+            <span class="remove-all-selected"><%=I18N.fillDomText('sms.removeAll')%></span>
+        </div>
+        <div class="g-sms-box-footer">
+            <button class="button-ok g-btn g-btn2"><%=I18N.fillDomText('common.okLabel')%></button>
+            <button class="button-cancel g-btn g-btn4"><%=I18N.fillDomText('common.cancelLabel')%></button>
+        </div>
+    </div>
+</script>

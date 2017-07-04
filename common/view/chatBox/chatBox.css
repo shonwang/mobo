@@ -1,0 +1,271 @@
+.g-message-threads-ctn {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 126px;
+}
+
+.g-message-thread {
+    width: 100%;
+}
+
+.g-message-threads-ctn .date-ctn {
+    background-color: #e6e6e6;
+    color: #a9a9a9;
+    margin: 0 auto 5px;
+    width: 100px;
+    text-align: center;
+    -webkit-border-radius: 2px;
+}
+
+.g-message-item-ctn {
+    list-style: none;
+}
+
+.g-message-threads-list-ctn {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.g-message-item-ctn li {
+    padding: 5px 20px 20px 15px;
+}
+
+.g-message-item-ctn li .content-wrap {
+    background-color: #b3b3b3;
+    border-radius: 6px;
+    display: block;
+    max-width: 220px;
+    min-height: 22px;
+    min-width: 20px;
+    line-height: 22px;
+    padding: 1px 13px;
+    position: relative;
+}
+
+.g-message-item-ctn li .content-wrap .content {
+    color: #fff;
+    max-width: 220px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.g-message-item-ctn li .content-wrap .arrow {
+    left: -6px;
+}
+
+.g-message-item-ctn li .content-wrap .actions {
+    bottom: -20px;
+    display: none;
+    left: 0;
+    padding-top: 5px;
+    position: absolute;
+    right: 0;
+    min-width: 70px;
+}
+
+.g-message-item-ctn li .info {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 0 0 10px;
+    color: #999;
+}
+
+.g-message-item-ctn li.from-me {
+    direction: rtl;
+}
+
+.g-message-item-ctn li.from-me .content-wrap {
+    background-color: #0ab4ea;
+    direction: ltr;
+}
+
+.g-message-item-ctn li.from-me .arrow {
+    right: -7px;
+    left: auto;
+    background-position: 0 -11px;
+}
+
+.g-message-item-ctn li.from-me .content-wrap .actions {
+    direction: rtl;
+    right: -5px;
+}
+
+.g-message-item-ctn li.from-me .content-wrap .actions .ico-btn {
+    float: right;
+}
+
+.g-message-item-ctn .content-wrap .actions .ico-btn {
+    float: left;
+}
+
+.g-message-item-ctn li.from-me .content-wrap .actions .ico-loading {
+    direction: ltr;
+}
+
+.g-message-item-ctn li.from-me .info {
+    direction: ltr;
+    color: #999;
+    margin: 3px 10px 0 0;
+}
+
+.g-message-item-ctn li.from-retry .content-wrap {
+    max-width: 190px;
+    background-color: #ffc975;
+    border: 1px solid #ff9c00;
+}
+
+.g-message-item-ctn li.from-retry .arrow {
+    right: -7px;
+    background-position: 0 -22px;
+}
+
+.g-message-threads-ctn .g-chat-header {
+    background-color: rgba(219, 219, 219, 0.6);
+    height: 34px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    -webkit-box-align: center;
+}
+
+.g-message-threads-ctn .contact-name {
+    font-size: 14px;
+    padding-right: 10px;
+
+    -webkit-box-flex: 1;
+}
+
+.g-message-threads-ctn .contact-name .name {
+    height: 20px;
+    line-height: 20px;
+    -webkit-box-flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.g-message-threads-ctn .contact-name p {
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    white-space: nowrap;
+/*    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;*/
+}
+
+.g-message-threads-ctn .contact-name .num {
+    background-color: #cdcdcd;
+    padding: 0px 6px;
+    border-radius: 12px;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.g-message-threads-ctn .contact-info {
+    padding: 0 5px;
+    color: #666;
+    -webkit-box-align: center;
+    -webkit-box-flex: 1;
+}
+
+.g-message-threads-ctn .g-message-quick-sender {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    bottom: 0px;
+    background-color: #f9f9f9;
+    border-top: 1px #cacaca solid;
+    box-shadow: 0 1px 0 #fff inset, 0 0 3px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.g-message-threads-ctn .g-message-quick-sender .monitor-char {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.g-message-threads-ctn .monitor {
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.g-message-threads-ctn .send-to-label {
+    margin: 0 5px 5px 0;
+    line-height: 30px;
+}
+
+.g-message-threads-ctn .input-content {
+    min-height: 30px;
+    height: 30px;
+}
+
+.g-message-threads-ctn .hotkey-label {
+    line-height: 30px;
+    margin-right: 10px;
+    color: #999;
+}
+
+.g-message-threads-ctn .button-send {
+
+}
+
+.arrow {
+    position: absolute;
+    bottom: 0;
+    width: 14px;
+    height: 10px;
+    display: block;
+    background: url(../../images/ico/chat.png) no-repeat;
+}
+
+.ico-sms-copy {
+    margin: 0 5px;
+    padding-left: 19px;
+    background: url(../../../sms/images/copy.png) no-repeat left center;
+}
+
+.ico-sms-copy:hover {
+    background: url(../../../sms/images/copy-hover.png) no-repeat left center;
+}
+
+.ico-sms-copy:active {
+    background: url(../../../sms/images/copy-active.png) no-repeat left center;
+}
+
+.ico-forwarding {
+    padding-left: 21px;
+    background: url(../../../sms/images/forwarding.png) no-repeat left center;
+}
+
+.ico-forwarding:hover {
+    background: url(../../../sms/images/forwarding-hover.png) no-repeat left center;
+}
+
+.ico-forwarding:active {
+    background: url(../../../sms/images/forwarding-active.png) no-repeat left center;
+}
+
+.loadingmore {
+    background: #f3f3f3;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    margin: 0 36px;
+    -webkit-border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: #999;
+}

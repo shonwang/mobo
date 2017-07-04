@@ -1,0 +1,31 @@
+﻿body[language="arabic"] .g-header .right{right: 180px;left:0;}
+body[language="arabic"] .device-info.logo,body[language="arabic"] .device-info{float: right;}
+body[language="arabic"] .g-header-toolbar{left:0; right: auto;direction:rtl;}
+body[language="arabic"] .g-header-oper{right: 0; left:auto;padding-left:26px;}
+body[language="arabic"] .g-header .g-search-box{direction: rtl;}
+body[language="arabic"] .cbox{direction: rtl;}
+body[language="arabic"] .g-search-app-item .icon{margin-right: 0; margin-left: 5px;}
+body[language="arabic"] .g-search-app-item .ctn{text-align: right;}
+body[language="arabic"] .placeholder-head{padding:0 10px 0 40px;}
+body[language="arabic"] .g-search-box .com-text{padding:5px 10px 5px 40px; direction: rtl;}
+body[language="arabic"] .g-search-icon{margin-right: -64px; margin-left: auto;}
+body[language="arabic"] .g-menu-setting{left: 20px!important; right: auto;}
+body[language="arabic"] .g-popup.g-smart-tip{right: 13px; left: auto!important;}
+
+body[language="arabic"] .g-popup.multi-tip{left: 150px!important; right: auto; direction: rtl;}
+body[language="arabic"] .g-popup.multi-tip .arrow-left .arr{top: 30px;right: -5px;-webkit-transform: rotate(135deg);}
+body[language="arabic"] .g-popup.multi-tip .g-app-tips .ar{background-position:center 0;-webkit-transform: rotate(180deg);}
+
+body[language="arabic"] .g-popup.ar-smart-music{right:auto!important; left:40%!important;}
+body[language="arabic"] .g-search-clear{margin-right: -64px;margin-left: auto;}
+body[language="arabic"] .g-header-toolbar i.close{margin-left:9px;}
+body[language="arabic"] .device-info{direction:rtl;}
+body[language="arabic"] .g-connect-menu .g-menu .g-menu-item{text-align: right;}
+body[language="arabic"] .g-header-toolbar i.fbk{margin-right: 11px;margin-left: 0;}
+
+body[language=arabic] .g-search-box .com-text {text-align: right; margin-left: 30px;margin-right: 0}
+body[language=arabic] .signin-down .g-menu-item{text-align: right;}
+body[language=arabic] .g-header-toolbar i.max{margin: 0}
+body[language=arabic] .g-header-toolbar i.min{margin-right: 5px;}
+/*资源页修改*/
+

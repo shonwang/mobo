@@ -1,0 +1,59 @@
+<script id="tpl-restore-view" type="text/tpl">
+	<div class="restore-panel">
+		<div class="f14 select-label"><%=I18N.fillDomText('backupRestore.selectLabel')%></div>
+		<button class="g-btn g-btn3 btn-restore-folder"><%=I18N.fillDomText('backupRestore.restoreFolder')%></button>
+		<ul class="restore-file-list"></ul>
+		<ul class="g-tools-list backup-list"></ul>
+		<div class="restore-process f14 c-9 cbox"><span class="ico-remind"><%=I18N.fillDomText('backupRestore.restoreProcess')%></span></div>
+        <div class="restore-no-file f14 c-9 cbox"><span class="ico-remind"><%=I18N.fillDomText('backupRestore.noBackupFile')%></span></div>
+		<div class="backup-footer hbox">
+			<a class="special f14 pre-link"><%=I18N.fillDomText('backupRestore.previousLabel')%></a>
+			<button class="g-btn g-btn1 btn-restore"><%=I18N.fillDomText('backupRestore.restoreLabel')%></button>
+			<button class="g-btn g-btn1 btn-next"><%=I18N.fillDomText('backupRestore.nextLabel')%></button>
+            <button class="g-btn g-btn4 btn-cancel"><%=I18N.fillDomText('common.cancelLabel')%></button>
+			<button class="g-btn g-btn1 btn-close"><%=I18N.fillDomText('backupRestore.closeLabel')%></button>
+		</div>
+	</div>
+</script>
+
+<script id="tpl-restore-file-item-view" type="text/tpl">
+    <li class="restore-file-item">
+    	<input type="radio" name="restore" class="radio">
+    	<span class="file-name f14"></span>
+    	<span class="time c-9 f14"></span>
+    	<ul class="restore-list hbox"></ul>
+    </li>
+</script>
+
+<script id="tpl-restore-item-view" type="text/tpl">
+    <li class="restore-item hbox">
+    	<span class="icon"></span>
+    	<span class="number f14">0</span>
+    </li>
+</script>
+
+<script id="tpl-restore-detail-item-view" type="text/tpl">
+    <li class="backup-item">
+        <div class="g-tools-con">
+            <p class="fl tools-l">
+                <span class="icon-tools"></span>
+                <span class="ico-warng-small">&nbsp;</span>
+                <span class="ico-pass-small">&nbsp;</span>
+            </p>
+
+            <p class="fl tools-r cbox">
+                <span class="con">
+                    <span class="name te"></span>
+                    <span class="num te fl"><em class="c-red">0</em>0</span>
+                    <span class="size f12">(333MB)</span>
+                </span>
+            </p>
+            <input type="checkbox" checked="" class="checkbox">
+            <div class="tools-load hide">
+                <div class="progress-bar">
+                    <span style="width: 0%"></span>
+                </div>
+            </div>
+        </div>
+    </li>
+</script>

@@ -1,0 +1,25 @@
+<script id="ui-menu-tpl" type="text/tpl">
+    <menu class="g-menu">
+        <%for(var i=0; i < list.length; i++){%>
+            <%if(list[i].type == 'sp'){%>
+                <li class="sp g-menu-item" data-type="<%=list[i].type%>"></li>
+            <%}else if(list[i].type == 'label'){%>
+                <li class="label g-menu-item c-9" data-item="<%=list[i].index%>" data-type="<%=list[i].type%>">
+                    <%=list[i].label%>
+                </li>
+            <%}else if(list[i].type == 'checkbox'){%>
+                <li class="checkbox g-menu-item" data-item="<%=list[i].index%>" data-type="<%=list[i].type%>">
+                    <%if(multiCheck){%>
+                        <div class="hbox"><input type="checkbox" name="<%=inputName%>" <%=list[i].checked? "checked": ""%>/><%=list[i].label%></div>
+                    <%}else{%>
+                        <div class="hbox"><input type="radio" name="<%=inputName%>" <%=list[i].checked? "checked": ""%>/><%=list[i].label%></div>
+                    <%}%>
+                </li>
+            <%}else{%>
+                <li class="g-menu-item" data-item="<%=list[i].index%>" data-type="<%=list[i].type%>">
+                    <%=list[i].label%>
+                </li>
+            <%}%>
+        <%}%>
+    </menu>
+</script>

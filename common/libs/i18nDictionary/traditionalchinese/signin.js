@@ -1,0 +1,55 @@
+define('traditionalchinese:signin', function(require, exports, module){
+    var dictionary = {
+        signUpHeader: "註冊",
+        myAccountLabel: "個人中心",
+        logoutLabel: "登出",
+        errorEmailLabel: "電郵無效",
+        emptyEmailLabel: "此處不能留空",
+        shortPwdLabel: "密碼長度必須大於8個字符",
+        longPwdLabel: "密碼長度不能超過20個字符",
+        notMatchPwdLbel: "重新確認密碼與之前密碼不乎，請重新輸入。",
+        usedEmailLabel: "該電郵已被註冊，請更換電郵。",
+        errorLoginLbel: "密碼錯誤，請重新輸入。",
+        agreeLabel: "我同意",
+        userAgreenebtLabel: "用戶協議",
+        orLabel: "或",
+        forgotPwdLabel: "忘記密碼",
+        changeLabel: "修改",
+        sendLabel: "發送驗證電郵",
+        changePwdLabel: "更改密碼",
+        pwdSuccessLabel: "密碼修改成功",
+        confirmLabel: "確認",
+        networkLabel: "網絡連接失敗，請稍候再試。",
+        nullAccount: "帳號無效",
+        errorPwdLabel: "僅限英文字母和數字",
+        sendSuccessLabel: "發送成功",
+        errorCodeLabel: "驗證碼錯誤",
+        imgUploadSuccess: "上載成功",
+        imgUploadFailed: "上載失敗",
+        incorrectPwd: "密碼錯誤，請再次輸入",
+        registerFailedLabel: "新帳號註冊失敗",
+        waitImageUploadLabel: "上載中，請稍候。",
+        loginInputText:"密碼",
+        conWordInputText:"確認密碼",
+        enterCodeInputText:"輸入驗證碼",
+        //20140811
+        samePwdLabel:"您輸入的密碼與之前的密碼相同，請重新輸入。" ,
+        //20140812
+        errorPicLabel: "不支持此圖片格式，請上載jpg、gif、png格式的圖片。",
+		oldword:"原密碼",
+		newword:"新密碼",
+		conword:"確認密碼",
+        //20140917
+       selectPicFromPCLabel: "從您的電腦選擇一張相片",
+        selectPicFromPhoneLabel: "從您的電話選擇一張相片",
+        promptConnect: "請使用USB線連接您的裝置",
+        setAsProfilePhoto: "設定為個人相片",
+        promptPullPic: "正在從電話提取圖片，請耐心稍候...",
+        promptPullPicFailed: "電話提取圖片失敗，請再嘗試。",
+        promptLargePic: "對不起，該圖片太大。",
+        promptFailAuth: "獲取第三方授權失敗，請檢查您的網絡、防火牆、及用戶帳號。",
+        imgUploading:"上載中..."
+
+    };
+    return dictionary;
+});

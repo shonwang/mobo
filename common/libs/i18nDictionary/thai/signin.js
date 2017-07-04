@@ -1,0 +1,55 @@
+define('thai:signin', function(require, exports, module){
+    var dictionary = {
+        signUpHeader: "สมัคร",
+        myAccountLabel: "บัญชีของฉัน",
+        logoutLabel: "ออกจากระบบ",
+        errorEmailLabel: "อีเมล์ไม่ถูกต้อง.",
+        emptyEmailLabel: "คุณไม่สามารปล่อยให้ว่างได้.",
+        shortPwdLabel: "รหัสผ่านต้องมีอย่างต่ำ 8 ตัวอักษร.",
+        longPwdLabel: "รหัสผ่านมีได้ไม่เกิน 20 ตัวอักษร..",
+        notMatchPwdLbel: "การยืนยันรหัสผ่านไม่ตรงกัน. กรุณาใส่รหัสผ่านใหม่อีกครั้ง.",
+        usedEmailLabel: "อีเมล์นี้ถูกใช้งานแล้ว. กรุณาใช้เมล์อื่น.",
+        errorLoginLbel: "รหัสผ่านไม่ถูกต้อง. กรุณาใส่รหัสผ่านใหม่อีกครั้ง.",
+        agreeLabel: "ฉันยอมรับ",
+        userAgreenebtLabel: "ข้อตกลงผู้ใช้งาน",
+        orLabel: "หรือ",
+        forgotPwdLabel: "ลืมรหัสผ่าน?",
+        changeLabel: "เปลี่ยน",
+        sendLabel: "ส่งอีเมล์ยืนยัน",
+        changePwdLabel: "เปลี่ยนรหัสผ่าน",
+        pwdSuccessLabel: "อัพเดทรหัสผ่านเรียบร้อย!",
+        confirmLabel: "ยืนยัน",
+        networkLabel: "ไม่สามารถเชื่อมต่อเน็ทเวิร์ค. กรุณาลองใหม่ภายหลัง.",
+        nullAccount: "บัญชีว่าง",
+        errorPwdLabel: "กรุณาใส่เฉพาะตัวอักษรและตัวเลข",
+        sendSuccessLabel: "ส่งเรียบร้อยแล้ว.",
+        errorCodeLabel: "รหัสยืนยันไม่ถูกต้อง.",
+        imgUploadSuccess: "อัพโหลดเรียบร้อย",
+        imgUploadFailed: "อัพโหลดไม่สำเร็จ",
+        incorrectPwd: "รหัสผ่านผิดพลาด. กรุณาลองใหม่อีกครั้ง.",
+        registerFailedLabel: "การลงทะเบียนบัญชีใหม่ไม่สำเร็จ",
+        waitImageUploadLabel: "กรุณารอสักครู่.",
+        loginInputText:"รหัสผ่าน",
+        conWordInputText:"ยืนยันรหัสผ่าน",
+        enterCodeInputText:"ใส่รหัส",
+        //20140811
+        samePwdLabel: "กรุณาใช้รหัสผ่านที่คุณไม่เคยใช้กับบัญชีนี้.",
+        //20140812
+        errorPicLabel: "ประเภทไฟล์รูปไม่ถูกต้อง. คุณสามารถอัพโหลดได้เฉพาะไฟล์ jpg, gif หรือ png .",
+		oldword:"รหัสลับเดิม",
+		newword:"รหัสลับใหม่",
+		conword:"ยืนยันรหัสลับ",
+        //20140917
+        selectPicFromPCLabel: "เลือกรูปภาพจากคอมพิวเตอร์ของคุณ",
+        selectPicFromPhoneLabel: "เลือกรูปภาพจากโทรศัพท์ของคุณ",
+        promptConnect: "กรุณาเชื่อมต่ออุปกรณ์ของคุณโดยสาย USB.",
+        setAsProfilePhoto: "ตั้งเป็นรูปโปรไฟล์",
+        promptPullPic: "กำลังดึงรูปภาพจากโทรศัพท์, กรุณารอสักครู่...",
+        promptPullPicFailed: "ดึงรูปภาพจากโทรศัพท์ไม่สำเร็จ, กรุณาลองใหม่อีกครั้ง.",
+        promptLargePic: "ขนาดของภาพที่คุณกำลังใช้งานมีขนาดใหญ่เกินไป. กรุณาเปลี่ยนขนาดหรือเลือกใช้รูปอื่น.",
+        promptFailAuth: "การขออณุญาติการใช้งานกับอุปกรณ์อื่นไม่สำเร็จ,กรุณาตรวจสอบเครือข่าย, ไฟร์วอล์, และบัญชีผู้ใช้งาน.",
+        imgUploading:"กำลังอัพโหลด..."
+
+    };
+    return dictionary;
+});

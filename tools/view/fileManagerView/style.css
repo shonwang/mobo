@@ -1,0 +1,451 @@
+@charset "utf-8";
+/* CSS Document */
+
+.sd-box {
+    padding: 0;
+    position: relative;
+}
+
+.g-sdCard-manage {
+    width: 100%;
+    height: 100%;
+}
+
+.g-sdCard-manage .left-nav {
+    width: 179px;
+    max-width: 300px;
+    height: 100%;
+    border-right: 1px solid #ddd;
+    background-color: #eee;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+.g-sdCard-manage .left-nav .nav-tool-bar{
+    height:35px;
+    line-height:35px;
+    border-bottom: #ccc 1px solid;
+}
+.g-sdCard-manage .left-nav ::-webkit-scrollbar-corner {
+    background-color: #eee;
+}
+
+.g-sdCard-manage .left-nav .root {
+    width: 100%;
+    height: 96%;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.sd-box .node {
+    width: 100%;
+}
+
+.extSdcardRoot .nav-left-li,
+.sdcardRoot .nav-left-li {
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+
+.nav-left-li {
+    width: 100%;
+}
+
+.nav-left-li img {
+    vertical-align: -3px;
+}
+
+.childNode .nav-left-li {
+    padding-left: 17px;
+    box-sizing: content-box;
+}
+
+.childNode .childNode .nav-left-li {
+    padding-left: 29px;
+    box-sizing: content-box;
+}
+
+.childNode .childNode .childNode .nav-left-li {
+    padding-left: 38px;
+    box-sizing: content-box;
+}
+
+.childNode .childNode .childNode .childNode .nav-left-li {
+    padding-left: 50px;
+    box-sizing: content-box;
+}
+
+.childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding-left: 61px;
+    box-sizing: content-box;
+}
+
+.childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding-left: 70px;
+    box-sizing: content-box;
+}
+
+.childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding-left: 81px;
+    box-sizing: content-box;
+}
+
+.childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding-left: 92px;
+    box-sizing: content-box;
+}
+
+.childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding-left: 114px;
+    box-sizing: content-box;
+}
+.childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding-left: 125px;
+    box-sizing: content-box;
+}
+.childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding-left: 136px;
+    box-sizing: content-box;
+}
+.childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding-left: 147px;
+    box-sizing: content-box;
+}
+.childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding-left: 158px;
+    box-sizing: content-box;
+}
+
+.g-sdCard-manage .nav-left-li .name_sp {
+    height: 28px;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    -webkit-box-flex: 1;
+}
+
+.g-sdCard-manage .nav-left-li:hover {
+    background-color: #d9d9d9;
+}
+
+.g-sdCard-manage .childNode .nav-left-li .name_sp {
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    display: block;
+    -webkit-box-flex: 1;
+}
+
+.g-sdCard-manage .childNode .cur .nav-left-li .name_sp {
+    color: #333;
+}
+
+.g-sdCard-manage .node.cur > .nav-left-li:hover,
+.g-sdCard-manage .node.cur > .nav-left-li {
+    background-color: #d9d9d9;
+}
+
+.ico-file-sd {
+    padding-left: 14px;
+    height: 24px;
+    vertical-align: -2px;
+    display: inline-block;
+    background: url(../../images/sd.png) no-repeat left center;
+}
+
+.ico-fold + .name_sp {
+    color: #333 !important;
+}
+
+.ico-open-close,
+.ico-fold,
+.ico-expand {
+    width: 12px;
+    height: 26px;
+    line-height: 30px;
+    text-indent: -999em;
+    display: inline-block;
+    vertical-align: -2px;
+    overflow: hidden;
+}
+
+.ico-fold,
+.ico-expand {
+    visibility: hidden;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-delay: .1s;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: both;
+}
+
+.g-sdCard-manage .left-nav:hover .ico-fold,
+.g-sdCard-manage .left-nav:hover .ico-expand {
+    visibility: visible;
+    -webkit-animation-name: fadeIn;
+}
+
+.g-sdCard-manage .fadeOut .ico-fold,
+.g-sdCard-manage .fadeOut .ico-expand {
+    visibility: visible;
+    -webkit-animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+}
+
+.ico-fold {
+    background: url(../../images/unfold.png) no-repeat left center;
+}
+
+.ico-fold:hover {
+    background: url(../../images/unfold-hover.png) no-repeat left center;
+}
+
+.ico-expand {
+    background: url(../../images/up.png) no-repeat 2px center;
+}
+
+.ico-expand:hover {
+    background: url(../../images/up-hover.png) no-repeat 2px center;
+}
+
+.g-sdCard-manage .left-nav .manage-title li.device i {
+    background: url(../../images/unfold.png) no-repeat;
+}
+
+.g-sdCard-manage .left-nav .manage-title li.sdCard i {
+    background: url(../../images/up.png) no-repeat;
+}
+
+/*右列*/
+.g-sdCard-manage .right-moudle {
+    background-color: #fafafa;
+    position: absolute;
+    left: 179px;
+    right: 0;
+    bottom: 38px;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.g-sdCard-manage .g-toolbar {
+    border-top: none;
+}
+
+.g-sdCard-manage .g-grid-row {
+    border: none;
+}
+
+.g-sdCard-manage .right-moudle .g-toolbar .g-toolbar-right {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    height: 36px;
+}
+
+.g-sdCard-manage .right-moudle .g-toolbar .g-toolbar-right .list-shape,
+.g-sdCard-manage .right-moudle .g-toolbar .g-toolbar-right .graph-shape {
+    width: 20px;
+    height: 36px;
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.g-sdCard-manage .right-moudle .list-shape {
+    background: url(../../images/array-list.png) center no-repeat;
+}
+
+.g-sdCard-manage .right-moudle .list-shape:hover,
+.g-sdCard-manage .right-moudle .list-shape.light {
+    background: url(../../images/array-list-hover.png) center no-repeat;
+}
+
+.g-sdCard-manage .right-moudle .graph-shape {
+    background: url(../../images/array-icon.png) center no-repeat;
+}
+
+.g-sdCard-manage .right-moudle .graph-shape:hover,
+.g-sdCard-manage .right-moudle .graph-shape.light {
+    background: url(../../images/array-icon-hover.png) center no-repeat;
+}
+
+.g-sdCard-manage .right-moudle-view {
+    position: absolute;
+    top: 37px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.g-sdCard-manage .right-moudle-view .list-view,
+.g-sdCard-manage .right-moudle-view .graph-view {
+    width: 100%;
+    height: 100%;
+}
+
+.g-sdCard-manage .right-moudle-view .g-grid-row:hover {
+    background-color: #f0f0f0;
+}
+
+.file-list-item {
+    width: 100%;
+}
+
+.file-selected-item {
+    width: 100%;
+}
+
+.file-selected-item .input-box,
+.file-list-item .input-box {
+    -webkit-box-flex: 1;
+}
+
+.icon-file-type {
+    display: block;
+    margin-right: 3px;
+}
+
+.file-selected-item .name,
+.file-list-item .name {
+    width: 100%;
+    height: 30px;
+    max-width: 500px;
+    display: block;
+}
+
+.file-selected-item .type,
+.file-list-item .type {
+    width: 150px;
+    display: block;
+}
+
+.file-list-item .size,
+.file-selected-item .size {
+    padding-left: 20px;
+    display: block;
+    width: 90px;
+}
+
+.file-list-item .modifyDate,
+.file-selected-item .modifyDate {
+    width: 130px;
+    padding-left: 20px;
+    display: block;
+}
+
+.file-list-item-edit {
+    position: absolute;
+    height: 40px;
+    line-height: 40px;
+    left: 0;
+    border: solid 1px #ddd;
+}
+
+/*SD底部状态*/
+
+.sd-detail-box {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 1px 1px;
+    padding: 0 23px;
+    box-sizing: border-box;
+    height: 38px;
+    line-height: 38px;
+    border-top: 1px solid #ddd;
+    background-color: #ececec;
+}
+
+/*第一种状态*/
+.sd-detail-box .sd-box {
+}
+
+.sd-detail-box .sd-memory {
+    width: 180px;
+    height: 40px;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.sd-detail-box .sd-memory .con {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, .6);
+}
+
+.sd-detail-box .sd-memory .con .progress {
+    position: absolute;
+    left: -1px;
+    top: 0;
+    height: 4px;
+    width: 0%;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, .15);
+}
+
+.sd-detail-box .sd-memory .con .alarm {
+    background-color: #ff0909;
+}
+
+/*第二种*/
+.sd-detail-box .sd-box-img {
+}
+
+.sd-detail-box .file-selected-item .name,
+.sd-detail-box .file-selected-item .size,
+.sd-detail-box .file-selected-item .modifyDate {
+    width: auto;
+    height: auto;
+    padding: 0 20px 0 0;
+}
+
+/*SD卡 文件夹为空状态*/
+.sd-not{}
+.emptyBox{}
+.box-none-height-hidden{
+    visibility:hidden;
+    z-index:-1;
+    height:0
+}
+.box-full-height-show{
+    visibility:visible;
+    z-index:1;
+    height:100%
+}
+
+.sd-detail-box .ico-file-sd{ display: block;}

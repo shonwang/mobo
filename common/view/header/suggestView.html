@@ -1,0 +1,108 @@
+<script id="tpl-search-app-item" type="text/tpl">
+     <div class="g-search-app-item cbox">
+        <div class="icon">
+           <img src="<%=iconPath%>"></img>
+        </div>
+        <div class="ctn">
+           <p class="name te"><%=name%></p>
+           <p class="c-9 te"><%=description%></p>
+        </div>
+        <div class="action">
+             <button class="g-btn g-btn2 btn-quick-install install" versioncode="<%=versionCode%>" packagename="<%=packageName%>"><%=I18N.fillDomText('common.installLabel')%></button>
+        </div> 
+     </div>
+</script>
+
+<!--搜索联系人模板-->
+<script id="tpl-search-local-contact" type="text/tpl">
+         <div class="g-search-app-item g-search-local-contact-item cbox">
+             <div class="icon" >
+                <img src="<%=data.sContactIcon||'common/images/ico/default-avatar.png'%>"/>    
+             </div>
+            <div class="ctn">
+                   <p class="name f14 te"><%=data.displayName%></p>
+                   <p class="c-9 te"><%=data.sContactNumber||""%></p>   
+            </div>
+         </div>
+</script>
+
+<!--搜索短信模板-->
+<script id="tpl-search-local-sms" type="text/tpl">
+  <div class="g-search-app-item g-search-local-sms-item cbox">
+    <div class="icon">
+      <img src="<%=data.contactIcon%>"></img>
+    </div>
+    <div class="ctn">
+      <p class="name f14 te"><%=data.displayLabel||""%></p>
+      <p class="c-9 te"><%=data.smsContent||""%></p>
+    </div>
+  </div>
+</script>
+<!--搜索短信模板-->
+<script id="tpl-search-local-book" type="text/tpl">
+     <div class="g-search-app-item cbox">
+        <div class="ctn">
+           <p class="name te"><%=name%></p>
+        </div>
+     </div>
+</script>
+<!--搜索ringtones模板-->
+<script id="tpl-search-ringtones-item" type="text/tpl">
+     <div class="g-search-app-item cbox">
+        <div class="ctn">
+           <p class="name te"><%=name%></p>
+        </div>
+     </div>
+</script>
+<!--搜索wallpaper模板-->
+<script id="tpl-search-wallpapers-item" type="text/tpl">
+     <div class="g-search-app-item cbox">
+        <div class="ctn">
+           <p class="name te"><%=name%></p>
+        </div>
+     </div>
+</script>
+<!--搜索wallpaper模板-->
+<script id="tpl-search-book-item" type="text/tpl">
+     <div class="g-search-app-item cbox">
+        <div class="ctn">
+           <p class="name te"><%=name%></p>
+        </div>
+     </div>
+</script>
+<!--搜索youtube模板-->
+<script id="tpl-search-youtube-item" type="text/tpl">
+     <div class="g-search-app-item cbox">
+           <div class="icon">
+               <img src="<%=iconPath%>"></img>
+           </div>
+        <div class="ctn">
+           <p class="name te"><%=name%></p>
+        </div>
+     </div>
+</script>
+<!--搜索本地应用模板-->
+<script id="tpl-search-local-app" type="text/tpl">
+         <div class="g-search-app-item g-search-local-app-item cbox">
+           <div class="icon">
+               <img src="<%=data.iconPath||'common/images/ico/default-rim-app.png'%>"></img>
+           </div>
+          <div class="ctn">
+                   <p class="name te"><%=data.apkName||""%></p>
+                   <p class="c-9 te">
+                       <span class="version" style="display: inline-block;width:80px;"><%=data.version.length>10?data.version.substring(0,9)+"...":data.version||""%></span>
+                       <span class="size" style="display: inline-block;width:80px;"><%=data.size%></span>
+                       <span class=<%=data.installPos=='0'? 'postion':'postionsdCard'%> style='display: inline-block;width:80px;'></span>
+                   </p>
+           </div>
+           <%
+              if(data.updatable){
+                  %>
+           <div class="action">
+               <button class="g-btn g-btn2 btn-quick-update update" versioncode="<%=data.versionCode%>" packagename="<%=data.packageName%>" <%=data.updating?'disabled=true':''%>><%=data.updating?I18N.fillDomText('myapp.updatingText'):I18N.fillDomText('common.updateLabel')%></button>
+           </div>                  
+              <%}
+           %>
+
+         </div>
+</script>

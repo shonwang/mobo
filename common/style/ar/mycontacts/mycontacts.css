@@ -1,0 +1,63 @@
+﻿body[language="arabic"] .g-page-ctn{left:0; right: 180px;}
+body[language="arabic"] .g-menu-account-filter{ left:90px!important;}
+body[language="arabic"] .g-contact .list, body[language="arabic"] .g-image-contact-empty,body[language="arabic"] .g-contact .loading-box{right:0!important; left: 380px!important; border-left:1px solid #dcdcdc;border-right:0;}
+body[language="arabic"] .g-contact .right{left:0; right: auto;}
+body[language="arabic"] .g-contact .w-contact-helper{text-align: right;}
+body[language="arabic"] .icon-contact-add{padding-right: 22px; padding-left: 0; background-position:right center;}
+body[language="arabic"] .g-contact .contact-quick-add-content .content-title{text-align: right;}
+body[language="arabic"] .g-contact .contact-quick-add-content{padding-right: 50px; padding-left: 0}
+body[language="arabic"] .g-contact .quick-add-item{direction:rtl;}
+body[language="arabic"] .g-contact .quick-add-item input[name="email"],body[language="arabic"] .g-contact .quick-add-item input[name="phone"]{text-align: right;direction: ltr;}
+body[language="arabic"] .contact-right-edit-or-new-ctn{direction:rtl;}
+body[language="arabic"] .add-item-btn,body[language="arabic"] .add-item-btn:hover{background-position:center;}
+body[language="arabic"] .contact-detail-edit-container .icon-container{margin-left: 10px; margin-right: 0;}
+body[language="arabic"] .g-toolbar-right{left:10px;right:auto;}
+body[language="arabic"] .g-toolbar{direction:rtl;}
+body[language="arabic"] .g-menu-group-filter{left:5px!important;}
+body[language="arabic"] .g-scr-prx-content{direction: rtl;}
+body[language="arabic"] .app-version-col .ar{ background-position:center 0;-webkit-transform: rotate(180deg);}
+body[language="arabic"] .g-contact .list .contact-list-item .info{text-align: right;padding-left: 0; padding-right: 12px;}
+body[language="arabic"] .contact-basic-info img,body[language="arabic"] .contact-group-info{float: right;}
+body[language="arabic"] .contact-basic-info{direction: rtl;}
+body[language="arabic"] .contact-detail-content-info{text-align: right; direction: rtl;}
+body[language="arabic"] .g-grid-search-box .g-grid-search{direction: rtl;}
+body[language="arabic"] .g-grid-search .g-btn2{margin-left: 10px;margin-right: 0}
+body[language="arabic"] .progress-bar span{left: auto;right: 0;}
+
+
+body[language="arabic"] .ico-delete,body[language="arabic"] .ico-delete:hover,body[language="arabic"] .g-image-player .action .ico-delete{background-position: right center;padding-left:0;padding-right: 18px}
+body[language="arabic"] .g-image-player .action .ico-delete{margin-right: 10px;}
+body[language="arabic"] .ico-export,body[language="arabic"] .ico-export:hover{background-position: right center;padding-right: 20px;padding-left: 0}
+body[language="arabic"] .ico-import{background-position: right center;padding-left:0;padding-right: 19px;}
+body[language="arabic"] .ico-message{background-position: right center;padding-right: 21px;padding-left:0;}
+body[language="arabic"] .ico-sd,body[language="arabic"] .ico-sd:hover{background-position: right center;padding-right: 20px;padding-left:0;}
+body[language="arabic"] .ico-unstall,body[language="arabic"] .ico-unstall:hover{background-position: right center;padding-left:0;padding-right: 19px;}
+body[language="arabic"] .ico-update-all,body[language="arabic"] .ico-update-all[disabled],
+body[language="arabic"] .ico-update-all[disabled]:hover,
+body[language="arabic"] .ico-update-all[disabled]:active{background-position: right center;padding-left:0;padding-right: 16px;}
+
+body[language="arabic"] .ico-install,body[language="arabic"] .ico-install[disabled],
+body[language="arabic"] .ico-install[disabled]:hover,
+body[language="arabic"] .ico-install[disabled]:active{background-position: right center;padding-left:0;padding-right: 19px;}
+body[language="arabic"] .ico-music{background-position: right center;padding-right: 21px;padding-left:0;}
+body[language="arabic"] .ico-picture{background-position: right center;padding-right: 21px;padding-left:0;}
+body[language="arabic"] .ico-import-video{background-position: right center;padding-right: 21px;padding-left:0;}
+body[language="arabic"] .ico-import-book{background-position: right center;padding-right: 20px;padding-left:0;}
+body[language="arabic"] .ico-mark,body[language="arabic"] .ico-mark:hover{background-position: right center;padding-right: 21px;padding-left:0;}
+
+body[language="arabic"] .delete-item-btn,body[language="arabic"] .delete-item-btn:hover{width: 30px;padding:0; margin:0;background-position: center; }
+
+body[language="arabic"] .numbers input,body[language="arabic"] .contact-quick-add-content input{direction: ltr;text-align: right;}
+
+/*下拉框*/
+body[language="arabic"] .g-menu-group-filter,
+body[language="arabic"] .g-menu-account-filter,
+body[language="arabic"] .g-menu-group-edit{direction: rtl;}
+body[language="arabic"] .g-menu .g-menu-item.checkbox input,
+body[language="arabic"] .g-menu .g-menu-item.checkbox input{margin: 0 0 0 6px;}
+
+body[language="arabic"] .g-task-item .ctn-view .name,body[language="arabic"] .g-contact .list .contact-list-item .info p{direction: ltr;text-align: right;}
+body[language="arabic"] .g-message-item-ctn li.from-retry .content-wrap{direction: rtl;}
+/*日期*/
+body[language="arabic"] .g-image-thread .title{direction: ltr;text-align: right;}
+body[language="arabic"] .g-image-thread .title input{float: right;margin: 3px;}

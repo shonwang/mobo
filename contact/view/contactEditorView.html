@@ -1,0 +1,88 @@
+<script id="tpl-contact-new-dlg" type="text/tpl">	
+	<div class="new-dlg-container">
+			<!--dialog区 start-->
+				<div class="new-contact">
+					 	<!--头像-->
+							<div class="icon-container">
+								<img src="<%=data.icon || 'contact/images/contact-default-large.png'%>" alt="" style="width:45px;height: 45px;border:1px #ddd;" name="icon"/>
+								<input type="file" name="iconSelector" style="display: none;"/>
+								<div class="mask cbox">
+									<div class="change-contact-icon"><%=I18N.fillDomText('contact.ChangeIcon')%></div>
+								 </div>
+							</div>
+					 	<div class="new-dlg-contact-item">
+					 		<input  placeholder="First Name" value="<%=data&&data.sFirstName||''%>" name="name" type="text" class="input-field" style="width:40%"/>
+					 		<input  placeholder="Last Name"  name="lastname" value="<%=data&&data.sLastName||''%>" type="text" class="input-field" style="width:40%"/>
+					 	</div>
+					 	<div class="new-dlg-contact-item">
+                       	 	<div  class="group input-field" name="group" placeholder="group" style="width: 80%;min-height:35px;display:inline-block;"><%=data.group||groups[0].label%></div>
+					 	    <i class="ico-arrow" style="border-bottom: 1px;border-top:1px;border-right: 1px;padding-left: 0px; border-color: #eee;"></i>
+					 	</div>
+					    <!--number号码-->
+					    <div class="new-dlg-contact-item-wraper">
+					    <div class="numbers">
+					    	<%
+					    	if(data.number){
+					    	   for(var i=0;i<data.number.length;i++){
+					    	%>
+					    	   	<div class="new-dlg-contact-item number_item">
+					            <input class="name  input-field" name="name" index="<%=data.number[i].type||i%>" style="width: 60px" value="<%=data.number[i].name||phoneTypes[0].label%>"/>
+					            <i class="ico-arrow" style="border-bottom: 1px;border-top:1px;border-right: 1px;padding-left: 0px;border-color: #eee;"></i>
+					    		<input class="data  input-field" name="data" placeholder="input number here" value="<%=data.number[i].data%>"/>
+					    		<span class="add add-item-btn"></span>
+					    		<span class="ico-delete delete-item-btn"></span>
+					    	</div>
+					    	 <%}
+					    	 }
+					    	%>
+					    	<%
+                            if(data.sContactEmail){
+                               for(var i=0;i<data.sContactEmail.length;i++){
+                            %>
+                                <div class="new-dlg-contact-item number_item">
+                                <input class="name  input-field" name="name" index="<%=data.sContactEmail[i].typename||i%>" style="width: 60px" value="<%=data.sContactEmail[i].typename||phoneTypes[2].label%>"/>
+                                <i class="ico-arrow" style="border-bottom: 1px;border-top:1px;border-right: 1px;padding-left: 0px;border-color: #eee;"></i>
+                                <input class="data  input-field" name="data" value="<%=data.sContactEmail[i].data%>"/>
+                                <span class="add add-item-btn"></span>
+                                <span class="ico-delete delete-item-btn"></span>
+                            </div>
+                             <%}
+                             }
+                            %>
+					    	<div class="new-dlg-contact-item number_item">
+					    		<input class="name  input-field" name="name" index ="-1" style="width: 60px" value="<%=phoneTypes[0].label%>"/>
+					    		<i class="ico-arrow" style="border-bottom: 1px;border-top:1px;border-right: 1px;padding-left: 0px;border-color: #eee;"></i>
+					    		<input class="data input-field" name="data"/>
+					    	   <span class="add add-item-btn"></span>
+                               <span class="ico-delete delete-item-btn"></span>
+					    	</div>
+					    	<div class="new-dlg-contact-item number_item">
+                                <input class="name  input-field" name="name" index ="-1" style="width: 60px" value="<%=phoneTypes[2].label%>"/>
+                                <i class="ico-arrow" style="border-bottom: 1px;border-top:1px;border-right: 1px;padding-left: 0px;border-color: #eee;"></i>
+                                <input class="data input-field" name="data"/>
+                               <span class="add add-item-btn"></span>
+                               <span class="ico-delete delete-item-btn"></span>
+                            </div>
+					    </div>
+					  
+					    <div class="note-ctn">
+					    	<textarea class="input-area" name="note" cols="32" placeholder="input note here"></textarea>
+					    </div>
+					 </div>
+					<div class="btn-ctn">
+						<button class="btn-dlg-save"><%=I18N.fillDomText('contact.Save')%></button>
+						<button class="btn-dlg-cancel"><%=I18N.fillDomText('common.cancelLabel')%></button>
+					</div>
+			   </div>
+				<!--dialog区 end-->
+		</div>
+</script>
+<script id="tpl-new-dlg-contact-item" type="text/tpl">
+                    <div class="new-dlg-contact-item number_item">
+                                <input class="name  input-field" name="name" style="width: 60px" value="Mobile"/>
+                                <i class="ico-arrow" style="border-bottom: 1px;border-top:1px;border-right: 1px;padding-left: 0px;border-color: #ddd;"></i>
+                                <input class="data input-field" name="data" placeholder="input number here"/>
+                               <span class="add add-item-btn"></span>
+                               <span class="ico-delete delete-item-btn"></span>
+                    </div>
+</script>

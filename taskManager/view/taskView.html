@@ -1,0 +1,75 @@
+<script id="tpl-task-view" type="text/tpl">
+    <div class="g-task-manager">
+        <div class="g-toolbar hbox">
+            <input type="checkbox" class="chkbox-all"></input>
+            <button class="ico-btn ico-pause pause" disabled><%=i18n.fillDomText('common.pauseText')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="ico-btn ico-continue continue" disabled><%=i18n.fillDomText('common.continueText')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="ico-btn ico-delete delete" disabled><span></span><%=i18n.fillDomText('common.Delete')%></button>
+            <i class="g-toolbar-line"></i>
+            
+            <button class="ico-btn ico-down-open openFolder"><span></span><%=i18n.fillDomText('task.openFolder')%></button>
+            <button class="back" i18n-key="task.hideTaskTip"></button>
+        </div>
+        
+        <div class="g-content">
+            <!-- processing task list -->
+            
+            <div class="g-list-tab-header">
+                <menu class="tab hbox">
+                    <li class="selected" data-tab="progress"><%=i18n.fillDomText('common.inProcessingTaskText')%> <em>0</em> </li>
+                    <li data-tab="completed"><%=i18n.fillDomText('common.completedText')%> <em>0</em> </li>
+                    <div class="line"></div>
+                </menu>
+            </div>
+            
+            <!--tab列表区域-->
+            <div class="g-list-tab-con">
+                <div id="i-task-process" class="list g-page-show" >
+                    
+                </div>
+                <div id="i-task-complete" class="list g-page-hide" >
+                    
+                </div>
+                
+                <div class="g-app-not" style="display:none">
+                    <img src="taskManager/images/not-task.png">
+                    <p class="info"><%=i18n.fillDomText('task.noTaskText')%></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="tpl-task-item" type="text/tpl">
+    <div class="g-task-item">
+        <div class="ctn-view">
+            <div class="pc cbox"><img src="<%=iconPath%>"></img></div>
+            <span class="name te"><%= name %></span>
+        </div>
+        <div class="size c-9">
+            <%=size%>
+        </div>
+        <div class="status">
+           <div class="progress-bar-stripes" style="display:none">
+               <span></span>
+           </div>
+           <div class="progress-bar">
+               <span></span>
+           </div>
+           <div class="hbox ctn c-6">
+               <span class="txt te"></span>
+               <span class="pr-txt"></span>
+           </div>
+        </div>
+        <div class="op"></div>
+    </div>
+</script>
+
+<script id="tpl-task-empty" type="text/tpl">
+    <div class="g-app-not">
+        <img src="../src/application/images/not-app.png">
+        <p class="info">There are no tasks here.</p>
+    </div>
+</script>

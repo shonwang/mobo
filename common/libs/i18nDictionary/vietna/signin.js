@@ -1,0 +1,53 @@
+define('vietna:signin', function(require, exports, module){
+    var dictionary = {
+        signUpHeader: "Đăng ký",
+        myAccountLabel: "Tài khoản của tôi",
+        logoutLabel: "Đăng xuất",
+        errorEmailLabel: "Email không đúng.",
+        emptyEmailLabel: "Bạn không thể để trống.",
+        shortPwdLabel: "Mật khẩu phải ít nhất 8 ký tự.",
+        longPwdLabel: "Mật khẩu không nhiều hơn 20 ký tự",
+        notMatchPwdLbel: "Mật khẩu xác nhận không đúng. Hãy gõ lại",
+        usedEmailLabel: "Địa chỉ email đã được sử dụng. Hãy thử email khác.",
+        errorLoginLbel: "Mật khẩu không đúng. Hãy nhập lại mật khẩu.",
+        agreeLabel: "Tôi đồng ý",
+        userAgreenebtLabel: "Điều Khoản Người Sử Dụng",
+        orLabel: "Hoặc",
+        forgotPwdLabel: "Quên mật khẩu?",
+        changeLabel: "Thay đổi",
+        sendLabel: "Gửi email xác nhận",
+        changePwdLabel: "Thay đổi mật khẩu",
+        pwdSuccessLabel: "Mật khẩu cập nhật thành công!",
+        confirmLabel: "Xác nhận",
+        networkLabel: "Lỗi mạng. Hãy thử lại.",
+        nullAccount: "Tài khoản trống",
+        errorPwdLabel: "Chỉ chữ và số",
+        sendSuccessLabel: "Đã gửi thành công.",
+        errorCodeLabel: "Nhập sai mã xác nhận.",
+        imgUploadSuccess: "Đã tải lên thành công",
+        imgUploadFailed: "Tải lên thất bại",
+        incorrectPwd: "Mật khẩu hiện tại sai. Hãy thử lại",
+        registerFailedLabel: "Đăng ký tài khoản mới thất bại",
+        waitImageUploadLabel: "Hãy kiên nhẫn.",
+        loginInputText:"Mật khẩu",
+        conWordInputText:"Xác nhận mật khẩu",
+        enterCodeInputText:"Nhập mã",
+        //20140811
+        samePwdLabel: "Chọn một mật khẩu mà bạn chưa sử dụng trước đó cho tài khoản này.",
+        //20140812
+        errorPicLabel: "Định dạng hình ảnh vô hiệu. Bạn có thể tải lên file jpg, gif hay png",
+		oldword:"Mật khẩu cũ",
+		newword:"Mật khẩu mới",
+        //20140917
+        selectPicFromPCLabel: "Chọn một ảnh từ máy tính của bạn",
+        selectPicFromPhoneLabel: "Chọn một ảnh từ điện thoại của bạn",
+        promptConnect: "Vui lòng kết nối thiết bị của bạn sử dụng cáp USB.",
+        setAsProfilePhoto: "Đặt làm ảnh tiểu sử",
+        promptPullPic: "Đang lấy ảnh từ điện thoại, vui lòng kiên nhẫn...",
+        promptPullPicFailed: "Không lấy được ảnh từ điện thoại, vui lòng thử lại.",
+        promptLargePic: "Ảnh bạn đang cố sử dụng có kích cỡ quá lớn. Hãy thử thay đổi kích cỡ của nó hoặc sử dụng ảnh khác.",
+        promptFailAuth: "Không có được sự cho phép của bên thứ ba, vui lòng kiểm tra mạng, tường lửa và tài khoản người dùng của bạn.",
+        imgUploading:"Đang tải lên..."
+    };
+    return dictionary;
+});

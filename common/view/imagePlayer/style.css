@@ -1,0 +1,214 @@
+.g-image-player {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, .85);
+}
+
+.g-image-player .container {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    bottom: 90px;
+    top: 0;
+    padding: 10px;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    overflow: hidden;
+}
+
+.g-image-player .container img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    opacity: 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-transition: -webkit-transform .2s;
+}
+
+.g-image-player .container img.hd{
+    opacity: 0;
+}
+.g-image-player .container img.sw{
+    -webkit-transition: opacity .6s;
+    opacity: 1;
+}
+
+.g-image-player .close {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    background: url(../../images/ico/close-btn.png) no-repeat;
+}
+
+.g-image-player .close:hover {
+    background-position: 0 -35px;
+}
+
+.g-image-player .close:active {
+    background-position: 0 -70px;
+}
+
+/*.g-image-player .container:hover .arrow {
+    display: block;
+}*/
+
+.g-image-player .container .arrow {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 75px;
+    margin-top: -37px;
+    cursor: pointer;
+    /*display: none;*/
+}
+
+.g-image-player .container .arrow.pre {
+    left: 9px;
+    background: url(../../images/ico/prev-image.png) no-repeat;
+}
+
+.g-image-player .container .arrow.next {
+    right: 9px;
+    background: url(../../images/ico/next-image.png) no-repeat;
+}
+
+.g-image-player .container .arrow.pre:hover {
+    background: url(../../images/ico/prev-image-hover.png) no-repeat;
+}
+
+.g-image-player .container .arrow.next:hover {
+    background: url(../../images/ico/next-image-hover.png) no-repeat;
+}
+
+.g-image-player .container .action {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    height: 26px;
+    width: 100px;
+    margin-left: -50px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, .85);
+    border: rgba(255,255,255,0.20) solid 1px;
+}
+
+.g-image-player .action .rotate-left,
+.g-image-player .action .rotate-right,
+.g-image-player .action .other,
+.g-image-player .action .ico-delete,
+.g-image-player .action .wallpaper {
+    width: 36px;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+}
+
+.g-image-player .action .ico-delete {
+    background-image: url(../../images/toolbar/delete-gray.png);
+}
+
+.g-image-player .action .ico-delete:hover {
+    background-image: url(../../images/toolbar/delete-hover.png);
+}
+
+.g-image-player .action .ico-delete:active {
+    background-image: url(../../images/toolbar/delete-active.png);
+}
+
+.g-image-player .action .rotate-left {
+    display: none;
+    background-image: url(../../images/ico/prev.png);
+}
+
+.g-image-player .action .rotate-left:hover {
+    background-image: url(../../images/ico/prev-hover.png);
+}
+
+.g-image-player .action .rotate-left:active {
+    background-image: url(../../images/ico/prev-active.png);
+}
+
+.g-image-player .action .rotate-right {
+    display: none;
+    background-image: url(../../images/ico/next.png);
+}
+
+.g-image-player .action .rotate-right:hover {
+    background-image: url(../../images/ico/next-hover.png);
+}
+
+.g-image-player .action .rotate-right:active {
+    background-image: url(../../images/ico/next-active.png);
+}
+
+.g-image-player .action .wallpaper {
+    background-image: url(../../images/ico/set-wallpaper.png);
+}
+
+.g-image-player .action .wallpaper:hover {
+    background-image: url(../../images/ico/set-wallpaper-hover.png);
+}
+
+.g-image-player .action .wallpaper:active {
+    background-image: url(../../images/ico/set-wallpaper-active.png);
+}
+
+.g-image-player .action .other {
+    background-image: url(../../images/ico/down.png);
+}
+
+.g-image-player .action .other:hover {
+    background-image: url(../../images/ico/down-hover.png);
+}
+
+.g-image-player .action .other:active {
+    background-image: url(../../images/ico/down-active.png);
+}
+
+.g-image-player .thumb {
+    height: 76px;
+    position: absolute;
+    bottom: 30px;
+    left: 80px;
+    right: 80px;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.g-image-player .thumb:first-child img {
+    margin-right: 0;
+}
+
+.g-image-player .thumb img {
+    width: 80px;
+    height: 60px;
+    margin-right: 10px;
+    display: block;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+.g-image-player .thumb img:last-child {
+    margin-right: 0;
+}
+
+.g-image-player .thumb .cur {
+    width: 100px;
+    height: 76px;
+}
+
+

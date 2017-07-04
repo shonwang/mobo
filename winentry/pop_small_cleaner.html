@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link href="../common/style/base.css" rel="stylesheet" type="text/css">
+  <link href="../common/view/popup/popup.css" rel="stylesheet" type="text/css">
+  <link href="../common/view/window/window.css" rel="stylesheet" type="text/css">
+  <style>
+  		.g-popup.g-window{
+  			width:298px;
+  			height:118px;
+  			box-shadow: 0 0 5px #ccc;
+  			border-width: 1px;
+  		}
+  		.clean-left{
+  			width:118px;
+  			height:118px;
+  			color:#fff;
+  			text-align:center;
+  			font-size:16px;
+  			background:#0096E3;
+  			position:relative;
+  			-webkit-transition: background 0.8s;
+  		}
+  		.clean-left p{
+  			margin-top: 10px;
+  		}
+  		.clean-left img{
+  			position:absolute;
+  		}
+  		.clean-left p span,
+  		.clean-left p b{
+  			display:block;
+  			margin-top:5px;
+  		}
+  		.g-popup.g-window .ico-close {
+  			right:0;
+  			height:30px;
+  		}
+  		.clean-left b{
+  			font-size:26px;
+  		}
+  		.clean-text{
+  			-webkit-box-flex: 1;
+  			padding:10px 20px 0;
+  		}
+  		#btn-clean{
+  			display:block;
+  			margin:10px auto 0;
+  		}
+  </style>
+  
+</head>
+<body>
+<div class="g-popup g-window" >
+	<div class="cbox">
+	    <div class="clean-left cbox">
+	    	<img draggable="false" src="custom/images/clean-left.png" />
+	    	<p><b class="size">0</b><span class="mb">MB</span></p>
+	    </div>
+	    <div class="clean-text cbox">
+	    	 <i class="g-window-header-x ico-close ico-close-black"></i>
+	    	<div class="clean-info">
+	    		<p>可清理<span class="c-blue size">120</span>个垃圾文件 和<span class="c-blue">62</span>项注册表垃圾！</p>
+	    		<button id="btn-clean" class="btn-clean g-btn g-btn1">Clean</button>
+	    	</div>
+	    </div>
+    </div>
+    
+    
+</div>
+<script type="text/javascript">
+    document.oncontextmenu = function(){return false};
+    var dic={
+        arabic:{
+            staticsInfo:"قد تم  تنظيف </span>{1}<span class=\"c-blue\"> ملفات غير مرغوب فيه و </span>{0}<span class=\"c-blue size\" > نفايات التسجيل",
+            cleanLabel:"تنظيف"
+        },
+        chinese:{
+            staticsInfo:"可清理<span class=\"c-blue size\" >{0}</span>个垃圾文件和<span class=\"c-blue\">{1}</span>项注册表垃圾",
+            cleanLabel:"清理"
+        },
+        english:{
+            staticsInfo:"<span class=\"c-blue size\" >{0}</span> junk files and <span class=\"c-blue\">{1}</span> registry files can be cleaned.",
+            
+            cleanLabel:"Clean"                
+        },
+        farsi:{
+            staticsInfo:"می‌توانید </span>{1}<span class=\"c-blue\"> فایل بی‌استفاده و </span>{0}<span class=\"c-blue size\" > فایل رجیستری را پاک کنید.",
+            cleanLabel:"پاک کردن"                   
+        },
+        france:{
+            staticsInfo:"<span class=\"c-blue size\" >{0}</span> fichiers indésirables et <span class=\"c-blue\">{1}</span> fichiers de registre peuvent être nettoyés.",
+            cleanLabel:"Nettoyage"
+        },
+        hindi:{
+        	
+            staticsInfo:"<span class=\"c-blue size\" >{0}</span> जंक फ़ाइलें और <span class=\"c-blue\">{1}</span> रजिस्ट्री फ़ाइलें साफ़ की जा सकती हैं.",
+            cleanLabel:"साफ़ करें"
+        },
+        indonesian:{
+            staticsInfo:"Berkas sampah <span class=\"c-blue size\" >{0}</span> dan Berkas Registri <span class=\"c-blue\">{1}</span> bisa dibersihkan.",
+            cleanLabel:"Bersihkan"                
+        },
+        italian:{
+            staticsInfo:"È possibile eliminare <span class=\"c-blue size\" >{0}</span> file indesiderati e <span class=\"c-blue\">{1}</span> file del Registro di sistema.",
+            cleanLabel:"Pulisci"                      
+        },
+        korean:{
+            staticsInfo:"<span class=\"c-blue size\" >{0}</span> 개 불필요 파일과 <span class=\"c-blue\">{1}</span>개 레지스트리 파일을 삭제할수 있습니다.",
+            cleanLabel:"정리"
+        },
+        poland:{
+            staticsInfo:"Pliki-śmieci <span class=\"c-blue size\" >{0}</span> i pliki rejestru <span class=\"c-blue\">{1}</span> mogą zostać wyczyszczone.",
+            cleanLabel:"Wyczyść"
+        },
+        portuguese:{
+            staticsInfo:"<span class=\"c-blue size\" >{0}</span> arquivos inúteis a <span class=\"c-blue\">{1}</span> arquivos de registro podem ser limpos.",
+            cleanLabel:"Limpar"                
+        },
+        russian:{
+            staticsInfo:"<span class=\"c-blue size\" >{0}</span> мусорных файлов и <span class=\"c-blue\">{1}</span> файлов регистра возможно очистить",
+            cleanLabel:"Очистить"                      
+        },
+        spanish:{
+            staticsInfo:"<span class=\"c-blue size\" >{0}</span> Archivos basura y archivos de registro <span class=\"c-blue\">{1}</span> se pueden limpiar.",
+            cleanLabel:"Limpio"                
+        },
+        thai:{
+            staticsInfo:"<span class=\"c-blue size\" >{0}</span>  ไฟล์ขยะและ <span class=\"c-blue\">{1}</span> ไฟล์รีจิสทรีสามารถทำความสะอาดได้.",
+            cleanLabel:"ทำความสะอาด"                      
+        },
+        traditionalchinese:{
+            staticsInfo:"可清理 <span class=\"c-blue size\" >{0}</span> 個垃圾檔和 <span class=\"c-blue\">{1}</span> 項登錄碼垃圾！",
+            cleanLabel:"清理"
+        },
+        vietna:{
+        
+            staticsInfo:"Có thể dọn dẹp <span class=\"c-blue size\" >{0}</span> tệp rác và <span class=\"c-blue\">{1}</span> tệp đăng ký.",
+            cleanLabel:"Dọn dẹp"
+        },
+        turkish:{
+            staticsInfo:"<span class=\"c-blue size\" >{0}</span> atık dosyalar ve <span class=\"c-blue\">{1}</span> kayıt dosyaları temizlenebilir",
+            cleanLabel:"Temizle"
+        }
+    };
+
+    function sendMessageCallback(action, paras, callback){
+        app.setMessageCallback(action, function(bn, args) {
+              var res;
+              try{
+                  res = JSON.parse(args[0]);
+              }catch(e){
+                  res = args[0];
+              }
+              callback && callback(res);
+              app.removeMessageCallback(action);
+        });
+        //var requestId = new Date().valueOf();
+        app.sendMessage(action, [JSON.stringify(paras)]);
+    }
+    //*********************************************************
+    //20140928 新版日志
+    var isGetPulickFeild = false;
+    var log_channelid = "-";
+    var log_version = "-";
+    var log_sessionid = "-";
+    var log_site = "-";
+    var log_pclg = "-";
+    var log_phonestatus = "-";
+    var log_service_id = "1000120";
+    var newLog = {
+        class: "c20002",
+        page: "p20002",
+        module: "m20003"
+    }
+	var showLog = {
+        class: "c20002",
+        page: "p20002",
+        module: "m20003"
+    }
+    var logS2 = {
+	    module: "notification",
+	    targetvalue: "clean2",
+	    status: 1,
+	    httpcode: 200
+	}
+	sendMessageCallback("get_GetClientInfo", {}, function(res){
+        console.log("新版日志公共字段：", Object.keys(res.info).length);
+        if (res&&res.info){
+            log_channelid = res.info.channelid;
+            log_version = res.info.clientVer;
+            log_sessionid = res.info.sessionid;
+            log_site = res.info.site;
+            log_pclg = res.info.language;
+        }
+    });
+    var sendNewLog = function (logServiceExt){
+	    	console.log(logServiceExt)
+	        var log_time = new Date().valueOf();
+	        var log_nettype = "-";
+	
+	        logServiceExt = JSON.stringify(logServiceExt)
+	        console.log(logServiceExt)
+	        var feildStr = [log_channelid, log_version, log_sessionid, log_time, log_nettype, log_site, log_phonestatus, log_pclg, log_service_id, logServiceExt].join("###");
+	        console.log("%c 新版日志 >> " + feildStr, "color:#13abe1");
+	         try{
+                if (log_channelid === "-"){
+                    setTimeout(function(){
+                      app.sendMessage("get_ReportLog2",  [feildStr]);  
+                    }, 4000)
+                } else {
+                    app.sendMessage("get_ReportLog2",  [feildStr]); 
+                }
+	         }catch (error){}   
+	    };
+
+    //*********************************************************
+	    //旧版日志
+
+	    var serializeObj = function(obj){
+	        var u = '';
+	        for(var key in obj){
+	            var kv = key + '=' + obj[key];
+	            u = u + kv + '&';
+	        }
+	        return u.slice(0, u.lastIndexOf('&'));
+	    };
+	
+	    var sendStatistics = function(paras){
+	        try {
+	            var actionName = paras.action;
+	            var agrsStr = paras.args || {};
+	            
+	            var paramObj = {
+	                S1 : actionName||"",
+	                S2 : JSON.stringify(agrsStr),
+	                sid :"1000130"
+	            };
+	            console.log("%c utility >> event log info: " + serializeObj(paramObj), "color:green");
+	
+	            app.sendMessage("get_ReportLog", {
+	                paramer: serializeObj(paramObj)
+	            });
+	        } catch (error){
+	            console.error("utility >> event log info: ", error); 
+	        }
+	    };
+
+    //*********************************************************
+    var getParameter = function(name, targetUrl){
+        var url = targetUrl || location.href;  
+        
+        if(url.indexOf('#') > -1){
+            url = url.slice(0, url.indexOf('#'));
+        }
+        
+        var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");  
+        var paraObj = {}  
+        for (i = 0; j = paraString[i]; i++) {  
+            paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);  
+        }  
+        var returnValue = paraObj[name.toLowerCase()];  
+        if (typeof (returnValue) == "undefined") {  
+            return "";  
+        } else {  
+            return window.decodeURIComponent(returnValue);  
+        }  
+    };
+    function convertSizeToString(initSize){
+        if(initSize == 0){
+            return 0 + "KB";
+        }else if(initSize < 1024){
+            return initSize + "B";
+        }else if((initSize / 1024) < 1024){
+            return Math.ceil((initSize / 1024)) + "KB";
+        }else if((initSize / (1024*1024)) < 1024){
+            return (initSize / (1024*1024)).toFixed(2) + "MB";
+        }else if((initSize / (1024*1024*1024)) < 1024){
+            return (initSize / (1024*1024*1024)).toFixed(2)+"GB";
+        }
+    };
+    window.onload=function(){
+    	/*发送日志开始*/
+    	showLog.action = "a20022";
+    	showLog.targetvalue = "clean2";
+        if (log_channelid === "-"){  
+            setTimeout(function(){
+              sendNewLog(showLog);
+            }, 2000);
+        } else {
+            sendNewLog(showLog);
+        }
+        var log = {
+	        action: "pushshowup",
+	        args: logS2
+	    }
+	    sendStatistics(log);
+	    var a = 0;
+	    var cleanLeft = document.querySelector(".clean-left");
+	    var time = setInterval( function(){
+	    	a++;
+	    	if( a == 1){
+	    		cleanLeft.style.background = "#68B206"
+	    	}else if(a == 2){
+	    		cleanLeft.style.background = "#F2BB15"
+	    	}else if(a == 3){
+	    		cleanLeft.style.background = "#E39000"
+	    	}else if(a == 4){
+	    		cleanLeft.style.background = "#e35000"
+	    		clearInterval(time)
+	    	}
+	    },500)
+	    /*发送日志结束*/       
+		var size=getParameter("size",location.href);
+        var files=getParameter("fileCount",location.href);
+        var regs=getParameter("regCount",location.href);
+        var language=getParameter("language",location.href);
+        if(language == "arabic"){
+              document.querySelector("body").setAttribute("language","arabic");
+          }else{
+              document.querySelector("body").removeAttribute("language");
+          }
+        console.log("size:"+size+";regs:"+regs+";language:"+language+";files:"+files);  
+        
+        var tt = convertSizeToString(size).replace(/[^0-9.]/g,'');
+         var num = size / 100;
+         var ts = convertSizeToString(num).replace(/[^0-9.]/g,''),
+	    	tb = convertSizeToString(num).replace(/[0-9.]/g,''); 
+	     var s = 0;
+	     var timer = setInterval( function(){
+	     	s++;
+	     	var nums = num * s;
+	     	var ts = convertSizeToString(nums).replace(/[^0-9.]/g,''),
+	    		tb = convertSizeToString(nums).replace(/[0-9.]/g,''); 
+	    	
+	    	document.querySelector(".clean-left .size").innerHTML=ts;
+        	document.querySelector(".clean-left .mb").innerHTML=tb;
+	    	if( s == 100){
+	    		clearInterval(timer)
+	    	}
+	     },20);
+        document.getElementById("btn-clean").innerHTML = dic[language].cleanLabel;
+        document.querySelector(".clean-info p").innerHTML=dic[language||"english"]["staticsInfo"].replace("{0}",files).replace("{1}",regs);
+        document.querySelector(".g-window-header-x.ico-close").onmousedown = function(){
+	        app.sendMessage("get_DragMainDisabled");
+	    };
+
+        document.querySelector(".clean-text .ico-close").addEventListener("click",function(){
+           app.sendMessage("get_Close", []);
+        });
+        document.getElementById("btn-clean").addEventListener("click",function(){
+            console.log("开始清理");    
+            //发送日志开始
+		    newLog.action = "a20023";
+		    newLog.targetvalue = "clean2";
+		    newLog.targettype = "16";
+		    sendNewLog(newLog);
+		    
+		    logS2.targettype = "16";
+			var log = {
+		        action: "pushclick",
+		        args: logS2
+		    }
+		    sendStatistics(log);
+		    //发送日志结束
+            app.sendMessage("get_ShowWindow", [JSON.stringify({cmdShow: 1})],function(){
+                console.log("消息已经发出");
+            });
+            app.sendMessage("get_NotifyMainWindow",  [JSON.stringify({
+                action: "pcClean"
+            })],function(){
+                console.log("消息已经发出");
+            });
+            app.sendMessage("get_Close", []);
+        });
+    }
+    
+</script>
+</body>
+</html>

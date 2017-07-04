@@ -1,0 +1,22 @@
+<script id="tpl-image-player" type="text/tpl">
+    <div class="g-image-player">
+        <div class="container">
+            <img class="img" onerror="this.src='image\\images\\no-image.png'" draggable="false"></img>
+            <div class="arrow pre"></div>
+            <div class="arrow next"></div>
+            <div class="action cbox">
+                <button class="rotate-left" i18n-key = 'image.rotateLeftText'></button>
+                <button class="rotate-right" i18n-key = 'image.rotateRightText'></button>
+                <button class="wallpaper"  i18n-key = 'image.setWallpaper'></button>
+                
+                <button class="ico-delete" i18n-key = 'common.Delete' style="display:none"></button>
+                <button class="other downWallpaper" i18n-key = 'common.downloadLabel'></button>
+            </div>
+            
+        </div>
+        <div class="close"></div>
+        <div class="thumb">
+        </div>
+        
+    </div>
+</script>

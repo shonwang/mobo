@@ -1,0 +1,106 @@
+
+.g-menu input[type="radio"] {
+    width: 10px;
+    height: 10px;
+    border: none;
+    vertical-align: 0 !important;
+    background: transparent;
+}
+
+.g-menu input[type="radio"]:enabled:checked {
+    background: transparent url(../../images/check/radio.png) no-repeat center;
+    border: none;
+}
+
+.g-menu .g-menu-item:hover input[type="radio"],
+.g-menu input[type="radio"]:enabled:checked:hover {
+    border: none;
+    background: transparent url(../../images/check/radio-hover.png) no-repeat center;
+}
+
+.g-menu .g-menu-item .checkbox {
+    padding: 0 8px;
+}
+
+.g-menu input[type="checkbox"]:checked {
+    background: #0aa8dd no-repeat center;
+    border-color: #0aa8dd;
+}
+
+.g-menu-con {
+    position: absolute;
+    overflow: hidden;
+    -webkit-transform: translateX(-10000px);
+    max-height: 500px;
+    z-index: 2;
+}
+
+.g-menu-con.show {
+    -webkit-transform: translateX(0);
+}
+
+.g-menu-con.hide {
+    -webkit-transform: translateX(-10000px);
+    display: block !important;
+}
+
+.g-menu {
+    padding: 6px 0;
+    border: 1px solid #c3c3c3;
+    -webkit-transform: translateY(-100%);
+    background-color: #fff;
+    max-height: 498px;
+    overflow-y: auto;
+}
+
+.g-menu .g-menu-item {
+    line-height: 30px;
+    padding: 0 12px;
+    color: #525252;
+    white-space: nowrap;
+}
+
+.g-menu .g-menu-item label {
+    display: block;
+}
+
+.g-menu .g-menu-item:hover,
+.g-menu .g-menu-item:active {
+    color: #fff;
+    background-color: #0ba6dc;
+}
+
+.g-menu .g-menu-item.hover {
+    background-color: rgba(38, 187, 238, 0.9);
+}
+
+.g-menu .g-menu-item.active {
+    background-color: rgba(0, 151, 201, 0.9) !important;
+}
+
+.g-menu .g-menu-item:not(.label):not(.sp):hover {
+    background-color: rgba(38, 187, 238, 0.9);
+    color: #fff;
+    cursor: pointer;
+}
+
+.g-menu .g-menu-item.sp {
+    height: 1px;
+    background: #cacaca;
+    margin: 6px 9px;
+}
+
+.g-menu .g-menu-item.label {
+    color: #999;
+}
+
+.g-menu .g-menu-item.label:hover,
+.g-menu .g-menu-item.label.active {
+    background: none !important;
+}
+
+.g-menu .g-menu-item.checkbox input {
+    vertical-align: -3px;
+    margin-right: 6px;
+}
+

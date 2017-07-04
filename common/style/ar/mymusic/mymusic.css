@@ -1,0 +1,4 @@
+﻿body[language="arabic"] .g-image-thread{margin-right: 20px;margin-left: 0}
+body[language="arabic"] .g-image-thread .pic-list li{float: right;}
+body[language="arabic"] .g-image-item .wp,body[language="arabic"] .g-image-item .open, .g-image-item .detail,body[language="arabic"]  .g-image-item .detail{float: left;}
+body[language="arabic"] .g-image-item input{right: 5px; left: auto;}

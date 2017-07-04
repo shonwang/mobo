@@ -1,0 +1,142 @@
+<script id="tpl-driverAdapter-view" type="text/tpl">
+
+	 <div class="g-connction-guide">
+		<div class="g-connction-guide-content c-3">
+			<div class="g-connction-guide-usb show">
+				<div class="connct-imgs"  style="display:none">
+					<img src="../common/images/connGuide/usb.gif" />
+				</div>	
+				<div class="g-connction-guide-usb-text c-9" style="display:none">
+					<h1 class="c-3 f18"><%=I18N.fillDomText('driver.driverUsbTitle')%></h1>
+					<p class="f14"><%=I18N.fillDomText('driver.driverUsbText')%></p>
+					<button class="g-btn g-btn1 usbConn"><%=I18N.fillDomText('driver.alreadyCon')%></button>
+				</div>
+
+				<div class="connct-imgs-moble">
+					<img src="../common/images/connGuide/usbbar.gif" />
+				</div>
+
+				<div class="g-connction-guide-tips c-3 f18">
+					<%=I18N.fillDomText('common.connectDeviceText')%>
+				</div>
+				<button class="g-btn g-btn3 get-btn"><%=I18N.fillDomText('driver.waitLong')%></button>
+			</div>
+			
+			<div class="g-connction-guide-wifi c-3">
+				<div class="wifi-con">
+					<h1><%=I18N.fillDomText('driver.pleaseDownMg')%></h1>
+					<div class="wifi-img">
+						<div class="fl">
+							<p><%=I18N.fillDomText('driver.scanBlow')%></p>
+							<img src="../common/images/driverAdapter/code.png" />
+						</div>
+						<p class="fl or"><%=I18N.fillDomText('driver.orText')%></p>
+						<div class="fr">
+							<p><%=I18N.fillDomText('driver.downloadUsing')%></p>
+							<img src="../common/images/driverAdapter/setter.png" />
+							<span class="url f18">http://goo.gl/o2fu06</span>
+						</div>
+					</div>
+					<a class="help"><%=I18N.fillDomText('driver.alreadyHava')%></a>
+				
+				</div>
+				<div class="wifi-pass">
+					
+					<div class="wifi-word">
+						<div class="fl text">
+							<p class="f14"><%=I18N.fillDomText('driver.openHelpDevice')%></p>
+							<p class="f14"><%=I18N.fillDomText('driver.enterPass')%></p>
+							<input type="text" class="com-text code" maxlength="4">
+							<span class="how"><%=I18N.fillDomText('driver.howtofind')%></span>
+							<button class="g-btn g-btn1 connect"><%=I18N.fillDomText('driver.connectBtnText')%></button>
+						</div>
+						<div class="fl imgs">
+							<img class="con-img" src="../common/images/driverAdapter/wifi-con.png"/>
+							<img class="yuan" src="../common/images/driverAdapter/yuan.png"/>
+						</div>
+					</div>
+					<button class="back f14"><%=I18N.fillDomText('driver.noHavaMobo')%></button>
+				</div>
+				<div class="wifi-conncting">
+					<img src="../common/images/driverAdapter/connect.gif"/>
+					<p class="f18"><%=I18N.fillDomText('driver.contingDevice')%></p>
+				</div>
+				<div class="wifi-warrnnt">
+					<div class="warrnnt-info">
+						<img src="../common/images/driverAdapter/show.png"/>
+						<p class="pc-name f14"></p>
+					</div>	
+					<p class="f14"><%=I18N.fillDomText('driver.pleasePhoneOk')%></p>
+				</div>
+				<div class="wifi-nix">
+					<img src="../common/images/driverAdapter/con-failed.png"/>
+					<p class="pc-name"></p>
+					<p class="f14"><%=I18N.fillDomText('driver.connectnix')%></p>
+					<button class="g-btn g-btn2 retry"><%=I18N.fillDomText('common.retryText')%></button>
+					<button class="g-btn g-btn3 back"><%=I18N.fillDomText('driver.butBack')%></button>
+				</div>
+				<div class="wifi-failed">
+					<img src="../common/images/driverAdapter/con-failed.png"/>
+					<h4 class="f14"><%=I18N.fillDomText('driver.conncetionFailed')%></h4>
+					<p class="f14 c-9"><em></em><%=I18N.fillDomText('driver.phoneWifiOpen')%></p>
+					<p class="f14 c-9"><em></em><%=I18N.fillDomText('driver.helpisOpen')%></p>
+					<p class="f14 c-9"><em></em><%=I18N.fillDomText('driver.passwordOk')%></p>
+					<button class="g-btn g-btn2 auto retry"><%=I18N.fillDomText('common.retryText')%></button>
+				</div>
+				<div class="wifi-install">
+					<img src="../common/images/driverAdapter/update.png"/>
+					<p class="f14"><%=I18N.fillDomText('driver.pleaseClick')%></p>
+					<button class="g-btn g-btn2 retry"><%=I18N.fillDomText('driver.reConnectBtn')%></button>
+					<button class="g-btn g-btn3 back"><%=I18N.fillDomText('driver.butBack')%></button>
+				</div>
+				<div class="wifi-pleaseInstall">
+					<img src="../common/images/driverAdapter/install.png"/>
+					<p class="f14"><%=I18N.fillDomText('driver.pleaseInstall')%></p>
+				</div>
+				<div class="wifi-updatefailed">
+					<img src="../common/images/driverAdapter/con-failed.png"/>
+					<p class="f16"><%=I18N.fillDomText('driver.updateFailed')%></p>
+				</div>
+				<div class="wifi-deviceCon">
+					<p class="title"><%=I18N.fillDomText('driver.deviceBeen','<span class="num"></span>')%></p>
+					<div class="device-list">
+						
+					</div>
+				
+				</div>
+			</div>
+		</div>
+		<div class="g-connction-guide-nav f14">
+			<ul>
+				<li class="usb light"><i><%=I18N.fillDomText('driver.driverUsbConnect')%></i></li>
+				<li class="wifi"><i><%=I18N.fillDomText('driver.driverWifiConnect')%></i></li>
+			</ul>
+			<div class="arrow-t arrow-bg"></div>
+		</div>
+		
+	</div>
+    
+</script>
+<script id="tpl-wifi-phone-list" type="text/html">
+	<ul class="wifi-list">
+		<%for(i = 0; i < data.length; i ++) {%>
+			<li phoneUid=<%=data[i].phoneUid%> brand=<%=data[i].phoneBrand%> model=<%=data[i].phoneModel%> >
+				<div class="ph cbox">
+					<p>
+						<span class="brand"><%=data[i].phoneBrand%></span>
+						<span class="model"><%=data[i].phoneModel%></span>
+					</p>
+				</div>
+				<div class="cn cbox">
+					<%=I18N.fillDomText('driver.connectBtnText')%>
+				</div>
+				<p class="phone-time"><%=time[i]%></p>
+			</li>
+		<%}%>
+		<li class="cbox other">
+			<p>
+				<%=I18N.fillDomText('driver.connectAnother')%>
+			</p>
+		</li>
+	</ul>
+</script>

@@ -1,0 +1,55 @@
+define('korean:signin', function(require, exports, module){
+    var dictionary = {
+        signUpHeader: "가입",
+        myAccountLabel: "개인 정보",
+        logoutLabel: "로그아웃",
+        errorEmailLabel: "무효 이메일",
+        emptyEmailLabel: "필수 정보입니다",
+        shortPwdLabel: "비밀번호는 8자이상이여야 합니다",
+        longPwdLabel: "비밀번호는 20자이내여야 합니다",
+        notMatchPwdLbel: "비밀번호가 일치하지 않습니다.다시 입력하세요.",
+        usedEmailLabel: "이메일이 이미 사용되였습니다.다른 이메일을 사용하세요. ",
+        errorLoginLbel: "비밀번호가 틀렸습니다.다시 입력하세요.",
+        agreeLabel: "동의",
+        userAgreenebtLabel: "이용약관",
+        orLabel: "혹은",
+        forgotPwdLabel: "비밀번호 찾기",
+        changeLabel: "수정",
+        sendLabel: "인증메일 발송",
+        changePwdLabel: "비밀번호 재설정",
+        pwdSuccessLabel: "비밀번호 재설정 성공",
+        confirmLabel: "확인",
+        networkLabel: "네트워크 연결에 실패하였습니다.다시 시도하세요. ",
+        nullAccount: "무효 계정",
+        errorPwdLabel: "문자와 숫자만 가능합니다",
+        sendSuccessLabel: "발송 성공",
+        errorCodeLabel: "인증번호가 틀렸습니다",
+        imgUploadSuccess: "업로드 성공",
+        imgUploadFailed: "업로드 실패",
+        incorrectPwd: "비밀번호가 틀렸습니다.다시 입력하세요",
+        registerFailedLabel: "새 계정 가입 실패",
+        waitImageUploadLabel: "업로드중이니 잠시 기다려주세요. ",
+        loginInputText:"비밀번호",
+        conWordInputText:"비밀번호 확인",
+        enterCodeInputText:" 인증번호 입력",
+        //20140811
+        samePwdLabel:"입력한 비밀번호가 원래 비밀번호와 같습니다.다시 입력하세요. " ,
+        //20140812
+        errorPicLabel: "이런 사진 형식을 지원하지 않습니다. jpg、gif、png형식의 사진을 업로드 하세요.",
+		oldword:"현재 비밀번호",
+		newword:"새 비밀번호",
+		conword:"새 비밀번호 확인",
+        //20140917
+        selectPicFromPCLabel: "컴퓨터에서 사진을 선택하기",
+        selectPicFromPhoneLabel: "폰에서 사진을 선택하기",
+        promptConnect: "USB 캐이블로 장치를 연결하세요.",
+        setAsProfilePhoto: "프로필 사진으로 설정",
+        promptPullPic: "폰에서 사진을 가져오고 있습니다. 잠시만 기다려 주세요...",
+        promptPullPicFailed: "실패했습니다. 다시 시도해 보세요.",
+        promptLargePic: "죄송합니다, 이미지가 나무 큽니다.",
+        promptFailAuth: "제삼자 이미지 로드하기가 실패했습니다. 네트워크, 파이어월과 어카운트 권한을 체크해 주세요.",
+        imgUploading:"로딩중..."
+
+    };
+    return dictionary;
+});

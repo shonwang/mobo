@@ -1,0 +1,19 @@
+
+.book-list-item,
+.book-list-item .name {
+    -webkit-box-flex: 1;
+}
+
+.book-list-item .book {
+    width: 80px;
+    margin-left: 30px;
+    background: url("../images/ico-book.png") no-repeat left center;
+}
+
+.book-list-item .format {
+    width: 80px;
+}
+
+.book-list-item .size {
+    width: 80px;
+}

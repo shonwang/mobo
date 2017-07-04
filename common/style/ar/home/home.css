@@ -1,0 +1,34 @@
+﻿body[language="arabic"] .g-home .top,body[language="arabic"] .g-home .bottom{left:0; }
+body[language="arabic"] .g-home-tools .phone-memory{margin-left:50px; margin-right: 0;}
+body[language="arabic"] .g-home-tools .phone-memory,body[language="arabic"] .g-home-tools .sd-memory{background-position:right center; padding-right: 20px; padding-left: 0;}
+body[language="arabic"] .inner-ctn header{text-align: right;}
+body[language="arabic"] .inner-ctn .footer .install{float: left;}
+body[language="arabic"] .inner-ctn .footer label{float:right; direction: rtl;}
+body[language="arabic"] .g-mobile-screen{left: 520px; }
+body[language="arabic"] .g-home-recommend{left:40px;}
+body[language="arabic"] .g-home-tools{left:40px;}
+
+body[language="arabic"] .g-home-card-big, body[language="arabic"] .g-home-card-small{direction: rtl;}
+body[language="arabic"] .g-home-card-big.big-card2 .pic, body[language="arabic"] .g-home-card-big.big-card2 .pic img{float: right;}
+body[language="arabic"] .g-home-card-big.big-card2 .pic{margin-left:10px;margin-right: 0}
+body[language="arabic"] .g-home-card-big.big-card2 .name{text-align: right;}
+body[language="arabic"] .g-home-card-small.small-card1 .pic,body[language="arabic"] .g-home-card-small.small-card4 .pic{float: right;}
+body[language="arabic"] .g-home-card-big .mr, body[language="arabic"] .g-home-card-small .mr{float: left;margin-right:0; margin-left: 16px;}
+body[language="arabic"] .inner-ctn .footer label input{margin-right: 0; margin-left: 6px;}
+body[language="arabic"] .inner-ctn td input[type="checkbox"]{right: 20px;left: auto;}
+body[language="arabic"] .g-screen-action .refresh,
+body[language="arabic"] .g-screen-action .capture{background-position: right center;}
+body[language="arabic"] .g-screen-action .refresh,
+body[language="arabic"] .g-screen-action .capture{ padding: 0 22px 0 0; text-align: right;}
+
+/*多语言切换*/
+body[language="arabic"] .g-menu-site .g-menu .g-menu-item{ overflow: hidden;}
+body[language="arabic"] .g-menu-site .g-menu .logo-img{float: right; margin-top: 3px;}
+body[language="arabic"] .g-menu-site .g-menu .siteName{ float: right;}
+body[language="arabic"] .g-menu-site .g-menu,
+body[language="arabic"] .g-menu-language .g-menu{direction: rtl;}
+body[language="arabic"] .g-menu-language .g-menu-item{direction: ltr;}
+
+body[language="arabic"] .memory-info .c-f{direction: rtl;}
+body[language="arabic"] .memory-info .c-f span{display: inline-block;}
+body[language="arabic"] .g-home-sd-tips .memory-info .total-value{padding-right: 0; padding-left: 20px}

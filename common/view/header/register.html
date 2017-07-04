@@ -1,0 +1,41 @@
+<script id="tpl-sign-up" type="text/tpl">
+    <div class="signin register">
+        <ul class="signin-form">
+            <li>
+                <input class="com-text input-email" type="email" pattern="(^[a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2}" minLength="4" maxlength="50"></input>
+                <p class="error-email error"></p>
+                <span class="correct-email ico-signin-success" style="display:none"></span>
+            </li>
+            <li>
+                <input class="com-text input-pwd"type="password" minLength="8" maxlength="20"></input>
+                <p class="error-pwd error"></p>
+                <span class="correct-pwd ico-signin-success" style="display:none"></span>
+            </li>
+            <li>
+                <input class="com-text input-pwdconfirm" type="password" minLength="8" maxlength="20"></input>
+                <p class="error-confirm error"></p>
+                <span class="correct-cpwd ico-signin-success" style="display:none"></span>
+            </li>
+            <li style="min-height:40px;">
+                <div class="hbox">
+                    <input class="com-text input-code" ></input>
+                    <img class="randcode" src="" width="120" height="30">
+                </div>
+                <p class="error-code error"></p>
+                <span class="correct-code ico-signin-success" style="display:none; right:137px;"></span>
+            </li>
+            <li class="hbox">
+                <input name="" type="checkbox" class="checkbox" value="">
+                <p class="agree"><%=I18N.fillDomText('signin.agreeLabel')%></p>
+                <a href="#" class="user-agree special"><%=I18N.fillDomText('signin.userAgreenebtLabel')%></a>
+            </li>
+        </ul>
+        <button class="button-signup g-btn g-btn1"><%=I18N.fillDomText('signin.signUpHeader')%></button>
+	    <div class="third-party cbox">
+	    	<a href="javascript:;" class="sign-up"><%=I18N.fillDomText('common.headSignIn')%></a>
+	        <p class="or c-9"><%=I18N.fillDomText('signin.orLabel')%></p>
+	        <button class="ico-facebook"></button>
+	        <button class="ico-google"></button>
+	    </div>
+    </div>
+</script>

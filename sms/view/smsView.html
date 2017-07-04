@@ -1,0 +1,78 @@
+<script id="tpl-sms-main-view" type="text/tpl">
+    <div class="g-sms">
+        <div id="i-sms-header" class="g-toolbar hbox">
+            <input type="checkbox" class="chkbox-all"></input>
+            <button class="ico-btn ico-message btn-send-message"><%=I18N.fillDomText('sms.newMessage')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="btn-import ico-btn ico-import"><%=I18N.fillDomText('common.Import')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="btn-export ico-btn ico-export"><%=I18N.fillDomText('common.Export')%><span class="g-arrow"></span></button>
+            <i class="g-toolbar-line"></i>
+            <button class="btn-delete ico-btn ico-delete"><%=I18N.fillDomText('common.Delete')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="btn-mark ico-btn ico-mark"><%=I18N.fillDomText('sms.markasRead')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="btn-refresh ico-btn ico-refresh"><%=I18N.fillDomText('common.Refresh')%></button>
+        </div>
+        <div class="g-content hbox">
+        <div class="g-image-sms-empty g-empty-state cbox"  style="display: none;">
+             <div class="g-image-master">
+                    <img src="../src/contact/images/no-contacts.png">
+                    <p class="info c-6 f14"><%=I18N.fillDomText('sms.emptySMS')%></p>
+                    <p class="text c-9"><%=I18N.fillDomText('sms.smsPermissionNotice')%></p>
+             </div>
+         </div>
+            <div  class="list"></div>
+            <div class="right"></div>
+        </div>
+    </div>
+</script>
+
+<script id="tpl-sms-right-empty-info" type="text/tpl">
+    <div class="empty-info">
+        <div class="bg-pic"><%=I18N.fillDomText('sms.emptyInfo')%></div>
+    </div>
+</script>
+
+<script id="tpl-sms-confirm-win" type="text/tpl">
+    <div>
+        <div class="sms-confirm-content"></div>
+        <div class="sms-confirm-footer hbox">
+            <button class="g-btn g-btn2 btn-ok"><%=I18N.fillDomText('common.okLabel')%></button>
+            <button class="g-btn g-btn4 btn-cancel"><%=I18N.fillDomText('common.cancelLabel')%></button>
+        </div>
+    </div>
+</script>
+
+<script id="tpl-sms-right-multiple-selected" type="text/tpl">
+    <div class="g-message-batch-conversations vbox">
+        <div class="conversation-monitor">
+            <span class="contacts-count">2</span>
+            <span style="display:none"><%=I18N.fillDomText('sms.msgSelected')%></span>
+            <span class="cancel-select"><%=I18N.fillDomText('common.cancelLabel')%></span>
+        </div>
+        <div class="g-message-batch-conversations-list-ctn vbox"></div>
+    </div>
+</script>
+
+<script  id="tpl-sms-list-item" type="text/tpl">
+    <div class="sms-list-item">
+            <img class="icon" src='<%=data.contactIcon || "common/images/ico/default-avatar.png"%>' width="50" height="50" />
+            <p class="sms-title">
+                <span class="name te"><%=data.contactName%></span>
+                <span class="sms-num c-6"><%=data.smsList.length%></span>
+            </p>
+            <p class="phone"><%=data.smsPhoneNumber%></p>
+            <p class="info te"><%=data.smsList[0] !== undefined ? data.smsList[0].smsContent : ""%></p>
+            <span class="time"><%=data.showTime%></span>
+    </div>
+</script>
+
+<script id="tpl-search-result-tip" type="text/tpl">
+    <div class="g-grid-search hbox">
+        <p class="static te"><%=i18n.fillDomText('common.searchResultText', key, count)%></p>
+        <button class="btn-clear-search g-btn g-btn2">
+            <%=i18n.fillDomText('common.searchSeeAllLink')%>
+        </button>
+    </div>
+</script>

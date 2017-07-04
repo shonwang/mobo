@@ -1,0 +1,225 @@
+<script id="tpl-feedback-view" type="text/tpl">
+	
+	<div class="fb-moudle">
+		<form id="info-form" method="post" enctype="multipart/form-data" action="">
+			<input class="clientVersion" type="hidden" name="clientVersion" value="">
+		    <input class="brand" type="hidden" name="brand" value="">
+		    <input class="model" type="hidden" name="model" value="">
+		    <input class="pid" type="hidden" name="pid" value="">
+		    <input class="vid" type="hidden" name="vid" value="">
+		    <input class="os" type="hidden" name="os" value="">
+		    
+		    <input class="fbk_id" type="hidden" name="fbk_subID" value="">
+		    <input class="fbk_sub" type="hidden" name="fbk_sub" value="">
+		    <input class="usb" type="hidden" name="usb" value="">
+		    <input class="fb-userModel" type="hidden" name="userModel" value="">
+		    <input class="mail" type="hidden" name="mail" value="">
+		    <input class="android_sys" type="hidden" name="android_sys" value="">
+		    <input class="s_type" type="hidden" name="s_type" value="">
+		    <input class="s_id" type="hidden" name="s_id" value="">
+		    <input class="attach_file" type="hidden" name="attach_file" value="">
+		    <input class="message" type="hidden" name="message" value="">
+		    
+		    <input class="feedbackID" type="hidden" name="feedbackId" value="">
+		</form>
+		
+		<form id="image-form" method="post" enctype="multipart/form-data" target="image-iframe" action="http://source.mobogenie.com/imagefile/upload.htm">
+			  <input class="file" type="file" name="file" style="display: none" accept="image/jpeg,image/png,image/gif" value="">
+			  <input type="hidden" name="appid" value="helper">
+		</form>
+		<iframe class="image-iframe" name="image-iframe" style="display: none;"></iframe>
+		
+		<div class="fb-question-moudle">
+			<h1><%=I18N.fillDomText('setting.feedback')%></h1>
+			<ul>
+	        	<li class="fb-type">
+	            	<p class="text"><span class="c-red">*</span><%=I18N.fillDomText('setting.pleaseGory')%></p>
+	                <div class="g-select">
+						<a href="javascript:;" class="g-select-mod"><span class="m-type"><%=I18N.fillDomText('setting.pleaseChoose')%></span><span class="fr"><i class="g-arrow"></i></span></a>
+					</div>
+					<span class="ico-warng-small"><%=I18N.fillDomText('setting.pleaseChoose')%></span>
+	            </li>
+	            <li class="fb-usb animation">
+	            	<p class="text"><span class="c-red">*</span><%=I18N.fillDomText('setting.openUSB')%></p>
+	                <div class="g-select">
+						<a href="javascript:;" class="g-select-mod"><span class="m-usb"><%=I18N.fillDomText('setting.pleaseSele')%></span><span class="fr"><i class="g-arrow"></i></span></a>
+					</div>
+					<a class="special usb-hint"><%=I18N.fillDomText('setting.whatUsb')%></a>
+					<span class="ico-warng-small mm"><%=I18N.fillDomText('setting.havaActive')%></span>
+	            </li>
+	            <li class="fb-model animation">
+	            	<p class="text"><span class="c-red">*</span><%=I18N.fillDomText('setting.phoneModel')%></p>
+	                <input class="com-text userModel" maxlength="50" type="text" id="driver" type="checkbox" value="">
+					<span class="ico-warng-small mm"><%=I18N.fillDomText('setting.pleaseEnter')%></span>
+	                <p class="hint"><%=I18N.fillDomText('setting.modelOf')%></p>
+	            </li>
+	            <li class="fb-mail">
+	            	<p class="text"><span class="c-red">*</span><%=I18N.fillDomText('setting.email')%></p>
+	                <input class="com-text email" type="text" maxlength="50" id="driver" type="checkbox" value="">
+					<span class="ico-warng-small mm"><%=I18N.fillDomText('setting.enterEmail')%></span>
+	                <p class="hint"><%=I18N.fillDomText('setting.enterValid')%></p>
+	            </li>
+	            <li class="fb-ver animation">
+	            	<p class="text"><span class="c-red">*</span><%=I18N.fillDomText('setting.andVer')%></p>
+	                <div class="g-select">
+						<a href="javascript:;" class="g-select-mod"><span class="m-ver"><%=I18N.fillDomText('setting.pleaseVer')%></span><span class="fr"><i class="g-arrow"></i></span></a>
+					</div>
+					<span class="ico-warng-small"><%=I18N.fillDomText('setting.pleaseVer')%></span>
+					<p class="hint"><%=I18N.fillDomText('setting.corSystem')%></p>
+	            </li>
+	            <li class="fb-acc">
+	            	<p class="text"><%=I18N.fillDomText('setting.socialAcc')%></p>
+	                <div class="g-select">
+						<a href="javascript:;" class="g-select-mod"><span class="m-acc">Facebook</span><span class="fr"><i class="g-arrow"></i></span></a>
+					</div>
+					<input class="com-text accid" maxlength="50" type="text" id="driver" type="checkbox" value="">
+					
+					<p class="hint"><%=I18N.fillDomText('setting.selectMethod')%></p>
+	            </li>
+	            <li class="fb-dis">
+	            	<p class="text"><%=I18N.fillDomText('setting.description')%></p>
+	            	<textarea class="com-area info" maxlength="2000"></textarea>
+	            	
+	            </li>
+	        	
+	        </ul>
+	        <div class="cf"></div>
+	        <div class="fb-submit">
+	        	<button class="g-btn g-btn3 add-files"><span class="add"></span><%=I18N.fillDomText('setting.addAttach')%></button>
+	        	<p class="c-6 nof"><%=I18N.fillDomText('setting.noFiles')%></p>
+	        	<button class="g-btn g-btn1 submit"><%=I18N.fillDomText('setting.BtnSubmit')%></button>
+	        	<div class="file-failed">
+	        		<p class="te">
+	        			<span class="ico-warng-small"><%=I18N.fillDomText('setting.onlySupports')%></span>
+	        		</p>
+	        	</div>
+	        	<div class="file-success">
+	        		<p class="file-name te"></p>
+	        		<span class="delete"></span>
+	        	</div>
+	        
+	        </div>
+        </div>
+		
+		<div class="feedback-success-moudle">
+	    		<div class="thanks">
+	    			<img src="common/images/feedback/fb-success.png" />
+	    			<div class="th-text">
+	    				<h1 class="f24"><%=I18N.fillDomText('setting.fbSuccessTitle')%></h1>
+	    				<p class="c-6 f16"><%=I18N.fillDomText('setting.fbSuccessText')%></p>
+	    				<button class="g-btn g-btn1 close"><%=I18N.fillDomText('setting.fbSuccessClose','(<b class="count">10</b>)')%></button>
+	    			</div>
+	    			
+	    			
+	    		</div>
+	    </div>
+	
+	</div>
+	<div class="feedback-usb-moudle">
+		<div class="usb-body">
+			<div class = "top">
+		    	<h1 class="f16 c-blue"><%=I18N.fillDomText('setting.whyNeed')%></h1>
+		    	<p class="c-3"><%=I18N.fillDomText('setting.debugRequired')%></p>
+		    </div>
+	    	<div class="usb-imgs">
+	    		<div class="open-usb">
+	    			<h2 class="f14"><%=I18N.fillDomText('setting.openfun')%></h1>
+	    			<ul>
+	    				<li class="title">
+	    					<%=I18N.fillDomText('setting.andLower')%>
+	    				</li>
+	    				<li class="cbox">
+	    					<p class="img"><img src="common/images/feedback/usb1.png" /></p>
+	    					<div class="text">
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.selectSet')%></span></p>
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.selectApp')%></span></p>
+	    					</div>
+	    				</li>
+	    				<li class="cbox">
+	    					<p class="img"><img src="common/images/feedback/usb2.png" /></p>
+	    					<div class="text">
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.selectDeve')%></span></p>
+	    					</div>
+	    				</li>
+	    				<li class="cbox">
+	    					<p class="img"><img src="common/images/feedback/usb3.png" /></p>
+	    					<div class="text">
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.selectTap')%></span></p>
+	    					</div>
+	    				</li>
+	    			</ul>
+	    			
+	    		</div>
+	    		<div class="open-usb notitle">
+	    			<ul>
+	    				<li class="title">
+	    					<%=I18N.fillDomText('setting.andFour')%>
+	    				</li>
+	    				<li class="cbox">
+	    					<p class="img"><img src="common/images/feedback/usb4.png" /></p>
+	    					<div class="text">
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.selectSet')%></span></p>
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.selectOpt')%></span></p>
+	    					</div>
+	    				</li>
+	    				<li class="cbox">
+	    					<p class="img"><img src="common/images/feedback/usb5.png" /></p>
+	    					<div class="text">
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.openOpt')%></span></p>
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.checkTap')%></span></p>
+	    					</div>
+	    				</li>
+	    			</ul>
+	    		</div>
+	    		<div class="open-usb notitle">
+	    			<ul>
+	    				<li class="title">
+	    					<%=I18N.fillDomText('setting.androidFour')%>
+	    				</li>
+	    				<li class="cbox">
+	    					<p class="img"><img src="common/images/feedback/usb6.png" /></p>
+	    					<div class="text">
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.tapIcon')%></span></p>
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.tapPhone')%></span></p>
+	    					</div>
+	    				</li>
+	    				<li class="cbox">
+	    					<p class="img"><img src="common/images/feedback/usb7.png" /></p>
+	    					<div class="text">
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.scrollBot')%></span></p>
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.keepTap')%></span></p>
+	    					</div>
+	    				</li>
+	    				<li class="cbox">
+	    					<p class="img"><img src="common/images/feedback/usb8.png" /></p>
+	    					<div class="text">
+	    						<p><b></b><span class="tt goback"><%=I18N.fillDomText('setting.goback')%></span></p>
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.enterDeve')%></span></p>
+	    					</div>
+	    				</li>
+	    				<li class="cbox">
+	    					<p class="img"><img src="common/images/feedback/usb9.png" /></p>
+	    					<div class="text">
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.backDeve')%></span></p>
+	    					</div>
+	    				</li>
+	    				<li class="cbox">
+	    					<p class="img"><img src="common/images/feedback/usb10.png" /></p>
+	    					<div class="text">
+	    						<p><b></b><span class="tt"><%=I18N.fillDomText('setting.connectCom')%></span></p>
+	    					</div>
+	    				</li>
+	    			</ul>
+	    		</div>
+    		</div>
+    		<p class="bot"><button class="g-btn g-btn1 return"><%=I18N.fillDomText('setting.returnCon')%></button></p>
+    	</div>
+    </div>
+	
+	<div id="fb-net">
+	
+	</div>
+	
+	
+    
+</script>

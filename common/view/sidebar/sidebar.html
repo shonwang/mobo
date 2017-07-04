@@ -1,0 +1,165 @@
+<script id="tpl-sidebar" type="text/tpl">
+    <nav class="resource">
+        <li class="title home" data-index="nav-3">
+            <i class="icon"></i><%=I18N.fillDomText('common.homeLabel')%>
+        </li>
+        <li class="title appres" data-index="nav-5">
+            <i class="icon"></i><%=I18N.fillDomText('common.appLabel')%>
+        </li>
+        <li class="title game" data-index="nav-4">
+            <i class="icon"></i><%=I18N.fillDomText('common.gamesLabel')%>
+        </li>
+        <li class="title rengtone" data-index="nav-1000">
+            <i class="icon"></i><%=I18N.fillDomText('backupRestore.musicLabel')%>
+        </li>
+        <li class="title wallpaper" data-index="nav-1001">
+            <i class="icon"></i><%=I18N.fillDomText('common.wallPaperLabel')%>
+        </li>
+        <li class="title youtube" data-index="nav-1002">
+            <i class="icon"></i><%=I18N.fillDomText('common.youTubeLabel')%>
+        </li>
+         <li class="title ebook" data-index="nav-1003">
+            <i class="icon"></i><%=I18N.fillDomText('common.ebookLabel')%>
+        </li>
+        <li class="title more hide">
+            <i class="icon"></i><%=I18N.fillDomText('common.moreLabel')%>
+        </li>
+        
+    </nav>
+    <div class="line"></div>
+    <nav class="tools">
+        <li class="title" data-index="nav-15">
+            <i class="icon tools"></i><%=I18N.fillDomText('sms.msgSelected')%>
+        </li>
+        <li class="title" data-index="nav-10">
+            <i class="icon tools"></i><%=I18N.fillDomText('common.toolsLabel')%>
+        </li>
+        <li class="title hide">
+            <i class="icon safety"></i><%=I18N.fillDomText('common.safetyLabel')%>
+        </li>
+    </nav>
+    <div class="line"></div>
+    <nav class="local">
+        <li class="title" data-index="nav-1">
+            <i class="icon contact"></i><%=I18N.fillDomText('common.contactLabel')%>
+        </li>
+        <li class="title" data-index="nav-7">
+            <i class="icon sms"></i><%=I18N.fillDomText('common.smsLabel')%>
+        </li>
+        <li class="title" data-index="nav-2">
+            <i class="icon app"></i><%=I18N.fillDomText('common.myAppLabel')%>
+        </li>
+        <li class="title" data-index="nav-9">
+            <i class="icon music"></i><%=I18N.fillDomText('common.myMusicLabel')%>
+        </li>
+        <li class="title" data-index="nav-6">
+            <i class="icon picture"></i><%=I18N.fillDomText('common.myPictureLabel')%>
+        </li>
+        <li class="title" data-index="nav-8">
+            <i class="icon video"></i><%=I18N.fillDomText('common.myVideoLabel')%>
+        </li>
+    </nav>
+    <nav class="task-nav">
+        <li class="title" data-index="nav-100">
+            <span class="animation-ctn"></span>
+            <i class="icon download"></i>
+            <!--
+            <span class="count">
+                <em class="c-pr"></em>
+                /
+                <em class="c-total"></em>
+            </span>
+            -->
+            <span class="speed">
+                <em class="c te"></em>
+                <em class="s"></em>
+            </span>
+        </li>
+    </nav>
+</script>
+<!--2014-03-23添加自适应站点的左侧栏-->
+<script id="tpl-sidebar-adjust" type="text/tpl">
+    <nav class="resource">
+        <li class="title home" data-index="nav-3">
+            <i class="icon"></i><%=I18N.fillDomText('common.homeLabel')%>
+        </li>
+            <li class="title appres" data-index="nav-5" style="display:<%=(config["5"].blackList&&config["5"].blackList.indexOf(defsite.toLowerCase())>-1)?'none':''%>">
+                <i class="icon"></i><%=I18N.fillDomText('common.appLabel')%>
+            </li>            
+            <%
+              console.log();
+            %>
+        <li class="title game" data-index="nav-4" style="display:<%=(config["4"].blackList&&config["4"].blackList.indexOf(defsite.toLowerCase())>-1)?'none':''%>">
+            <i class="icon"></i><%=I18N.fillDomText('common.gamesLabel')%>
+        </li>
+        <li class="title rengtone" data-index="nav-1000" style="display:<%=(config["1000"].blackList&&config["1000"].blackList.indexOf(defsite.toLowerCase())>-1)?'none':''%>">
+            <i class="icon"></i><%=I18N.fillDomText('backupRestore.musicLabel')%>
+        </li>
+        <li class="title wallpaper" data-index="nav-1001" style="display:<%=(config["1001"].blackList&&config["1001"].blackList.indexOf(defsite.toLowerCase())>-1)?'none':''%>">
+            <i class="icon"></i><%=I18N.fillDomText('common.wallPaperLabel')%>
+        </li>
+        <li class="title youtube" data-index="nav-1002" style="display:<%=((config['1002'].blackList&&config['1002'].blackList.indexOf("all")>-1)||(config["1002"].blackList&&config["1002"].blackList.indexOf(defsite.toLowerCase())>-1))?'none':''%>">
+            <i class="icon"></i><%=I18N.fillDomText('common.youTubeLabel')%>
+        </li>
+       <li class="title ebook" data-index="nav-1003" style="display:<%=((config['1003'].blackList&&config['1003'].blackList.indexOf("all")>-1)||(config["1003"].blackList&&config["1003"].blackList.indexOf(defsite.toLowerCase())>-1))?'none':''%>">
+            <i class="icon"></i><%=I18N.fillDomText('common.ebookLabel')%>
+        </li>
+        <li class="title more hide">
+            <i class="icon"></i><%=I18N.fillDomText('common.moreLabel')%>
+        </li>
+        
+    </nav>
+    <div class="line"></div>
+    <nav class="tools">
+        <li class="title" data-index="nav-12" style="display:<%=((config["12"].blackList&&config["12"].blackList.indexOf("all")>-1)||(config["12"].blackList&&config["12"].blackList.indexOf(defsite.toLowerCase())>-1))?'none':''%>">
+            <i class="icon genie"></i><span class="loc-label">Genie</span>
+        </li>
+        <li class="title" data-index="nav-10">
+            <i class="icon tools"></i><%=I18N.fillDomText('common.toolsLabel')%>
+        </li>
+        <li class="title hide">
+            <i class="icon safety"></i><%=I18N.fillDomText('common.safetyLabel')%>
+        </li>
+    </nav>
+    <div class="line"></div>
+    <nav class="local">
+        <li class="title" data-index="nav-1"  style="display:<%=(config["1"].blackList&&config["1"].blackList.indexOf(defsite.toLowerCase())>-1)?'none':''%>">
+            <i class="icon contact"></i><%=I18N.fillDomText('common.contactLabel')%>
+        </li>
+        <li class="title" data-index="nav-7" style="display:<%=(config["7"].blackList&&config["7"].blackList.indexOf(defsite.toLowerCase())>-1)?'none':''%>">
+            <i class="icon sms"></i><%=I18N.fillDomText('common.smsLabel')%>
+        </li>
+        <li class="title" data-index="nav-2" style="display:<%=(config["2"].blackList&&config["2"].blackList.indexOf(defsite.toLowerCase())>-1)?'none':''%>">
+            <i class="icon app"></i><%=I18N.fillDomText('common.myAppLabel')%>
+        </li>
+        <li class="title" data-index="nav-9" style="display:<%=(config["9"].blackList&&config["9"].blackList.indexOf(defsite.toLowerCase())>-1)?'none':''%>">
+            <i class="icon music"></i><%=I18N.fillDomText('common.myMusicLabel')%>
+        </li>
+        <li class="title" data-index="nav-6" style="display:<%=(config["6"].blackList&&config["6"].blackList.indexOf(defsite.toLowerCase())>-1)?'none':''%>">
+            <i class="icon picture"></i><%=I18N.fillDomText('common.myPictureLabel')%>
+        </li>
+        <li class="title" data-index="nav-8" style="display:<%=(config["8"].blackList&&config["8"].blackList.indexOf(defsite.toLowerCase())>-1)?'none':''%>">
+            <i class="icon video"></i><%=I18N.fillDomText('common.myVideoLabel')%>
+        </li>
+        <li class="title" data-index="nav-11" style="display:<%=((config["11"].blackList&&config["11"].blackList.indexOf("all")>-1)||(config["11"].blackList&&config["11"].blackList.indexOf(defsite.toLowerCase())>-1))?'none':''%>">
+            <i class="icon ebook"></i><%=I18N.fillDomText('common.myEbookLabel')%>
+        </li>
+    </nav>
+    <nav class="task-nav">
+        <li class="title" data-index="nav-100">
+            <span class="animation-ctn"></span>
+            <i class="icon download"></i>
+            <!--
+            <span class="count">
+                <em class="c-pr"></em>
+                /
+                <em class="c-total"></em>
+            </span>
+            -->
+            <span class="speed">
+                <em class="c te"></em>
+                <em class="s"></em>
+            </span>
+        </li>
+    </nav>
+</script>

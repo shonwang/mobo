@@ -1,0 +1,590 @@
+@charset "utf-8";
+/* CSS Document */
+.g-driver-moudle{
+	width:640px;
+	height:510px;
+	position:relative;
+	margin:-12px 0 0 -12px;
+}
+.g-driver-moudle > div{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:20px;
+}
+.g-driver-moudle .link{
+	text-decoration:underline;
+	cursor:pointer;
+}
+.g-driver-moudle .text-center{
+	text-align:center; 
+}
+.g-driver-moudle h1{
+	height: 55px;
+	padding:5px 20px 0 20px;
+}
+.g-driver-moudle h1 i{
+	width:40px;
+	height:40px;
+	display:inline-block;
+	vertical-align: middle;
+	margin: -2px 15px 0 0;
+	background:url(../../images/connGuide/guide-logo.png) no-repeat;
+}
+.g-driver-moudle h1 p{
+	max-width: 500px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.link.goto-debug-setter,
+.link.feedback{
+	padding-left:10px;
+}
+.g-driver-moudle .margin-auto{
+	display:block;
+	margin:10px auto 0;
+}
+.g-driver-bad-network-image{
+	width:472px;
+	height:142px;
+	margin:95px auto 88px auto;
+}
+.g-driver-bad-network button{
+	padding:0 35px;
+}
+.g-driver-usb-debug h1 i{
+	float: left;
+}
+.g-driver-usb-debug h1 p{
+	display:block;
+}
+.g-driver-usb-debug .havaOpen{
+	color:#3caed6;
+	background:url(../../images/driverAdapter/next-hover.png) no-repeat right;
+	padding-right:12px;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+}
+.g-driver-usb-debug .havaOpen:hover{
+	color:#0097c9;
+	background:url(../../images/connGuide/next-hover.png) no-repeat right;
+}
+.g-usb-debug-guide-body{
+	width:100%;
+	height:380px;
+	background:#eeeeee;
+}
+.g-usb-debug-version-video-content{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+.g-usb-debug-version-text{
+	height:35px;
+	padding-top:10px;	
+} 
+.g-usb-debug-version-list{
+	display:inline-block;	
+	margin-left:30px;
+}
+.g-usb-debug-version-list li{
+	display:inline-block;
+	padding:2px 7px;
+	margin:0 5px;
+	cursor:pointer;
+}
+.g-usb-debug-version-list li.hover{
+	background:#0aa9e0;
+	border-radius:3px;
+	color:#fff;
+}
+.g-usb-debug-guide-body .change-version{
+	width:640px;
+	right:60px;
+	text-align: right;
+	position:absolute;
+}
+.g-usb-debug-guide-body .change-version p{
+	display:inline-block;
+	padding-right:10px;
+}
+.g-usb-debug-version-video-content iframe{
+	width: 500px;
+	height: 280px;
+	display: block;
+	margin: auto;
+	position: absolute;
+	left: 70px;
+	top: 10px;
+}
+.g-usb-debug-version-video-content iframe h2{
+	color:#eee;
+}
+.g-usb-debug-version-video-content iframe video{
+	width:450px;
+	height:250px;
+}
+.g-usb-debug-version-video-content .change-version{
+	top: 18px;
+	right: 20px;
+}
+.g-usb-debug-version-content .ver-low{
+	position:relative;
+	width: 720px;
+	height:100%;
+	margin-left: -40px;
+}
+.g-driver-debug-setting{
+	left:640px;
+	opacity:0;
+}
+.g-usb-debug-version-content .ver-low i{
+	display:inline-block;
+	width:38px;
+	height:78px;
+	position:absolute;
+	top:140px;
+	cursor:pointer;
+}
+.g-usb-debug-loading,
+.g-usb-debug-video-loading,
+.g-driver-service-loading,
+.g-usb-debug-refresh,
+.g-usb-debug-video-refresh{
+	width:100%;
+	top: 98px;
+	height:341px;
+	position: absolute;
+	z-index: 5;
+	background:#eeeeee url(../../images/loading/loading80.gif) center no-repeat;
+}
+.g-usb-debug-refresh,
+.g-usb-debug-video-refresh,
+.g-driver-service-refresh{
+	cursor:pointer;
+	background:#eeeeee url(../../images/ico/refresh-big.png) center no-repeat;
+}
+.g-usb-debug-refresh:hover,
+.g-usb-debug-video-refresh:hover,
+.g-driver-service-refresh:hover{
+	background:#eeeeee url(../../images/ico/refresh-big-hover.png) center no-repeat;
+}
+.g-usb-debug-refresh:active,
+.g-usb-debug-video-refresh:active,
+.g-driver-service-refresh:active{
+	background:#eeeeee url(../../images/ico/refresh-big-active.png) center no-repeat;
+}
+.g-driver-service-loading,
+.g-driver-service-refresh{
+	top:61px;
+	height:380px;
+}
+.g-usb-debug-version-content .ver-low i.previmg{
+	left:70px;
+	background:url(../../images/connGuide/prev.png) no-repeat;
+	display:none;
+}
+.g-usb-debug-version-content .ver-low i.previmg:hover{
+	background:url(../../images/connGuide/prev-light.png) no-repeat;
+}
+.g-usb-debug-version-content .ver-low i.previmg:active{
+	background:url(../../images/connGuide/prev-active.png) no-repeat;
+}
+.g-usb-debug-version-content .ver-low i.nextimg{
+	right:70px;
+	background:url(../../images/connGuide/next.png) no-repeat;
+	display:none;
+}
+.g-usb-debug-version-content .ver-low i.nextimg:hover{
+	background:url(../../images/connGuide/next-light.png) no-repeat;
+}
+.g-usb-debug-version-content .ver-low i.nextimg:active{
+	background:url(../../images/connGuide/next-active.png) no-repeat;
+}
+.g-usb-debug-version-content .ver-low ul{
+	width:434px;
+	height:340px;
+	position:absolute;
+	left:143px;
+}
+.g-usb-debug-version-content li{
+	width:auto;
+	height:auto;
+	display:inline-block;
+}
+.g-usb-debug-version-content .arrow-b,
+.g-usb-debug-version-content .arrow-t{
+	z-index:4;
+	position:absolute;
+}
+.g-usb-debug-version-content li img{
+	opacity:0.5;
+	position:absolute;
+	z-index:1;
+	height:240px;
+	left:273px;
+	top:40px;
+	display:none;
+	cursor: pointer;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+.g-usb-debug-version-content li:nth-child(1) img{
+	cursor: default;
+}
+.g-usb-debug-version-content li.list0 img{
+	opacity: 1;
+	z-index:3;
+}
+/*.g-usb-debug-foot-text p{
+	text-indent:24px;
+	display:inline-block;
+	line-height:30px;
+	padding-right:15px;
+}
+.g-usb-debug-foot-text{
+	text-align: right;
+}
+.g-usb-debug-foot-text .goto-debug-setter{
+	margin:0 10px;
+}*/
+
+.g-usb-debug-foot-text ul{
+	margin:auto;
+	text-align: center;
+	margin-top:18px;
+}
+.g-usb-debug-foot-text ul li{
+	display:inline-block;
+	text-align:left;
+	height:32px;
+	line-height:32px;
+	cursor:pointer;
+	padding-right: 10px;
+	border: #e1e1e1 solid 1px;
+	max-width: 150px;
+	overflow: hidden;
+}
+.g-usb-debug-foot-text ul li.light{
+	background:#0aa9e0;
+	border-color:transparent;
+	color:#fff;
+}
+.g-usb-debug-foot-text ul li i{
+	display:inline-block;
+	width:18px;
+	height:18px;
+	margin:2px 5px 0 10px;
+	vertical-align: middle;
+}
+.g-usb-debug-foot-text ul li.picture i{
+	background: url(../../images/connGuide/picture.png) no-repeat;
+}
+.g-usb-debug-foot-text ul li.picture.light i{
+	background: url(../../images/connGuide/picture-light.png) no-repeat;
+}
+.g-usb-debug-foot-text ul li.video i{
+	background: url(../../images/connGuide/video.png) no-repeat;
+}
+.g-usb-debug-foot-text ul li.video.light i{
+	background: url(../../images/connGuide/video-light.png) no-repeat;
+}
+.g-usb-debug-foot-text ul li.set i{
+	background: url(../../images/connGuide/set.png) no-repeat;
+	margin-top:-4px;
+}
+.g-usb-debug-foot-text ul li.set.light i{
+	margin-top:-4px;
+	background: url(../../images/connGuide/set-light.png) no-repeat;
+}
+.g-usb-debug-foot-text ul li.service i{
+	background: url(../../images/connGuide/service.png) no-repeat;
+}
+.g-usb-debug-foot-text ul li.service.light i{
+	background: url(../../images/connGuide/service-light.png) no-repeat;
+}
+.g-driver-service{
+	height: 380px;
+	overflow-y: scroll;
+}
+.g-driver-service ul{
+	margin:auto;
+	padding:27px 0 0 125px;
+}
+.g-driver-service ul li{
+	display:inline-block;
+	float:left;
+	width:240px;
+	height:90px;
+}
+.g-driver-service ul li i{
+	width:22px;
+	height:22px;
+	display:inline-block;
+	padding-right:10px;
+	margin-top: -9px;
+	vertical-align: middle;
+}
+.g-driver-service ul li i img{
+	width:22px;
+	height:22px;
+}
+
+.g-driver-service ul li .ser_num{
+	clear: both;
+	display:block;
+	font-size:16px;
+	padding-left:30px;
+	color:#333;
+}
+.g-driver-service ul li p{
+	color:#666;
+	padding-bottom:17px;
+}
+.g-driver-allow-debug-image{
+	position:relative;
+	top:15px;
+}
+.g-driver-allow-debug-image .arrow-b,
+.g-driver-allow-debug-image .arrow-t{
+	position:absolute;
+}
+.g-driver-allow-debug-image img{
+	padding-bottom:38px;
+}
+.g-driver-allow-debug-image button{
+	margin-left:10px;
+	height:28px;
+}
+.g-driver-allow-debug .foot-text{
+	padding:15px 20px 0 0;
+	text-align:right;
+}
+.g-driver-download-setter-image{
+	width:550px;
+	margin:auto;
+	padding-top:90px;
+}
+.g-driver-download-setter-image .or{
+	width:104px;
+	display:inline-block;
+	padding-top:70px;
+	text-align:center;
+}
+.g-driver-download-setter-code{
+	margin-top:16px;
+	margin:16px 0 0 38px;
+}
+.g-driver-download-setter .foot-text{
+	padding:0 25px 0 22px;	
+	line-height:28px;
+}
+.g-driver-debug-setting-image{
+	padding:60px 0 0 0;
+	height:380px;
+}
+.g-driver-debug-setting-image > div p{
+	padding-top:20px;
+}
+.g-driver-debug-setting-check-usb{
+	width:240px;
+}
+.g-driver-debug-setting-image p.or{
+	width:100px;
+	text-align:center;
+	line-height:400px;
+	position:relative;
+	top:-180px;
+	padding:0;
+}
+.g-driver-debug-setting-foot{
+	padding:0 25px;
+	line-height:26px;
+}
+.g-driver-debug-setting-foot button{
+	height:26px;
+}
+.g-driver-debug-setting-foot a{
+	float:right;
+}
+.g-usb-debug-version-content .tip,
+.g-driver-allow-debug-image .tip{
+	padding: 8px;
+	padding-left: 30px;
+	font-size:12px;
+}
+.g-usb-debug-version-content .tip i,
+.g-driver-allow-debug-image .tip i{
+	width:25px;
+	height:25px;
+	line-height: 25px;
+	text-align: center;
+	background: #0a93d2;
+	position: absolute;
+	left:-1px;
+	top:-1px;
+	color:#fff;
+	text-indent:0;
+	font-size:16px;
+	font-style:normal;
+	margin-top:0;
+}
+
+.g-driver-no-space-body{
+	padding:30px 0 0 87px;	
+}
+.g-driver-no-space-body img{
+	float:left;
+}
+.g-driver-no-space-text{
+	width:250px;
+	padding:95px 0 0 70px;
+	display:inline-block;
+}
+.g-driver-no-space-text p{
+	display:inline-block;
+}
+.g-driver-no-space-text p.text{
+	padding:10px 0 0 26px;
+}
+.g-driver-no-space-text button{
+	height:28px;
+	margin:25px 0 0 26px;
+}
+
+.g-driver-conncet-failed .wifiCon{
+	float: right;
+	margin-right: 60px;
+}
+.g-driver-conncet-failed ul{
+	width:558px;
+}
+.g-driver-conncet-failed ul li{
+	width:222px;
+	height:225px;
+	float:left;
+	margin-left:10px;
+}
+.g-driver-conncet-failed ul li.right{
+	margin-left:70px;
+}
+.g-driver-conncet-failed ul li img{
+	padding-top:10px;
+}
+/*修改按钮样式*/
+.g-driver-moudle .g-btn3.back i{
+	width: 14px;
+	height: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: -4px 6px 0 0;
+	background: url(../../images/connGuide/btn-back.png) no-repeat;
+}
+/*adb页面各国语的tip位置*/
+.g-driver-allow-debug .arrow-b{
+	top:126px;
+	left:163px;
+}
+.g-driver-allow-debug .arrow-t{
+	top:254px;
+	left:332px;
+}
+.g-driver-allow-debug.english .arrow-b{
+	left:163px;
+}
+.g-driver-allow-debug.english .arrow-t{
+	left:332px;
+}
+.g-driver-allow-debug.portuguese .arrow-b{
+	left:157px;
+}
+.g-driver-allow-debug.portuguese .arrow-t{
+	left:316px;
+}
+.g-driver-allow-debug.russian .arrow-b{
+	left:139px;
+}
+.g-driver-allow-debug.russian .arrow-t{
+	left:316px;
+}
+.g-driver-allow-debug.thai .arrow-b{
+	left:165px;
+}
+.g-driver-allow-debug.thai .arrow-t{
+	left:327px;
+}
+.g-driver-allow-debug.indonesian .arrow-b{
+	left:159px;
+}
+.g-driver-allow-debug.indonesian .arrow-t{
+	left:327px;
+}
+.g-driver-allow-debug.vietna .arrow-b{
+	left:152px;
+}
+.g-driver-allow-debug.vietna .arrow-t{
+	left:327px;
+}
+.g-driver-allow-debug.poland .arrow-b{
+	left:165px;
+}
+.g-driver-allow-debug.poland .arrow-t{
+	left:323px;
+}
+.g-driver-allow-debug.italian .arrow-b{
+	left:136px;
+}
+.g-driver-allow-debug.italian .arrow-t{
+	left:321px;
+}
+.g-driver-allow-debug.france .arrow-b{
+	left:156px;
+}
+.g-driver-allow-debug.france .arrow-t{
+	left:309px;
+}
+.g-driver-allow-debug.korean .arrow-b{
+	left:151px;
+}
+.g-driver-allow-debug.korean .arrow-t{
+	left:307px;
+}
+.g-driver-allow-debug.spanish .arrow-b{
+	left:157px;
+}
+.g-driver-allow-debug.spanish .arrow-t{
+	left:326px;
+}
+.g-driver-allow-debug.arabic .arrow-b{
+	left:182px;
+}
+.g-driver-allow-debug.arabic .arrow-t{
+	left:323px;
+}
+.g-driver-allow-debug.farsi .arrow-b{
+	left:160px;
+}
+.g-driver-allow-debug.farsi .arrow-t{
+	left:309px;
+}
+.g-driver-allow-debug.hindi .arrow-b{
+	left:165px;
+}
+.g-driver-allow-debug.hindi .arrow-t{
+	left:326px;
+}
+.g-driver-allow-debug.traditionalchinese .arrow-b{
+	left:181px;
+}
+.g-driver-allow-debug.traditionalchinese .arrow-t{
+	left:334px;
+}
+.g-driver-allow-debug.turkish .arrow-b{
+	left:144px;
+}
+.g-driver-allow-debug.turkish .arrow-t{
+	left:325px;
+}
+body[language ="arabic"] .arrow-tip{
+	direction:rtl;
+}

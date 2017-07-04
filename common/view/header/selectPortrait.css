@@ -1,0 +1,152 @@
+.upload-wrap,
+.select-wrap{
+    width: 595px;
+    height: 300px;
+    margin: 30px;
+    background-color: #edeff1;
+    border: 1px solid #e1e1e1;
+}
+
+.select-wrap img {
+    margin-top: 35px;
+    margin-bottom: 25px
+}
+
+
+.select-wrap .g-btn1{
+    min-width:280px;
+    height: 34px;
+    font-size: 14px; 
+    margin-bottom: 25px;
+}
+.select-wrap .g-btn3{
+    font-size: 14px;
+    min-width:280px;
+    height: 34px; 
+    margin-bottom: 5px;
+}
+
+.select-wrap .label{
+    font-size: 14px;
+    color: #db1616;
+};
+
+.cut-panel{
+    width: 600px;
+    height: 340px;
+}
+
+.cut-panel .img-area{
+    width: 600px;
+    height: 300px;
+    position: relative;
+    margin: 25px;
+    margin-bottom: 15px;
+    background-color: #edeff1;
+    border: 1px solid #e1e1e1;
+}
+
+.cut-panel img{
+
+}
+
+.cut-panel .set-pic{
+    min-width:280px;
+    height: 34px; 
+}
+
+.upload-label{
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+.upload-wrap .progress-bar,
+.upload-wrap .progress-bar span{
+    height: 8px;
+}
+
+/*
+ * imgAreaSelect animated border style
+ */
+
+.imgareaselect-border1 {
+    background: url(../../images/ico/border-anim-v.gif) repeat-y left top;
+}
+
+.imgareaselect-border2 {
+    background: url(../../images/ico/border-anim-h.gif) repeat-x left top;
+}
+
+.imgareaselect-border3 {
+    background: url(../../images/ico/border-anim-v.gif) repeat-y right top;
+}
+
+.imgareaselect-border4 {
+    background: url(../../images/ico/border-anim-h.gif) repeat-x left bottom;
+}
+
+.imgareaselect-border1, .imgareaselect-border2,
+.imgareaselect-border3, .imgareaselect-border4 {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.imgareaselect-handle {
+    background-color: #fff;
+    border: solid 1px #000;
+/*    border-radius: 100%;*/
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.imgareaselect-outer {
+    background-color: #fff;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.imgareaselect-selection {
+}
+
+/*
+ * imgAreaSelect default style
+ */
+
+/*.imgareaselect-border1 {
+    background: url(../../images/ico/border-v.gif) repeat-y left top;
+}
+
+.imgareaselect-border2 {
+    background: url(../../images/ico/border-h.gif) repeat-x left top;
+}
+
+.imgareaselect-border3 {
+    background: url(../../images/ico/border-v.gif) repeat-y right top;
+}
+
+.imgareaselect-border4 {
+    background: url(../../images/ico/border-h.gif) repeat-x left bottom;
+}
+
+.imgareaselect-border1, .imgareaselect-border2,
+.imgareaselect-border3, .imgareaselect-border4 {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.imgareaselect-handle {
+    background-color: #fff;
+    border: solid 1px #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.imgareaselect-outer {
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.imgareaselect-selection {  
+}
+*/

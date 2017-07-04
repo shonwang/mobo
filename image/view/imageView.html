@@ -1,0 +1,119 @@
+<script id="tpl-image-main-view" type="text/tpl">
+    <div class="g-image">
+        <div id="i-image-header" class="g-toolbar hbox">
+            <input id="i-image-chkboxall" type="checkbox" class="chkbox-all"></input>
+            <button class="ico-btn ico-picture"><%=I18N.fillDomText('image.importPicture')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="ico-btn ico-export" disabled><%=I18N.fillDomText('common.Export')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="ico-btn ico-delete" disabled><%=I18N.fillDomText('common.Delete')%></button>
+            <i class="g-toolbar-line"></i>
+            <!--button class="ico-btn ico-refresh">Refresh</button-->
+        </div>
+        <div id="g-content" class="g-content hbox">
+            <div class="g-panels">
+                <!-- tab 区域-->
+                <div class="g-list-tab-header">
+                    <menu class="tab hbox">
+                        <li class="selected" data-tab="1"><%=I18N.fillDomText('image.gallery')%> <em>0</em></li>
+                        <li data-tab="2"><%=I18N.fillDomText('image.wallpapers')%> <em>0</em></li>
+                        <li data-tab="3"><%=I18N.fillDomText('image.others')%> <em>0</em></li>
+                        
+                        <div class="line"></div>
+                    </menu>
+                </div>
+                
+                <!--tab列表区域-->
+                <div class="g-list-tab-con">
+                    <div id="i-gallery-pic" class="list g-page-show" >
+                        
+                    </div>
+                    <div id="i-wallpaper-pic" class="list g-page-hide" >
+                        
+                    </div>
+                    <div id="i-other-pic" class="list g-page-hide" >
+                        
+                    </div>
+                    
+                    <div id="wallpaper-empty-tip" class="g-empty-state cbox" style="display: none">
+                        <div class="con">
+                            <img src="../src/image/images/no-pic.png">
+                            <p class="info">
+                                <%=I18N.fillDomText('image.noImagesText')%>
+                            </p>
+                            <button class="g-btn g-btn1"><%=I18N.fillDomText('image.downloadImage')%></button>
+                        </div>
+                    </div>
+                    
+                    <div class="g-empty-state g-media-empty-info cbox" style="display: none">
+                        <div class="con">
+                            <img src="../src/music/images/no-sd.png">
+                            <p class="info">
+                                <%=I18N.fillDomText('common.noSdState')%>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="i-image-player-placeholder" style="display: none">
+           
+        </div>
+    </div>
+</script>
+
+<script id="tpl-image-thread" type="text/tpl">
+    <div class="g-image-thread">
+        <h1 class="title" >
+            <label>
+                <input type="checkbox" class="thread-checkbox"></input>
+                <span class="text">
+                    <strong></strong>
+                    <span class="second f18"></span>
+                    <span class="count"> </span>
+                </span>
+            </label>
+        </h1>
+        <ul class="pic-list">
+            
+        </ul>
+    </div>
+</script>
+
+<script id="tpl-image-item" type="text/tpl">
+    <li class="g-image-item">
+        <img onerror="this.src='image\\images\\damage-pic.png'"></img>
+        <div class="setting">
+            <a href="javascript:void(0)" class="detail"></a>
+            <a href="javascript:void(0)" class="open" i18n-key="image.previewLabel" ></a>
+            <a href="javascript:void(0)" class="wp" i18n-key="image.setWallpaper" ></a>
+        </div>
+        <input type="checkbox"></input>
+    </li>
+</script>
+
+<script id="tpl-image-detail-tip" type="text/tpl">
+    <div>
+        <p class="n hbox">
+            <em class="te"><%=data.name%></em>
+        </p>
+        <p class="d">
+            <em class="c-9"><%=data.measure%></em>
+            <em class="c-9"><%=data.size%></em>
+        </p>
+        <p>
+            <em class="c-9"><%=data.date%></em>
+        </p>
+    </div>
+</script>
+
+<script id="tpl-image-failed-item" type="text/tpl">
+    <ul>
+       <%for(var i=0;i<data.length;i++){%>
+           <li><%=data[i].label%></li>
+        <%}%>
+      </ul>
+</script>
+

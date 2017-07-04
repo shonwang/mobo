@@ -1,0 +1,1871 @@
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("font/Roboto-Regular.ttf")
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("font/Roboto-Light.ttf")
+}
+
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url("font/Roboto-Thin.ttf")
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("font/Roboto-Bold.ttf")
+}
+
+@font-face {
+    font-family: "Roboto-Italic";
+    src: url("font/Roboto-Italic.ttf")
+}
+
+html, body {
+    overflow: hidden;
+}
+
+html, body, div, button, textarea, input, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    -webkit-user-select: none;
+    background-color: transparent;
+}
+
+body {
+    color: #333;
+    cursor: default;
+    font: 12px/1.5em Roboto-Regular, Arial, Helvetica, Microsoft Yahei, sans-serif;
+}
+
+/*清除内外边距*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+nav, ul, ol, menu, li {
+    list-style: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+address, caption, cite, code, dfn, em, i, th, var, optgroup {
+    font-style: normal;
+    font-weight: normal;
+}
+
+input, button, textarea, select, optgroup, option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+/*-- 浮动，清除浮动，字号，颜色
+------------------------------------------------------------------------------------------*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* 字号 */
+.f12 {
+    font-size: 12px;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+.f24 {
+    font-size: 24px;
+}
+
+.fb {
+    font-weight: 700;
+}
+
+/*颜色*/
+.c-f {
+    color: #fff;
+}
+
+.c-3 {
+    color: #333;
+}
+
+.c-6 {
+    color: #666;
+}
+
+.c-9 {
+    color: #999;
+}
+
+.c-blue {
+    color: #13abe1;
+}
+
+.c-red {
+    color: #ff5454;
+}
+
+/*宽度*/
+.wh {
+    width: 100%;
+    height: 100%;
+}
+
+/*文字隐藏*/
+.te {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*显示 ,隐藏*/
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+/*清除浮动*/
+.cf:before, .cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    clear: both;
+    *zoom: 1;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    -webkit-transition: color .2s ease-in-out;
+}
+
+a:hover {
+    color: #1fb3e5;
+    text-decoration: none;
+}
+
+a.special, .special a {
+    color: #1fb3e5;
+}
+
+a.special:hover, .special a:hover {
+    text-decoration: underline;
+}
+
+/*-- End -*/
+#i-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+#i-sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 180px;
+    background-color: #222d3f;
+}
+
+#i-content {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fcfcfc;
+    z-index: -1; /*主体内容显示层次缩进*/
+}
+
+#i-modules {
+    position: absolute;
+    height: 100%;
+    left: 0px;
+    right: 0;
+    overflow: hidden;
+    background: #fcfcfc;
+    z-index: -1;
+}
+
+/*Custom Scrollbar*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    -webkit-appearance: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #C7C7C7;
+    min-height: 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #b0b0b0;
+    border: 2px solid rgba(255, 255, 255, 0);
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #969696;
+}
+
+/*input checkbox custom*/
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 0;
+    border: 1px #dcdcdc solid;
+    background-color: #fff;
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    /*border-radius: 2px;*/
+    outline: none;
+}
+
+input[type="checkbox"]:enabled:hover,
+input[type="radio"]:enabled:hover,
+input[type="checkbox"].g-light,
+input[type="radio"].g-light {
+    border-color: #0aa8dd;
+    -webkit-appearance: none;
+}
+
+input[type="checkbox"]:enabled:checked {
+    background: #0aa8dd url(../images/check/check.png) no-repeat center;
+    border-color: #0aa8dd
+}
+
+/*input[type="checkbox"]:enabled:focus,*/
+/*input[type="radio"]:enabled:focus {*/
+/*border-color: #39a6d4;*/
+/*}*/
+
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled {
+    opacity: 0.4;
+}
+
+/*input radio custom*/
+input[type="radio"] {
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+}
+
+input[type="radio"]:enabled:checked {
+    background: #fff url(../images/check/radio-check.png) no-repeat center;
+    border-color: #39a6d4
+}
+
+.hbox, .vbox {
+    display: -webkit-box;
+    -webkit-box-align: stretch;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: start;
+}
+
+.hbox {
+    -webkit-box-orient: horizontal;
+}
+
+.vbox {
+    -webkit-box-orient: vertical;
+}
+
+.cbox {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+.vcbox {
+    display: -webkit-box;
+    -webkit-box-align: center;
+}
+
+/*input ,textarea 框组件*/
+.com-pos {
+    position: relative;
+}
+
+.com-area {
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    border: 1px solid #dcdcdc;
+    overflow-y: auto;
+    font-family: arial;
+    word-wrap: break-word;
+    background-color: #fff;
+    color: #999;
+    box-sizing: border-box;
+    position: relative;
+    /*-webkit-transition: border-color .2s ease, background-color .2s ease;*/
+}
+
+.com-area:focus, .com-area_focus {
+    color: #333;
+    border: 1px solid #65c4eb;
+}
+
+.com-area:hover,
+.com-text:hover {
+    border: 1px solid #b4e4f7;
+}
+
+.com-text {
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #dcdcdc;
+    color: #999;
+    background: #fff;
+    vertical-align: middle;
+    -webkit-transition: background-color .2s ease;
+}
+
+.com-text:focus, .com_text-focus {
+    color: #333;
+    border: 1px solid #65c4eb;
+}
+
+.err-input {
+    -webkit-animation: error .2s 3;
+    -moz-animation: error .2s 3;
+    animation: error .2s 3;
+    border: 1px solid #ff5454;
+}
+
+/*下拉选择 select*/
+.g-select {
+    min-width: 100px;
+    max-width: 200px;
+    font-size: 14px;
+    position: relative;
+    background-color: #fff;
+}
+
+.g-select-mod {
+    margin: 0 29px 0 0;
+    padding: 0 5px;
+    color: #525252;
+    height: 28px;
+    line-height: 28px;
+    display: block;
+    border: 1px solid #dcdcdc;
+    overflow: hidden;
+    text-align: left;
+    background-color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+/*.g-select-mod span {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    border-left: 1px solid #dcdcdc;
+    display: block;
+}*/
+.g-select-mod .loc-label {
+    display: inline !important;
+}
+
+.g-select-mod .g-arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-position: center;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    /*-webkit-transition: all 0.3s ease-in 0s;*/
+}
+
+/*.g-select-mod .g-arrow:before {
+    position: absolute;
+    top: 11px;
+    left: 8px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #b0b0b0 transparent transparent transparent;
+}
+
+.g-select:hover .g-select-mod {
+    color: #1fb3e5;
+}*/
+
+/*.g-select:hover .g-arrow {
+    -webkit-transform: rotate(180deg);
+}*/
+
+.g-select:hover .g-select-down {
+    display: block;
+}
+
+.g-select-down {
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 29px;
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+
+}
+
+.g-select-down a {
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+    color: #525252;
+    display: block;
+    background-color: #fff;
+}
+
+.g-select-down a:hover {
+    color: #fff;
+    background-color: #65c4eb;
+}
+
+/*头像*/
+.g-avatar {
+    border-radius: 100%;
+    border: 1px solid #c6c6c6;
+    display: block;
+}
+
+/*返回顶部*/
+.scrolltop {
+    width: 34px;
+    height: 34px;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    background: url("../images/scrolltop/top.png") no-repeat;
+}
+
+.scrolltop:hover {
+    background-position: 0 -34px;
+}
+
+.scrolltop:active {
+    background-position: 0 -68px;
+}
+
+/*功能提示框 4个方向箭头*/
+.arrow-t,
+.arrow-r,
+.arrow-b,
+.arrow-l,
+.arrow-top,
+.arrow-right,
+.arrow-bottom,
+.arrow-left {
+    position: relative;
+    padding: 10px;
+    min-height: 20px;
+    border: 1px solid #9dd0e1;
+    background-color: #fff;
+    border-radius: 2px;
+    /*box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);*/
+}
+
+.arrow-top .arr,
+.arrow-right .arr,
+.arrow-bottom .arr,
+.arrow-left .arr {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    font-size: 0;
+    background-color: #fff;
+    border-left: 1px #9dd0e1 solid;
+    border-top: 1px #9dd0e1 solid;
+}
+
+.arrow-top .arr {
+    left: 50%;
+    margin-left: -4px;
+    top: -5px;
+    -webkit-transform: rotate(45deg);
+}
+
+.arrow-right .arr {
+    top: 30px;
+    right: -5px;
+    -webkit-transform: rotate(135deg);
+}
+
+.arrow-bottom .arr {
+    left: 50%;
+    margin-left: -5px;
+    bottom: -5px;
+    -webkit-transform: rotate(225deg);
+}
+
+.arrow-left .arr {
+    left: -5px;
+    top: 30px;
+    -webkit-transform: rotate(-45deg);
+}
+
+.arrow-t:after,
+.arrow-r:after,
+.arrow-b:after,
+.arrow-l:after {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    font-size: 0;
+    background-color: #fff;
+    content: "";
+    border-left: 1px #9dd0e1 solid;
+    border-top: 1px #9dd0e1 solid;
+}
+
+.arrow-t:after {
+    left: 50%;
+    margin-left: -4px;
+    top: -5px;
+    -webkit-transform: rotate(45deg);
+}
+
+.arrow-r:after {
+    top: 30px;
+    right: -5px;
+    -webkit-transform: rotate(135deg);
+}
+
+.arrow-b:after {
+    left: 50%;
+    margin-left: -5px;
+    bottom: -5px;
+    -webkit-transform: rotate(225deg);
+}
+
+.arrow-l:after {
+    left: -5px;
+    top: 30px;
+    -webkit-transform: rotate(-45deg);
+}
+
+.arrow-bg,
+.arrow-bg:after {
+    background-color: #e2f2f9;
+}
+
+.arrow-bg-shadow,
+.arrow-bg-shadow:after {
+    color: #fff;
+    border-color: transparent !important;
+    background-color: #0ab0e8 !important;
+}
+
+.arrow-bg-shadow {
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.45);
+}
+
+.arrow-lrb:after {
+    bottom: 30px;
+    top: auto;
+}
+
+/* 2种 进度条*/
+
+.progress-bar-stripes {
+    background-color: #09b3e4;
+    height: 5px;
+    width: 100%;
+}
+
+.progress-bar-stripes span {
+    -webkit-background-size: 12px 12px;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-image: linear-gradient(135deg, rgba(180, 218, 241, .8) 25%, transparent 25%, transparent 50%, rgba(180, 218, 241, .8) 50%, rgba(180, 218, 241, .8) 75%, transparent 75%, transparent);
+    -webkit-animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 60px 0;
+    }
+}
+
+.progress-bar {
+    position: relative;
+    height: 5px;
+    width: 100%;
+    background-color: #e4e3e4;
+}
+
+.progress-bar span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 5px;
+    width: 100%;
+    display: block;
+    background-color: #06a1df;
+}
+
+.progress-bar.disabled span {
+    background-color: #cecece;
+}
+
+/*资源页内容模块主接口*/
+.g-page-ctn {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 180px;
+    right: 0px;
+    overflow: hidden;
+}
+
+.g-page-hide {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+
+.g-page-show {
+    visibility: visible;
+    opacity: 1;
+    z-index: 0;
+}
+
+.g-res-ctn {
+    border: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/*toolbar 样式*/
+.g-toolbar {
+    /*background: -webkit-linear-gradient(#f0f0f0 0%, #f9f9f9 7%);*/
+    border-top: 2px #f6f6f6 solid;
+    border-bottom: 1px #dcdcdc solid;
+    height: 36px;
+    position: relative;
+    width: 100%;
+    background-color: #ececec;
+    -webkit-box-align: center;
+}
+
+.g-toolbar .chkbox-all {
+    display: block;
+    margin: 0 20px;
+}
+
+.g-toolbar-line {
+    width: 0px;
+    height: 16px;
+    margin: 0 12px;
+    overflow: hidden;
+    display: block;
+}
+
+.g-toolbar .ico-btn {
+    height: 100%;
+}
+
+/*toolbar底部内容*/
+.g-content {
+    position: absolute;
+    left: 0;
+    top: 39px;
+    bottom: 0;
+    width: 100%;
+}
+
+/*-- 按钮组件    所有按钮集合  (包含，确定，取消，删除，下载等)
+------------------------------------------------------------------------------------------------------*/
+.g-btn {
+    padding: 0 10px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    /* -webkit-transition: background-color .3s ease-in;*/
+}
+
+.g-btn[disabled],
+.g-btn[disabled]:hover,
+.g-btn[disabled]:active {
+    cursor: default;
+    background-color: #ecebeb;
+    color: #c6c6c6;
+    border: 1px solid transparent;
+}
+
+/* 蓝色按钮 高30px, 按钮名称：Download All ,Save, Install, Send ,One-click ROot*/
+.g-btn1 {
+    min-width: 86px;
+    font-size: 14px;
+    height: 30px;
+    background-color: #00aae3;
+}
+
+.g-btn1:hover,
+.g-btn2:hover {
+    background-color: #00b7f5;
+}
+
+.g-btn1:active,
+.g-btn2:active {
+    background-color: #0097c9;
+    /*border-top: 1px solid #006d92;*/
+}
+
+/* 蓝色按钮 高24px, 按钮名称：OK ,Save, Edit, Uninstall  */
+.g-btn2 {
+    min-width: 70px;
+    height: 24px;
+    background-color: #00aae3;
+}
+
+/* 灰色带边框按钮 高24px, 按钮名称：Install  */
+.g-btn3 {
+    min-width: 70px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #515659;
+    background-color: #f4f7f9;
+    border: 1px solid #a1b3be;
+    text-shadow: 1px 1px 0px #fff;
+}
+
+.g-btn3:hover {
+    color: #14abe0;
+    background-color: #fff;
+}
+
+.g-btn3:active {
+    color: #0a7da5;
+    background-color: #e8edf0;
+}
+
+/*
+.g-btn3 {
+    min-width: 70px;
+    height: 24px;
+    color: #333;
+    background-color: #efefef;
+    border: 1px solid #ccc;
+    text-shadow: 1px 1px 0px #fff;
+}
+
+.g-btn3:hover {
+    border: 1px solid #b4b4b4;
+    background-color: #cdcdcd;
+}
+
+.g-btn3:active {
+    border: 1px solid #999;
+    background-color: #b2b1b1;
+}
+*/
+
+/* 灰色按钮 高24px, 按钮名称：Cancel, move, Undate  */
+.g-btn4 {
+    min-width: 50px;
+    height: 24px;
+    color: #565656;
+    background-color: #dcdcdc;
+}
+
+.g-btn4:hover {
+    background-color: #ededed;
+}
+
+.g-btn4:active {
+    background-color: #c6c6c6;
+    /*border-top: 1px solid #a6a6a6;*/
+}
+
+/*Play All*/
+.g-btn5 {
+    height: 30px;
+    background-color: #e17745;
+}
+
+.g-btn5:hover {
+    background-color: #eb8529;
+}
+
+.g-btn5:active {
+    background-color: #d96b21;
+    /*border-top: 1px solid #8e4615;*/
+}
+
+/*Retry*/
+.g-btn6 {
+    height: 20px;
+    background-color: #ff5c5c;
+}
+
+.g-btn6:hover {
+    background-color: #ff7575;
+}
+
+.g-btn6:active {
+    background-color: #f64b4b;
+    /*border-top: 1px solid #a13131;*/
+}
+
+/* End btn */
+
+.g-primary-btn {
+    line-height: 26px;
+    padding: 0 8px;
+}
+
+.g-list-tab-header {
+    /*background-color: #fff;*/
+    border-bottom: 1px #ddd solid;
+    /*box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);*/
+    position: absolute;
+    height: 34px;
+    width: 100%;
+}
+
+.g-list-tab-header .tab {
+    -webkit-box-pack: center;
+    height: 100%;
+
+}
+
+.g-list-tab-header .tab li {
+    color: #999;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0 12px;
+    margin: 0 8px;
+}
+
+.g-list-tab-header .tab .selected {
+    position: relative;
+    color: #00aae3;
+}
+
+.g-list-tab-header .tab .selected:after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    content: "";
+    border-bottom: 3px solid #00aae3;
+}
+
+.g-list-tab-header .tab .selected em {
+    background-color: #00aae3;
+}
+
+.g-list-tab-header .tab li em {
+    background-color: #cdcdcd;
+    padding: 0px 8px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.g-list-tab-header .tab .line {
+    display: none;
+    position: absolute;
+    width: 80px;
+    margin: 0 10px;
+    height: 3px;
+    background: #00aae3;
+    bottom: -1px;
+    left: 0;
+    -webkit-transition: left .2s ease, width .2s ease;
+}
+
+.g-list-tab-con {
+    position: absolute;
+    top: 35px;
+    bottom: 0;
+    width: 100%;
+}
+
+.g-list-tab-con .list {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+/*下拉箭头*/
+.g-arrow {
+    height: 100%;
+    cursor: pointer;
+    color: #666;
+    padding-right: 14px;
+    vertical-align: top;
+    background: url(../images/toolbar/ico-down-arrow.png) no-repeat right center;
+}
+
+.g-arrow:hover {
+    color: #00b7f5;
+}
+
+.g-arrow:active {
+    color: #22a5d0;
+}
+
+/*二级下拉菜单*/
+
+.g-drop-down {
+    position: absolute;
+    z-index: 100;
+    margin-top: 4px;
+    min-width: 150px;
+    max-width: 300px;
+    border: 1px solid #dcdcdc;
+    border-top: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(35, 53, 69, 0.1);
+}
+
+.g-drop-down .list {
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+}
+
+/*-- 小于20像素的 ico图标  集合 组件
+-----------------------------------------------------------------*/
+/*分享*/
+
+.g-setting-sns .facebook,
+.g-setting-sns .twitter,
+.g-setting-sns .gplus {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.g-setting-sns .facebook:hover {
+    background-color: #5577bf;
+}
+
+.g-setting-sns .twitter:hover {
+    background-color: #48a3e8;
+}
+
+.g-setting-sns .gplus:hover {
+    background-color: #d23623;
+}
+
+.g-setting-sns .facebook:active {
+    background-color: #375dac;
+}
+
+.g-setting-sns .twitter:active {
+    background-color: #3d9ae0;
+}
+
+.g-setting-sns .gplus:active {
+    background-color: #cb2d19;
+}
+
+.g-setting-sns .facebook {
+    background: #999 url(../images/ico/facebook.png) no-repeat center;
+}
+
+.g-setting-sns .twitter {
+    margin: 0 14px;
+    background: #999 url(../images/ico/twitter.png) no-repeat center;
+}
+
+.g-setting-sns .gplus {
+    background: #999 url(../images/ico/google.png) no-repeat center;
+}
+
+/*星星*/
+.ico-star,
+.ico-stars {
+    width: 75px;
+    height: 13px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../images/ico/star.png) repeat-x;
+}
+
+.ico-stars {
+    vertical-align: top;
+    background: url(../images/ico/stars.png) repeat-x;
+}
+
+/*更多*/
+.r-more {
+    margin-left: 5px;
+    padding-right: 9px;
+    display: block;
+    font-size: 14px;
+    color: #0aa8dd;
+    cursor: pointer;
+    background: url(../images/ico/more.png) no-repeat right center;
+}
+
+.r-more:hover {
+    color: #00b7f5;
+    background: url(../images/ico/more-hover.png) no-repeat right center;
+}
+
+.r-more:active {
+    color: #0097c9;
+    background: url(../images/ico/more-active.png) no-repeat right center;
+}
+
+/*下载图标*/
+
+.ico-app-down {
+    height: 20px;
+    padding-left: 11px;
+    background: url(../images/ico/ico-app-down.png) no-repeat left center;
+}
+
+/*警告，提示，正确，错误*/
+.ico-pass,
+.ico-pass-small {
+    /*display: block;*/
+    color: #82b11d;
+    background: url(../images/ico/pass.png) no-repeat left center;
+}
+
+.ico-error,
+.ico-error-small {
+    color: #de1b1b;
+    /*display: block;*/
+    background: url(../images/ico/error.png) no-repeat left center;
+}
+
+.ico-warng,
+.ico-warng-small {
+    color: #e5820d;
+    /*display: block;*/
+    background: url(../images/ico/warng.png) no-repeat left center;
+}
+
+.ico-remind,
+.ico-remind-small {
+    color: #0aa8dd;
+    /*display: block;*/
+    background: url(../images/ico/remind.png) no-repeat left center;
+}
+
+.ico-pass,
+.ico-error,
+.ico-warng,
+.ico-remind {
+    height: 18px;
+    padding-left: 23px;
+}
+
+.ico-pass-small,
+.ico-error-small,
+.ico-warng-small,
+.ico-remind-small {
+    padding-left: 18px;
+    background-size: auto 14px;
+}
+
+/*设置壁纸*/
+.ico-set-wallpaper {
+    padding-left: 23px;
+    display: inline-block;
+    height: 100%;
+    color: #fff;
+    white-space: nowrap;
+    cursor: pointer;
+    background: url(../images/ico/set-wallpaper.png) no-repeat left center;
+}
+
+.ico-set-wallpaper:hover {
+    background: url(../images/ico/set-wallpaper-hover.png) no-repeat left center;
+}
+
+.ico-set-wallpaper:active {
+    background: url(../images/ico/set-wallpaper-active.png) no-repeat left center;
+}
+
+/*my contacts*/
+.ico-btn {
+    height: 20px;
+    cursor: pointer;
+    display: block;
+    color: #686868;
+}
+
+.ico-btn:hover {
+    color: #00b7f5;
+}
+
+.ico-btn:active {
+    color: #22a5d0;
+}
+
+.ico-btn[disabled],
+.ico-btn[disabled]:hover,
+.ico-btn[disabled]:active,
+.ico-btn[disabled] span,
+.ico-btn[disabled]:hover span,
+.ico-btn[disabled]:active span {
+    color: #e0e0e0;
+    cursor: default;
+}
+
+/*My contacts*/
+.ico-contact {
+    padding-left: 21px;
+    line-height: 20px;
+    background: url(../images/toolbar/contact.png) no-repeat left center;
+}
+
+.ico-contact:hover {
+    background: url(../images/toolbar/contact-hover.png) no-repeat left center;
+}
+
+.ico-contact:active {
+    background: url(../images/toolbar/contact-active.png) no-repeat left center;
+}
+
+.ico-contact[disabled],
+.ico-contact[disabled]:hover,
+.ico-contact[disabled]:active {
+    background: url(../images/toolbar/contact-disabled.png) no-repeat left center;
+}
+
+.ico-message {
+    padding-left: 21px;
+    line-height: 20px;
+    background: url(../images/toolbar/message.png) no-repeat left center;
+}
+
+.ico-message:hover {
+    background: url(../images/toolbar/message-hover.png) no-repeat left center;
+}
+
+.ico-message:active {
+    background: url(../images/toolbar/message-active.png) no-repeat left center;
+}
+
+.ico-message[disabled],
+.ico-message[disabled]:hover,
+.ico-message[disabled]:active {
+    background: url(../images/toolbar/message-disabled.png) no-repeat left center;
+}
+
+.ico-import {
+    padding-left: 19px;
+    background: url(../images/toolbar/import.png) no-repeat left center;
+}
+
+.ico-import:hover {
+    background: url(../images/toolbar/import-hover.png) no-repeat left center;
+}
+
+.ico-import:active {
+    background: url(../images/toolbar/import-active.png) no-repeat left center;
+}
+
+.ico-import[disabled],
+.ico-import[disabled]:hover,
+.ico-import[disabled]:active {
+    background: url(../images/toolbar/import-disabled.png) no-repeat left center;
+}
+
+.ico-export {
+    padding-left: 20px;
+    background: url("../images/toolbar/export.png") no-repeat left center;
+}
+
+.ico-export:hover {
+    background: url("../images/toolbar/export-hover.png") no-repeat left center;
+}
+
+.ico-export:active {
+    background: url("../images/toolbar/export-active.png") no-repeat left center;
+}
+
+.ico-export[disabled],
+.ico-export[disabled]:hover,
+.ico-export[disabled]:active {
+    background: url("../images/toolbar/export-disabled.png") no-repeat left center;
+}
+
+.ico-btn[disabled] .g-arrow,
+.ico-btn[disabled]:hover .g-arrow,
+.ico-btn[disabled]:active .g-arrow {
+    background: url("../images/toolbar/ico-down-arrow-disabled.png") no-repeat right center
+}
+
+.ico-delete {
+    padding-left: 18px;
+    background: url(../images/toolbar/delete.png) no-repeat left center;
+}
+
+.ico-delete:hover {
+    background: url(../images/toolbar/delete-hover.png) no-repeat left center;
+}
+
+.ico-delete:active {
+    background: url(../images/toolbar/delete-active.png) no-repeat left center;
+}
+
+.ico-delete[disabled],
+.ico-delete[disabled]:hover,
+.ico-delete[disabled]:active {
+    background: url(../images/toolbar/delete-disabled.png) no-repeat left center;
+}
+
+.ico-refresh {
+    padding-left: 19px;
+    background: url(../images/toolbar/refresh.png) no-repeat left center;
+}
+
+.ico-refresh:hover {
+    background: url(../images/toolbar/refresh-hover.png) no-repeat left center;
+}
+
+.ico-refresh:active {
+    background: url(../images/toolbar/refresh-active.png) no-repeat left center;
+}
+
+.ico-refresh[disabled],
+.ico-refresh[disabled]:hover,
+.ico-refresh[disabled]:active {
+    background: url(../images/toolbar/refresh-disabled.png) no-repeat left center;
+}
+
+.ico-mark {
+    padding-left: 21px;
+    background: url(../images/toolbar/mark.png) no-repeat left center;
+}
+
+.ico-mark:hover {
+    background: url(../images/toolbar/mark-hover.png) no-repeat left center;
+}
+
+.ico-mark:active {
+    background: url(../images/toolbar/mark-active.png) no-repeat left center;
+}
+
+.ico-mark[disabled],
+.ico-mark[disabled]:hover,
+.ico-mark[disabled]:active {
+    background: url(../images/toolbar/mark-disabled.png) no-repeat left center;
+}
+
+.ico-new-messages {
+    padding-left: 21px;
+    background: url(../images/toolbar/new-messages.png) no-repeat left center;
+}
+
+.ico-new-messages:hover {
+    background: url(../images/toolbar/new-messages-hover.png) no-repeat left center;
+}
+
+.ico-new-messages:active {
+    background: url(../images/toolbar/new-messages-active.png) no-repeat left center;
+}
+
+.ico-new-messages[disabled],
+.ico-new-messages[disabled]:hover,
+.ico-new-messages[disabled]:active {
+    background: url(../images/toolbar/new-messages-disabled.png) no-repeat left center;
+}
+
+/*My Picture*/
+.ico-picture {
+    padding-left: 21px;
+    background: url(../images/toolbar/picture.png) no-repeat left center;
+}
+
+.ico-picture:hover {
+    background: url(../images/toolbar/picture-hover.png) no-repeat left center;
+}
+
+.ico-picture:active {
+    background: url(../images/toolbar/picture-active.png) no-repeat left center;
+}
+
+.ico-picture[disabled],
+.ico-picture[disabled]:hover,
+.ico-picture[disabled]:active {
+    background: url(../images/toolbar/picture-disabled.png) no-repeat left center;
+}
+
+/*My Music*/
+.ico-music {
+    padding-left: 21px;
+    background: url(../images/toolbar/music.png) no-repeat left center;
+}
+
+.ico-music:hover {
+    background: url(../images/toolbar/music-hover.png) no-repeat left center;
+}
+
+.ico-music:active {
+    background: url(../images/toolbar/music-active.png) no-repeat left center;
+}
+
+.ico-music[disabled],
+.ico-music[disabled]:hover,
+.ico-music[disabled]:active {
+    background: url(../images/toolbar/music-disabled.png) no-repeat left center;
+}
+
+/*My Apps*/
+.ico-install {
+    padding-left: 19px;
+    background: url(../images/toolbar/install.png) no-repeat left center;
+}
+
+.ico-install:hover {
+    background: url(../images/toolbar/install-hover.png) no-repeat left center;
+}
+
+.ico-install:active {
+    background: url(../images/toolbar/install-active.png) no-repeat left center;
+}
+
+.ico-install[disabled],
+.ico-install[disabled]:hover,
+.ico-install[disabled]:active {
+    background: url(../images/toolbar/install-disabled.png) no-repeat left center;
+}
+
+.ico-update-all {
+    padding-left: 16px;
+    background: url(../images/toolbar/update-all.png) no-repeat left center;
+}
+
+.ico-update-all:hover {
+    background: url(../images/toolbar/update-all-hover.png) no-repeat left center;
+}
+
+.ico-update-all:active {
+    background: url(../images/toolbar/update-all-active.png) no-repeat left center;
+}
+
+.ico-update-all[disabled],
+.ico-update-all[disabled]:hover,
+.ico-update-all[disabled]:active {
+    background: url(../images/toolbar/update-all-disabled.png) no-repeat left center;
+}
+
+.ico-update {
+    padding-left: 16px;
+    background: url(../images/toolbar/update.png) no-repeat left center;
+}
+
+.ico-update:hover {
+    background: url(../images/toolbar/update-hover.png) no-repeat left center;
+}
+
+.ico-update:active {
+    background: url(../images/toolbar/update-active.png) no-repeat left center;
+}
+
+.ico-update[disabled],
+.ico-update[disabled]:hover,
+.ico-update[disabled]:active {
+    background: url(../images/toolbar/update-disabled.png) no-repeat left center;
+}
+
+.ico-unstall {
+    padding-left: 19px;
+    background: url(../images/toolbar/unstall.png) no-repeat left center;
+}
+
+.ico-unstall:hover {
+    background: url(../images/toolbar/unstall-hover.png) no-repeat left center;
+}
+
+.ico-unstall:active {
+    background: url(../images/toolbar/unstall-active.png) no-repeat left center;
+}
+
+.ico-unstall[disabled],
+.ico-unstall[disabled]:hover,
+.ico-unstall[disabled]:active {
+    background: url(../images/toolbar/unstall-disabled.png) no-repeat left center;
+}
+
+.ico-sd {
+    padding-left: 20px;
+    background: url(../images/toolbar/sd.png) no-repeat left center;
+}
+
+.ico-sd:hover {
+    background: url(../images/toolbar/sd-hover.png) no-repeat left center;
+}
+
+.ico-sd:active {
+    background: url(../images/toolbar/sd-active.png) no-repeat left center;
+}
+
+.ico-sd[disabled],
+.ico-sd[disabled]:hover,
+.ico-sd[disabled]:active {
+    background: url(../images/toolbar/sd-disabled.png) no-repeat left center;
+}
+
+/*My Video*/
+.ico-import-video {
+    padding-left: 21px;
+    background: url(../images/toolbar/import-video.png) no-repeat left center;
+}
+
+.ico-import-video:hover {
+    background: url(../images/toolbar/import-video-hover.png) no-repeat left center;
+}
+
+.ico-import-video:active {
+    background: url(../images/toolbar/import-video-active.png) no-repeat left center;
+}
+
+.ico-import-video[disabled],
+.ico-import-video[disabled]:hover,
+.ico-import-video[disabled]:active {
+    background: url(../images/toolbar/import-video-disabled.png) no-repeat left center;
+}
+
+/*Download*/
+.ico-pause {
+    padding-left: 15px;
+    background: url(../images/toolbar/pause.png) no-repeat left center;
+}
+
+.ico-pause:hover {
+    background: url(../images/toolbar/pause-hover.png) no-repeat left center;
+}
+
+.ico-pause:active {
+    background: url(../images/toolbar/pause-active.png) no-repeat left center;
+}
+
+.ico-pause[disabled],
+.ico-pause[disabled]:hover,
+.ico-pause[disabled]:active {
+    background: url(../images/toolbar/pause-disabled.png) no-repeat left center;
+}
+
+.ico-continue {
+    padding-left: 17px;
+    background: url(../images/toolbar/continue.png) no-repeat left center;
+}
+
+.ico-continue:hover {
+    background: url(../images/toolbar/continue-hover.png) no-repeat left center;
+}
+
+.ico-continue:active {
+    background: url(../images/toolbar/continue-active.png) no-repeat left center;
+}
+
+.ico-continue[disabled],
+.ico-continue[disabled]:hover,
+.ico-continue[disabled]:active {
+    background: url(../images/toolbar/continue-disabled.png) no-repeat left center;
+}
+
+.ico-down-open {
+    padding-left: 17px;
+    background: url(../images/toolbar/open.png) no-repeat left center;
+}
+
+.ico-down-open:hover {
+    background: url(../images/toolbar/open-hover.png) no-repeat left center;
+}
+
+.ico-down-open:active {
+    background: url(../images/toolbar/open-active.png) no-repeat left center;
+}
+
+.ico-down-open[disabled],
+.ico-down-open[disabled]:hover,
+.ico-down-open[disabled]:active {
+    background: url(../images/toolbar/open-disabled.png) no-repeat left center;
+}
+
+/*ebook*/
+.ico-import-book {
+    padding-left: 20px;
+    background: url(../images/toolbar/import-book.png) no-repeat left center;
+}
+
+.ico-import-book:hover {
+    background: url(../images/toolbar/import-book-hover.png) no-repeat left center;
+}
+
+.ico-import-book:active {
+    background: url(../images/toolbar/import-book-active.png) no-repeat left center;
+}
+
+/* 联系人 ，messages */
+.ico-add {
+    width: 30px;
+    height: 30px;
+    text-indent: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    background: url(../images/ico/add.png) no-repeat center;
+}
+
+.ico-add:hover {
+    background: url(../images/ico/add-hover.png) no-repeat center;
+}
+
+.ico-add:active {
+    background: url(../images/ico/add-active.png) no-repeat center;
+}
+
+.ico-expression {
+    width: 26px;
+    height: 26px;
+    text-indent: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    background: url(../images/exp/expression.png) no-repeat center;
+}
+
+.ico-close,
+.ico-min {
+    width: 20px;
+    height: 20px;
+    display: block;
+    cursor: pointer;
+    background: url(../images/header/close.png) no-repeat center;
+}
+
+.ico-close:hover,
+.g-popup.g-window .ico-close:hover,
+.g-popup.g-window .ico-close-black:hover,
+.g-message-tip .ico-close:hover {
+    background: url(../images/header/close-hover.png) no-repeat center;
+}
+
+.ico-close:active,
+.g-popup.g-window .ico-close:active,
+.g-popup.g-window .ico-close-black:active,
+.g-message-tip .ico-close:active {
+    background: url(../images/header/close-active.png) no-repeat center
+}
+
+.ico-min,
+.g-popup.g-window .ico-min-white {
+    background: url(../images/header/minimize.png) no-repeat center;
+}
+
+.ico-min:hover,
+.g-popup.g-window .ico-min:hover,
+.g-popup.g-window .ico-min-white:hover {
+    background: url(../images/header/minimize-hover.png) no-repeat center;
+}
+
+.ico-min:active,
+.g-popup.g-window .ico-min:active,
+.g-popup.g-window .ico-min-white:active {
+    background: url(../images/header/minimize-active.png) no-repeat center
+}
+
+/*sdCard管理*/
+.ico-copy {
+    padding-left: 21px;
+    background: url(../images/toolbar/copy.png) no-repeat left center;
+}
+
+.ico-copy:hover {
+    background: url(../images/toolbar/copy-hover.png) no-repeat left center;
+}
+
+.ico-copy:active {
+    background: url(../images/toolbar/copy-active.png) no-repeat left center;
+}
+
+.ico-copy[disabled],
+.ico-copy[disabled]:hover,
+.ico-copy[disabled]:active {
+    background: url(../images/toolbar/copy-disabled.png) no-repeat left center;
+}
+
+.ico-paste {
+    padding-left: 21px;
+    background: url(../images/toolbar/paste.png) no-repeat left center;
+}
+
+.ico-paste:hover {
+    background: url(../images/toolbar/paste-hover.png) no-repeat left center;
+}
+
+.ico-paste:active {
+    background: url(../images/toolbar/paste-active.png) no-repeat left center;
+}
+
+.ico-paste[disabled],
+.ico-paste[disabled]:hover,
+.ico-paste[disabled]:active {
+    background: url(../images/toolbar/paste-disabled.png) no-repeat left center;
+}
+
+.ico-new-folder {
+    padding-left: 21px;
+    background: url(../images/toolbar/new-folder.png) no-repeat left center;
+}
+
+.ico-new-folder:hover {
+    background: url(../images/toolbar/new-folder-hover.png) no-repeat left center;
+}
+
+.ico-new-folder:active {
+    background: url(../images/toolbar/new-folder-active.png) no-repeat left center;
+}
+
+.ico-new-folder[disabled],
+.ico-new-folder[disabled]:hover,
+.ico-new-folder[disabled]:active {
+    background: url(../images/toolbar/new-folder-disabled.png) no-repeat left center;
+}
+
+/*End */
+
+/*弹框提示*/
+.g-global-tip {
+    width: 500px;
+    height: 300px;
+}
+
+/*消息提示*/
+.g-message-tip {
+    position: absolute;
+    padding: 6px 12px;
+    right: 0px;
+    bottom: 0px;
+    min-width: 300px;
+    min-height: 16px;
+    background: rgba(0, 0, 0, .8);
+}
+
+.g-message-tip .ctn {
+    -webkit-box-flex: 1;
+    margin-right: 12px;
+}
+
+.g-message-tip .ico-close {
+    background: url(../images/header/close-white.png) no-repeat center;
+}
+
+/*为空的状态图*/
+.g-empty-state {
+    text-align: center;
+}
+
+.g-empty-state .pic {
+    width: 318px;
+    height: 247px;
+    display: block;
+    overflow: hidden;
+    background: url(../../../src/common/images/mynot/not-bg.png) no-repeat;
+}
+
+.g-empty-state .pic span {
+    margin: 22px 0 0 187px;
+    width: 110px;
+    height: 70px;
+}
+
+.g-empty-state .info {
+    font-size: 14px;
+    color: #666;
+    margin: 50px auto 20px;
+}
+
+/*tip*/
+.g-title-tip {
+    position: absolute;
+    background: rgba(34, 36, 31, 0.8);
+    padding: 6px 8px;
+    color: #fff;
+    min-width: 20px;
+    max-width: 300px;
+    word-wrap: break-word;
+    line-height: 18px;
+    display: none;
+}
+
+/*刷新*/
+.g-refresh-btn {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7) url(../images/ico/refresh-big.png) no-repeat center;
+}
+
+.g-refresh-btn:hover {
+    background: rgba(0, 0, 0, 0.7) url(../images/ico/refresh-big-hover.png) no-repeat center;
+}
+
+.g-refresh-btn:active {
+    background: rgba(0, 0, 0, 0.7) url(../images/ico/refresh-big-active.png) no-repeat center;
+}
+
+/*placeholder*/
+.placeholder {
+    position: absolute;
+    word-wrap: break-word;
+    padding: 5px;
+    overflow: hidden;
+    z-index: 1;
+    color: #999;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: text;
+    display: none;
+}
+
+.loaddivBox {
+    position: absolute;
+    width: 39%;
+    left: 50%;
+    top: 0;
+    margin-left: -18.5%;
+    height: 50px;
+    font-size: 14px;
+}
+
+.placeholder-head {
+    max-width: 500px;
+    width: 100%;
+    height: 30px;
+    padding: 0 40px 0 10px;
+    line-height: 30px;
+    box-sizing: border-box;
+    color: #999;
+    cursor: text;
+    overflow: hidden;
+}
+
+/*断网后的状态*/
+.r-app-network {
+    text-align: center;
+}
+
+.r-app-network .pic {
+    width: 520px;
+    height: 140px;
+    display: block;
+    margin: 60px auto;
+    background: url(../images/network/off-network.png) no-repeat center;
+}
+
+/*阿拉伯语*/
+body[language ="arabic"] .loc-label,
+body[language ="farsi"] .loc-label {
+    direction: rtl;
+    display: inline-block;
+}
+
+/*繁体中文 重置字体*/
+body[language ="traditionalchinese"],
+body[language ="traditionalchinese"] .g-sidebar nav li span,
+body[language ="traditionalchinese"] .g-app-recommend-list .column2,
+body[language ="traditionalchinese"] .g-app-recommend-list .title {
+    font-family: "Microsoft YaHei";
+}
+
+/*隐藏*/
+/*setting菜单里的手动升级*/
+.g-menu-setting menu li:nth-child(2){
+	display: none;
+}
+

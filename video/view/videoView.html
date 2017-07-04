@@ -1,0 +1,106 @@
+<script id="tpl-video-main-view" type="text/tpl">
+    <div class="g-video g-video-tips-box">
+        <div id="i-video-header" class="g-toolbar hbox">
+            <input type="checkbox" class="chkbox-all"></input>
+            <button class="ico-btn ico-import-video btn-import"><%=I18N.fillDomText('video.importVideo')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="ico-btn ico-export btn-export"><%=I18N.fillDomText('common.Export')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="ico-btn ico-delete btn-delete"><%=I18N.fillDomText('common.Delete')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="ico-btn ico-refresh btn-refresh"><%=I18N.fillDomText('common.Refresh')%></button>
+        </div>
+        <div class="g-video-tips cbox">
+            <span class="te ico-remind-small"><%=I18N.fillDomText('video.promptImportTips')%></span>
+            <button class="ico-close-blue"></button>
+        </div>
+        <div class="g-content hbox">
+            <div  class="list"></div>
+            <div class="g-empty-state g-media-empty-info sdempty cbox" style="display: none">
+                <div class="con">
+                    <img src="../src/music/images/no-sd.png">
+                    <p class="info">
+                        <%=I18N.fillDomText('common.noSdState')%>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="tpl-vedio-empty-info" type="text/tpl">
+    <div class="g-media-empty-info vbox">
+        <div class="empty-label"><%=I18N.fillDomText('video.emptyVideoLabel')%></div>
+        <button class="g-btn g-btn1 goto-youtube"><%=I18N.fillDomText('video.gotoYouTubeLabel')%></button>
+    </div>
+</script>
+
+<script id="tpl-vedio-thread-view" type="text/tpl">
+    <div class="g-media-thread">
+        <div class="header">
+            <input type="checkbox" class="selecter"></input>
+            <span class="date"></span>
+            <span class="count"></span>
+        </div>
+        <ul class="media-ctn"></ul>
+    </div>
+</script>
+
+<script id="tpl-vedio-item-view" type="text/tpl">
+    <li class="g-media-item" style="display: inline-block;">
+        <div class="video-image"><img id="image" onerror='javascript:this.src="video/images/video-default.png"'></img></div>
+        <input type="checkbox" class="select-item"></input>
+        <div class="video-duration"></div>
+        <div class="control">
+            <button class="btn-play" i18n-key = "video.playLabel"></button>
+            <button class="btn-info"></button>
+        </div>
+    </li>
+</script>
+
+<script id="tpl-vedio-process-view" type="text/tpl">
+    <div class="g-video-process-ctn">
+        <div class="process-label"></div>
+        <div class="progress-bar">
+            <span id="inner-bar" style="width: 0%"></span>
+        </div>
+        <div class="progress-bar-stripes">
+            <span></span>
+        </div>
+    </div>
+</script>
+
+<script id="tpl-vedio-detail-tip" type="text/tpl">
+    <div>
+        <p class="n hbox">
+            <em class="c-9 te"><%=data.name%></em>
+        </p>
+        <p class="d">
+            <em class="c-9"><%=data.size%></em>
+            <em class="c-9"><%=data.date%></em>
+        </p>
+    </div>
+</script>
+
+<script id="tpl-vedio-item-view-backup" type="text/tpl">
+    <li class="g-media-item">
+        <div class="video-image"><img id="image" onerror='javascript:this.src="video/images/video-default.png"'></img></div>
+        <input type="checkbox" class="select-item"></input>
+        <div class="control">
+            <button class="btn-play" i18n-key = "video.playLabel"></button>
+            <button class="btn-info"></button>
+        </div>
+        <ul class="info-detail">
+            <li class="nameLabel"><%=I18N.fillDomText('video.nameLabel')%>
+                <span class="name te"></span>
+                <span class="ext"></span>
+            </li>
+            <li class="dateLabel"><%=I18N.fillDomText('video.dateLabel')%>
+                <span class="date-info"></span>
+            </li>
+            <li class="sizeLabel"><%=I18N.fillDomText('video.sizeLabel')%>
+                <span class="size"></span>
+            </li>
+        </ul>
+    </li>
+</script>

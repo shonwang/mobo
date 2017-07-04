@@ -1,0 +1,182 @@
+<script id="tpl-connection-view" type="text/tpl">
+    <div class="g-driver-moudle">
+    
+    	<!-------------------- Bad network connection start-------------------->
+        
+        	<div class="driver-module g-driver-bad-network hide">
+            	
+            	<h1 class="f14 c-6"><i></i><p class="te"><%=I18N.fillDomText('driver.badNetworkTitle')%></p></h1>
+                <div class="g-driver-bad-network-image">
+                	<img src="../common/images/connGuide/bad-network-.png" />
+                </div>
+               	<button class="g-btn g-btn1 margin-auto retry-btn"><%=I18N.fillDomText('common.retryText')%></button>
+            </div>
+        
+        <!-------------------- Bad network connection end  -------------------->
+        
+        <!--------------------      Usb debug start        -------------------->
+        
+        	<div class="driver-module g-driver-usb-debug hide">
+            	<h1 class="f14 c-6"><i></i><p class="te"><%=I18N.fillDomText('driver.usbDebugTitle')%></p>
+            		<button class="havaOpen"><%=I18N.fillDomText('driver.havaOpenUsb')%></button>
+            	</h1>
+              
+                <div class="g-usb-debug-guide-body">
+	                <div class="g-usb-debug-version-image">
+	                   	<div class="g-usb-debug-version-text f14 text-center">
+	                            <span><%=I18N.fillDomText('driver.myVersion')%></span>
+	                            <ul class="g-usb-debug-version-list">
+		                            <li ver="low">1.6~3.2</li>
+		                            <li ver="high"  class="hover">4.0~4.1</li>
+		                            <li ver="higher">4.2~4.4</li>
+		                        </ul>
+	                            
+	                    </div>
+	                    <div class="g-usb-debug-loading"></div>
+	                    <div class="g-usb-debug-refresh"></div>
+	                    <div class="g-usb-debug-version-content android">
+	                    	 <div class="ver-low">
+	                        	
+	                            <i class="previmg"></i>
+	                            <div class="arrow-tip tip" style="display:none;"></div>  
+	                            <div class="arrow-tip tip-two" style="display:none;"></div>  
+	                            <ul>
+	                               
+	                            </ul>
+	                            <i class="nextimg"></i>
+	                         </div>
+	                        
+	                    </div> 
+	                
+	                </div>
+                
+	                <div class="g-usb-debug-version-video hide">
+	                     <div class="g-usb-debug-version-text f14 text-center">
+	                        <span><%=I18N.fillDomText('driver.myVersion')%></span><i></i>
+	                        <ul class="g-usb-debug-version-list">
+	                            <li ver="low">1.6~3.2</li>
+	                            <li ver="high"  class="hover">4.0~4.1</li>
+	                            <li ver="higher">4.2~4.4</li>
+	                        </ul>
+	                            
+	                    </div>
+	                    <div class="g-usb-debug-video-loading"></div>
+	                    <div class="g-usb-debug-video-refresh"></div>
+	                    <div class="g-usb-debug-version-video-content margin-auto">
+	                        <iframe id="video-inner" src=""  scrolling="no"></iframe> 
+	                    </div>
+	                </div>
+	                
+            		<div class="g-driver-download-setter-image hide">
+	                	<div class="g-driver-download-setter-code fl">
+	                    	<img src="../common/images/connGuide/code.png" />
+	                    </div>
+	                    <p class="or f14"><%=I18N.fillDomText('driver.orText')%></p>
+	                    <div class="g-driver-download-setter-img fr">
+	                    	<img src="../common/images/connGuide/setter.jpg" />
+	                    </div>
+	                </div>
+	                
+	                <div class="g-driver-service hide">
+	                	<div class="g-driver-service-loading"></div>
+	                	 <div class="g-driver-service-refresh"></div>
+	                	<ul></ul>
+	                </div>
+	                	
+	            </div>
+                <div class="g-usb-debug-foot-text f14">
+                	<ul>
+                		<li class="picture light te"><i></i><%=I18N.fillDomText('driver.pictureGuide')%></li><li class="video te"><i></i><%=I18N.fillDomText('driver.videoGuide')%></li><li class="set te"><i></i><%=I18N.fillDomText('driver.oneClickSet')%></li><li class="service te"><i></i><%=I18N.fillDomText('driver.usbDebugCustomer')%></li>
+                	</ul>
+                	
+                </div>
+            </div>
+        
+        <!--------------------      Usb debug end          -------------------->
+		 
+        <!--------------------      allow debug start      -------------------->
+        
+        	<div class="driver-module g-driver-allow-debug hide">
+            	<h1 class="f14 c-6"><i></i><p class="te"><%=I18N.fillDomText('driver.allowDebugText')%></p></h1>
+                <div class="g-driver-allow-debug-image text-center">
+					<div class="tip arrow-b"><%=I18N.fillDomText('driver.allowDebugTip')%></div>
+					<div class="tip arrow-t"><%=I18N.fillDomText('driver.allowDebugOkTip')%></div>
+                	<img class="margin-auto" src="../common/images/connGuide/allow-debug.jpg" />
+                    <p class="f14 c-9">
+						 <%=I18N.fillDomText('driver.butRetry')%>
+					 	<button class="g-btn g-btn2 show-again-btn"><%=I18N.fillDomText('driver.butShowAgain')%></button>
+					</p>
+                </div>
+                 <p class="foot-text f14 c-blue"><a class="c-blue link goto-setting"><%=I18N.fillDomText('driver.stillNoSolove')%></a></p>
+            </div>
+        
+        <!--------------------      allow debug end        -------------------->
+		
+		
+        <!--------------------      contact driver start   -------------------->
+        
+        	<div class="driver-module g-driver-debug-setting hide">
+        		<div class="g-driver-debug-setting-image">
+                    <div class="g-driver-debug-setting-check-usb margin-auto">
+                    	<img class="margin-auto" src="../common/images/connGuide/check-usb.png" />
+                        <p class="c-6 f14"><%=I18N.fillDomText('driver.tryConnectText')%></p>
+                    </div>
+                </div>
+                <p class="g-driver-debug-setting-foot">
+                	<button class="g-btn g-btn3 back back-allow-debug"><i></i><%=I18N.fillDomText('driver.butBack')%></button>
+                    <a class="c-blue link f14 feedback"><%=I18N.fillDomText('driver.ContactSupport')%></a>
+                </p>
+        	</div>
+            
+        <!--------------------      contact driver end     -------------------->
+       
+        
+        <!--------------------   Not enough storage start  -------------------->
+        	<div class="driver-module g-driver-no-space hide">
+        		<h1 class="f14 c-6"><i></i></h1>
+        		<div class="g-driver-no-space-body">
+                	<img src="../common/images/connGuide/no-space.png" />
+                    <div class="g-driver-no-space-text">
+                    	<p class="f14 ico-warng"><%=I18N.fillDomText('driver.noSpaceHint')%></p>
+                        <p class="text c-3"><%=I18N.fillDomText('driver.noSpaceText','<span class="c-red">' + I18N.fillDomText('driver.needSpaceText') + '</span>')%></p>
+                        <p class="text c-3"><%=I18N.fillDomText('driver.upSpaceText')%></p>
+                        <button class="g-btn g-btn2 hava-space-btn"><%=I18N.fillDomText('driver.butHaveSpace')%></button>
+                    </div>
+                </div>
+        	</div>
+        
+        <!--------------------   Not enough storage end    -------------------->
+        
+        <!--------------------     conncet failed start    -------------------->
+        
+        	<div class="driver-module g-driver-conncet-failed hide">
+            	
+                <h1 class="f14 c-6"><i></i><p class="te"><%=I18N.fillDomText('driver.connectFailedTitle')%></p>
+                	<button class="g-btn g-btn2 wifiCon"><%=I18N.fillDomText('driver.tryConnectWifi')%></button>
+                
+                </h1>
+                <ul class="margin-auto">
+                	<li>
+                    	<p class="f12 text-center"><%=I18N.fillDomText('driver.connectFailedTryText')%></p>
+                        <img class="margin-auto" src="../common/images/connGuide/failed-usb.png" />
+                    </li>
+                    <li class="right">
+                    	<p class="f12 text-center"><%=I18N.fillDomText('driver.connectFailedRestart')%></p>
+                        <img class="margin-auto" src="../common/images/connGuide/failed-mg.png" />
+                    </li>
+                    <li>
+                    	<p class="f12 text-center"><%=I18N.fillDomText('driver.RestartDevice')%></p>
+                        <img class="margin-auto" src="../common/images/connGuide/failed-restart.png" />
+                    </li>
+                    <li class="right">
+                    	<p class="f12 text-center"><%=I18N.fillDomText('driver.connectFailedText')%></p>
+                        <img class="margin-auto" src="../common/images/connGuide/failed-report.png" />
+                    </li>
+                </ul>
+            	
+            </div>
+        
+        <!--------------------     conncet failed end      -------------------->
+    
+    </div>
+</script>

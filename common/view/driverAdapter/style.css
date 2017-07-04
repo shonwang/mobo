@@ -1,0 +1,411 @@
+@charset "utf-8";
+/* CSS Document */
+.g-connction-guide{
+	width:640px; 
+	height:385px;
+	margin-left:-12px;
+}
+.g-connction-guide-content{
+	width:100%;
+	height:392px;
+}
+.g-connction-guide-usb{
+	margin: auto;
+	width: 495px;
+	height:100%;
+}
+.g-connction-guide-usb .connct-imgs,
+.g-connction-guide-usb .connct-imgs-moble{
+	height:240px;
+	width:418px;
+	margin:15px auto 0;
+	background:url(../../images/driverAdapter/connet-now.png) no-repeat left center;
+}
+.g-connction-guide-usb .connct-imgs{
+	height:230px;
+	margin:0 auto;
+}
+.g-connction-guide-usb .connct-imgs-moble{
+	margin-top:39px;
+}
+.g-connction-guide-usb img{
+	display:block;
+	position: relative;
+	top:169px;
+	left:0;
+}
+.connct-imgs img{
+	top:164px;
+}
+.g-connction-guide-usb-text h1,
+.g-connction-guide-muserver-text h1,
+.g-connction-guide-Driver-text h1,
+.g-connction-guide-Download-text h1{
+	text-align: center;
+	margin:10px 0 10px 0;
+}
+.g-connction-guide-usb-text p{
+	text-align: left;
+}
+.g-connction-guide-usb-text button{
+	display:block;
+	margin:20px auto 0;
+}
+.g-connction-guide-tips{
+	text-align: center;
+}
+.g-connction-guide-wifi > div{
+	display:none;
+}
+.g-connction-guide-wifi > div.wifi-con{
+	display:block;
+}
+.wifi-con{
+	width: 525px;
+	margin:25px auto 0;
+}
+.wifi-con h1{
+	font-size:14px;
+	margin-bottom:22px;
+	line-height:30px;
+}
+.wifi-con h1 b{
+	background:url(../../images/driverAdapter/mobohelp.png) no-repeat left center;
+	text-indent: 28px;
+	height:30px;
+	margin:0 10px;
+	display:inline-block;
+	background-size:24px;
+}
+.wifi-img{
+	height:252px;
+	color: #333;
+}
+.wifi-img div.fl img{
+	margin-top:5px;
+}
+.wifi-img div.fl{
+	width:165px;
+}
+.wifi-img div p{
+	height:45px;
+}
+.wifi-img div.fr{
+	width:250px;
+	position:relative;
+}
+.wifi-img .url{
+	position:absolute;
+	left:50px;
+	top:58px;
+	color:#707070;
+	font-size:17px;
+}
+.wifi-img p.or{
+	width: 110px;
+	display: inline-block;
+	text-align: center;
+	margin-top: 110px;
+	font-size: 24px;
+}
+.wifi-con .help{
+	height:30px;
+	line-height:30px;
+	float: right;
+	margin-right: -20px;
+	background:url(../../images/driverAdapter/next.png) no-repeat right;
+	padding-right: 15px;
+	cursor: pointer;
+	font-size:14px;
+}
+.wifi-con .help:hover{
+	color:#3caed6;
+	background:url(../../images/driverAdapter/next-hover.png) no-repeat right;
+}
+.wifi-pass{
+	width:530px;
+	margin:auto;
+}
+.wifi-pass .back{
+	margin-top: 30px;
+	margin-left: -20px;
+	height:30px;
+	line-height:30px;
+	cursor:pointer;
+	padding-left:15px;
+	background:url(../../images/driverAdapter/back.png) no-repeat left;
+}
+
+.wifi-pass .back:hover{
+	color:#3caed6;
+	background:url(../../images/driverAdapter/back-hover.png) no-repeat left;
+}
+.wifi-word .text{
+	width:260px;
+	margin:60px 0 0 25px;
+}
+.wifi-word .text p{
+	margin:0 10px 10px 0;
+}
+.wifi-word input{
+	width:160px;
+	margin:5px 0 6px 0;
+}
+.wifi-word .how{
+	color:#336699;
+	display:block;
+	margin-bottom:40px;
+	cursor:pointer;
+}
+.wifi-word button{
+	width:160px;
+}
+.wifi-pass .imgs{
+	position:relative;
+}
+.wifi-pass .imgs .yuan{
+	position:absolute;
+	bottom:50px;
+	right:-32px;
+	display:none;
+}
+.wifi-conncting,
+.wifi-warrnnt,
+.wifi-nix{
+	text-align: center;
+}
+.wifi-nix img{
+	margin: 65px auto 50px;
+	display: block;
+}
+.wifi-nix button,
+.wifi-install button{
+	margin:30px 30px 0 0;
+}
+.wifi-conncting img{
+	margin:85px 0 40px 0;
+}
+.wifi-conncting p{
+	padding: 0 50px;
+}
+.wifi-install {
+	text-align: center;
+	margin-top:15px;
+}
+.wifi-install p{
+	margin-top: 10px;
+	padding:0 10px;
+}
+.wifi-pleaseInstall{
+	margin-top:20px;
+}
+.wifi-pleaseInstall img{
+	margin-left: 65px;
+	float: left;
+	margin-top: 30px;
+}
+.wifi-pleaseInstall P{
+	display: inline-block;
+	width: 220px;
+	word-wrap: break-word;
+	margin: 150px 0 0 25px;
+}
+.warrnnt-info{
+	width:330px;
+	height:320px;
+	position:relative;
+	display:block;
+	margin:20px auto 0;
+}
+.pc-name{
+	position: absolute;
+	top: 175px;
+	width: 100%;
+	text-align: center;
+}
+.wifi-deviceCon .title{
+	margin:40px 0 0 30px;
+	height:60px;
+	font-size:14px;
+}
+.wifi-deviceCon .num{
+	padding-right:6px;
+}
+.device-list li{
+	width:106px;
+	height:206px;
+	float:left;
+	margin-left:40px;
+	cursor:pointer;
+	position:relative;
+	text-align: center;
+	background:url(../../images/driverAdapter/device.png) no-repeat left center;
+}
+.device-list li.other{
+	background:url(../../images/driverAdapter/device2.png) no-repeat left center;
+}
+.device-list li .ph p{
+	width:94px;
+	margin:auto;
+	font-size:14px;
+	line-height: 18px;
+	text-align: center;
+}
+.device-list li .ph {
+	width: 100%;
+	height: 100%;
+}
+.device-list li .ph p span{
+	display:block;
+	width:94px;
+	word-break: break-word;
+}
+.device-list li .cn{
+	position: absolute;
+	width: 94px;
+	height: 150px;
+	background: #333;
+	left: 6px;
+	top: 27px;
+	opacity: 0.95;
+	color: #fff;
+	display:none;
+}
+.device-list li.hover .cn{
+	display:-webkit-box;
+}
+.device-list li .phone-time{
+	text-align: center;
+	margin-top: 15px;
+}
+.auto{
+	display: block;
+	margin:auto;
+}
+.wifi-failed img{
+	margin:40px auto 35px;
+	display:block;
+}
+.wifi-failed h4,
+.wifi-failed p{
+	margin:0 50px 5px;
+}
+.wifi-failed p em{
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	display: block;
+	float: left;
+	background: #999;
+	margin: 6px 7px 0 0;
+}
+.wifi-failed h4{
+	margin-bottom:15px;
+	text-align: center;
+}
+.wifi-failed button{
+	margin-top:18px;
+}
+.wifi-updatefailed img{
+	margin: auto;
+	display: block;
+	margin-top: 85px;
+}
+.wifi-updatefailed p{
+	margin-top: 40px;
+	text-align: center;
+}
+/*�ײ�������ʽ*/
+.g-connction-guide-nav{
+	clear:both;
+	width:638px;
+	height:70px;
+	position:absolute;
+	background:#eee;
+	bottom: 0;
+}
+.g-connction-guide-nav ul {
+	width:100%;
+	height:100%;
+}
+.g-connction-guide-nav ul li{
+	width:50%;
+	float:left;
+	height:100%;
+	display:-webkit-box;
+	box-sizing:border-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+	cursor:pointer;
+	position:absolute;
+	color:#999;
+	z-index:2;
+}
+.g-connction-guide-nav ul li:hover,
+.g-connction-guide-nav ul li.light{
+	color:#3caed6;
+}
+.g-connction-guide-nav ul li i{
+	display:inline-block;
+	height: 40px;
+	line-height: 40px;
+	background:url(../../images/driverAdapter/usb.png) no-repeat left center;
+	text-indent:30px;
+}
+.g-connction-guide-nav ul li.wifi{
+	left:50%;
+}
+.g-connction-guide-nav ul li.wifi i{
+	text-indent:45px;
+	background:url(../../images/driverAdapter/wifi.png) no-repeat left center;
+	position:relative;
+}
+.g-connction-guide-nav ul li.wifi:hover i,
+.g-connction-guide-nav ul li.wifi.light i{
+	background:url(../../images/driverAdapter/wifi-light.png) no-repeat left center;
+}
+.g-connction-guide-nav ul li.usb:hover i,
+.g-connction-guide-nav ul li.usb.light i{
+	background:url(../../images/driverAdapter/usb-light.png) no-repeat left center;
+}
+.g-connction-guide-nav .arrow-t{
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+	width:50%;
+	box-sizing:border-box;
+	border:none;
+	z-index:1;
+	-webkit-transition: left .2s ease;
+}
+.g-connction-guide-nav .arrow-t:after{
+	border:none;
+	width: 10px;
+	height: 10px;
+	top: -6px; 
+	margin-left:-5px;
+}
+.g-connction-guide-nav .wifi.first i:after {
+    position: absolute;
+    left: 30px;
+	top: 8px;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #de2d1a;
+}
+.g-connction-guide-nav .wifi.first.light i:after{
+	display:none;
+}
+.get-btn{
+	margin-top: 100px;
+	float: right;
+	margin-right: -40px;
+	display: none;
+}
+body[language ="farsi"] .wifi-con h1 b {
+	background: url(../../images/driverAdapter/mobohelp.png) no-repeat right center;
+	padding-right: 7px;
+}

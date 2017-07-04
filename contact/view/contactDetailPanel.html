@@ -1,0 +1,277 @@
+<script id="tpl-contact-detail-panel" type="text/tpl">
+	<!--右侧操作区 start-->
+	         <!--编辑与新建区start-->
+	           <div class="contact-right-edit-or-new-ctn  w-layout-hidden">
+               </div>
+             <!--编辑与新建区end-->  
+               
+            <!---单选联系人基本信息区 start-->
+            <div class="contact-detail-single-selected-ctn   w-layout-hidden">
+              
+             </div>
+            <!---单选联系人基本信息区 end-->
+            
+            
+            <!--联系人多选区 start-->
+            <div class="contact-detail-multi-selected-ctn g-page-hide">
+                    <div class="conversation-monitor">
+                        <div class="cancel">
+                            <span><%=I18N.fillDomText('contact.ContactSelected',"0")%></span>
+                            <span class="cancel-select clearAllSelected"><%=I18N.fillDomText('contact.Cancel')%></span>
+                        </div>
+
+                            <button class="g-btn g-btn1 btn-send-batch" style="vertical-align:top"><%=I18N.fillDomText('contact.SendMessage')%></button>
+                    </div>
+                    <div class="multi-selected-ul-wraper">
+                    </div>
+            </div>
+            <!--联系人多选区 end-->
+            
+        <!--右侧操作区 end-->
+</script>
+
+
+<script id="tpl-new-contact-number-item" type="text/tpl">
+                   <div class="number_item">
+                                <div class="g-select" style="width: 40px;overflow:hidden;display:inline-block">
+                                    <a class="g-select-mod" name="typename" value="mobile"><i class="name_sp"><%=I18N.fillDomText('contact.Mobile')%></i><span><i class="g-arrow"></i> </span></a>
+                               </div>
+                                <input class="com-text" name="data"  minLength="4" maxlength="20" pattern = "[\+\-\*\#0-9]{4,20}"  />
+                              <!-- <span class="add add-item-btn"></span>-->
+                               <span class="ico-delete delete-item-btn"></span>
+                    </div>
+</script>
+<script id="tpl-new-contact-email-item" type="text/tpl">
+                   <div class="number_item">
+                                <div class="g-select" style="width: 40px;overflow:hidden;display:inline-block">
+                                    <a class="g-select-mod" name="typename" value="email"><i class="name_sp"><%=I18N.fillDomText('common.email')%></i><span><i class="g-arrow"></i> </span></a>
+                               </div>
+                                <input class="com-text" name="data" type="email" pattern="(^[a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})"   minLength="4" maxlength="40" />
+                               <!-- <span class="add add-item-btn"></span>-->
+                               <span class="ico-delete delete-item-btn"></span>
+                    </div>
+</script>
+
+<script id="tpl-contact-right-contact-multi-selected-item" type="text/tpl">
+    <div data-id="<%=model.id%>" class="selected-contact-item contact-list-item" >
+                <img class="icon" src="<%=model.data.sContactIcon || 'common/images/ico/default-avatar.png'%>"  />
+                <p class="name te">
+                    <%=model.data.sDisplayName%> 
+                </p>
+                <p class="phone te">
+        <%
+        if(model.data.sContactNumber){
+            for(var i=0;i<model.data.sContactNumber.length;i++){
+                if(i===model.data.sContactNumber.length-1){
+                     %><%=model.data.sContactNumber[i].value%>&nbsp;&nbsp;<%
+                }else{
+                    %>
+                    <%=model.data.sContactNumber[i].value%>&nbsp;&nbsp;,
+                <%}
+            }
+            }
+        %>
+                </p>
+                <div class="btn-uncheck close-item ico-close te" data-id="<%=model.id%>" ></div>
+      </div>
+</script>
+
+<!--单选联系人-->
+<script  id="tpl-contact-right-single-selected" type="text/tpl">
+    <div class="contact-basic-info-ctn">
+                <div class="contact-basic-info">
+                     <img class="fl" src="<%=model.data.sContactIcon || 'common/images/ico/default-avatar.png'%>" alt=""/>
+                     <div class="fl contact-group-info">
+                        <p class="name te" style="font-size: 16px"><span class="family-name"><%=model.data.sDisplayName%><span></p>
+                        <p class="sim te"><%=(model.data.accountName=='phone'?I18N.fillDomText('common.phoneText'):model.data.accountName)||I18N.fillDomText('common.phoneText')%></p>
+                        <p class="family te">
+                            <%
+                            if(model.data.sGroup){
+                                for(var i=0;i<model.data.sGroup.length;i++){
+                                    if(i==model.data.sGroup.length-1){ %>
+                                      <%=(model.data.sGroup[i].groupId<0?I18N.fillDomText('contact.notassigened'):model.data.sGroup[i].groupName)||I18N.fillDomText('contact.notassigened')%>&nbsp;
+                                  <%}else{%>
+                                       <%=(model.data.sGroup[i].groupId<0?I18N.fillDomText('contact.notassigened'):model.data.sGroup[i].groupName)||I18N.fillDomText('contact.notassigened')%>,&nbsp; 
+                                    <%}
+                                }
+                            }%>
+                        </p>
+                        <input name="modelId" value="<%=model.id%>" readonly="true" type="hidden"/>
+                        <input class="contact-input t-input"  name="accountName"  readonly="true"  value="<%=model.data.accountName||'phone'%>" type="hidden"/>
+
+                     </div>
+                     <div class="btn-container-right fr">
+                         <button class="btn-edit g-btn g-btn2" <%=model.data.accountName.toLowerCase().indexOf('sim')>-1?'disabled':''%>><%=I18N.fillDomText('contact.Edit')%></button>
+                     </div>
+                 </div>
+                 
+                  <div class="contact-detail-content-info">
+                        <h1 class="info-header font-size-h3"><%=I18N.fillDomText('contact.ContactInfomation')%></h1>
+                         <ul class="info-ctn cf">
+                            <%
+                            if(model.data.sContactNumber){
+                             for(var i=0;i<model.data.sContactNumber.length;i++){%>
+                            <li class="input-item hbox number_item">
+                                <div class="name te">
+                                    <i class="name_sp">
+                                        <%if(model.data.sContactNumber[i].typeName.toLowerCase()=='mobile'){%>
+                                          <%=I18N.fillDomText('contact.Mobile')%>  
+                                        <%}else if(model.data.sContactNumber[i].typeName.toLowerCase()=='phone'){%>
+                                            <%=I18N.fillDomText('common.phoneText')%>  
+                                        <%}else{%>
+                                            <%=I18N.fillDomText('contact.Mobile')%>
+                                         <%}%>
+                                    </i>
+                                 </div>
+                                <div class="phone te"><%=model.data.sContactNumber[i].value||""%></div>
+                                <button class="ico-btn ico-phone" style="display: none;"></button>
+                                <button class="ico-btn ico-sms"></button>
+                             </li>
+                             <%}
+                            }%>
+                            <%
+                            if(model.data.sContactEmail){
+                             for(var i=0;i<model.data.sContactEmail.length;i++){%>
+                            <li class="input-item hbox number_item">
+                                <div class="name te"><i class="name_sp"><%=(model.data.sContactEmail[i].typeName=='Email'?I18N.fillDomText('common.email'):model.data.sContactEmail[i].typeName)||I18N.fillDomText('common.email')%></i></div>
+                                <div class="email te"><%=model.data.sContactEmail[i].value||""%></div>
+                             </li>
+                             <%}
+                            }%>
+                            <%
+                               if(model.data.sNote){%>
+                                <li class="input-item hbox">
+                                   <div class="name te"><%=I18N.fillDomText('contact.Note')%></div>
+                                   <div class="phone"><%=model.data.sNote%></div>
+                                </li>   
+                               <%}
+                            %>
+                         </ul>
+                  </div>
+                  
+                  <div class="contact-right-sms-ctn" style="display: none;">
+                                   <!--短信列表区 start-->
+                     <div class="message-record-header w-layout-hidden">
+                          <h3 class="fl f18 font-size-h3"><%=I18N.fillDomText('contact.MessageRecord')%></h3>
+                         <button class="fr btn-min ico-pack-up"></button>
+                     </div>
+
+                     <div class="contact-detail-message-list">
+                      
+                     </div>
+                  </div>
+             </div>
+</script>
+
+
+
+<script  id="tpl-contact-right-panel-edit" type="text/tpl">
+    <div class="contact-detail-edit-container">
+                               <div class="icon-container">
+                                        <img src="<%=data.sContactIcon || 'common/images/ico/default-avatar.png'%>" alt="" name="icon" style="width:70px;height:70px"/>
+                                        <div class="mask cbox" style="display:<%=data.sContactIcon?'none':''%>">
+                                            <div class="change-contact-icon"><%=I18N.fillDomText('contact.ChangeIcon')%></div>
+                                         </div>
+                                </div>
+                            <div class="names-container">
+                              <input type="hidden" class="id" name="id" value="<%=data.sContactId%>"/>
+                              <input type="hidden" class="operation" name="operation" value="2"/>
+                              <input type="hidden" class="accountName" value="<%=data.accountName||'phone'%>" />
+                              <input   minLength="1" required="true" maxLength="30" value="<%=data&&data.sDisplayName||''%>" name="displayName" type="text" class="com-text"/>
+                              <div class="phone"><%=(data.accountName=='phone'?I18N.fillDomText('common.phoneText'):data.accountName)||I18N.fillDomText('common.phoneText')%></div>
+                               <div class="g-select" style="max-width: 255px;">
+                                   <%
+                                   var groupStr="";
+                                    data.sGroup&&data.sGroup.forEach(function(groupItem){
+                                        groupStr+=groupItem.groupId+",";
+                                    });
+                                   %>
+                                    <a class="g-select-mod" name="group" value="<%=groupStr||-1%>"><i class="name_sp"><%=I18N.fillDomText('contact.groupText')%></i><span><i class="g-arrow"></i> </span></a>
+                               </div>
+                             </div>
+                        <!--number号码-->
+                        <div class="contact-detail-edit-item-wraper">
+                            <div class="font-size-h2 f18"><%=I18N.fillDomText('contact.ContactInfomation')%></div>
+                        <div class="numbers">
+                            <%
+                            if(data.sContactNumber&&data.sContactNumber.length>0){
+                               for(var i=0;i<data.sContactNumber.length;i++){
+                            %>
+                             <div class="number_item">
+                               <div class="g-select" style="width: 40px;overflow:hidden;display:inline-block">
+                                    <a class="g-select-mod" name="typename" value="<%=data.sContactNumber[i].typeName%>">
+                                        <i class="name_sp">
+                                           <%if(data.sContactNumber[i].typeName.toLowerCase()=='mobile'){%>
+                                          <%=I18N.fillDomText('contact.Mobile')%>  
+                                        <%}else if(data.sContactNumber[i].typeName.toLowerCase()=='phone'){%>
+                                            <%=I18N.fillDomText('common.phoneText')%>  
+                                        <%}else{%>
+                                            <%=I18N.fillDomText('contact.Mobile')%>
+                                         <%}%>
+                                        </i>
+                                        <span><i class="g-arrow"></i> </span></a>
+                               </div>
+                               <input name="label" maxLength="10" value="<%=data.sContactNumber[i].value%>" type="hidden"/>
+                                <input class="com-text" name="data"  minLength="4" maxlength="20" pattern = "[\+\-\*\#0-9]{4,20}" value="<%=data.sContactNumber[i].value%>"/>
+                              <%if(i==0){%>
+                                  <span class="add add-item-btn" i18n-key="contact.addTipText"></span>
+                              <%}else{%>
+                                  <span class="ico-delete delete-item-btn"></span>
+                              <%}%>
+                            </div>
+                             <%}
+                             }else{%>
+                                 <!--如果没有联系人，给一个默认的输入框，label为1-->
+                                 <div class="number_item">
+                                <div class="g-select" style="width: 40px;overflow:hidden;display:inline-block">
+                                    <a class="g-select-mod" name="typename" value="<%=phoneTypes[0].value%>"><i class="name_sp"><%=(phoneTypes[0].label.toLowerCase()=='mobile'?I18N.fillDomText('contact.Mobile'):phoneTypes[0].label)||I18N.fillDomText('contact.Mobile')%></i><span><i class="g-arrow"></i> </span></a>
+                               </div>
+                                <input name="label" maxLength="10" value="1" type="hidden"/>
+                                <input class="com-text" name="data"  minLength="4" maxlength="20" pattern = "[\+\-\*\#0-9]{4,20}"/>
+                               <span class="add add-item-btn" i18n-key="contact.addTipText"></span>
+                              <!-- <span class="ico-delete delete-item-btn"></span>-->
+                            </div>
+                             <%}
+                            %>
+                             <%
+                            if(data.sContactEmail&&data.sContactEmail.length>0){
+                               for(var i=0;i<data.sContactEmail.length;i++){
+                            %>
+                                <div class="number_item">
+                               <div class="g-select" style="width: 40px;overflow:hidden;display:inline-block">
+                                    <a class="g-select-mod" name="typename" value="<%=data.sContactEmail[i].typeName||'Email'%>"><i class="name_sp"><%=(data.sContactEmail[i].typeName=='Email'?I18N.fillDomText('common.email'):data.sContactEmail[i].typeName)||I18N.fillDomText('common.email')%></i><span><i class="g-arrow"></i> </span></a>
+                               </div>
+                                <input name="label" maxLength="10" value="<%=data.sContactEmail[i].value%>" type="hidden"/>
+                                <input class="com-text" name="data" type="email" minLength="4" maxlength="40" pattern="(^[a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})" value="<%=data.sContactEmail[i].value%>" />
+                              
+                              <%if(i==0){%>
+                                  <span class="add add-item-btn"></span>
+                              <%}else{%>
+                                  <span class="ico-delete delete-item-btn"></span>
+                                  <%}%>
+                            </div>
+                             <%}
+                             }else{%>
+                           <div class="number_item">
+                                <div class="g-select" style="width: 40px;overflow:hidden;display:inline-block">
+                                    <a class="g-select-mod" name="typename" value="<%=emailTypes[0].value%>"><i class="name_sp"><%=(emailTypes[0].label=='Email'?I18N.fillDomText('common.email'):emailTypes[0].label)||I18N.fillDomText('common.email')%></i><span><i class="g-arrow"></i> </span></a>
+                               </div>
+                                <input name="label" maxLength="10" value="1" type="hidden"/>
+                                <input class="com-text" name="data" type="email" minLength="4"  pattern="(^[a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})"  maxlength="40" />
+                               <span class="add add-item-btn"></span>
+                               <!--<span class="ico-delete delete-item-btn"></span>-->
+                            </div>
+                             <%}
+                            %>
+                        </div>
+                      <!--备注-->
+                        <div class="note-ctn">
+                            <textarea class="com-area" name="comments" minLength="1" maxlength="500" cols="20" rows="5" value="<%=data.sNote%>"><%=data.sNote%></textarea>
+                        </div>
+                     </div>
+                    <div class="btn-ctn">
+                        <button class="btn-dlg-save g-btn g-btn2"><%=I18N.fillDomText('contact.Save')%></button>
+                        <button class="btn-dlg-cancel g-btn g-btn4"><%=I18N.fillDomText('contact.Cancel')%></button>
+                    </div>
+        </div>
+</script>

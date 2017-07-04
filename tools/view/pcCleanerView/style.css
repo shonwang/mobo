@@ -1,0 +1,326 @@
+@charset "utf-8";
+/* CSS Document */
+.cleaner-wraper .animation{
+	-webkit-animation-duration:1.2s;
+	-webkit-animation-timing-function:linear;
+}
+@-webkit-keyframes rotateIn{
+	0%{
+		-webkit-transform-origin:center center;
+		-webkit-transform:rotate(0deg)
+	}
+	100%{
+		-webkit-transform-origin:center center;
+		-webkit-transform:rotate(360deg);	
+	}
+}
+.cleaner-box {
+    padding: 0;
+    position: relative;
+    border:1px solid rgba(195, 195, 195, 1);
+  	border-top: none;
+}
+.g-cleanWin-top{
+	height:265px;
+    width:100%;
+    color:#fff;
+    position: relative;
+    background:#0096E3;
+    -webkit-transition: background 2s linear;
+}
+.g-cleanWin-top.clean{
+	 -webkit-transition: background 0.5s linear;
+}
+.clean-bg{
+	position:absolute;
+	height:265px;
+    width:100%;
+	top:0;
+	left:0;
+}
+.cleaner-top .anima{
+	width:184px;
+	height:184px;
+	position:relative;
+	top:20px;
+	left:24px;
+	margin-right:15px;
+}
+.cleaner-top .anima-d,
+.cleaner-top .anima-bg,
+.cleaner-top .anima-fly{
+	position:absolute;
+	width:184px;
+	height:184px;
+}
+.cleaner-top .anima .anima-bg{
+	background:url(../../images/scan-bg.png) no-repeat;
+}
+.cleaner-top .anima .anima-d{
+	background:url(../../images/scan-d.gif) no-repeat;
+}
+.cleaner-top .anima .anima-fly{
+	background:url(../../images/scan-fly.png) no-repeat;
+}
+.cleaner-top .anima.clean .anima-bg{
+	background:url(../../images/clean-bg.png) no-repeat;
+}
+.cleaner-top .anima.clean .anima-fly{
+	background:url(../../images/clean-fly.png) no-repeat;
+}
+.rotateIn{
+	-webkit-animation-name:rotateIn;
+	-webkit-animation-iteration-count:infinite;
+}
+.cleaner-top .less{
+	display: inline-block;
+	width: 300px;
+	margin:55px 0 0 35px;
+}
+.cleaner-top .less .size{
+	font-size:18px;
+}
+.cleaner-top .less .size b{
+	font-size:46px;
+	padding-right:5px;
+}
+.cleaner-top .clean-progress{
+	position: relative;
+	width: 100%;
+	height: 6px;
+	border-radius:3px;
+	background-color: #ffffff;
+	opacity:0.7;
+	margin:25px 0 22px;
+}
+.cleaner-top .clean-progress .pg{
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	height: 4px;
+	width:2%;
+	display: block;
+	background-color: #8dc801;
+}
+.cleaner-top .text{
+	opacity:0.8;
+	word-wrap: break-word;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+.cleaner-top.finish .clean-progress,
+.cleaner-top.clean-finish .clean-progress,
+.cleaner-top.finish .anima-d,
+.cleaner-top.clean-finish .anima-d,
+.cleaner-top.finish .anima-fly,
+.cleaner-top.clean-finish .anima-fly{
+	display: none;
+}
+.cleaner-top.finish .less{
+	margin-top:70px;
+}	
+.cleaner-top.clean-finish .less{
+	margin-top:70px;
+}
+.cleaner-top.clean-finish .text,
+.cleaner-top.finish .text{
+	margin-top:25px;
+}
+.cleaner-top.clean-finish .size{
+	font-size:30px;
+	line-height:30px;
+}
+.cleaner-top.clean-finish .anima.clean .anima-bg{
+	background:url(../../images/clean-finish.png) no-repeat;	
+}
+.less-info{
+	height: 243px;
+	overflow-y: auto;
+}
+.less-info .tt{
+	height:auto;
+	width:578px;
+	margin-left:10px;
+}
+.clean-hint{
+	padding:20px 10px 20px;
+	text-align: center;
+}
+.tt .title{
+	height:39px;
+	border-bottom:#c3c3c3 solid 1px;
+	position:relative; 
+}
+.tt .title input,
+.tt .title img{
+	margin:0 12px 0 14px;
+	vertical-align: middle;
+	margin-top: -3px;
+}
+.tt .title img{
+	display:none;
+}
+.tt .title.clean .cleaImg{
+	display: inline-block;
+	margin-left: 2px;
+	margin-right: -2px;
+}
+.tt .title.scan .scanImg{
+	display: inline-block;
+}
+.tt .title.scan input,
+.tt .title.clean input{
+	display:none;
+}
+.tt .title p{
+	display:inline-block;
+	line-height: 40px;
+}
+.tt .title .name{
+	padding-left:26px;
+}
+.tt.net .name{
+	background:url(../../images/net.png) left center no-repeat;	
+}
+.tt.trace .name{
+	background:url(../../images/trace.png) left center no-repeat;	
+}
+.tt.com .name{
+	background:url(../../images/com.png) left center no-repeat;	
+}
+.tt.sys .name{
+	background:url(../../images/sys.png) left center no-repeat;	
+}
+.tt.trash .name{
+	background:url(../../images/trash.png) left center no-repeat;	
+}
+.tt.registry .name{
+	background:url(../../images/registry.png) left center no-repeat;	
+}
+.tt .title .size,
+.tt .title .fin{
+	position:absolute;
+	right:45px;
+}
+.tt .title .fin{
+	right:20px;
+	display:none;
+}
+.tt .title .fin.show{
+	display:inline-block;
+}
+.tt .title .elastic{
+	position:absolute;
+	top:9px;
+	right:15px;
+	width:25px;
+	height:25px;
+	background:url(../../images/on-icon.png) center no-repeat;	
+}
+.tt .title .elastic.expand{
+	background:url(../../images/up-icon.png) center no-repeat;
+}
+.less-info .info{
+	height:auto;
+	display:none;
+	border-bottom:#c3c3c3 solid 1px;
+}
+.less-info .info li{
+	height:31px;
+	line-height:30px;
+	position:relative;
+	padding-left:14px;
+	display:none;
+}
+.less-info .info li img{
+	display:none;
+	margin-left:17px;
+}
+.less-info .info p{
+	display:inline-block;
+	position:absolute;
+}
+.less-info .info input{
+	margin-left:30px;
+	vertical-align: middle;
+	margin-top: -3px;
+}
+.less-info .info li.sing input,
+.less-info .info li.cing input{
+	display:none;
+}
+.less-info .info li.cing,
+.less-info .info li.sing{
+	background:#ecf8fc;
+}
+.less-info .info li.sing .scanImg,
+.less-info .info li.cing .cleaImg{
+	display:inline-block;
+	margin:7px 0 0 28px;
+}
+.less-info .info li.cing .cleaImg{
+	margin:0 0 0 25px;
+}
+.less-info .info li.cing .scanImg{
+	display:none;
+}
+.less-info .info .info-name{
+	left:67px;
+}
+.less-info .info .info-size{
+	right:45px;
+}
+
+.button{
+	display:block;
+	margin:0 auto;
+}
+.tt .title .size.hide,
+.less-info .info .info-size.hide{
+	display:none;
+}
+body[language ="portuguese"] .title .name,
+body[language ="poland"] .title .name,
+body[language ="italian"] .title .name,
+body[language ="france"]  .title .name{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+body[language ="portuguese"] .title input, 
+body[language ="portuguese"] .title img,
+body[language ="poland"] .title input, 
+body[language ="poland"] .title img,
+body[language ="italian"] .title input, 
+body[language ="italian"] .title img,
+body[language ="france"] .title input, 
+body[language ="france"] .title img{
+	margin-top:-32px;
+}
+
+.g-popup.g-window.clean .g-window-header{
+	display:none;
+}
+.g-clean-title{
+	line-height: 38px;
+	height: 38px;
+	padding: 0 40px 0 15px;
+	font-size: 14px;
+}
+body[language ="korean"] .clean-finish .less,
+body[language ="italian"] .clean-finish .less,
+body[language ="poland"] .clean-finish .less,
+body[language ="thai"] .clean-finish .less{
+	margin-top:55px;
+}
+
+
+
+
+
+
+
+

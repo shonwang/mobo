@@ -1,0 +1,38 @@
+<script id="tpl-group-dlg" type="text/tpl">	
+	<div class="group-dlg-container">
+			<!--快速添加区 start-->
+			<div class="account-down hbox">
+			   <lable class="lable"><%=I18N.fillDomText('contact.accountLabel')%></lable>
+			   <div class="g-select">
+                    <a class="g-select-mod" name="account" value="<%=accountName%>"><i class="name_sp"><%=accountName=='phone'?I18N.fillDomText('common.phoneText'):accountName%></i><span><i class="g-arrow"></i> </span></a>
+               </div>
+			</div>
+
+			<div class="dlg-group-item-wraper">
+            </div>
+
+					<div class="btn-ctn">
+						<button class="g-btn g-btn2 btn-save"><%=I18N.fillDomText('contact.Save')%></button>
+						<button class="g-btn g-btn4 btn-cancel"><%=I18N.fillDomText('common.cancelLabel')%></button>
+					</div>
+				<!--快速添加区 end-->
+		</div>
+</script>
+<script id="tpl-group-dlg-item" type="text/tpl">
+     <div class="dlg-group-item hbox">
+        <input value="" account-name ="" name="groupName" type="text" minLength="1" required="true" maxlength="50" pattern="[^\%\-\<\>\/]{1,50}" class="com-text input-field"/>
+        <button class="ico-btn ico-delete delete-item-btn"></button>
+     </div>
+</script>
+<script id="tpl-group-list" type="text/tpl">
+                <%
+                 for(var i=0;i<groupList.length;i++){%>
+                        <div class="number_item dlg-group-item hbox" style="display:<%=groupList[i].groupId<0?'none':''%> ">
+                            <input  account-name ="<%=accountName%>" minLength="1" required="true" maxlength="50" pattern="[^\%\-\<\>\/]{1,50}" group-id="<%=groupList[i].groupId%>" value="<%=groupList[i].groupName||''%>" name="groupName" type="text" class="com-text input-field"/>
+                            <button class="ico-btn ico-delete delete-item-btn" style="display: <%=groupList[i].groupId<0?'none':''%>"></button>
+                        </div> 
+                <% }%>
+                      <div class="dlg-group-item-just-action">
+                            <span class="add add-item-btn"></span>
+                      </div>    
+</script>

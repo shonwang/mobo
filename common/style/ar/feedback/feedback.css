@@ -1,0 +1,23 @@
+﻿body[language="arabic"] .fb-question-moudle h1{background:url("../../../images/feedback/pen_arabic.png") no-repeat right top;direction: rtl;margin-right: 130px;padding-right: 30px; }
+body[language="arabic"] .fb-question-moudle .text{float: right;text-align:left;padding-right: 0;padding-left: 10px;}
+body[language="arabic"] .fb-question-moudle .com-text{float: right;text-align: right;}
+body[language="arabic"] .fb-acc .com-text{margin-right:270px; text-align: right;}
+body[language="arabic"] .fb-question-moudle .g-select{float: right;}
+body[language="arabic"] .com-area{float: right;margin-bottom:3px; text-align: right;}
+body[language="arabic"] .fb-question-moudle .placeholder{left:230px!important}
+.fb-question-moudle .placeholder{left: 270px!important;}
+body[language="arabic"] .fb-dis .placeholder{text-align: right;}
+body[language="arabic"] .fb-question-moudle .hint{text-align: right;margin-left:258px;}
+body[language="arabic"] .fb-submit{direction: rtl;margin-left:211px;}
+body[language="arabic"] .fb-submit p.nof{margin-left: 0; margin-right: 5px;}
+body[language="arabic"] .fb-question-moudle .ico-warng-small{background-position: right center;padding-right: 18px;padding-left: 0; text-align: right;margin-left:241px;}
+body[language="arabic"] .fb-submit .submit{left: 0;right: auto;}
+body[language="arabic"] .fb-question-moudle .usb-hint{text-align:right; background-position: right center;padding-left:0;padding-right: 18px; }
+body[language="arabic"] .fb-submit .file-name{float: right; direction: ltr;}
+body[language="arabic"] .file-success .delete{float: right;}
+
+body[language="arabic"] .thanks img{float: right;}
+body[language="arabic"] .th-text h1{text-align: right;}
+body[language="arabic"] .thanks .close{float: right;}
+body[language="arabic"] .file-failed p{text-overflow:inherit;}
+

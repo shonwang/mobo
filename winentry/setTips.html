@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Mobogenie</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+<body>
+<script type="text/javascript" src="../common/libs/module.js"></script>
+<link rel="stylesheet" href="../common/view/menu/menu.css"></link><link rel="stylesheet" href="../common/view/grid/grid.css"></link><link rel="stylesheet" href="../common/view/scrollerProxy/proxy.css"></link><link rel="stylesheet" href="../common/view/popup/popup.css"></link><link rel="stylesheet" href="../common/view/sidebar/sidebar.css"></link><link rel="stylesheet" href="../common/view/header/header.css"></link><link rel="stylesheet" href="../common/view/header/login.css"></link><link rel="stylesheet" href="../common/view/header/selectPortrait.css"></link><link rel="stylesheet" href="../common/view/window/window.css"></link><link rel="stylesheet" href="../common/view/typeahead/style.css"></link><link rel="stylesheet" href="../common/view/smartTip/style.css"></link><link rel="stylesheet" href="../common/view/chatBox/chatBox.css"></link><link rel="stylesheet" href="../common/view/dialog/style.css"></link><link rel="stylesheet" href="../common/view/connGuide/style.css"></link><link rel="stylesheet" href="../common/view/aboutMe/style.css"></link><link rel="stylesheet" href="../common/view/setting/style.css"></link><link rel="stylesheet" href="../common/view/driverAdapter/style.css"></link><link rel="stylesheet" href="../common/view/friendlyConn/style.css"></link><link rel="stylesheet" href="../common/view/loading/style.css"></link><link rel="stylesheet" href="../common/view/imagePlayer/style.css"></link><link rel="stylesheet" href="../common/view/progress/progress.css"></link><link rel="stylesheet" href="../common/view/toolTip/style.css"></link><link rel="stylesheet" href="../common/view/setTips/style.css"></link><link rel="stylesheet" href="../common/view/newbieGuide/style.css"></link><link rel="stylesheet" href="../common/view/egg/egg.css"></link><link rel="stylesheet" href="../common/view/getAdbState/style.css"></link><link rel="stylesheet" href="../common/style/base.css"></link><link rel="stylesheet" href="../common/style/ar/local.css"></link><link rel="stylesheet" href="../common/style/ar/side/side.css"></link><link rel="stylesheet" href="../common/style/ar/header/header.css"></link><link rel="stylesheet" href="../common/style/ar/home/home.css"></link><link rel="stylesheet" href="../common/style/ar/mycontacts/mycontacts.css"></link><link rel="stylesheet" href="../common/style/ar/myapps/myapps.css"></link><link rel="stylesheet" href="../common/style/ar/mymessages/mymessages.css"></link><link rel="stylesheet" href="../common/style/ar/mymusic/mymusic.css"></link><link rel="stylesheet" href="../common/style/ar/myvideos/myvideos.css"></link><link rel="stylesheet" href="../common/style/ar/toolkit/toolkit.css"></link><link rel="stylesheet" href="../common/style/ar/popup/popup.css"></link><link rel="stylesheet" href="../common/style/ar/feedback/feedback.css"></link><link rel="stylesheet" href="../home/view/style.css"></link><link rel="stylesheet" href="../contact/view/style.css"></link><link rel="stylesheet" href="../application/view/style.css"></link><link rel="stylesheet" href="../image/view/style.css"></link><link rel="stylesheet" href="../sms/view/style.css"></link><link rel="stylesheet" href="../video/view/style.css"></link><link rel="stylesheet" href="../book/view/style.css"></link><link rel="stylesheet" href="../music/view/style.css"></link><link rel="stylesheet" href="../taskManager/view/style.css"></link><link rel="stylesheet" href="../tools/view/toolsMainView/style.css"></link><link rel="stylesheet" href="../tools/view/backupRestoreView/style.css"></link><link rel="stylesheet" href="../tools/view/fileManagerView/style.css"></link><link rel="stylesheet" href="../tools/view/deviceInfoView/style.css"></link><link rel="stylesheet" href="../tools/view/pcCleanerView/style.css"></link><link rel="stylesheet" href="../tools/view/wifiHotPot/style.css"></link><link rel="stylesheet" href="../feedback/view/style.css"></link><link rel="stylesheet" href="../genie/view/style.css"></link>
+<script type="text/javascript">
+
+	genie.use('UIWindow', function(require){
+        var UIWindow = require('UIWindow');
+		var UIsetTipsView = require('UISetTips');
+        
+        var utils = require('utils');
+        var i18nDi  = require('I18NDI');
+        
+        var win = new UIWindow();
+		win.setHeader("Mobogenie");
+        win.show();
+		win.on('close', function(){
+            win.notifyParentWindow({
+                action: 'close'
+            });
+        });
+	    var UIsetTipsView = new UIsetTipsView({win:win});
+        win.setContent(UIsetTipsView);
+    });
+</script>
+</body>
+</html>

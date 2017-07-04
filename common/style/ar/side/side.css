@@ -1,0 +1,6 @@
+﻿body[language="arabic"] .g-sidebar nav li{ direction: rtl;}
+body[language="arabic"] #i-sidebar{text-align: right;}
+body[language="arabic"] #i-sidebar{right: 0; left:auto;}
+body[language="arabic"] .g-con-friendly-view{padding-right: 180px; padding-left: 0}
+
+body[language="arabic"] .ico-device-connected span,body[language="arabic"] .ico-device-disconnect span{background-position: right center;padding-right:23px;padding-left:0;}

@@ -1,0 +1,22 @@
+<script id="tpl-genie-view" type="text/tpl">
+    <iframe name="genie-frame" id="genie-frame" src="" type="text/html" width="100%" height="100%" frameborder="0"></iframe>
+</script>
+
+<script id="tpl-genie-card" type="text/tpl">
+  <div class="g-home-card-big big-card1">
+    <span class="pic cbox">
+      <img onerror="this.src='http://public.mobogenie.com/resource/pchome/images/default-rim-play-160.png'" src="<%=imgPath%>">
+    </span>
+    <h3 class="title"><%=description%></h3>
+  </div>
+</script>
+
+<script id="tpl-genie-error-page" type="text/tpl">
+	<div class="cbox wh noNetPage">
+		<div class="r-app-network">
+			<p class="f18"><%=I18N.fillDomText('driver.badNetworkTitle')%></p>
+			<span class="pic"></span>
+			<button class="g-btn g-btn1 js-retry"><%=I18N.fillDomText('common.retryText')%></button>
+		</div>
+	</div>
+</script>

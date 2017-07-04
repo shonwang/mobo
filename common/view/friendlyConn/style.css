@@ -1,0 +1,30 @@
+.g-con-friendly-view{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    background: #fff;
+    z-index: 20;
+    display: none;
+    padding-left: 180px;
+}
+
+.g-con-friendly-view .img{
+	margin-top:7%;
+    background-image: url(../../images/connGuide/connet-now.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+}
+
+.g-con-friendly-view .action-area{
+    text-align: center;
+}
+
+.g-con-friendly-view .action-area p{
+    line-height: 24px;
+    font-size: 14px;
+    width: 608px;
+	margin: auto;
+	margin-bottom:20px;
+}

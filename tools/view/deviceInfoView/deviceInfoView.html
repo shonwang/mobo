@@ -1,0 +1,35 @@
+<script  id="tpl-device-info" type="text/tpl">
+    <div class="g-deviceInfo-moudle">
+		<div class="g-deviceInfo-center">
+			<div class="g-basic-info">
+				<h1 class="f18 c-6"><%=I18N.fillDomText('tools.basicInfo')%></h1>
+				<ul class="f14">
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.modelNumber')%></i><b class="c-3 te"><%=infoData.sPhoneName || "N/A" %></b></li>
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.androidVer')%></i><b class="c-3 te"><%=infoData.sPhoneReleaseVersion || "N/A" %></b></li>
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.screenResoltion')%></i><b class="c-3 te"><%=infoData.width  +" * "+ infoData.height %></b></li>
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.battery')%></i><b class="c-3 te"><%=infoData.sBatteryLevel && (infoData.sBatteryLevel+"%") || "N/A" %></b></li>
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.cpu')%></i><b titleText='<%=infoData.sPhoneCPUName%><%=infoData.sPhoneCPUCoreSize %><%=sPhoneCPUFrequency+"MHz"%>' class="c-3 te cpu"><%=infoData.sPhoneCPUName || "N/A" %><%=infoData.sPhoneCPUCoreSize || "N/A" %><%=sPhoneCPUFrequency&&(sPhoneCPUFrequency+"MHz") || "N/A" %></b></li>
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.ram')%></i><b class="c-3 te"><%= sPhoneRam && (sPhoneRam+"MB") || "N/A"%></b></li>
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.memory')%></i><b class="c-3 te"><%=sAvaliableMemory +"MB" +"/"+ sTotalMemory+"MB"%></b></li>
+					<li class="sdCard"><s></s><i class="c-6"><%=I18N.fillDomText('tools.sdCard')%></i><b class="c-3 te"><%=sSDAvaliableMemory +"MB" +"/"+ sSDTotalMemory+"MB"%></b></li>
+				</ul>
+			</div>
+			<div class="line"></div>
+			<div class="g-basic-info">
+				<h1 class="f18 c-6"><%=I18N.fillDomText('tools.hardwareInfo')%></h1>
+				<ul class="f14">
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.imei')%></i><b class="phoneIMEI c-3 te"><%=infoData.sPhoneIMEI || "N/A"%></b><a href="javascript:;" class="special copy"><%=I18N.fillDomText('tools.copy')%></a></li>
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.serialNumber')%></i></i><b class="c-3 te"><%=infoData.sPhoneSerialNumber || "N/A"%></b></li>
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.imsi')%></i><b class="c-3 te"><%=infoData.sPhoneIMSI || "N/A"%></b></li>
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.macAddress')%></i><b class="c-3 te"><%=infoData.sPhoneMAC || "N/A"%></b></li>
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.basebandVer')%></i><b titleText="<%=infoData.sPhoneBaseband%>" class="c-3 te ver"><%=infoData.sPhoneBaseband || "N/A"%></b></li>
+					<li><s></s><i class="c-6"><%=I18N.fillDomText('tools.kernelVer')%></i><b titleText='<%=infoData.sPhoneKernelVersion || "N/A"%>' class="c-3 te kernelVer"><%=infoData.sPhoneKernelVersion || "N/A"%></b></li>
+				</ul>
+			</div>
+			<div class="copy-tip">
+				<%=I18N.fillDomText('tools.copySuccess')%>
+			</div>
+			
+		</div>
+	</div>
+</script>

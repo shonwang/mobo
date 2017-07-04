@@ -1,0 +1,86 @@
+<script id="tpl-feedback-view" type="text/tpl">
+
+	<div class="g-feedback-moudle">
+		<p class="g-feedback-hint  c-9 f14"><%=I18N.fillDomText('setting.fbFootText')%></p>
+		<span class="ico-error-small"></span>
+		<form id="action-form" method="post" enctype="multipart/form-data" action="">
+			<input class="clientVersion" type="hidden" name="clientVersion" value="">
+		    <input class="brand" type="hidden" name="brand" value="">
+		    <input class="model" type="hidden" name="model" value="">
+		    <input class="pid" type="hidden" name="pid" value="">
+		    <input class="vid" type="hidden" name="vid" value="">
+		    <input class="os" type="hidden" name="os" value="">
+		    <input class="feedbackID" type="hidden" name="feedbackId" value="">
+			<ul class="g-feedback-option">
+				<li class="f14 c-3">
+					<input class="fb-option" name="fbk_sub" id="usb" type="checkbox" value="">
+					<label for="usb"><%=I18N.fillDomText('setting.fbType1')%></label>
+					<p><%=I18N.fillDomText('setting.fbTypePrompt1')%></p>
+				</li>
+				<li class="f14 c-3">
+					<input class="fb-option" name="fbk_sub" id="driver" type="checkbox" value="">
+					<label for="driver"><%=I18N.fillDomText('setting.fbType2')%></label>
+					<p><%=I18N.fillDomText('setting.fbTypePrompt2')%></p>
+				</li>
+				<li class="f14 c-3">
+					<input class="fb-option" name="fbk_sub" id="speed" type="checkbox" value="">
+					<label for="speed"><%=I18N.fillDomText('setting.fbType3')%></label>
+					<p><%=I18N.fillDomText('setting.fbTypePrompt3')%></p>
+				</li>
+				<li class="f14 c-3">
+					<input class="fb-option" name="fbk_sub" id="detection" type="checkbox" value="">
+					<label for="detection"><%=I18N.fillDomText('setting.fbType4')%></label>
+					<p><%=I18N.fillDomText('setting.fbTypePrompt4')%></p>
+				</li>
+				<li class="f14 c-3">
+					<input class="fb-option" name="fbk_sub" id="feature" type="checkbox" value="">
+					<label for="feature"><%=I18N.fillDomText('setting.fbType5')%></label>
+					<p><%=I18N.fillDomText('setting.fbTypePrompt3')%></p>
+				</li>
+				<li class="f14 c-3">
+					<input class="fb-option" name="fbk_sub" id="sync" type="checkbox" value="">
+					<label for="sync"><%=I18N.fillDomText('setting.fbType6')%></label>
+					<p><%=I18N.fillDomText('setting.fbTypePrompt5')%></p>
+				</li>
+				<li class="f14 c-3">
+					<input class="fb-option" name="fbk_sub" id="user" type="checkbox" value="">
+					<label for="user"><%=I18N.fillDomText('setting.fbType7')%></label>
+					<p><%=I18N.fillDomText('setting.fbTypePrompt6')%></p>
+				</li>
+				<li class="f14 c-3">
+					<input class="fb-option" name="fbk_sub" id="sugg" type="checkbox" value="">
+					<label for="sugg"><%=I18N.fillDomText('setting.fbType8')%></label>
+					<p><%=I18N.fillDomText('setting.fbTypePrompt7')%></p>
+				</li>
+				<li class="f14 c-3">
+					<input class="fb-option" name="fbk_sub" id="other" type="checkbox" value="">
+					<label for="other"><%=I18N.fillDomText('setting.fbType9')%></label>
+					<p><%=I18N.fillDomText('setting.fbTypePrompt8')%></p>
+				</li>
+			</ul>
+			<textarea name="message" class="com-area info"></textarea>
+			<div class="g-feedback-info">
+				 <input name="userModel" type="text" class="com-text userModel" placeholder=''>
+				 <input name="userVersion" type="text" class="com-text userVersion" placeholder=''>
+				 <input name="mail" type="text" class="com-text email mr" placeholder=''>
+			</div>
+			<p  class="g-feedback-foot">
+				<button class="g-btn g-btn1 submit-btn" type="button"><%=I18N.fillDomText('setting.BtnSubmit')%></button>
+			</p>
+		</form>
+	</div>
+    <div class="feedback-success-moudle">
+    	<div class="feedback-success-text">
+    		<div class="img fl"></div>
+    		<div class="succsee-text fl">
+    			<h1><%=I18N.fillDomText('setting.fbSuccessTitle')%></h1>
+    			<p class="f14 c-6"> <%=I18N.fillDomText('setting.fbSuccessText')%></p>
+    		</div>
+    	</div>
+    	
+    	<p  class="g-feedback-foot">
+    		<button class="g-btn g-btn1 close" type="button"><%=I18N.fillDomText('setting.fbSuccessClose','(<b class="count">10</b>)')%></button>
+    		
+		</p>
+    </div>
+</script>

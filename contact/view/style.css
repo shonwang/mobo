@@ -1,0 +1,729 @@
+.g-contact {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.g-toolbar-right {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    -webkit-box-align: center;
+}
+
+.g-toolbar-right .filter {
+    padding-right: 5px;
+    color: #999;
+    line-height: 36px;
+}
+
+.number_item .name_sp {
+    text-transform: capitalize
+}
+
+.g-contact .list,
+.g-image-contact-empty, .g-contact .loading-box {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    right: 380px;
+    border-right: 1px solid #dcdcdc;
+}
+
+.g-contact .list .contact-list-item {
+    height: 52px;
+    -webkit-box-flex: 1;
+}
+
+.g-contact .list .contact-list-item .icon {
+    float: none;
+    display: inline-block;
+    -webkit-border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #c6c6c6;
+}
+
+.g-contact .list .contact-list-item .info {
+    height: 52px;
+    font-size: 12px;
+    color: #222;
+    text-align: left;
+    padding-left: 10px;
+    color: #999;
+    -webkit-box-flex: 1;
+}
+
+.g-contact .list .contact-list-item .info h4 {
+    height: 20px;
+    padding: 6px 10px 3px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.g-contact .list .contact-list-item .info p {
+    padding-right: 10px;
+}
+
+.g-contact .right {
+    width: 380px;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+
+.g-contact .toolbaricon {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+}
+
+.icon-contact-add {
+    padding-left: 22px;
+    height: 20px;
+    font-size: 14px;
+    color: #686868;
+    background: url(../images/new-contact.png) no-repeat left center;
+}
+
+.g-contact .new-contact {
+    background: url(../images/new-contact.png) no-repeat;
+}
+
+.add-item-btn {
+    width: 30px;
+    display: inline-block;
+    height: 30px;
+    cursor: pointer;
+    vertical-align: top;
+    background: url(../images/add.png) no-repeat center;
+}
+
+.add-item-btn:hover {
+    background: url(../images/add-hover.png) no-repeat center;
+}
+
+.add-item-btn:active {
+    background: url(../images/add-active.png) no-repeat center;
+}
+
+/*分组管理 start*/
+.group-dlg-container {
+    height: 100%;
+    width: 100%;
+}
+
+.group-dlg-container .dlg-group-item-wraper {
+    /*border: 1px #e5e5e5 solid;*/
+    height: 160px;
+    overflow-y: auto;
+    margin: 20px 10px 10px;
+}
+
+.group-dlg-container .dlg-group-item {
+    padding-left: 18px;
+}
+
+.group-dlg-container .account-down {
+    padding: 10px 10px 20px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.g-account-manager-menu {
+    width: 247px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.group-dlg-container .account-down .lable {
+    line-height: 30px;
+}
+
+.group-dlg-container .account-down .g-select {
+    width: 249px;
+    max-width: 100%;
+}
+
+.group-dlg-container .dlg-group-item {
+    padding: 0 0 12px 0;
+}
+
+.group-dlg-container .dlg-group-item .input-field {
+    width: 87%;
+    display: block;
+}
+
+.delete-item-btn {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.delete-item-btn,
+.delete-item-btn:hover,
+.delete-item-btn:active {
+    background-position: center;
+}
+
+.group-dlg-container .dlg-group-item-just-action .add-item-btn {
+    width: 20px;
+    display: inline-block;
+    height: 20px;
+    vertical-align: middle;
+    text-align: left;
+    background: url(../images/add.png) no-repeat 4px 4px;
+}
+
+.group-dlg-container .btn-ctn {
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    width: 80%;
+    text-align: center;
+}
+
+.group-dlg-container .btn-ctn .g-btn2 {
+    margin-right: 30px;
+}
+
+/*分组管理 end*/
+
+/*contact right panel*/
+
+/*快速添加start*/
+.g-contact .item-label {
+    display: inline-block;
+    width: 60px;
+    height: 26px;
+    line-height: 26px;
+    color: #686868;
+}
+
+.g-contact .w-contact-helper {
+    padding: 60px 30px 55px 50px;
+}
+
+/*单选，详情*/
+.contact-right-edit-or-new-ctn {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-detail-single-selected-ctn {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    min-height: 620px;
+}
+
+.g-contact .info-header {
+    color: #4d4d4d;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.g-contact .input-field {
+    width: 210px;
+}
+
+.g-contact .quick-add-item {
+    height: 30px;
+    line-height: 30px;
+    margin-top: 15px;
+}
+
+.g-contact .quick-add-item .loc-label {
+    white-space: nowrap;
+}
+
+.g-contact .contact-quick-add-content {
+    padding-left: 50px;
+}
+
+.g-contact .btn-ctn {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-right-edit-or-new-ctn .btn-ctn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #c6c6c6;
+    padding: 10px 0;
+    background-color: #fafafa;
+}
+
+.contact-right-edit-or-new-ctn .btn-ctn .g-btn {
+    margin: 0 20px;
+}
+
+.g-contact .btn-edit {
+    /*    background: #07B9F5;
+     display: inline-block;
+     height: 28px;
+     width: 60px;
+     color: #fff;*/
+}
+
+/*快速添加end*/
+/*contact detail start*/
+.contact-basic-info {
+    padding: 50px 20px 51px;
+    overflow: hidden;
+}
+
+.contact-basic-info img {
+    -webkit-border-radius: 70px;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #c6c6c6;
+}
+
+.contact-group-info {
+    width: 146px;
+    margin: 9px 10px 0 18px;
+    overflow: hidden;
+}
+
+.contact-group-info .name {
+    font-size: 24px;
+    white-space: nowrap;
+    color: #4d4d4d;
+}
+
+.contact-group-info .last-name {
+}
+
+.contact-group-info .family-name {
+}
+
+.contact-group-info .sim {
+    margin-top: 8px;
+    color: #999;
+}
+
+.contact-group-info .family {
+    color: #999;
+}
+
+.contact-group-info .h-input {
+    font-size: 20px;
+    width: 120px;
+    background: none;
+}
+
+.contact-group-info .t-input {
+    font-size: 12px;
+    background: none;
+}
+
+.contact-detail-content-info {
+    padding: 0 20px 50px;
+    height: 430px;
+    text-align: left;
+    overflow-y: auto;
+}
+
+.btn-container-right {
+    padding-top: 9px;
+}
+
+.contact-detail-content-info .info-ctn {
+    padding: 0 10px;
+}
+
+.contact-detail-content-info .info-ctn .input-item {
+    height: 30px;
+    line-height: 30px;
+    color: #686868;
+}
+
+.contact-detail-content-info .input-item .name {
+    width: 70px;
+    padding-right: 10px;
+}
+
+.contact-detail-content-info .input-item .phone {
+    width: 180px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.contact-detail-content-info .input-item .email {
+    width: 248px;
+}
+
+.ico-phone {
+    width: 30px;
+    height: 30px;
+    background: url(../../contact/images/phone.png) no-repeat center;
+}
+
+.ico-phone:hover {
+    background: url(../../contact/images/phone-hover.png) no-repeat center;
+}
+
+.ico-phone:active {
+    background: url(../../contact/images/phone-active.png) no-repeat center;
+}
+
+.ico-sms {
+    width: 30px;
+    height: 30px;
+    background: url(../../contact/images/sms.png) no-repeat center;
+}
+
+.ico-sms:hover {
+    background: url(../../contact/images/sms-hover.png) no-repeat center;
+}
+
+.ico-sms:active {
+    background: url(../../contact/images/sms-active.png) no-repeat center;
+}
+
+.g-contact .right .editable {
+    border-color: #07B9F5;
+}
+
+.contact-right-edit-or-new-ctn .contact-detail-edit-container {
+    box-sizing: border-box;
+    padding: 50px 20px 50px 20px;
+}
+
+.contact-detail-edit-container {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.contact-detail-edit-item-wraper {
+    margin-top: 30px;
+}
+
+.contact-detail-edit-container .number_item {
+    height: 40px;
+    line-height: 40px;
+}
+
+.contact-detail-edit-container .icon-container {
+    position: relative;
+    margin-right: 10px;
+    -webkit-border-radius: 70px;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #c6c6c6;
+}
+
+.contact-detail-edit-container .icon {
+    display: block;
+    -webkit-border-radius: 70px;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #c6c6c6;
+}
+
+.contact-detail-edit-container .icon-container .mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    background-color: rgba(125, 125, 125, 0.5);
+}
+
+.contact-detail-edit-container .phone {
+    color: #999;
+    padding: 3px 0 10px 5px;
+}
+
+.contact-detail-edit-container .names-container {
+    width: 245px;
+    padding-top: 2px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.contact-detail-edit-container .number_item .com-text {
+    /*width: 126px;*/
+    font-size: 14px;
+    display: inline-block;
+    width: 58%;
+    vertical-align: top
+}
+
+.contact-detail-edit-item-wraper .font-size-h2 {
+    padding-bottom: 18px;
+}
+
+/*::-webkit-input-placeholder {
+    color: #4d4d4d;
+}*/
+/*contact detail end*/
+
+/* 当前联系人短信记录contact-detail-message start*/
+.g-contact .contact-detail-message-list {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow-y: auto;
+}
+
+/* 当前联系人短信记录contact-detail-message end*/
+/*导入导出与删除联系人弹窗 start*/
+.contact-process-dlg {
+    width: 100%;
+    height: 100%;
+}
+
+/*导入导出与删除联系人弹窗 end*/
+
+.w-layout-hidden {
+    /*visibility: hidden;
+    display: none;
+    z-index: -1;*/
+    display: none;
+    opacity: 0;
+}
+
+.w-layout-show {
+    /*visibility: visible;*/
+    opacity: 1;
+    z-index: 0;
+}
+
+.right .full-height-panel {
+    height: 500px;
+}
+
+.right .mini-height-panel {
+    height: 30%;
+}
+
+/*--短信回复区
+----------------------------------*/
+.contact-detail-message-quick-send {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #c6c6c6;
+}
+
+.quick-send-sms-phoneNumber {
+    line-height: 30px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.quick-send-sms-phoneNumber .lable {
+    color: #525252;
+    padding-right: 5px;
+}
+
+.quick-send-sms-phoneNumber .g-select {
+    min-width: 154px;
+}
+
+/*短信列表区*/
+.message-record-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 10px 20px 25px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.message-record-header .font-size-h3 {
+    color: #4d4d4d;
+}
+
+.ico-pack-up {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: url(../images/pack-up.png) no-repeat center;
+}
+
+/*选中全部联系列表*/
+
+.conversation-monitor {
+    width: 100%;
+    height: 120px;
+    background-color: #ebebeb;
+    text-align: center;
+    font-size: 14px;
+}
+
+.conversation-monitor .cancel {
+    padding: 30px 0 25px;
+    font-size: 14px;
+}
+
+.conversation-monitor .cancel-select {
+    color: #00aae3;
+    cursor: pointer;
+}
+
+.conversation-monitor .cancel-select:hover {
+    text-decoration: underline;
+}
+
+.multi-selected-ul-wraper {
+    min-height: 500px;
+    display: block;
+}
+
+.multi-selected-ul-wraper .g-grid {
+    top: 130px;
+    bottom: 10px;
+    margin: 0 20px;
+    margin-right: 0px;
+}
+
+.contact-detail-multi-selected-ctn .g-grid-row {
+    border: none;
+    padding: 3px 0;
+    /*background-color: #fff;*/
+}
+
+.contact-detail-multi-selected-ctn .contact-list-item {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+.contact-detail-multi-selected-ctn .contact-list-item .icon {
+    height: 32px !important;
+    width: 32px !important;
+    float: none;
+}
+
+.contact-detail-multi-selected-ctn .contact-list-item .name {
+    width: 110px;
+    padding: 0 10px;
+    font-size: 14px;
+    padding: 0 10px;
+    display: block;
+}
+
+.contact-detail-multi-selected-ctn .contact-list-item .phone {
+    width: 120px;
+    color: #999;
+    font-size: 12px;
+}
+
+.contact-detail-multi-selected-ctn .close-item {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.g-menu-group-edit {
+    width: 245px;
+}
+
+.g-menu-group-edit .g-menu {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.g-menu-group-edit .g-menu .hbox span {
+    -webkit-box-flex: 1;
+    display: block;
+}
+
+.g-menu-group-filter {
+    width: 200px;
+    display: -webkit-box;
+}
+
+.g-menu-group-filter li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: horizontal;
+}
+
+.g-menu-group-filter li:last-child {
+    margin-bottom: -6px;
+    background-color: #e6e6e6;
+    text-align: center;
+}
+
+/*
+.g-menu-group-filter .edit-group {
+    background-color: #e6e6e6;
+    margin: 0 -12px 6px;
+    text-align: center;
+}
+*/
+
+.g-menu-group-filter .g-menu {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.g-menu-group-filter .g-menu-item .g-group-filter-word {
+    display: block;
+    max-width: 68%;
+}
+
+.g-menu-group-filter .g-menu-item .g-group-filter-num {
+    display: block;
+    color: #999;
+    padding-left: 3px;
+}
+
+.g-menu-group-filter .g-menu-item:hover .g-group-filter-num {
+    color: #fff;
+}
+
+.g-menu-account-filter {
+    max-width: 300px;
+}
+
+.g-menu-account-filter li {
+    display: -webkit-box;
+}
+
+.g-menu-export input {
+    display: none;
+}
+
+.g-menu-export .g-menu-item:hover.label .c-9 {
+    color: #999;
+}
+
+.g-menu-export .g-menu-item:hover .c-9 {
+    color: #fff;
+}
+
+.phone-type-menu {
+    width: 100px;
+}
+
+
+

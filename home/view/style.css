@@ -1,0 +1,392 @@
+
+.g-page-ctn.g-page-home {
+    left: 0;
+}
+
+.g-home {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #f6f6f6;
+}
+
+.g-home .top {
+    position: absolute;
+    height: 500px;
+    left: 180px;
+    right: 0;
+    top: 0;
+}
+
+.g-home-bg {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+.g-home .bg iframe {
+    width: 100%;
+    height: 760px;
+}
+
+.g-mobile-screen {
+    position: absolute;
+    left: 40px;
+    top: 36px;
+    width: 236px;
+    height: 100%;
+    padding-top: 53px;
+    background: url(../images/phone-shell-top.png) no-repeat 0 top;
+    -webkit-transform: translate(-200%);
+}
+
+.g-mobile-screen .picture {
+    position: relative;
+    width: 236px;
+    min-height: 300px;
+    padding-bottom: 45px;
+    background: url(../images/phone-shell.png) no-repeat 0 bottom;
+
+}
+
+.g-mobile-screen .pic {
+    position: relative;
+    width: 198px;
+    min-height: 260px;
+    margin-left: 19px;
+    max-height: 356px;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.g-mobile-screen .pic img {
+    width: 198px;
+    height: 100%;
+    vertical-align: top;
+    visibility: hidden;
+}
+
+.g-mobile-screen .screen-empty-info {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top: 0;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    color: #fff;
+    z-index: 10;
+    word-wrap:break-word;
+}
+
+.g-mobile-screen .screen-empty-info:hover {
+    cursor: pointer;
+}
+
+.g-screen-action,
+.g-screen-action-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    color: #fff;
+    opacity: 0;
+    /*-webkit-transition: .3s ease;*/
+}
+
+.g-screen-action-bg {
+    -webkit-transition: .3s ease;
+}
+
+.g-mobile-screen.hover .g-screen-action-bg, .g-mobile-screen:hover .g-screen-action-bg {
+    opacity: 1;
+    display: -webkit-box;
+    background: rgba(0, 0, 0, .8);
+}
+.g-mobile-screen.wifi.hover .g-screen-action-bg,
+.g-mobile-screen.wifi:hover .g-screen-action-bg {
+	display:none;
+}
+.g-mobile-screen.hover .g-screen-action {
+    opacity: 1;
+    display: -webkit-box;
+    z-index: 10;
+}
+
+.g-screen-action .refresh,
+.g-screen-action .capture {
+    padding-left: 22px;
+    height: 22px;
+    line-height: 22px;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.g-screen-action .refresh {
+    background: url(../../common/images/ico/refresh-white.png) no-repeat left center;
+}
+
+.g-screen-action .refresh:hover {
+    color: #25acda;
+    background: url(../../common/images/ico/refresh-hover.png) no-repeat left center;
+}
+
+.g-screen-action .refresh:active {
+    color: #0b88b3;
+    background: url(../../common/images/ico/refresh-active.png) no-repeat left center;
+}
+
+.g-screen-action .capture {
+    background: url(../images/phone-capture.png) no-repeat left center;
+}
+
+.g-screen-action .capture:hover {
+    color: #25acda;
+    background: url(../images/phone-capture-hover.png) no-repeat left center;
+}
+
+.g-screen-action .capture:active {
+    color: #0b88b3;
+    background: url(../images/phone-capture-active.png) no-repeat left center;
+}
+
+.g-home-recommend {
+    left: 322px;
+    height: 330px;
+    background: blue;
+    position: absolute;
+    width: 450px;
+    top: 60px;
+    background: rgba(255, 255, 255, .7);
+    -webkit-transform: translate(400%);
+    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+}
+
+.g-home-tools {
+    position: absolute;
+    top: 400px;
+    left: 322px;
+    width: 450px;
+    height: 80px;
+    -webkit-box-align: center;
+    -webkit-transform: translate(150%);
+}
+.g-home-tools .all-memory{
+	display:none;
+}
+.g-home-tools .phone-memory,
+.g-home-tools .sd-memory {
+    width: 180px;
+    height: 32px;
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    -webkit-box-align: center;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
+.g-home-tools .phone-memory {
+    background-image: url(../images/phone.png);
+    margin-right: 50px;
+}
+
+.g-home-tools .sd-memory {
+    background-image: url(../images/sd.png);
+}
+
+.g-home-tools .phone-memory .con,
+.g-home-tools .sd-memory .con {
+    width: 100%;
+    height: 4px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, .6);
+}
+
+.g-home-tools .phone-memory .con .progress,
+.g-home-tools .sd-memory .con .progress {
+    height: 100%;
+    width: 0%;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 6px;
+}
+
+.g-home-tools .phone-memory .con .alarm,
+.g-home-tools .sd-memory .con .alarm {
+    background-color: #ff0909;
+}
+
+.g-home-tools .backup button,
+.g-home-tools .recovery button,
+.g-home-tools .file button {
+    width: 42px;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 4px 0 0 15px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.g-home-tools .backup button {
+    background-image: url(../images/backup.png);
+}
+.g-home-tools .recovery button {
+    background-image: url(../images/recovery.png);
+}
+.g-home-tools .file button {
+    background-image: url(../images/file.png);
+}
+
+.g-home-tools .backup:hover button,
+.g-home-tools .recovery:hover button,
+.g-home-tools .file:hover button{
+    opacity: 0.7;
+}
+
+.g-home-tools .backup:active button,
+.g-home-tools .recovery:active button,
+.g-home-tools .file:active button{
+    opacity: 0.45;
+}
+
+.g-home-tools .backup .home-backup-label,
+.g-home-tools .recovery .home-restore-label,
+.g-home-tools .file .home-fileManager-label{cursor: pointer;}
+
+.g-home-tools .backup:hover .home-backup-label,
+.g-home-tools .recovery:hover .home-restore-label,
+.g-home-tools .file:hover .home-fileManager-label{opacity: 0.7;}
+
+.g-home-tools .backup:active .home-backup-label,
+.g-home-tools .recovery:active .home-restore-label,
+.g-home-tools .file:active .home-fileManager-label{opacity: 0.45;}
+
+
+.g-home .bottom {
+    position: absolute;
+    left: 180px;
+    right: 0;
+    min-height: 350px;
+    background: rgba(255, 255, 255, .7);
+    top: 500px;
+    -webkit-transform: translateY(50%);
+
+    /*background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);*/
+}
+
+.g-card-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+/*内存 SD卡   tips 信息*/
+.g-home-sd-tips {
+}
+
+.g-home-sd-tips .arrow-top,
+.g-home-sd-tips .arrow-bottom {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+}
+
+.g-home-sd-tips .arrow-top .arr,
+.g-home-sd-tips .arrow-bottom .arr {
+    border-style: solid;
+    border-width: 5px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    -webkit-transform: none;
+    background: none;
+}
+
+.g-home-sd-tips .arrow-top .arr {
+    top: -10px;
+}
+
+.g-home-sd-tips .arrow-bottom .arr {
+    bottom: -10px;
+}
+
+.g-home-sd-tips .arrow-top .arr {
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+}
+
+.g-home-sd-tips .arrow-bottom .arr {
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+.g-home-sd-tips .memory-info .title {
+    padding-bottom: 5px;
+}
+
+.g-home-sd-tips .memory-info .total-value {
+    padding-right: 20px;
+}
+
+.g-home-sd-tips .btn-manage {
+    margin-left: 20px;
+    display: none;
+}
+
+#screenshot-loading {
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    margin-left: -16px;
+    margin-top: -18px;
+    width: 36px;
+    height: 36px;
+    opacity: 0.5;
+}
+
+#screen-black,
+#wifi-screen-black {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: #000;
+    top: 0;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    text-align: center;
+    color: #fff;
+}
+
+.g-mobile-screen .pic .g-screen-action.hd {
+    opacity: 1 !important;
+    display: -webkit-box;
+    background: rgba(0, 0, 0, .8);
+}
+
+.g-mobile-screen .pic .g-screen-action.hd .con {
+    display: none;
+}
+
+.g-home .home-backup-label,
+.g-home .home-restore-label,
+.g-home .home-fileManager-label {
+    display: none;
+}
+
+.g-home .unconnected .home-backup-label,
+.g-home .unconnected .home-restore-label,
+.g-home .unconnected .home-fileManager-label {
+    line-height: 50px;
+    height: 50px;
+    width: 90px;
+    color: #fff;
+    vertical-align: top;
+    display: inline-block;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+}

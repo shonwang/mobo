@@ -1,0 +1,29 @@
+<script  id="tpl-file-list-item" type="text/tpl">
+        <div class="file-list-item cbox" id="<%=data.id%>" parentId="<%=data.parentId%>">
+            <img class="icon-file-type" src="<%=data.iconPath||'../tools/images/file.png'%>" />
+            <div class="input-box">
+               <input class="name te" <%=data.editable?'':'readonly'%> value="<%=data.name%>"/>
+            </div>
+            <span class="size" style="visibility: <%=data.isDirectory?'hidden':'visible'%>"><%=data.realSize%></span>
+            <span class="type te"><%=data.type%></span>
+            <span class="modifyDate te"><%=data.realModifiedTime%></span>
+        </div>
+</script>
+<script  id="tpl-file-list-item-editor-input" type="text/tpl">
+        <div class="file-list-item-edit pbox">
+            <img class="icon-file-type" src="<%=data.iconPath||'../tools/images/file.png'%>" />
+            <input class="name"/>
+            <span class="size"></span>
+            <span class="type">2</span>
+            <span class="modifyDate"></span>
+        </div>
+</script>
+<!--header 标题-->
+<script  id="tpl-file-list-header" type="text/tpl">
+        <div class="file-list-header">
+            <p class="name">Name</p>
+            <p class="size">Size</p>
+            <p class="type">Type</p>
+            <p class="modifyDate">modifyDate</p>
+        </div>
+</script>

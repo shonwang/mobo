@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+.g-aboutMG-moudle{
+	width:476px;
+	height:246px;
+	margin:auto;
+	position:relative;
+}
+.g-aboutMG-info{
+	width:100%;
+	height:100%;
+	position:relative;
+	top:3px;
+}
+.g-aboutMG-info dt{
+	width:205px; 
+	height:200px;
+	margin-top:12px;
+	background:url(../../images/aboutMe/logo.png) no-repeat center;
+}
+.g-aboutMG-info-text{
+	width:270px;
+	margin-top:27px;
+}
+.g-aboutMG-info-title{
+	font-size:36px;
+	height:36px;
+}
+.g-aboutMG-info-text .version{
+	padding:10px 0 14px 0;
+}
+.g-aboutMG-info-text .website{
+	padding:0 0 5px 0;
+}
+.g-aboutMG-info-text .forums{
+	padding:0 0 35px 0;
+}
+.g-aboutMG-info-text .update-text{
+	position:relative;
+}
+.g-aboutMG-info-text .update-text i{
+	position:absolute;
+	top:0;
+	display:inline-block;
+	width:20px;
+	height:18px;
+	padding-left:6px;
+	background:url(../../images/ico/remind.png) right center no-repeat;
+}
+.g-aboutMG-info-text .links p{
+	display: inline-block;
+	padding-right:20px;
+}
+.poland .g-aboutMG-info-text .forums,
+.thai .g-aboutMG-info-text .forums,
+.turkish .g-aboutMG-info-text .forums{
+	padding:0 0 15px 0;
+}
+.poland .g-aboutMG-info-text,
+.thai .g-aboutMG-info-text,
+.russian .g-aboutMG-info-text{
+	margin-top:15px;
+}

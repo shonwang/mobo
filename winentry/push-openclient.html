@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>推送弹出层</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link href="custom/css/popup.css" rel="stylesheet" type="text/css">
+    <link href="custom/css/common.css" rel="stylesheet" type="text/css">
+    <style>
+        .resource-activity{ height: 320px;}
+        .g-popup-start h3 {
+            position: absolute;
+            left: 10px;
+            top: 8px;;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .g-popup-start-title {
+            padding: 10px;
+            height: 168px;
+            color: #fff;
+            background: url("custom/images/connect.jpg") no-repeat;
+        }
+
+        .g-popup-start-title .info {
+            padding-top: 130px;
+            font-size: 14px;
+            line-height: 18px;
+            height: 38px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .g-popup-open {
+            padding: 10px 15px 0 25px;
+            overflow: hidden;
+        }
+
+        .ico-games,
+        .ico-videos,
+        .ico-backup,
+        .ico-music {
+            float: left;
+            width: 92px;
+            padding-left: 28px;
+            margin: 5px;
+            height: 20px;
+            text-align: left;
+            color: #999;
+            background: url("custom/images/ico-open.png") no-repeat 0 0;
+        }
+
+        .ico-videos {
+            background-position: 0 -60px;
+        }
+
+        .ico-backup {
+            background-position: 0 -20px;
+        }
+
+        .ico-music {
+            background-position: 0 -40px;
+        }
+
+        .g-btn1 {
+            min-width: 140px;
+            height: 36px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Start 内嵌内容部分-->
+<div class="g-popup-start">
+    <h3>Mobogenie</h3>
+
+    <div class="g-popup-start-title">
+        <p class="info cbox">
+            A device has been detected.
+        </p>
+    </div>
+
+    <div class="g-popup-open">
+        <span class="ico-games te">Free Games</span>
+        <span class="ico-videos te">Latest Videos</span>
+        <span class="ico-music te">Hot Music</span>
+        <span class="ico-backup te">Backup Data</span>
+    </div>
+    <div class="g-popup-push-btn cbox">
+        <button class="btn-push-start g-btn g-btn1"></button>
+    </div>
+</div>
+
+<!--End 内嵌内容部分-->
+</body>
+<script type="text/javascript">
+    var localDic = {
+        english: {
+            promptLabel: "A device has been detected.",
+            updateLabel: "Connect Now",
+            gameLabel: "Free Games",
+            videoLabel: "Latest Videos",
+            musicLabel: "Hot Music",
+            backupLabel: "Backup Data"
+        },
+        arabic: {
+            promptLabel: "تم العثور علي جهاز",
+            updateLabel: "الاتصال الآ",
+            gameLabel: "ألعاب مجانية",
+            videoLabel: "أحدث الفيديوهات",
+            musicLabel: "أفضل الأغاني",
+            backupLabel: "أخذ نسخة إحتياطية"
+        },
+        farsi: {
+            promptLabel: "یک دستگاه شناسایی شد.",
+            updateLabel: "اکنون متصل شوید",
+            gameLabel: "بازی‌های رایگان",
+            videoLabel: "جدیدترین ویدیوها",
+            musicLabel: "موسیقی داغ",
+            backupLabel: "داده‌های پشتیبان"
+        },
+        france: {
+            promptLabel: "Un appareil a été détecté.",
+            updateLabel: "Se connecter",
+            gameLabel: "Jeux gratuits",
+            videoLabel: "Dernières vidéos",
+            musicLabel: "Musique tendance",
+            backupLabel: "Sauvegarde des données"
+        },
+        hindi: {
+            promptLabel: "एक डिवाइस का पता चला है.",
+            updateLabel: "अभी कनेक्ट करें",
+            gameLabel: "नि:शुल्क गेम्स",
+            videoLabel: "नवीनतम वीडियो",
+            musicLabel: "लोकप्रिय संगीत",
+            backupLabel: "बैकअप डेटा"
+        },
+        indonesian: {
+            promptLabel: "Sebuah perangkat telah terhubung.",
+            updateLabel: "Sambungkan Sekarang",
+            gameLabel: "Games Gratis",
+            videoLabel: "Video Terakhir",
+            musicLabel: "Musik Terpopuler",
+            backupLabel: "Backup Data"
+        },
+        italian: {
+            promptLabel: "È stato rilevato un dispositivo.",
+            updateLabel: "Collega adesso",
+            gameLabel: "Giochi gratuiti",
+            videoLabel: "Video recenti",
+            musicLabel: "Musica del momento",
+            backupLabel: "Backup dati"
+        },
+        korean: {
+            promptLabel: "모바일 디바이스가 연결되였습니다",
+            updateLabel: "지금 연결",
+            gameLabel: "무료 게임",
+            videoLabel: "최신 비디오",
+            musicLabel: "핫 뮤직",
+            backupLabel: "데이터 백업"
+        },
+        poland: {
+            promptLabel: "Urządzenie zostało wykryte.",
+            updateLabel: "Podłącz teraz",
+            gameLabel: "Darmowe gry",
+            videoLabel: "Najnowsze filmy",
+            musicLabel: "Najlepsza muzyka",
+            backupLabel: "Kopia zapasowa danych"
+        },
+        portuguese: {
+            promptLabel: "O dispositivo foi detectado",
+            updateLabel: "Conectar agora",
+            gameLabel: "Jogos Gratuitos",
+            videoLabel: "Vídeos",
+            musicLabel: "Música",
+            backupLabel: "Dados de Backup"
+        },
+        russian: {
+            promptLabel: "Обнаружено устройство.",
+            updateLabel: "Подключить сейчас",
+            gameLabel:  "Бесплатные игры",
+            videoLabel: "Последние видео",
+            musicLabel: "Популярная музыка",
+            backupLabel: "Данные бэкапа"
+        },
+        spanish: {
+            promptLabel: "Se detectó un dispositivo.",
+            updateLabel: "Conectar ahora",
+            gameLabel: "Se detectó un dispositivo.",
+            videoLabel: "Juegos gratuitos",
+            musicLabel: "Música de moda",
+            backupLabel: "Datos de copia de seguridad"
+        },
+        thai: {
+            promptLabel: "ตรวจสอบพบอุปกรณ์.",
+            updateLabel: "เชื่อมต่อทันที'",
+            gameLabel: "เกมฟรี",
+            videoLabel: "วีดีโอล่าสุด",
+            musicLabel: "เพลงฮิต",
+            backupLabel: "สำรองข้อมูล"
+        },
+        vietna: {
+            promptLabel: "Phát hiện một thiế bị.",
+            updateLabel: "Kết nối bây giờ",
+            gameLabel: "Game Miễn Phí",
+            videoLabel: "Video Mới Nhất",
+            musicLabel: "Nhạc Hot Nhất",
+            backupLabel: "Sao lưu dữ liệu"
+        },
+        traditionalchinese: {
+            promptLabel: "已偵測到一個流動設備",
+            updateLabel: "連接手機",
+            gameLabel: "免費遊戲",
+            videoLabel: "最新影片",
+            musicLabel: "熱門音樂",
+            backupLabel: "資料備份"
+        },
+        turkish: {
+            promptLabel: "Bir cihaz algılandı.",
+            updateLabel: "Şimdi Bağlan",
+            gameLabel: "Bedava Oyunlar",
+            videoLabel: "En Yeni Videolar",
+            musicLabel: "Popüler Müzik",
+            backupLabel: "Veri Yedekle"
+        }
+    };
+
+    document.addEventListener("dragstart", function(e){  
+        e.preventDefault();
+    }, false); 
+
+    document.addEventListener("dragenter", function(e){  
+        e.preventDefault();
+    }, false); 
+
+    document.oncontextmenu = function(){return false};
+
+    //*********************************************************
+    //20140724 新版日志
+    var isGetPulickFeild = false;
+    var log_channelid = "-";
+    var log_version = "-";
+    var log_sessionid = "-";
+    var log_site = "-";
+    var log_pclg = "-";
+    var log_phonestatus = "-";
+    var log_service_id = "1000120";
+    var newLog = {
+        class: "push",
+        page: "p20002",
+        module: "m20003"
+    }
+
+    var sendNewLog = function (logServiceExt){
+        var log_time = new Date().valueOf();
+        var log_nettype = "-";
+
+        logServiceExt = JSON.stringify(logServiceExt)
+        var feildStr = [log_channelid, log_version, log_sessionid, log_time, log_nettype, log_site, log_phonestatus, log_pclg, log_service_id, logServiceExt].join("###");
+        console.log("%c 新版日志 >> " + feildStr, "color:#13abe1");
+        try{
+            parent.sendMessage("get_ReportLog2", feildStr);
+        } catch (error){}   
+    };
+
+    parent.sendMessage("get_GetClientInfo", {}, function(res){
+        console.log("新版日志公共字段：", res);
+        if (res&&res.info){
+            log_channelid = res.info.channelid;
+            log_version = res.info.clientVer;
+            log_sessionid = res.info.sessionid;
+            log_site = res.info.site;
+            log_pclg = res.info.language;
+        }
+    });
+    //*********************************************************
+
+    var serializeObj = function(obj){
+        var u = '';
+        for(var key in obj){
+            var kv = key + '=' + obj[key];
+            u = u + kv + '&';
+        }
+        return u.slice(0, u.lastIndexOf('&'));
+    };
+
+    var sendStatistics = function(paras){
+        try {
+            var actionName = paras.action;
+            var agrsStr = paras.args || {};
+            
+            var paramObj = {
+                S1 : actionName||"",
+                S2 : JSON.stringify(agrsStr),
+                sid :"1000130"
+            };
+            console.log("%c utility >> event log info: " + serializeObj(paramObj), "color:green");
+
+            parent.sendMessage("get_ReportLog", {
+                paramer: serializeObj(paramObj)
+            });
+        } catch (error){
+            console.error("utility >> event log info: ", error); 
+        }
+    };
+
+    var getParameter = function (name, targetUrl) {
+        var url = targetUrl || location.href;
+
+        //去掉hash
+        if (url.indexOf('#') > -1) {
+            url = url.slice(0, url.indexOf('#'));
+        }
+
+        var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+        var paraObj = {}
+        for (i = 0; j = paraString[i]; i++) {
+            paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+        }
+        var returnValue = paraObj[name.toLowerCase()];
+        if (typeof (returnValue) == "undefined") {
+            return "";
+        } else {
+            return window.decodeURIComponent(returnValue);
+        }
+    };
+    var language = getParameter("language");
+    if(language == "arabic"){
+        document.querySelector("body").setAttribute("language","arabic");
+    }else{
+        document.querySelector("body").removeAttribute("language");
+    }
+    var updateNode = document.querySelector('.btn-push-start');
+    var titleNode = document.querySelector('.g-popup-start-title .info');
+    var gameNode = document.querySelector('.g-popup-open .ico-games');
+    var videoNode = document.querySelector('.g-popup-open .ico-videos');
+    var musicNode = document.querySelector('.g-popup-open .ico-music');
+    var backupNode = document.querySelector('.g-popup-open .ico-backup');    
+    
+    if (localDic[language]){
+        updateNode.innerHTML = localDic[language].updateLabel;
+        titleNode.innerHTML = localDic[language].promptLabel;
+        gameNode.innerHTML = localDic[language].gameLabel;
+        videoNode.innerHTML = localDic[language].videoLabel;
+        musicNode.innerHTML = localDic[language].musicLabel;
+        backupNode.innerHTML = localDic[language].backupLabel;
+    }
+
+    updateNode.onclick = function () {
+        parent.sendMessage("get_StartMainWindow", []);
+        var logS2Click = {
+            module: "notification",
+            targetvalue: "launchClient",
+            targettype: 1
+        }
+        var logClick = {
+            action: "a20023",
+            args: logS2Click
+        }
+        sendStatistics(logClick)
+
+        //*********************************************************
+        if (newLog.status){
+            delete newLog.status;
+            delete newLog.httpcode;
+        }
+        //20140724 新版日志
+        newLog.action = "a20023";
+        newLog.targetvalue = "launchClient";
+        newLog.targettype = 1;
+        sendNewLog(newLog)
+        //*********************************************************
+
+        parent.closeWin();
+    };
+
+    parent.sendMessage("get_ShowWindow", {cmdShow: 1}, function () {});
+
+    parent.showTime = new Date().valueOf();
+
+    var logS2 = {
+        module: "notification",
+        targetvalue: "launchClient",
+        status: 1,
+        httpcode: 200
+    }
+    var log = {
+        action: "a20022",
+        args: logS2
+    }
+    sendStatistics(log);
+
+    //*********************************************************
+    //20140724 新版日志
+    newLog.action = "a20022";
+    newLog.targetvalue = "launchClient";
+    newLog.status = 1;
+    newLog.httpcode = 200;
+    setTimeout(function(){
+        sendNewLog(newLog)
+    }, 2000);
+    //*********************************************************
+</script>
+</html>

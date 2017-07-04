@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+.g-adbState-moudle{
+	text-align: center;
+}
+.g-adbState-moudle img{
+	display: block;
+	margin: 60px auto 40px;
+}
+.adbName{
+	line-height: 30px;
+}
+.closeRe{
+	float: right;
+	margin: 50px 20px 0 0;
+	cursor:pointer;
+	height:30px;
+	line-height:30px;
+}
+.closeRe:hover{
+	color:#3caed6;
+}

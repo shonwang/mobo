@@ -1,0 +1,11 @@
+﻿body[language="arabic"] .g-app-name-col .name{margin-right:12px;margin-left:0;}
+body[language="arabic"] .g-list-tab-header .tab{direction: rtl;}
+body[language="arabic"] .g-application-detail{direction: rtl;}
+body[language="arabic"] .g-application-detail .pic{float: right;}
+body[language="arabic"] .g-application-detail .pic{margin-left:10px; }
+body[language="arabic"] .g-app-recommend-list{direction:rtl;}
+body[language="arabic"] .g-app-recommend-list .column1 img{margin-right: 0; margin-left: 5px;}
+body[language="arabic"] .g-application .top,body[language="arabic"] .g-application .detail{right:auto;left:0;border-right:1px #c6c6c6 solid; border-left: none;}
+body[language="arabic"] .g-application .g-panels{right: 0; left: 220px;}
+body[language="arabic"] .g-task-item .pc{margin: 5px 0 5px 5px}
+body[language="arabic"] .g-application-detail .star{direction: ltr; float: right;}

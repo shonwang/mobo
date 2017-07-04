@@ -1,0 +1,203 @@
+﻿body[language="arabic"] .g-popup.g-window .ico-close{left: 0;right: auto;}
+body[language="arabic"] .g-popup.g-window .ico-min{left: 30px;right: auto;}
+body[language="arabic"] .g-window-header{direction: rtl;padding:0 10px 0 35px;}
+/*setting*/
+body[language="arabic"] .g-setting-moudle{direction: rtl; margin: -12px -12px 0 0px}
+body[language="arabic"] .g-setting-moudle .left-nav nav li{padding:13px 17px 13px 0}
+body[language="arabic"] .g-setting-moudle .right-module > div ul li label input[type="checkbox"],body[language="arabic"] .g-setting-moudle .right-module > div ul li label input[type="radio"]{right: 0;left: auto;}
+body[language="arabic"] .g-setting-moudle .right-module > div ul li label{padding-right: 20px;padding-right: auto;}
+body[language="arabic"] .g-menu-site .g-menu-item img, body[language="arabic"] .general-module .g-select img{padding-right:0;padding-left:8px;}
+/*Feedback*/
+body[language="arabic"] .g-feedback-moudle{direction: rtl;}
+body[language="arabic"] .g-feedback-option li input{float: right;margin: 2px 0 0 5px}
+body[language="arabic"] .g-feedback-info input{margin: 0 0 15px 28px}
+body[language="arabic"] .g-feedback-info input.mr{margin-left: 0}
+body[language="arabic"] .feedback-success-text .img{float: right;}
+body[language="arabic"] .feedback-success-text{direction: rtl;}
+body[language="arabic"] .open-usb li.title{text-align: right;}
+
+/*About Mobogenie*/
+body[language="arabic"] .g-aboutMG-info dt{float: right;}
+body[language="arabic"] .g-aboutMG-info{direction: rtl;}
+body[language="arabic"] .g-deviceInfo-center ul li .copy{margin-left: 0; margin-right: 8px;}
+body[language="arabic"] .g-deviceInfo-center ul li b{direction: ltr;text-align: right;}
+/*Mobogenie New Features*/
+body[language="arabic"] .img_cont .future{right: 0;left: auto;}
+body[language="arabic"] .guide-wrap{direction: ltr;}
+body[language="arabic"] .slidebar{direction: rtl;}
+body[language ="arabic"] .loc-label{ text-align: right; }
+/*driver-usb-debug*/
+body[language="arabic"] .g-driver-moudle{margin: -12px -12px 0 0}
+body[language="arabic"] .g-usb-debug-version-content{direction: ltr;}
+body[language="arabic"] .g-driver-moudle h1{direction: rtl;}
+body[language="arabic"] .g-driver-moudle h1 i{margin: -2px 0 0 15px;}
+body[language="arabic"] .g-usb-debug-version-text{direction: rtl;}
+body[language="arabic"] .g-usb-debug-foot-text{direction: rtl;}
+body[language="arabic"] .g-usb-debug-foot-text ul li{padding-left: 10px; padding-right:0 }
+body[language="arabic"] .g-driver-download-setter-img{float: left;}
+body[language="arabic"] .g-driver-download-setter-code{float: right;margin:16px 38px 0 0px;}
+body[language="arabic"] .g-driver-service ul{direction: rtl;padding:27px 125px 0 0px;}
+body[language="arabic"] .g-driver-service ul li i{padding-left: 10px; padding-right: 0}
+body[language="arabic"] .g-driver-no-space-body{padding:30px 87px 0 0 }
+body[language="arabic"] .g-driver-no-space-body img{float: right;}
+body[language="arabic"] .g-driver-conncet-failed ul li{float: right;margin-right: 10px;}
+body[language="arabic"] .g-driver-conncet-failed ul li.right{margin-right: 70px; margin-left:0;}
+body[language="arabic"] .g-driver-no-space-text{padding: 95px 70px 0 0px;}
+body[language="arabic"] .g-driver-service ul li .ser_num{direction: ltr;}
+
+/*删除图片弹窗*/
+body[language="arabic"] .g-window-ctn{direction: rtl;}
+
+body[language="arabic"] .g-window-footer{direction: rtl;}
+body[language="arabic"] .g-connction-guide-content{direction: ltr;}
+/*编辑联系人分组*/
+body[language="arabic"] .group-dlg-container .btn-ctn .g-btn2{margin-left: 30px;margin-right: 0}
+body[language="arabic"] .group-dlg-container .dlg-group-item-just-action .add-item-btn{background-position:4px 4px; }
+/*个人中心*/
+body[language="arabic"] .ico-signin-success{left: 8px;right: auto;}
+body[language="arabic"] .g-header-toolbar .user{margin-right: 0; margin-left: 14px;}
+/*文件管理*/
+body[language="arabic"] .file-list-item .name{ text-align: right;direction: rtl;}
+body[language="arabic"] .sd-detail-box .sd-memory .con .progress{right: -1px;left:auto;}
+body[language="arabic"] .g-ui-dialog .g-dialog-footer{direction:rtl;}
+body[language="arabic"] .g-ui-dialog .g-dialog-footer div{left:auto!important; right: 10px;padding-right: 13px;}
+body[language="arabic"] .g-menu-item{text-align: right;}
+body[language="arabic"] .g-sdCard-manage .left-nav .nav-tool-bar{direction: ltr;float:right;width: 105px;
+padding-left: 73px;}
+body[language="arabic"] .g-popup.g-window .min-r{left: 66px;}
+body[language="arabic"] .g-popup.g-window .ico-max{right: auto;left:34px;}
+body[language="arabic"] .childNode .nav-left-li{padding-left: 0; padding-right: 24px;}
+body[language="arabic"] .icon-file-type{margin-left: 3px;margin-right: 0}
+body[language="arabic"] .g-sdCard-manage .left-nav{right: 0;left: auto;}
+body[language="arabic"] .g-sdCard-manage .right-moudle{right: 179px;left: 0;}
+body[language="arabic"] .loaddivBox{right: 50%;margin-right: -21.5%; margin-left:auto;left:auto;}
+body[language="arabic"] .ico-file-sd{background-position:right center;  }
+body[language="arabic"] .ico-expand,body[language="arabic"] .ico-fold{-webkit-transform:scale(-1,1);}
+
+body[language="arabic"] .result-detail{direction: rtl;text-align:right !important;}
+body[language="arabic"] .g-scr-prx-scroller{left: 0;right: auto;}
+body[language="arabic"] .ico-down-open,body[language="arabic"] .ico-down-open:hover{background-position: right center;padding-left:0;padding-right: 17px;}
+body[language="arabic"] .ico-continue,body[language="arabic"] .ico-continue:hover{background-position: right center;padding-left:0;padding-right: 17px; }
+body[language="arabic"] .ico-pause,body[language="arabic"] .ico-pause:hover{background-position: right center;padding-left:0;padding-right: 15px;}
+body[language="arabic"] .ico-refresh{background-position: right center;padding-left:0;padding-right: 19px;}
+body[language="arabic"] .ico-paste,body[language="arabic"] .ico-paste:hover{background-position: right center;padding-left:0;padding-right: 21px;}
+body[language="arabic"] .ico-copy,body[language="arabic"] .ico-copy:hover{background-position: right center;padding-left:0;padding-right: 21px;}
+
+
+body[language="arabic"] .childNode .nav-left-li {
+    padding:0 17px 0 0;
+    box-sizing: content-box;
+}
+
+body[language="arabic"] .childNode .childNode .nav-left-li {
+    padding:0 29px 0 0;
+    box-sizing: content-box;
+}
+
+body[language="arabic"] .childNode .childNode .childNode .nav-left-li {
+    padding:0 38px 0 0;
+    box-sizing: content-box;
+}
+
+body[language="arabic"] .childNode .childNode .childNode .childNode .nav-left-li {
+    padding:0 50px 0 0;
+    box-sizing: content-box;
+}
+
+body[language="arabic"] .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding:0 61px 0 0;
+    box-sizing: content-box;
+}
+
+body[language="arabic"] .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding:0 70px 0 0;
+    box-sizing: content-box;
+}
+
+body[language="arabic"] .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding:0 81px 0 0;
+    box-sizing: content-box;
+}
+
+body[language="arabic"] .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding:0 92px 0 0;
+    box-sizing: content-box;
+}
+
+body[language="arabic"] .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding:0 114px 0 0;
+    box-sizing: content-box;
+}
+body[language="arabic"] .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding:0 125px 0 0;
+    box-sizing: content-box;
+}
+body[language="arabic"] .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding:0 136px 0 0;
+    box-sizing: content-box;
+}
+body[language="arabic"] .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding: 0 147px 0 0;
+    box-sizing: content-box;
+}
+body[language="arabic"] .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .childNode .nav-left-li {
+    padding: 0 158px 0 0;
+    box-sizing: content-box;
+}
+/*清理*/
+body[language="arabic"] .saoba{float: right;}
+body[language="arabic"] .tt .title .elastic{right: auto;left:15px;}
+body[language="arabic"] .tt .title .size{right: auto;left:45px;direction:ltr;}
+body[language="arabic"] .less-info .info .info-name{left:auto; right: 67px;}
+body[language="arabic"] .less-info .info .info-size{right: auto;left:45px;}
+body[language="arabic"] .less-info .info input{margin-right: 30px;margin-left: 0}
+body[language="arabic"] .cleaner-top .size span{ display: inline-block;padding-top: 12px;}
+body[language="arabic"] .tt .name{background-position: right center;padding-left: 0px;padding-right: 26px; }
+body[language="arabic"] .cleaner-top .less{direction: ltr;text-align: right;margin: 55px 35px 0 0}
+body[language="arabic"] .less-info .info li img{margin-right: 17px;margin-left: 0}
+body[language="arabic"] .less-info .info li{padding-left: 0;padding-right: 14px;}
+body[language="arabic"] .tt .title .size{left: 45px;right: auto;}
+body[language="arabic"] .tt .title .fin{left: 20px;right: auto;}
+body[language="arabic"] .cleaner-top .clean-progress .pg{left: auto;right: 1px;}
+body[language="arabic"] .cleaner-top .anima{float: right;left: auto}
+body[language="arabic"] .cleaner-top.finish .less{}
+body[language="arabic"] .wifi-pass .imgs .con-img{margin-top: 30px;}
+/*wifi*/
+body[language="arabic"] .g-popup-driver  .g-window-ctn{ padding: 0}
+body[language="arabic"] .wifi-install{direction: rtl;}
+body[language="arabic"] .g-connction-guide-nav ul li.wifi{left: 0}
+body[language="arabic"] .g-connction-guide-nav ul li.wifi i,body[language="arabic"] .g-connction-guide-nav ul li.wifi:hover i, body[language="arabic"] .g-connction-guide-nav ul li.wifi.light i{background-position: right center;}
+body[language="arabic"] .g-connction-guide-nav ul li .loc-label{display: block;}
+body[language="arabic"] .g-connction-guide-nav ul li.usb i,body[language="arabic"] .g-connction-guide-nav ul li.usb:hover i, body[language="arabic"] .g-connction-guide-nav ul li.usb.light i{background-position: right center;}
+body[language="arabic"] .wifi-con h1 b{background-position: right center;}
+body[language="arabic"] .wifi-img .fl,body[language="arabic"] .wifi-img p.or{float: right;}
+body[language="arabic"] .wifi-word .text,body[language="arabic"] .wifi-pass .imgs{float: right;}
+body[language="arabic"] .wifi-pass{text-align: right;}
+body[language="arabic"] .wifi-failed p em{float: right;margin: 6px 0 0 7px}
+body[language="arabic"] .wifi-failed h4, body[language="arabic"] .wifi-failed p{direction: rtl;}
+body[language="arabic"] .wifi-word input{ text-align: right;}
+body[language="arabic"] .wifi-con h1{direction: rtl;}
+body[language="arabic"] .wifi-deviceCon .title{ text-align: right;margin: 40px 30px 0 0;}
+body[language="arabic"] .device-list li{float:right;margin: 0 40px 0 0;}
+body[language="arabic"] .g-connction-guide-wifi > div{direction: rtl;}
+body[language="arabic"] .wifi-pleaseInstall P{margin: 150px 25px 0 0}
+body[language="arabic"] .g-connction-guide-nav .wifi.first i:after{left:70px;}
+body[language="arabic"] .wifi-img .url{left: 65px;}
+body[language="arabic"] .wifi-con .help{background:url(../../../images/driverAdapter/back.png) no-repeat left;padding-right: 0;padding-left: 15px;}
+body[language="arabic"] .wifi-con .help:hover{background:url(../../../images/driverAdapter/back-hover.png) no-repeat left;}
+body[language="arabic"] .wifi-pass .back{padding-right: 15px;padding-left: 0;background:url(../../../images/driverAdapter/next.png) no-repeat right;}
+body[language="arabic"] .wifi-pass .back:hover{background:url(../../../images/driverAdapter/next-hover.png) no-repeat right;}
+/*login*/
+body[language="arabic"] .success .account{direction: ltr;}
+body[language="arabic"] .input-email-login,body[language="arabic"] .input-email{direction: ltr;text-align: right;}
+
+
+/*mypic,myvideo*/
+body[language="arabic"] .g-tooltip-content{direction: rtl;}
+body[language="arabic"] .g-tooltip .d em{ padding: 0 0 0 20px; display: inline-block; direction: ltr; }
+body[language="arabic"] .g-tooltip .n em{text-align: right; direction: ltr; }
+
+/*Select*/
+body[language="arabic"] .g-select-mod{ margin:0;padding: 0 5px 0 29px; text-align: right;}
+body[language="arabic"] .g-select-mod .g-arrow{ right: auto; left: 0;}
+

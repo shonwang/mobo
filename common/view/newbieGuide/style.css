@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+ .guide-wrap{width: 600px; height: 400px; background: #fcfcfc;position: relative; font-family: Roboto-Light;}
+.img_cont{ position:relative; width:600px; height:368px; overflow:hidden; background: #fff;}
+.slideshow li{ display:inline; float:left; width: 600px; height: 368px; position: relative;}
+.slideshow li p{width: 600px; position:absolute;top:0;left:0;color:#fff;}
+.slideshow .slid01 p{top:110px;left:320px;font-size: 20px; line-height: 30px;width: 265px;}
+.slideshow .slid01 p .normal{font-size: 28px;}
+.slideshow .slid01 p .yellow{color:#fbef37;font-size: 42px;}
+.slideshow .slid02 p{top:110px;left:320px;font-size: 20px; line-height: 30px;width: 265px;}
+.slideshow .slid02 p .normal{font-size: 36px;color: #ffbe31;}
+.slideshow .slid03 p{top:110px;left:30px;font-size: 20px; line-height: 30px; width: 200px;}
+.slideshow .slid03 p .normal{font-size: 28px;}
+.slideshow .slid03 p .blue{color:#034da5;font-size: 42px;}
+.slideshow .slid04 p{top:126px;left:36px;font-size: 18px; line-height: 45px}
+.slideshow .slid04 p .normal{font-size: 24px;color: #fff;background: #ff6600;display: inline-block;padding:0 3px; line-height: 35px;}
+.try{height: 30px; line-height: 30px; padding: 0 10px;min-width: 120px;  border: 1px solid rgba(255,255,255,0.7);position: absolute;left:30px;bottom:75px; cursor: pointer; text-align: center; font-size: 16px; border-radius:3px;color:#333; font-weight: bold; }
+.slid01 .try{background:#eaf1f4;left:330px;}
+.slid02 .try{background:#eaf1f4;left:330px;}
+.slid03 .try{background:#eaf1f4 }
+.slid04 .try{ background: #eaf1f4;}
+.slid01{background:url(../../../winentry/custom/images/guide-01.png) no-repeat;}
+.slid02{background:url(../../../winentry/custom/images/guide-02.png) no-repeat;}
+.slid03{background:url(../../../winentry/custom/images/guide-03.png) no-repeat;}
+.slid04{background:url(../../../winentry/custom/images/guide-04.png) no-repeat;}
+.img_cont .future{position :absolute;display:block;  height:20px; line-height: 20px;top:0; left: 0;padding:10px;color:#fff;font-size: 14px;}
+.slideshow li img{display:block;}
+.slideshow{position:absolute; width:3000px;}
+.slidebar{height: 40px;width: 600px; }
+.slidebar ul{height: 40px;display:-webkit-box;width: 600px; }
+.slidebar li{-webkit-box-flex:1; display: block; text-align: center; line-height: 40px;cursor:pointer; }
+.on.a0{ background: #13b0f1;color:#fff;}
+.on.a1{ background: #fccb48;color:#fff;}
+.Guide .g-window-header{display: none;}
+.Guide  .g-window-ctn{padding:0;}
+.Guide.g-window .ico-min{height: 0; width: 0;}
+.Guide .ico-close:hover{
+	background: url(../../images/header/close.png) no-repeat center !important
+}

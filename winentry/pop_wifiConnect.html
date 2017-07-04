@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link href="../common/style/base.css" rel="stylesheet" type="text/css">
+  <link href="../common/view/popup/popup.css" rel="stylesheet" type="text/css">
+  <link href="../common/view/window/window.css" rel="stylesheet" type="text/css">
+  <style>
+  		.g-popup.g-window{
+  			width: 298px;
+			height: 318px;
+  			box-shadow: 0 0 5px #ccc;
+  			border-width: 1px;
+  			color: #fff;
+  		}
+  		.g-window-ctn{
+  			padding:0;
+  			border:none;
+  		}
+  		.g-window-body{
+  			width:300px;
+  			height:258px;
+  			background:url(custom/images/wifi-bg.png) no-repeat;
+  		}
+  		.g-clean-title{
+  			padding-left:10px;
+  			line-height:30px;
+  			font-size: 14px;
+  		}
+  		.g-popup.g-window .ico-close{
+  			height:30px;
+  		}
+  		.g-window-ctn p{
+  			font-size: 14px;
+			margin-top: 167px;
+			padding: 0 5px;
+			text-align: center;
+  		}
+  		.conNow{
+  			display:block;
+  			margin:15px auto 0;
+  		}
+      body[language="arabic"] .g-clean-title,body[language="farsi"] .g-clean-title{text-align: right;padding-right: 10px;padding-left: 0} 
+      body[language="arabic"] .g-popup.g-window .ico-close,body[language="farsi"] .g-popup.g-window .ico-close{right: 0;left: 6px;}
+  </style>
+  
+</head>
+<body>
+<div class="g-popup g-window">
+    <i class="g-window-header-x ico-close ico-close-gary"></i>
+    <!-- Start 内容 -->
+    <div class="g-window-ctn">
+    	<div class="g-window-body">
+    		<div class="g-clean-title">
+	             Mobogenie
+	        </div>
+	        <p id="wifiText">WIFI connect</p>
+       </div>
+       <button id="conNow" class="g-btn g-btn1 conNow">Connect Now</button>
+    </div>
+    <!-- End 内容 -->
+</div>
+
+<script type="text/javascript">
+        document.oncontextmenu = function(){return false};
+        var dic={
+            arabic:{
+                wifiText:"توصيل الهاتف بواي فاي، وتثبيت التطبيقات دون كبل USB  بسهولة",
+                connect:'الاتصال الآن'        
+            },
+        	english:{
+                wifiText:"Connect to your phone via Wi-Fi. You can install apps, even without USB!",
+                connect:"Connect Now"                
+            },
+            farsi:{
+                wifiText:"از طریق Wi-Fi به تلفن متصل شوید. می‌توانید حتی بدون USB برنامه‌ها را نصب کنید!",
+                connect:'اکنون متصل شوید'   
+            },
+            france:{
+                wifiText:"Connectez votre téléphone via Wi-Fi . Vous pouvez installer des applications, même sans connexion USB !",
+                connect:"Se connecter"                
+            },
+            hindi:{
+                wifiText:"Connect to your phone via Wi-Fi. You can install apps, even without USB!",
+                connect:"अभी कनेक्ट करें"                
+            },
+            indonesian:{
+                wifiText:"Sambungkan ponsel Anda melalui Wi-Fi. Anda dapat menginstal aplikasi, meskipun tanpa USB!",
+                connect:"Sambungkan Sekarang"                
+            },
+            italian:{
+                wifiText:"Collegare al telefono via Wi-Fi. È possibile installare le app anche senza USB!",
+                connect:"Collega adesso"                
+            },
+            korean:{
+                wifiText:"Wi-Fi로 핸드폰 연결아기, 케이블이 없어도 간편하게 앱을 설치",
+                connect:"지금 연결"                
+            },
+            poland:{
+                wifiText:"Połącz się ze swoim telefonem przez Wi-Fi. Możesz instalować aplikacje nawet bez użycia USB!",
+                connect:"Podłącz teraz"                
+            },
+            portuguese:{
+                wifiText:"Conecte seu celular via Wi-Fi. Você pode instalar apps, té mesmo sem USB!",
+                connect:"Conectar agora"                
+            },
+            russian:{
+                wifiText:"Подключайтесь к вашему телефону через Wi-Fi. Теперь можно устанавливать приложения без USB провода!",
+                connect:"Подключить сейчас"                
+            },
+            spanish:{
+                wifiText:"¡Conecte su teléfono a través de Wi-Fi. Puede instalar aplicaciones, incluso sin USB!",
+                connect:"Conectar ahora"                
+            },
+            thai:{
+                wifiText:"เชื่อมต่ออุปกรณ์ของคุณผ่าน Wi-Fi. คุณสามารถติดตั้งแอพโดยไม่จำเป็นต้องใช้ USB!",
+                connect:"เชื่อมต่อทันที"                
+            },
+            traditionalchinese:{
+                wifiText:"Wi-Fi連接手機，沒有數據線一樣輕鬆安裝應用程式",
+                connect:"連接手機"                
+            },
+            turkish:{
+                wifiText:"Telefonunuzu Wi-Fi aracılığı ile bağlayınız. USB olmadan bile uygulamalar kurabilirsiniz!",
+                connect:"Şimdi Bağla"                
+            },
+            vietna:{
+                wifiText:"Hãy kết nối vào điện thoại của bạn qua Wi-Fi. Bạn có thể cài đặt ứng dụng, thậm chí không cần đến USB!",
+                connect:"Kết nối bây giờ"                
+            }
+        };
+         //20141126 新版日志
+	      function sendMessageCallback(action, paras, callback){
+	          app.setMessageCallback(action, function(bn, args) {
+	                var res;
+	                try{
+	                    res = JSON.parse(args[0]);
+	                }catch(e){
+	                    res = args[0];
+	                }
+	                callback && callback(res);
+	                app.removeMessageCallback(action);
+	          });
+	          //var requestId = new Date().valueOf();
+	          app.sendMessage(action, [JSON.stringify(paras)]);
+	      }
+        var isGetPulickFeild = false;
+	    var log_channelid = "-";
+	    var log_version = "-";
+	    var log_sessionid = "-";
+	    var log_site = "-";
+	    var log_pclg = "-";
+	    var log_phonestatus = "-";
+	    var log_service_id = "1000120";
+	    var showLog = {
+	        class: "c20002",
+	        page: "p20002",
+	        module: "m20003",
+	        action : "a20022",
+	        targetvalue: "wifiConnect"
+	    }
+	    var newLog = {
+	        class: "c20002",
+	        page: "p20002",
+	        module: "m20003",
+	        action : "a20023",
+	        targetvalue: "wifiConnect",
+	        targettype:"17"
+	    }
+	    sendMessageCallback("get_GetClientInfo", {}, function(res){
+	        console.log("新版日志公共字段：", Object.keys(res.info).length);
+	        if (res&&res.info){
+	            log_channelid = res.info.channelid;
+	            log_version = res.info.clientVer;
+	            log_sessionid = res.info.sessionid;
+	            log_site = res.info.site;
+	            log_pclg = res.info.language;
+	        }
+	    });
+	    var sendNewLog = function (logServiceExt){
+	    	var log_time = new Date().valueOf();
+	        var log_nettype = "-";
+	
+	        logServiceExt = JSON.stringify(logServiceExt);
+	        console.log(logServiceExt)
+	         var feildStr = [log_channelid, log_version, log_sessionid, log_time, log_nettype, log_site, log_phonestatus, log_pclg, log_service_id, logServiceExt].join("###");
+	        console.log("%c 新版日志 >> " + feildStr, "color:#13abe1");
+	         try{
+	         	app.sendMessage("get_ReportLog2",  [feildStr]);  
+	         }catch (error){}   
+	        
+	    };
+		if (log_channelid === "-"){  
+      	    setTimeout(function(){
+              sendNewLog(showLog);
+              
+            }, 2000);
+        } else {
+            sendNewLog(showLog);
+        }	        
+        
+        var getParameter = function(name, targetUrl){
+			var url = targetUrl || location.href;  
+        
+	        if(url.indexOf('#') > -1){
+	            url = url.slice(0, url.indexOf('#'));
+	        }
+        
+        	var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");  
+        	var paraObj = {}  
+	        for (i = 0; j = paraString[i]; i++) {  
+	            paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);  
+	        }  
+        	var returnValue = paraObj[name.toLowerCase()];  
+	        if (typeof (returnValue) == "undefined") {  
+	            return "";  
+	        } else {  
+	            return window.decodeURIComponent(returnValue);  
+	        }  
+       };
+       var language=getParameter("language",location.href) || "english";
+       if(language == "arabic" || language == "farsi"){
+        document.querySelector("body").setAttribute("language","arabic");
+          }else{
+              document.querySelector("body").removeAttribute("language");
+          }
+       document.getElementById("wifiText").innerHTML = dic[language].wifiText;
+       document.getElementById("conNow").innerHTML = dic[language].connect;
+       document.getElementById("conNow").addEventListener("click",function(){
+       		//发送日志开始
+		    sendNewLog(newLog); 
+       		app.sendMessage("get_NotifyMainWindow",  [JSON.stringify({
+                action: "wifiConnect"
+            })],function(){
+                console.log("消息已经发出");
+            });
+            app.sendMessage("get_Close", []);
+       });
+       
+       document.querySelector(".g-window-header-x.ico-close").onmousedown = function(){
+	        app.sendMessage("get_DragMainDisabled");
+	    };
+        document.querySelector(".g-window-header-x.ico-close").addEventListener("click",function(){
+           app.sendMessage("get_Close", []);
+        });
+         function bindCallback(bindingName, callback){
+	        app.setMessageCallback(bindingName, function(bn, args) {
+	            var res;
+	            try{
+	              res = JSON.parse(args[0]);
+	            }catch(E){
+	              res = args[0];
+	            }
+	            callback&&callback(res)
+	        });
+	    }
+	    bindCallback("set_NotifyCefWindow", function(res){
+	        if (res&&res.language&&dic[res.language]){
+				document.getElementById("wifiText").innerHTML = dic[res.language].wifiText;
+      		    document.getElementById("conNow").innerHTML = dic[res.language].connect;
+	        }
+	    })
+
+</script>
+</body>
+</html>

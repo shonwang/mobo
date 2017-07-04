@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+.setCont{height: 70px;}
+.setBtns{text-align: center;}
+.setBtns .g-btn4{min-width: 70px;margin:0 10px;}
+.setBtns .g-btn2{margin:0 10px;}
+.setGary{color: #999; display: block;}

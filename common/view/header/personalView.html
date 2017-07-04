@@ -1,0 +1,56 @@
+<script id="tpl-personal-main-view" type="text/tpl">
+	<div class="signin success">
+		<div class="user-avatar cbox">
+		    <span class="change"><%=I18N.fillDomText('signin.changeLabel')%></span>
+		    <span class="pic">
+                <span class="img cbox">
+                    <img class="portrait" src="../../src/common/images/header/user-avatar.png">
+                </span>
+		    </span>
+	    </div>
+	    <p class="image-info te"></p>
+
+		<!--<form id="uploadImg" action="" method="post" enctype="multipart/form-data" target="hidden_frame" style="display:none">
+			<input type="file" name="file" id="upfile" class="upfile" accept="image/jpeg,image/png,image/gif">
+			<iframe name="hidden_frame" id="hidden_frame" style="display:none" src=""></iframe>
+		</form>-->
+	    <p class="account"></p>
+	    <div class="send-email">
+            <button class="button-send-check g-btn g-btn1"><%=I18N.fillDomText('signin.sendLabel')%></button>
+            <p class="send-info"></p>
+	    </div>
+	    <button class="modify-pwd g-btn g-btn1"><%=I18N.fillDomText('signin.changePwdLabel')%></button>
+	</div>
+
+</script>
+
+<script id="tpl-modify-pwd-view" type="text/tpl">
+	<div class="signin">
+		<ul class="signin-form">
+	    	<li>
+	            <input class="com-text input-old-pwd" type="password" minLength="8" maxlength="20"></input>
+	            <p class="error-old-pwd error"></p>
+	            <span class="ico-pwd correct-old ico-signin-success" style="display:none"></span>
+	    	</li>
+	    	<li>
+	            <input class="com-text input-new-pwd" type="password" minLength="8" maxlength="20"></input>
+	            <p class="error-new-pwd error"></p>
+	            <span class="ico-pwd correct-new ico-signin-success" style="display:none"></span>
+	    	</li>
+	    	<li>
+	            <input class="com-text confirm-new-pwd" type="password" minLength="8" maxlength="20"></input>
+	            <p class="error-confirm-pwd error"></p>
+	            <span class="ico-pwd correct-newc ico-signin-success" style="display:none"></span>
+	    	</li>
+	    </ul>
+		<button class="save g-btn g-btn1" style="margin-top:10px;"><%=I18N.fillDomText('contact.Save')%></button>
+	</div>
+
+</script>
+
+<script id="tpl-modify-pwd-success" type="text/tpl">
+	<div class="signin success-confirm">
+		<p class="success-label cbox"><%=I18N.fillDomText('signin.pwdSuccessLabel')%></p>
+	    <button class="btn-ok g-btn g-btn1"><%=I18N.fillDomText('signin.confirmLabel')%></button>
+	</div>
+</script>

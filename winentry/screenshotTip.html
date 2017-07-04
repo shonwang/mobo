@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobogenie</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <style>
+        .g-screenshot-tip .tools {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .g-screenshot-tip .tools button:first-child {
+            margin-right: 10px;
+        }
+
+        .g-screenshot-tip label {
+            line-height: 30px;
+
+        }
+
+        .g-screenshot-tip label input {
+            vertical-align: middle;
+            margin-top: -2px;
+            margin-right: 5px;
+        }
+
+        .g-screenshot-tip label .test {
+            display: block;
+            -webkit-box-flex: 1;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="../common/libs/module.js"></script>
+<link rel="stylesheet" href="../common/view/menu/menu.css"></link><link rel="stylesheet" href="../common/view/grid/grid.css"></link><link rel="stylesheet" href="../common/view/scrollerProxy/proxy.css"></link><link rel="stylesheet" href="../common/view/popup/popup.css"></link><link rel="stylesheet" href="../common/view/sidebar/sidebar.css"></link><link rel="stylesheet" href="../common/view/header/header.css"></link><link rel="stylesheet" href="../common/view/header/login.css"></link><link rel="stylesheet" href="../common/view/header/selectPortrait.css"></link><link rel="stylesheet" href="../common/view/window/window.css"></link><link rel="stylesheet" href="../common/view/typeahead/style.css"></link><link rel="stylesheet" href="../common/view/smartTip/style.css"></link><link rel="stylesheet" href="../common/view/chatBox/chatBox.css"></link><link rel="stylesheet" href="../common/view/dialog/style.css"></link><link rel="stylesheet" href="../common/view/connGuide/style.css"></link><link rel="stylesheet" href="../common/view/aboutMe/style.css"></link><link rel="stylesheet" href="../common/view/setting/style.css"></link><link rel="stylesheet" href="../common/view/driverAdapter/style.css"></link><link rel="stylesheet" href="../common/view/friendlyConn/style.css"></link><link rel="stylesheet" href="../common/view/loading/style.css"></link><link rel="stylesheet" href="../common/view/imagePlayer/style.css"></link><link rel="stylesheet" href="../common/view/progress/progress.css"></link><link rel="stylesheet" href="../common/view/toolTip/style.css"></link><link rel="stylesheet" href="../common/view/setTips/style.css"></link><link rel="stylesheet" href="../common/view/newbieGuide/style.css"></link><link rel="stylesheet" href="../common/view/egg/egg.css"></link><link rel="stylesheet" href="../common/view/getAdbState/style.css"></link><link rel="stylesheet" href="../common/style/base.css"></link><link rel="stylesheet" href="../common/style/ar/local.css"></link><link rel="stylesheet" href="../common/style/ar/side/side.css"></link><link rel="stylesheet" href="../common/style/ar/header/header.css"></link><link rel="stylesheet" href="../common/style/ar/home/home.css"></link><link rel="stylesheet" href="../common/style/ar/mycontacts/mycontacts.css"></link><link rel="stylesheet" href="../common/style/ar/myapps/myapps.css"></link><link rel="stylesheet" href="../common/style/ar/mymessages/mymessages.css"></link><link rel="stylesheet" href="../common/style/ar/mymusic/mymusic.css"></link><link rel="stylesheet" href="../common/style/ar/myvideos/myvideos.css"></link><link rel="stylesheet" href="../common/style/ar/toolkit/toolkit.css"></link><link rel="stylesheet" href="../common/style/ar/popup/popup.css"></link><link rel="stylesheet" href="../common/style/ar/feedback/feedback.css"></link><link rel="stylesheet" href="../home/view/style.css"></link><link rel="stylesheet" href="../contact/view/style.css"></link><link rel="stylesheet" href="../application/view/style.css"></link><link rel="stylesheet" href="../image/view/style.css"></link><link rel="stylesheet" href="../sms/view/style.css"></link><link rel="stylesheet" href="../video/view/style.css"></link><link rel="stylesheet" href="../book/view/style.css"></link><link rel="stylesheet" href="../music/view/style.css"></link><link rel="stylesheet" href="../taskManager/view/style.css"></link><link rel="stylesheet" href="../tools/view/toolsMainView/style.css"></link><link rel="stylesheet" href="../tools/view/backupRestoreView/style.css"></link><link rel="stylesheet" href="../tools/view/fileManagerView/style.css"></link><link rel="stylesheet" href="../tools/view/deviceInfoView/style.css"></link><link rel="stylesheet" href="../tools/view/pcCleanerView/style.css"></link><link rel="stylesheet" href="../tools/view/wifiHotPot/style.css"></link><link rel="stylesheet" href="../feedback/view/style.css"></link><link rel="stylesheet" href="../genie/view/style.css"></link>
+
+<script type="text/tpl" id="tpl-current-tip-content">
+    <div class="g-screenshot-tip">
+        <p class="des te"><%=path%> </p>
+        <div>
+            <label class="hbox">
+                <input type="checkbox" checked></input>
+                <span class="te test"><%=i18n.fillDomText("common.screenshotCheckPathTip")%></span>
+            </label>
+        </div>
+        <div class="tools">
+            <button class="g-btn g-btn2 open"><%=i18n.fillDomText("common.openLabel")%></button>
+            <button class="g-btn g-btn4 close"><%=i18n.fillDomText("common.closeLabel")%></button>
+        </div>
+    </div>
+
+
+
+</script>
+
+<script type="text/javascript">
+    genie.use('UIWindow', function (require) {
+        var UIWindow = require('UIWindow');
+        var $ = require('jquery');
+        var utils = require('utils');
+        var i18nDi = require('I18NDI');
+        var _ = require("underscore");
+
+        var win = new UIWindow();
+        win.addClass('g-ui-dialog');
+        win.show();
+
+        var paras = JSON.parse(utils.getParameter('Parame'));
+
+        win.setHeader(i18nDi.fillDomText('common.screenshotText'));
+
+        var tpl = $('#tpl-current-tip-content').html();
+
+        var path = i18nDi.fillDomText('common.screenshotSave') + " " + paras.path;
+
+        win.setContent(_.template(tpl, {i18n: i18nDi, path: path}));
+
+        $('.g-screenshot-tip .open').on("click", function (e) {
+            var app = require("app");
+            var apiNames = require('APINames');
+            app.dal.request({
+                action: apiNames.REQ_OPEN_EXISTED_FILE,
+                paras: {
+                    path: paras.path
+                }
+            });
+        });
+
+        $('.g-screenshot-tip label').on("click", function () {
+            var checked = $(this).find('input').prop("checked");
+            win.notifyParentWindow({
+                checked: checked
+            });
+        });
+
+
+        $('.g-screenshot-tip .close').on("click", function (e) {
+            win.close();
+        });
+    });
+</script>
+
+
+</body>
+</html>

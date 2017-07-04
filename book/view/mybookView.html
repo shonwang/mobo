@@ -1,0 +1,82 @@
+<script id="tpl-book-main-view" type="text/tpl">
+    <div class="g-book">
+        <div id="i-book-header" class="g-toolbar hbox">
+            <input type="checkbox" class="chkbox-all"></input>
+            <button class="btn-import ico-btn ico-import-book"><%=I18N.fillDomText('book.ImportBook')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="btn-export ico-btn ico-export"><%=I18N.fillDomText('common.Export')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="btn-delete ico-btn ico-delete"><%=I18N.fillDomText('common.Delete')%></button>
+            <i class="g-toolbar-line"></i>
+        </div>
+        <div class="g-content hbox">
+            <div class="pic_content" style="display: none;">
+                <div class="g-empty-state g-media-empty-info cbox">
+                    <div class="con">
+                        <img src="../src/book/images/not-book.png">
+                        <p class="info">
+                            <%=I18N.fillDomText('common.noSdState')%>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div  class="list" style="width:100%;"></div>
+        </div>
+    </div>
+        
+</script>
+<!--列表栏目  start-->
+<script  id="tpl-book-list-item" type="text/tpl">
+  <div class="book-list-item hbox" data-url="<%=data.sbookRemotePath%>" data-id="<%=data.id%>">
+        <div class="name f14 te" >
+            <%=data.sBookName%>
+        </div>
+         <div class="book btn-open" i18n-key="book.openBookLabel">
+        </div>
+        <div class="format c-9">
+            <%=data.sBookExt%>
+        </div>
+        <div class="size c-9">
+            <%=data.size%>
+        </div>
+    </div>
+
+</script>
+<script id="tpl-search-header" type="text/tpl">
+      <!-- 搜索header统计 区域-->
+     <div class="g-grid-search hbox" style="display: none;">
+                        <p class="static te"></p>
+                        <button class="btn-clear-search g-btn g-btn2"><%=I18N.fillDomText('common.searchSeeAllLink')%></button>
+     </div>
+</script>
+<script id="tpl-book-grid-header" type="text/tpl">
+            <div class="book-list-header hbox">
+                <p class="name"><%=I18N.fillDomText('common.nameLabel')%><!--<i class="g-arrow"></i>--></p>
+                <p class="action">&nbsp;</p>
+                <p class="artist"><%=I18N.fillDomText('music.Artist')%></p>
+                <p class="format"><%=I18N.fillDomText('music.Format')%></p>
+                <p class="size"><%=I18N.fillDomText('common.sizeLabel')%></p>
+         </div>
+</script>
+<script id="tpl-book-empty-info" type="text/tpl">
+
+    <div class="g-empty-state g-media-empty-info cbox">
+        <div class="con">
+            <img src="../src/book/images/not-book.png">
+            <p class="info">
+                <%=I18N.fillDomText('book.emptyBookLabel')%>
+            </p>
+            <button class="g-btn g-btn1 goto-downloadEbooks"><%=I18N.fillDomText('book.gotoRingtonesLabel')%></button>
+        </div>
+    </div>
+</script>
+<script id="tpl-book-nosd-info" type="text/tpl">
+    <div class="g-empty-state g-media-empty-info cbox">
+        <div class="con">
+            <img src="../src/book/images/not-book.png">
+            <p class="info">
+                <%=I18N.fillDomText('common.noSdState')%>
+            </p>
+        </div>
+    </div>
+</script>

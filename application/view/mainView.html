@@ -1,0 +1,198 @@
+<script id="tpl-app-main-view" type="text/tpl">
+    <div class="g-application">
+        <div id="i-app-header" class="g-toolbar hbox">
+            <input type="checkbox" class="chkbox-all"></input>
+            <button class="ico-btn ico-install install"><%=i18n.fillDomText('myapp.installAppsLabel')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="ico-btn ico-update-all updateall"><%=i18n.fillDomText('common.updateAllLabel')%></button>
+            <i class="g-toolbar-line" style="display: none"></i>
+            <button class="ico-btn ico-update update" disabled style="display:none"><%=i18n.fillDomText('common.updateLabel')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="ico-btn ico-export export" disabled><%=i18n.fillDomText('common.Export')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="ico-btn ico-unstall uninstall" disabled><%=i18n.fillDomText('common.uninstallLabel')%></button>
+            <i class="g-toolbar-line"></i>
+            <button class="ico-btn ico-sd move" disabled><%=i18n.fillDomText('myapp.moveToSdCardLabel')%></button>
+        </div>
+        <div class="g-content">
+            <div class="g-panels">
+                <!-- tab 区域-->
+                <div class="g-list-tab-header">
+                    <menu class="tab hbox">
+                        <li class="selected" data-tab="local"><%=i18n.fillDomText('myapp.tabAppLabel')%> <em>0</em> </li>
+                        <li data-tab="update"><%=i18n.fillDomText('myapp.tabUpdatesLabel')%> <em>0</em> </li>
+                        <li data-tab="sys"><%=i18n.fillDomText('myapp.tabSystemLabel')%> <em>0</em> </li>
+                        <div class="line"></div>
+                    </menu>
+                </div>
+                <!-- 搜索header统计 区域-->
+                <div class="g-grid-search hbox">
+                        <p class="static te"></p>
+                        <button class="btn-clear-search g-btn g-btn2"><%=i18n.fillDomText('common.searchSeeAllLink')%></button>
+                </div>
+                
+                <!--tab列表区域-->
+                <div class="g-list-tab-con">
+                    <div id="i-local-app" class="list g-page-show" >
+                        
+                    </div>
+                    <div id="i-update-app" class="list g-page-hide" >
+                        
+                    </div>
+                    <div id="i-system-app" class="list g-page-hide" >
+                        
+                    </div>
+                    <!--搜索app列表-->
+                    <div id="i-search-app" class="list g-page-hide" >
+                        
+                    </div>
+                </div>
+            </div>
+            <!--详情-->
+            <div class="detail" style="display: none">
+				
+            </div>
+            <!--榜单-->
+            <div class="top">
+                
+            </div>
+        </div>
+    </div>
+</script>
+<script id="tpl-system-mask" type="text/tpl">
+    <div class="g-system-mask">
+        <div class="ctn">
+            <p><%=i18nDi.fillDomText('myapp.systemMaskText')%></p>
+            <p><%=i18nDi.fillDomText('myapp.systemMaskCtn')%></p>   
+             <button class="g-btn g-btn1"><%=i18nDi.fillDomText('common.oneClickRootLabel')%></button>
+        </div>
+    </div>
+</script>
+
+<script id="tpl-update-empty-tip" type="text/tpl">
+    <div class="g-empty-state" style="display:none">
+        <div class="cbox wh">
+            <div>
+                <img draggable="false" src="application/images/not-app.png">
+                <p class="info">
+                   <%=i18n.fillDomText("myapp.noupdatetext")%>
+                </p>
+                <button class="g-btn g-btn1"><%=i18n.fillDomText('myapp.noappBtnText')%></button>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="tpl-local-empty-tip" type="text/tpl">
+    <div class="g-empty-state" style="display:none">
+        <div class="cbox wh">
+            <div>
+                <img draggable="false" src="application/images/not-app.png">
+                <p class="info">
+                   <%=i18n.fillDomText('myapp.noapptext')%>
+                </p>
+                <button class="g-btn g-btn1"><%=i18n.fillDomText('myapp.noappBtnText')%></button>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="tpl-name-col-view" type="text/tpl">
+    <div class="g-app-name-col hbox">
+        <img src="<%=thumb%>" onerror="this.src='common\\images\\ico\\default-app.png'"></img>
+        <div class="name">
+            <div class="title te" titleText="<%=name%>"><%=name%></div>
+            <!--div class="version te"><%=version%></div-->
+        </div>
+        
+    </div>
+</script>
+
+
+<script id="tpl-action-col-view" type="text/tpl">
+    <div class="g-app-action-col"> 
+        <!--button class="g-btn g-btn2 uninstall"><%=i18n.fillDomText('common.uninstallLabel')%></button-->
+        <!--button class="g-btn g-btn4 move"><%=i18n.fillDomText('myapp.moveLabel')%></button-->
+        <button class="g-btn g-btn2 update"><%=i18n.fillDomText('common.updateLabel')%></button>
+        <div class="progress-bar" style="display:none">
+           <span style="width: 0px"></span>
+        </div>
+        <div class="progress-bar-stripes" style="display:none">
+           <span></span>
+        </div>
+    </div>
+</script>
+<!-- MY Apps 应用详情 -->
+<script id="tpl-app-detail" type="text/tpl">
+<div class="g-application-detail">
+    <span class="pic fl"><img  class="app-icon" src="<%=iconPath%>" width="48" height="48" alt=""/></span>
+    <h3 class="title te"><%=name%></h3>
+    <div class="star">
+        <span class="ico-star"><i class="ico-stars" style="width:0"></i></span>
+    </div>
+    <ul class="info">
+        <li><span class="c-9"><%=i18n.fillDomText('myapp.appCurrentVersionLabel')%></span> <%=version%></li>
+        <%if(sCurVersion){%>
+            <li><span class="c-6"><%=i18n.fillDomText('myapp.appLatestVersionLabel')%> </span> <%=sCurVersion%></li>
+        <%}%>
+        <li>
+            <span class="c-9"><%=i18n.fillDomText('myapp.appLocationLabel')%></span>
+            <%=(location == 0 ? i18n.fillDomText('common.deviceText') : i18n.fillDomText('common.memoryText'))%></li>
+        <li><span class="c-9"><%=i18n.fillDomText('myapp.appSizeColonLabel')%> </span><%=size%></li>
+        <!--
+        <li class="star" style="display:none"><span class="c-9"><%=i18n.fillDomText('myapp.ratingColonLabel')%></span><span class="ico-star"><i class="ico-stars" style="width: 80%"></i></span></li>
+        -->
+        <li>
+            <div class="button">
+                <button class="g-btn g-btn2 update"><%=i18n.fillDomText('common.updateLabel')%></button>
+                <button class="g-btn g-btn3 uninstall" style="display:<%=appType=='3'?'none':''%>"><%=i18n.fillDomText('common.uninstallLabel')%></button>
+            </div>
+        </li>
+    </ul>
+</div>
+</script>
+<!-- End -->
+
+<script id="tpl-recommend-list" type="text/tpl">
+    <div class="g-app-recommend-list">
+        <h2 class="title"><%=i18n.fillDomText('myapp.likeColonLabel')%></h2>
+        <ul class="list">
+           <%for(var i=0; i < list.length; i++){%>
+               <li class="hbox">
+                   <div class="column1  link-rec-app">
+                       <img src="<%=(list[i].iconPath + 'icon_m.png')%>"></img>
+                   </div>
+                   <div class="column2 te">
+                       <h3 class="f14 te"><a class="link-rec-app"><%=list[i].name%></a></h3>
+                       <span class="c-9"><%=i18n.fillDomText('myapp.downloadsText', list[i].totalNum)%></span>
+                   </div>
+                   <div class="column3">
+                       <button class="g-btn g-btn3 install" 
+                               data-id="<%=list[i].id%>"
+                               data-name="<%=list[i].name%>"
+                               data-typeCode="<%=list[i].type.typeCode%>"
+                               data-mtypeCode="<%=list[i].type.mtypeCode%>"
+                               data-apkPath="<%=list[i].apkPath%>"
+                               data-iconPath="<%=list[i].iconPath%>"
+                               data-size="<%=list[i].apkSize%>"
+                               data-pk="<%=list[i].apkId%>"
+                               data-versioncode="<%=list[i].versionCode%>"
+                               packagename="<%=list[i].apkId%>"
+                               versioncode="<%=list[i].versionCode%>"
+                               data-index="<%=i%>"
+                               data-md5="<%=list[i].md5||''%>">
+                               
+                          <%=i18n.fillDomText('common.installLabel')%>
+                       </button>
+                   </div>
+               </li>
+           <%}%>
+        </ul>
+    </div>
+</script>
+<script id="tpl-app-update-info-version" type="text/tpl">
+                <span class="c-9"><%=data.oldVersion%></span>
+                <span class="ar"></span>
+                <span><%=data.newVersion%></span>
+</script>
+

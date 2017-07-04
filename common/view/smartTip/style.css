@@ -1,0 +1,70 @@
+.g-popup.g-smart-tip {
+    min-width: 100px;
+    z-index: 1000;
+}
+
+.g-smart-tip .ctn {
+    position: static;
+    width: auto;
+    top: auto;
+}
+
+.g-smart-tip .arrow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    -webkit-transform: rotate(45deg);
+    border-left: 1px solid #9dd0e1;
+    border-top: 1px solid #9dd0e1;
+    left: 40px;
+    top: -5px;
+    background: #fff;
+}
+
+/* 驱动提示*/
+.g-smart-tip .arrow-t:after {
+    left: 13px;
+}
+
+.ico-device-down span,
+.ico-device-installing span,
+.ico-device-mobo span,
+.ico-device-connected span,
+.ico-device-connected span {
+    height: 20px;
+    line-height: 20px;
+    display: block;
+}
+
+.ico-device-down span {
+    padding-left: 21px;
+    background: url("../../../home/images/device-down.png") no-repeat left center;
+}
+
+.ico-device-installing span {
+    padding-left: 21px;
+    background: url("../../../home/images/device-installing.png") no-repeat left center;
+}
+
+.ico-device-mobo span {
+    padding-left: 17px;
+    background: url("../../../home/images/device-mobo.png") no-repeat left center;
+}
+
+.ico-device-connected span {
+    padding-left: 23px;
+    background: url("../../../home/images/device-connected.png") no-repeat left center;
+}
+
+.ico-device-disconnect span {
+    padding-left: 30px;
+    background: url("../../../home/images/device-disconnect.png") no-repeat left center;
+}
+.g-popup.g-smart-tip .arr-lb {
+    top: auto;
+    bottom: 5px;
+}
+.g-popup.g-smart-tip .arr-lc {
+    top: 50%;
+    bottom:auto;
+}

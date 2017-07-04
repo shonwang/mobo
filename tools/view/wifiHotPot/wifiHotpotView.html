@@ -1,0 +1,126 @@
+<script id="tpl-wifihotpot-main-view" type="text/tpl">
+        <!--初始界面start-->
+        <div class="wifi-page  wifihot-starting wifipot-not-start">
+            <span class="pic"><img src="../tools/images/top-01.jpg" alt="wifi"></span>
+
+            <div class="text cbox creating"><%=I18N.fillDomText('tools.startingWifiTitle')%></div>
+            <div class="notwifi create-failed">
+                <p class="not"><span class="ico-warng"></span><%=I18N.fillDomText('tools.hasNoWIfiTitle')%></p>
+                <button class="g-btn g-btn1 btn-have-wifi"><%=I18N.fillDomText('tools.iHaveWifi')%></button>
+            </div>
+            <div id="starting-animation" class="starting-animation"></div>
+        </div>
+       <!--初始界面end--> 
+       
+       <!--basic info editor 页面start-->
+        <div class="wifi-page  wifihot-box wifipot-starting-now hide">
+            <span class="pic"><img src="../tools/images/top-02.jpg" alt="wifi"></span>
+            <ul class="wifihot-form">
+                <li>
+                    <label class="fl"><%=I18N.fillDomText('tools.wifiNameLabel')%></label>
+                    <p class="fl name te">MobogenieWifi</p>
+                    <div class="input-box wifi-name-editor" style="display:none;">
+                        <input class="com-text" name="name" pattern="[\_\#0-9a-zA-Z]{1,12}" required="true" value=""/>
+                        <div class="arrow-t">
+                                <%=I18N.fillDomText('tools.pleaseWriteNum')%>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <label class="fl"><%=I18N.fillDomText('tools.wifiPasswordLabel')%></label>
+                    <p class="fl password">123456789</p>
+                    <div class="input-box wifi-password-editor" style="display:none;">
+                        <input class="com-text"  name="password" pattern="[\_\#0-9a-zA-Z]{1,12}" required="true" value=""/>
+                        <div class="arrow-t">
+                            <%=I18N.fillDomText('tools.pleaseWriteNum')%>
+                        </div>
+                    </div>
+                </li>
+                <li style="display: none;">
+                    <label class="fl"><%=I18N.fillDomText('tools.speedLabel')%></label>
+                    <p class="fl speed">
+                        <span class="ico-uplink">2.33MB</span>
+                        <span class="ico-downlink">890KB</span>
+                    </p>
+                </li>
+            </ul>
+            <div>
+                <button class="wifihot-devices btn-go-list"><span class="success-connected-static"><%=I18N.fillDomText('tools.devicesConnectedTitle',0)%></span><i class="ico-cusp"></i></button>
+            </div>
+            <button class="g-btn g-btn1 btn-close"><%=I18N.fillDomText('tools.closeWifiLabel')%></button>
+        </div>       
+       <!--basic info editor 页面end-->
+       
+<!--wifi 设备连接成功列表界面 start-->
+        <div class="wifi-page wifihot-connected-box hide">
+            <span class="pic"><img src="../tools/images/top-03.jpg" alt="wifi"></span>
+            <!-- Start Connected -->
+            <div class="list-ctn-div wifihot-connected open">
+                <h3 class="wifihot-connected-title expand-or-close"><i class="ico-cusp"></i><span class="title-label"><%=I18N.fillDomText('tools.deviceConnectingList',"(0)")%></span></h3>
+                <ul class="connect-list-ul">
+                </ul>
+            </div>
+            <!-- End Connected -->
+            <!-- Start Black List -->
+            <div class="list-ctn-div wifihot-black">
+                <h3 class="wifihot-connected-title expand-or-close"><i class="ico-cusp"></i><span class="title-label"><%=I18N.fillDomText('tools.deviceBlackList2',"(0)")%></span></h3>
+                <ul class="black-list-ul">
+                </ul>
+            </div>
+            <!-- End Black List -->
+            <div class="wifihot-back vcbox">
+                <button class="btn-back-to-info"><span> < </span><%=I18N.fillDomText('common.returnTipText')%></button>
+            </div>
+        </div>
+        <div class="tipCtn te"></div>
+<!--wifi 设备连接成功列表界面 end-->       
+</script>
+<script id="tpl-whiteList-view" type="text/tpl">
+    <%for(var i=0;i<data.length;i++){%>
+                   <li class="vcbox whiteList-item-li" ip="<%=data[i].ip%>" mac="<%=data[i].mac%>">
+                        <span class="phone"><img src="<%=data[i].icon||'../tools/images/ico-phone.png'%>"></span>
+
+                        <div class="con">
+                            <p class="fl model" name="deviceName"><%=data[i].deviceName||data[i].hostName%></p>
+                            <div class="input-box wifi-deviceName-editor" style="display:none;">
+                                <input class="com-text"  name="deviceName" value="<%=data[i].deviceName||data[i].hostName%>"/>
+                                <div class="arrow-t">
+                                    <%=I18N.fillDomText('tools.pleaseWriteDeviceNameValid')%>
+                                </div>
+                            </div>                            
+                            <span class="ico-uplink hide">2.33MB</span>
+                            <span class="ico-downlink hide">890KB</span>
+
+                            <div class="limit" style="display: none;">
+                                <button class="g-btn g-btn3"><%=I18N.fillDomText('tools.limitSpeedLabel')%></button>
+                                <div class="drop-down">
+                                    <p class="vcbox">
+                                        <input class="checkall" type="checkbox" checked="">
+                                        <span><%=I18N.fillDomText('tools.downloadSpeedLabel')%></span>
+                                        <input class="com-text">KB/s
+                                    </p>
+
+                                    <p class="vcbox">
+                                        <input class="checkall" type="checkbox" checked="">
+                                        <span><%=I18N.fillDomText('tools.uploadSpeedLabel')%></span>
+                                        <input class="com-text">KB/s
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="g-btn g-btn6 btn-setblack"><%=I18N.fillDomText('tools.deviceBlackList')%></button>
+                    </li>        
+    <%}%>
+</script>
+<script id="tpl-blackList-view" type="text/tpl">
+    <%for(var i=0;i<data.length;i++){%>
+                    <li class="vcbox blackList-item-li"  ip="<%=data[i].ip%>" mac="<%=data[i].mac%>">
+                        <span class="ico-black"></span>
+
+                        <p class="model"><%=data[i].deviceName||data[i].hostName%></p>
+
+                        <p class="time"><%=data[i].updateTime||''%></p>
+                        <button class="g-btn g-btn3 btn-remove-black"><%=I18N.fillDomText('tools.moveOutBlackList')%></button>
+                    </li>          
+    <%}%>
+</script>

@@ -1,0 +1,71 @@
+<script id="tpl-chat-box-view" type="text/tpl">
+    <div class="g-message-threads-ctn vbox">
+        <ul class="g-message-threads-list-ctn">
+            <div class="load-more-msg loadingmore" style="display: none;"><%=I18N.fillDomText('sms.loadMore')%></div>
+        </ul>
+    </div>
+</script>
+
+<script id="tpl-chat-box-header-view" type="text/tpl">
+    <div class="g-chat-header hbox">
+        <div class="contact-name hbox">
+            <div class="name"></div>
+            <div class="num"></div>
+        </div>
+        <div class="contact-info"></div>
+        <button class="g-btn g-btn3 button-add-contact"><%=I18N.fillDomText('sms.addContact')%></button>
+        <button class="g-btn g-btn3 button-edit-contact"><%=I18N.fillDomText('sms.editContact')%></button>
+        <button class="g-btn g-btn3 button-all">Retry All</button>
+    </div>
+</script>
+
+<script id="tpl-chat-quick-sender" type="text/tpl">
+    <div class="g-message-quick-sender vbox">
+       <div class="send-to-box">
+           <lable class="fl send-to-label c-6"><%=I18N.fillDomText('sms.sendTo')%></lable>
+           <div class="fl g-select">
+                <a class="g-select-mod selecte-number" name="sendTo" value="" style="display: block;">
+                    <i class="number_span"></i>
+                    <span class="fr">
+                        <i class="g-arrow"></i>
+                    </span>
+                </a>
+           </div>
+       </div>
+       <textarea class="input-content com-area"  maxLength="1000"></textarea>
+        <div class="g-chat-box-footer">
+            <div class="monitor">
+                <span class="content-count">0</span>
+                <span class="c-6"><%=I18N.fillDomText('sms.characters')%></span>
+                <span class="fr ico-expression"></span>
+            </div>
+            <button class="fr button-send g-btn g-btn1"><%=I18N.fillDomText('sms.send')%></button>
+            <div class="fr hotkey-label"><%=I18N.fillDomText('sms.pressCE')%></div>
+        </div>
+    </div>
+</script>
+
+<script id="tpl-sms-date-item" type="text/tpl">
+    <li class="g-message-thread">
+        <div class="date-ctn"></div>
+        <ul class="g-message-item-ctn"></ul>
+    </li>
+</script>
+
+<script id="tpl-sms-message-item" type="text/tpl">
+    <li class="message-item hbox">
+        <div class="content-wrap">
+            <span class="content"></span>
+            <div class="arrow"></div>
+            <div class="actions">
+                <div class="button-delete ico-btn ico-delete" i18n-key="common.Delete"></div>
+                <div class="button-copy ico-btn ico-sms-copy" i18n-key="tools.copy"></div>
+                <div class="button-forward ico-btn ico-forwarding" i18n-key="common.retreatTipText"></div>
+            </div>
+        </div>
+        <div class="info">
+            <span id="status" class="ico-loading14"></span>
+            <button class="g-btn g-btn6 button-resend"><%=I18N.fillDomText('common.retryText')%></button>
+        </div>
+    </li>
+</script>
